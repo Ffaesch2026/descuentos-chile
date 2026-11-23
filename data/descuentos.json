@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-23T14:25:31+00:00",
+ "generado": "2026-11-23T14:40:05+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
@@ -7,7 +7,7 @@
    "sitio": "https://sitiospublicos.bancochile.cl/personas/beneficios",
    "estado": "ok",
    "cantidad": 853,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "falabella": {
@@ -16,7 +16,7 @@
    "sitio": "https://www.bancofalabella.cl/descuentos",
    "estado": "ok",
    "cantidad": 219,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "ripley": {
@@ -25,17 +25,17 @@
    "sitio": "https://www.bancoripley.cl/beneficios-y-promociones",
    "estado": "ok",
    "cantidad": 155,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "santander": {
    "id": "santander",
    "nombre": "Santander Chile",
    "sitio": "https://banco.santander.cl/beneficios",
-   "estado": "ok",
+   "estado": "error",
    "cantidad": 207,
    "actualizado": "2026-11-23T14:25:31+00:00",
-   "error": null
+   "error": "RuntimeError: Santander bloqueó la consulta a promociones.json (HTTP 403)"
   },
   "cencosud": {
    "id": "cencosud",
@@ -43,7 +43,7 @@
    "sitio": "https://www.tarjetacencosud.cl/publico/beneficios/landing/inicio",
    "estado": "ok",
    "cantidad": 39,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "tenpo": {
@@ -52,7 +52,7 @@
    "sitio": "https://www.tenpo.cl/beneficios",
    "estado": "ok",
    "cantidad": 37,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "mach": {
@@ -61,7 +61,7 @@
    "sitio": "https://www.machbank.cl/beneficios",
    "estado": "ok",
    "cantidad": 17,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "security": {
@@ -70,17 +70,17 @@
    "sitio": "https://personas.bancosecurity.cl/beneficios",
    "estado": "ok",
    "cantidad": 165,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "bancoestado": {
    "id": "bancoestado",
    "nombre": "BancoEstado",
    "sitio": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios.html",
-   "estado": "ok",
+   "estado": "error",
    "cantidad": 153,
    "actualizado": "2026-11-23T14:25:31+00:00",
-   "error": null
+   "error": "FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?"
   },
   "scotiabank": {
    "id": "scotiabank",
@@ -88,17 +88,17 @@
    "sitio": "https://www.scotiarewards.cl/scclubfront/categoria/mundos/descuentos",
    "estado": "ok",
    "cantidad": 262,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   },
   "itau": {
    "id": "itau",
    "nombre": "Itaú",
    "sitio": "https://itaubeneficios.cl/beneficios/",
-   "estado": "ok",
+   "estado": "error",
    "cantidad": 204,
    "actualizado": "2026-11-23T14:25:31+00:00",
-   "error": null
+   "error": "FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?"
   },
   "bci": {
    "id": "bci",
@@ -106,7 +106,7 @@
    "sitio": "https://www.bci.cl/beneficios/beneficios-bci",
    "estado": "ok",
    "cantidad": 290,
-   "actualizado": "2026-11-23T14:25:31+00:00",
+   "actualizado": "2026-11-23T14:40:05+00:00",
    "error": null
   }
  },
