@@ -38,6 +38,14 @@ BANCOS = [
     ("cencosud", "Tarjeta Cencosud", "#0068b3"), ("security", "Banco Security", "#6d1f6b"),
     ("tenpo", "Tenpo", "#00a88a"), ("mach", "MACH", "#6c2bd9"),
 ]
+# Filas cuyo "comercio" es en realidad una categoría (ej. MACH publica "Restaurantes")
+GENERICOS = {"restaurantes", "restaurant", "restaurantes adheridos", "comercios adheridos", "supermercados", "farmacias"}
+HASHTAG_REGION = {"AP": "arica", "TA": "iquique", "AN": "antofagasta", "AT": "copiapo", "CO": "laserena",
+                  "VS": "valparaiso", "RM": "santiago", "LI": "rancagua", "ML": "talca", "NB": "chillan",
+                  "BI": "concepcion", "AR": "temuco", "LR": "valdivia", "LL": "puertomontt", "AI": "coyhaique",
+                  "MA": "puntaarenas"}
+EMOJI = {"restaurantes": "🍽️", "supermercados": "🛒", "combustible": "⛽", "farmacias": "💊", "viajes": "✈️",
+         "entretencion": "🎬", "vestuario": "🛍️", "delivery": "🛵", "otros": "💳"}
 DSHORT = ["LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB", "DOM"]
 TIPOS = {"credito": "Crédito", "debito": "Débito", "prepago": "Prepago"}
 
@@ -61,6 +69,7 @@ def seleccionar(descuentos, rubro, region, por_banco, incluir_nacionales):
     out = {}
     for bid, _, _ in BANCOS:
         items = [d for d in descuentos if d["banco"] == bid and d["rubro"] == rubro and d.get("pct")
+                 and d["comercio"].strip().lower() not in GENERICOS
                  and ((region in d.get("regiones", [])) or (incluir_nacionales and not d.get("regiones")))]
         # Un mismo comercio una sola vez por banco (el de mayor %)
         mejor = {}
@@ -227,11 +236,12 @@ def main():
         b.close()
 
     total = sum(len(f) for f in sel.values())
-    texto = (f"🍽️ {total} descuentos en {rubro_txt.lower()} con tarjeta en la {region_txt} · {mes_txt}\n\n"
+    texto = (f"{EMOJI[a.rubro]} {total} descuentos en {rubro_txt.lower()} con tarjeta en la {region_txt} · {mes_txt}\n\n"
              f"Los mejores descuentos de {len(sel)} bancos y tarjetas, ordenados por día. "
              f"Desliza para ver todos y guarda el post para tenerlo a mano.\n\n"
              f"Los descuentos pueden cambiar: revisa topes y condiciones en el sitio de tu banco antes de usarlos.\n\n"
-             f"#descuentos #descuentoschile #{a.rubro} #santiago #tarjetadecredito #ahorro #chile")
+             f"#descuentos #descuentoschile #{a.rubro} #{HASHTAG_REGION.get(a.region, 'chile')} "
+             f"#tarjetadecredito #ahorro #chile")
     (out / "texto.txt").write_text(texto, "utf-8")
     print(f"{total_img} imágenes en {out}")
 

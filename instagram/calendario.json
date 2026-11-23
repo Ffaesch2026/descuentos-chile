@@ -1,0 +1,9 @@
+{
+ "_ayuda": "Cada entrada se publica el 'dia' indicado de cada mes (hora de Chile, alrededor de las 10:30). Solo se publican las que tienen \"activo\": true. Rubros: restaurantes, supermercados, combustible, farmacias, viajes, entretencion, vestuario, delivery, otros. Regiones: AP, TA, AN, AT, CO, VS, RM, LI, ML, NB, BI, AR, LR, LL, AI, MA.",
+ "publicaciones": [
+  {"dia": 2, "rubro": "restaurantes", "region": "RM", "activo": true},
+  {"dia": 9, "rubro": "restaurantes", "region": "VS", "activo": false},
+  {"dia": 16, "rubro": "restaurantes", "region": "BI", "activo": false},
+  {"dia": 23, "rubro": "vestuario", "region": "RM", "activo": false}
+ ]
+}

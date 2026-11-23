@@ -1,0 +1,87 @@
+name: Publicar en Instagram
+
+# Todos los días revisa instagram/calendario.json y publica lo que corresponde.
+# También se puede lanzar a mano (Actions → Publicar en Instagram → Run workflow).
+#
+# Secretos del repositorio (Settings → Secrets and variables → Actions):
+#   IG_TOKEN  token de acceso de larga duración de @descuentosalmes (obligatorio)
+#   GH_PAT    token de GitHub con permiso "Secrets: Read and write" sobre este repositorio,
+#             para guardar el IG_TOKEN renovado (opcional; sin él hay que renovarlo a mano cada 60 días)
+
+on:
+  schedule:
+    - cron: "23 13 * * *"   # 10:23 hora de Chile (verano) / 9:23 (invierno)
+  workflow_dispatch:
+    inputs:
+      rubro:
+        description: "Rubro (vacío = lo que diga el calendario para hoy)"
+        required: false
+        default: ""
+      region:
+        description: "Región (RM, VS, BI…)"
+        required: false
+        default: ""
+      publicar:
+        description: "Publicar en Instagram (si no, solo genera las imágenes para revisarlas)"
+        type: boolean
+        default: false
+      forzar:
+        description: "Publicar aunque ya se haya publicado este mes"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: instagram
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      TIENE_GH_PAT: ${{ secrets.GH_PAT != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - name: Preparar git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Renovar el token de Instagram
+        if: github.event_name == 'schedule' && env.TIENE_GH_PAT == 'true'
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          NUEVO=$(python -m instagram.publicar --renovar-token) || { echo "No se pudo renovar el token"; exit 0; }
+          echo "::add-mask::$NUEVO"
+          GH_TOKEN="$GH_PAT" gh secret set IG_TOKEN --body "$NUEVO" --repo "$GITHUB_REPOSITORY"
+          echo "Token renovado por 60 días."
+
+      - name: Publicar
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.rubro }}" ]; then ARGS="$ARGS --rubro ${{ inputs.rubro }} --region ${{ inputs.region }}"; fi
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.publicar }}" = "true" ]; then ARGS="$ARGS --publicar"; fi
+          if [ "${{ inputs.forzar }}" = "true" ]; then ARGS="$ARGS --forzar"; fi
+          python -m instagram.programar $ARGS
+
+      - name: Guardar imágenes para revisar
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: imagenes-instagram
+          path: instagram/salida/
+          if-no-files-found: ignore
+          retention-days: 14
