@@ -1,13 +1,13 @@
 {
- "generado": "2026-11-23T17:27:30+00:00",
+ "generado": "2026-11-23T18:24:48+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
    "nombre": "Banco de Chile",
    "sitio": "https://sitiospublicos.bancochile.cl/personas/beneficios",
    "estado": "ok",
-   "cantidad": 853,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "cantidad": 810,
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "falabella": {
@@ -16,7 +16,7 @@
    "sitio": "https://www.bancofalabella.cl/descuentos",
    "estado": "ok",
    "cantidad": 219,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "ripley": {
@@ -25,7 +25,7 @@
    "sitio": "https://www.bancoripley.cl/beneficios-y-promociones",
    "estado": "ok",
    "cantidad": 155,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "santander": {
@@ -34,7 +34,7 @@
    "sitio": "https://banco.santander.cl/beneficios",
    "estado": "ok",
    "cantidad": 207,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "cencosud": {
@@ -43,7 +43,7 @@
    "sitio": "https://www.tarjetacencosud.cl/publico/beneficios/landing/inicio",
    "estado": "ok",
    "cantidad": 39,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "tenpo": {
@@ -52,7 +52,7 @@
    "sitio": "https://www.tenpo.cl/beneficios",
    "estado": "ok",
    "cantidad": 37,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "mach": {
@@ -61,7 +61,7 @@
    "sitio": "https://www.machbank.cl/beneficios",
    "estado": "ok",
    "cantidad": 17,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "security": {
@@ -70,7 +70,7 @@
    "sitio": "https://personas.bancosecurity.cl/beneficios",
    "estado": "ok",
    "cantidad": 165,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "bancoestado": {
@@ -79,7 +79,7 @@
    "sitio": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios.html",
    "estado": "ok",
    "cantidad": 153,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "scotiabank": {
@@ -88,7 +88,7 @@
    "sitio": "https://www.scotiarewards.cl/scclubfront/categoria/mundos/descuentos",
    "estado": "ok",
    "cantidad": 248,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "itau": {
@@ -97,7 +97,7 @@
    "sitio": "https://itaubeneficios.cl/beneficios/",
    "estado": "ok",
    "cantidad": 204,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   },
   "bci": {
@@ -106,7 +106,7 @@
    "sitio": "https://www.bci.cl/beneficios/beneficios-bci",
    "estado": "ok",
    "cantidad": 291,
-   "actualizado": "2026-11-23T17:27:30+00:00",
+   "actualizado": "2026-11-23T18:24:48+00:00",
    "error": null
   }
  },
@@ -321,52 +321,6 @@
    ],
    "comunas": [
     "Valdivia"
-   ]
-  },
-  {
-   "id": "bancochile-77843d4a504c",
-   "banco": "bancochile",
-   "comercio": "Orbea",
-   "titulo": "Paga hasta en 24 cuotas sin interés.",
-   "descripcion": "Orbea es una marca vasca de bicicletas con más de un siglo de historia. Empresa de modelo de cooperativa, se destaca por sus valores, calidad, innovación y diseño personalizable, con presencia en el ciclismo profesional y recreativo a nivel global. . . Para una compra referencial de $1.000.000 en 24 cuotas. . CAE 0,06% Costo Total $1.008.000 Valor cuota: $41.667 . Promoción válida hasta el 31 de diciembre de 2027. Exclusivo para clientes que paguen con Tarjetas de credito emitidas por Banco de Chile y Banco Edwards y que soliciten el descuento al momento de pagar en compra presencial y online.",
-   "pct": 6,
-   "rubro": "otros",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2027-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/orbea",
-   "imagen": "https://assets.bancochile.cl/uploads/000/083/964/425f9c4b-8fc5-46bb-b2ef-747a4fd144db/original/logo-web-Orbea.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Lo Barnechea"
    ]
   },
   {
@@ -777,184 +731,13 @@
    ]
   },
   {
-   "id": "bancochile-b3379bcb632b",
-   "banco": "bancochile",
-   "comercio": "Smart Device",
-   "titulo": "Paga en 12 cuotas sin interés con tus Tarjetas de Crédito del Chile.",
-   "descripcion": "Paga en 12 cuotas sin interés con tus Tarjetas de Crédito del Chile. . Para una compra referencial de $800.000 en 12 cuotas de $66.667 . CAE: 1,47%, Costo Total: $806.336 . Promoción válida hasta el 31 de diciembre de 2026. Utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards), exclusivamente en modalidad de 12 cuotas sin interés. No aplica a otras tarjetas de crédito. Beneficio no aplica a compras efectuadas a través de recaudadores o plataformas de pago. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la g",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/smart-device",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/513/0c48bdc9-8758-44eb-b276-20f1fe70a35a/original/logo-web-Smart-Device.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-7264501568c7",
-   "banco": "bancochile",
-   "comercio": "Clínica Abedules",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Somos una Clínica Odontológica donde tenemos todas las especialidades dentales (Ortodoncia, Implantes, Rehabilitación, entre otras) y Estética facial (Bótox, Ácido Hialurónico etc). Combinamos la tecnología más avanzada con un excelente equipo de profesionales, entregando una extraordinaria calidad en nuestros tratamientos. Ofrecemos tratamientos de vanguardia (alineadores creados por nosotros (los entregamos en 1 semana y al ser de una nueva tecnología, ofrecen un menor tiempo de tratamiento), implantología con provisorios inmediatos, diseño de sonrisa). . . PPara una compra referencial de $5",
-   "pct": 47,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/clinica-abedulces-dto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/056/834/443cf695-0504-41cb-9cd9-7410f9bc254a/original/logo-web-Abedules.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Lo Barnechea"
-   ]
-  },
-  {
-   "id": "bancochile-38feb252787d",
-   "banco": "bancochile",
-   "comercio": "RUUF",
-   "titulo": "Paga hasta en 24 cuotas sin interés.",
-   "descripcion": "RUUF es el instalador de paneles solares residenciales más grande de Chile con más de 1000 instalaciones. Nos enfocamos en ofrecer un servicio de largo plazo para acompañarte en los 25 años de vida útil de tu proyecto. . Para una compra referencial de $8.000.000 en 24 cuotas . CAE: 0,77% Valor cuota: $333.333 Costo total $8.064.000 Promoción válida hasta el 31 de diciembre de 2026. Exclusivo para clientes que paguen con Tarjetas emitidas por Banco de Chile y Banco Edwards y que soliciten el descuento al momento de pagar en compra presencial y online. No acumulable con otras promociones. Descue",
-   "pct": 77,
-   "rubro": "otros",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/ruuf",
-   "imagen": "https://assets.bancochile.cl/uploads/000/083/153/328b2364-5b1f-4e36-bb1a-cd7d59b2b335/original/logo-web-RUUF.jpg",
-   "regiones": [
-    "TA"
-   ],
-   "comunas": [
-    "Iquique"
-   ]
-  },
-  {
-   "id": "bancochile-7db6e933a706",
-   "banco": "bancochile",
-   "comercio": "HIFI",
-   "titulo": "Paga en 4 a 24 cuotas sin interes.",
-   "descripcion": "HiFi existe porque amamos la música tanto como tú. Creemos que cada canción es una obra que merece ser vivida con intensidad y autenticidad. Por eso, nos dedicamos a ofrecer equipos de alta fidelidad que transforman cada nota en una experiencia única. Para quienes sienten la música en el alma, el sonido perfecto es simplemente indispensable. . Para una compra referencial de $500.000 CAE: 1,47% Costo total: $503.960 . Promoción válida hasta el 31 de diciembre de 2026. para compras presenciales en la dirección escificada utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chi",
-   "pct": 47,
-   "rubro": "entretencion",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/hifi-dto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/049/090/9371302e-4c46-47dd-aef3-843a946d998f/original/logo-web-HIFI.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Las Condes"
-   ]
-  },
-  {
    "id": "bancochile-a5d899d47e17",
    "banco": "bancochile",
    "comercio": "Axes Minibodegas",
    "titulo": "35% dto. presencial",
    "descripcion": "Axes Minibodegas – Tu espacio seguro y flexible en Santiago . ¿Te falta espacio en casa o en tu empresa? . Axes Minibodegas es tu solución perfecta de almacenamiento en Santiago. . Con más de 20 años de experiencia, ofrecen a sus clientes mini bodegas de 6, 10, 15 y 20 m2. Su misión es ofrecerte un Servicio de Excelencia, acompañándote en todo el proceso; desde la elección del tamaño ideal y el servicio de mudanza, hasta tu acceso libre y permanente. . . 35% dto. en los 4 primeros meses de arriendo de minibodegas. . Solicita tu descuento al momento de pagar. . No acumulable con otras promocion",
    "pct": 35,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -1340,7 +1123,7 @@
    "titulo": "20% dto. lunes y martes en compra presencial",
    "descripcion": "Trayecto Bookstore es la primera librería dentro de Metro. Trabajamos tanto con las grandes editoriales como con algunas más independientes, por lo que manejamos un catálogo amplio de libros. . . Beneficio valido los días lunes y martes. . No acumulable con otras promociones. . Beneficio exclusivo pagando con tus Tarjetas del Chile. . Promoción válida hasta el 31 de diciembre de 2026. Exclusivo para clientes que paguen con Tarjetas emitidas por Banco de Chile y Banco Edwards y que soliciten el descuento al momento de pagar en compra presencial . No acumulable con otras promociones. Descuento e",
    "pct": 20,
-   "rubro": "viajes",
+   "rubro": "entretencion",
    "dias": [
     0,
     1
@@ -2023,42 +1806,6 @@
    "comunas": []
   },
   {
-   "id": "bancochile-38a693a0a327",
-   "banco": "bancochile",
-   "comercio": "Zenit 90",
-   "titulo": "Paga hasta en 24 cuotas sin interés",
-   "descripcion": "Tu techo puede hacer mucho más que proteger tu casa. Puede trabajar por ti. En Zenit90 diseñan e instalan sistemas solares a medida, para hogares, comunidades y empresas, pensados para asegurar un retorno de la inversión, donde el ahorro mensual permite ir pagando el proyecto y reducir de forma permanente el gasto en energía. . . Paga hasta en 24 cuotas sin interés . Descuento exclusivo pagando con tus Tarjetas Crédito del Chile. . Para una compra referencial de $8.000.000 en 24 cuotas CAE: 0,77% Valor cuota: $333.333 Costo total $8.064.000 . Para una compra referencial de $8.000.000 en 24 cuo",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/zenit-90",
-   "imagen": "https://assets.bancochile.cl/uploads/000/098/508/bed1174e-8fa7-446a-88ec-e6f68d4ae77f/original/logo-web-Zenit-90.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-98f4ec4804ed",
    "banco": "bancochile",
    "comercio": "TERRA FORCE",
@@ -2389,42 +2136,6 @@
    ]
   },
   {
-   "id": "bancochile-91d0ac4aa479",
-   "banco": "bancochile",
-   "comercio": "4geeks",
-   "titulo": "Paga de 4 a 18 cuotas sin interés.",
-   "descripcion": "Paga de 4 a 18 cuotas sin interés con tus Tarjetas de Crédito del Chile. En 4Geeks Academy tendrás la oportunidad de convertirte en Full-Stack Developer en tan sólo 18 semanas o en Data Scientists en 16 semanas, además de contar con clases online y en vivo, mentorías personalizadas y acompañamiento en tu búsqueda de empleo. . +4.000 graduados . 86% contratados . 4.91/5 de valoración . Sus certificaciones están avaladas por el Departamento de Educación del Estado de La Florida Fueron nombrados uno de los mejores Bootcamps de programación del mundo según Course Report, Switchup, los Premios Exce",
-   "pct": 86,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/4geeks",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/778/ff8819cf-df3f-43e6-a8f5-713b10f13226/original/logo-web-4geeks.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-b1558d9729ba",
    "banco": "bancochile",
    "comercio": "Caktus",
@@ -2475,7 +2186,7 @@
    "titulo": "20% dto todos los días en compras online",
    "descripcion": "Dropit reinventa los productos de limpieza del hogar, transformándolos en una simple pastilla, así es como luchamos contra los plásticos de un solo uso. Dropit el único producto que limpia nuestras casas, montañas y costas. . . 20% dto en compras sobre $12.990 en dropit.cl todos los días . Obtén tu descuento ingresando el código SOYDELCHILE al finalizar la compra. . No acumulable con otras promociones. . Instagram: @dropit.cl | Facebook: @dropitchile.cl . Promoción válida hasta el 31 de diciembre de 2026. descuento exclusivo para clientes que paguen con Tarjetas emitidas por Banco de Chile, Ba",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -2549,268 +2260,6 @@
    "comunas": []
   },
   {
-   "id": "bancochile-ef6fdc433c3f",
-   "banco": "bancochile",
-   "comercio": "Edify",
-   "titulo": "Paga hasta 24 cuotas sin interés.",
-   "descripcion": "Edify entrega soluciones de energía solar residencial y eficiencia energética, a través de paneles solares, con atención personalizada, sin inversión inicial y con ahorro inmediato. . . Para una compra referencial de $8.000.000 en 24 cuotas . CAE: 0,77% Valor cuota: $333.333 Costo total $8.064.000 . Promoción válida hasta el 31 de diciembre de 2026. para compras utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards), exclusivamente en modalidad de 4 a 24 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, e",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/edify",
-   "imagen": "https://assets.bancochile.cl/uploads/000/077/439/354d7d03-b912-40fd-b093-4b75823708ed/original/logo-web-Edify.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura"
-   ]
-  },
-  {
-   "id": "bancochile-9ded5a6d6c11",
-   "banco": "bancochile",
-   "comercio": "SideMarket",
-   "titulo": "Paga en 4 a 24 cuotas sin interés.",
-   "descripcion": "Tienda especializada en notebooks y celulares reacondicionados, trabajamos con marcas como Apple, Lenovo, Dell y Hp. Todo con 1 año de garantía. . Paga en 4 a 24 cuotas sin interés. . Para una compra referencial del $500.000 en 12 cuotas de $41.667 . CAE: 1,47%, Costo Total: $503.960 . Promoción válida hasta el 31 de diciembre de 2026. para compras utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards) exclusivamente en modalidad de 4 a 24 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, entregas de bene",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/sidemarket",
-   "imagen": "https://assets.bancochile.cl/uploads/000/058/354/4272941f-adab-4f63-879e-5d0568db135a/original/logo-web-SideMarket.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "La Florida"
-   ]
-  },
-  {
-   "id": "bancochile-6b8222318132",
-   "banco": "bancochile",
-   "comercio": "Solarvento",
-   "titulo": "Paga en 4 a 24 cuotas sin interés.",
-   "descripcion": "Solarvento nace en el año 2010 como una de las primeras empresas dedicadas a la Energías Renovables del país. Inicialmente se enfoca en la producción de agua caliente usando el sol como combustible, y luego a partir del año 2018 casi en un 100% a la generación fotovoltaica. Sus principales clientes han sido las empresas que quieren reducir o eliminar sus consumos eléctricos, pero también aquellos clientes residenciales cansados de las continuas alzas de tarifas o bien como una forma de hacer un aporte al medio ambiente mediante la autogeneración de su propia energía . . Paga en 4 a 24 cuotas s",
-   "pct": 100,
-   "rubro": "combustible",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/solarvento-cuotas",
-   "imagen": "https://assets.bancochile.cl/uploads/000/056/398/a55c00c7-49f9-404a-989a-69b981ed7b2c/original/logo-web-Solarvento-.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-32255b904e87",
-   "banco": "bancochile",
-   "comercio": "Gaes",
-   "titulo": "Paga en 4 a 24 cuotas sin interés.",
-   "descripcion": "GAES, una marca Amplifon: expertos en cuidado auditivo, audífonos y centros auditivos | GAES y Amplifon impulsaron, hace más de 70 años, dos proyectos con los que mejorar la calidad de vida de las personas con pérdida auditiva. Hoy, con la unión de las dos marcas, nos convertimos en “GAES, una marca Amplifon”, la compañía más grande, avanzada e innovadora en el sector.. . Para compras referencial de $1.000.000 en 24 cuotas . CAE: 0,77% Valor cuota: $41.667 Costo total $1.008.000 . Promoción válida hasta el 31 de diciembre de 2026. Para compras utilizando como medio de pago Tarjetas de Crédito ",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/gaes",
-   "imagen": "https://assets.bancochile.cl/uploads/000/058/408/f57e3bfa-e4d1-40af-8996-4fd79003878e/original/logo-web-GAES.jpg",
-   "regiones": [
-    "AP",
-    "CO",
-    "VS",
-    "RM",
-    "LI",
-    "ML",
-    "BI",
-    "AR",
-    "LR",
-    "LL",
-    "MA"
-   ],
-   "comunas": [
-    "Arica",
-    "Cerrillos",
-    "Huechuraba",
-    "La Florida",
-    "La Reina",
-    "La Serena",
-    "Los Andes",
-    "Los Ángeles",
-    "Maipú",
-    "Melipilla",
-    "Osorno",
-    "Providencia",
-    "Puente Alto",
-    "Puerto Montt",
-    "Punta Arenas",
-    "Quillota",
-    "Quilpué",
-    "Rancagua",
-    "San Fernando",
-    "Santiago",
-    "Talca",
-    "Temuco",
-    "Valdivia",
-    "Valparaíso",
-    "Vitacura",
-    "Viña del Mar"
-   ]
-  },
-  {
-   "id": "bancochile-3070a51854d0",
-   "banco": "bancochile",
-   "comercio": "SolarBosch",
-   "titulo": "Paga en 4 a 24 cuotas sin interés.",
-   "descripcion": "Solarbosch nace el año 2019 en Aysén, como una empresa especialista en la instalación de proyectos fotovoltaicos con almacenamiento de baterías (Off grid) dentro de la región. Nuestro sello siempre ha sido la post venta y la entrega de diferentes alternativas para el desarrollo de cada proyecto, evaluando y dimensionando según las necesidades de consumo y presupuesto de cada cliente. Actualmente, hemos realizado más de 50 proyectos de diferente índole (Off Grid-On grid e híbridos) y estamos presentes a lo largo de todo Chile con sedes en Aysén, RM, Atacama y O'Higgins. . Paga tus proyectos en ",
-   "pct": 47,
-   "rubro": "supermercados",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/solarbosch",
-   "imagen": "https://assets.bancochile.cl/uploads/000/027/110/11cef8b3-6f1c-4d44-b0f0-d0ab1e1552fc/original/logo-web-SolarBosch.jpg",
-   "regiones": [
-    "AI"
-   ],
-   "comunas": [
-    "Río Ibáñez"
-   ]
-  },
-  {
    "id": "bancochile-349b677b1d8b",
    "banco": "bancochile",
    "comercio": "Guiño Óptica",
@@ -2857,46 +2306,6 @@
    "comunas": [
     "Concepción",
     "Los Ángeles"
-   ]
-  },
-  {
-   "id": "bancochile-d3114ec89d81",
-   "banco": "bancochile",
-   "comercio": "Carolina Varela",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Centro de Salud y Estética Integral Carolina Varela, es la decisión para lograr la figura ideal y la salud que mereces. Somos un centro de estética comprometido en brindarte un enfoque integral y saludable para alcanzar tus metas. Recupera o descubre tu figura ideal con nuestros tratamientos. . Paga todos tus tratamientos de 4 a 12 cuotas sin interés con tus Tarjetas de Crédito del Chile. . Para una compra referencial de $1.000.000 en 12 cuotas de $83.333, CAE: 1,47%, Costo Total: $1.007.920 Promoción válida hasta el 31 de diciembre de 2026. Para compras en establecimientos adheridos, utilizan",
-   "pct": 47,
-   "rubro": "farmacias",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/carolina-varela",
-   "imagen": "https://assets.bancochile.cl/uploads/000/058/903/9fe976c2-eec8-4e3a-a8e1-b347fab9115b/original/logo-web-carola.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura"
    ]
   },
   {
@@ -2997,142 +2406,6 @@
    "imagen": "https://assets.bancochile.cl/uploads/000/026/880/30090fe2-3482-4a51-aea6-d6b92b475795/original/logo_web_pitisimas_bch.jpg",
    "regiones": [],
    "comunas": []
-  },
-  {
-   "id": "bancochile-34405fed0f8f",
-   "banco": "bancochile",
-   "comercio": "TUBSA",
-   "titulo": "Paga en 4 a 18 cuotas sin interés.",
-   "descripcion": "Paga en 4 a 18 cuotas sin interés . Proyectos y productos de eficiencia energética y energía renovables. Bombas de calor, sistemas fotovoltaicos y descalcificadores de agua. . Para una compra referencial de $800.000 en 18 cuotas de $44.444 . CAE: 0,08% Costo total: $806.400 . Promoción válida hasta el 31 de diciembre de 2026. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards), exclusivamente en modalidad 04 a 18 a cuotas sin interés en los proyectos adheridos. No aplica a otras tarjetas de crédito. L",
-   "pct": 8,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/tubsa-dto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/058/359/3ffd9375-c309-4b5f-9031-81e8ec1cabe6/original/logo-web-TUBSA.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Santiago"
-   ]
-  },
-  {
-   "id": "bancochile-32e233c86135",
-   "banco": "bancochile",
-   "comercio": "Motoplex",
-   "titulo": "Paga en 12, 18 y 24 cuotas sin interés.",
-   "descripcion": "Descubre la síntesis perfecta entre diseño y tecnología. Vespa, una obra maestra sobre ruedas Made in Italy Estilo que se siente, tecnología que sorprende. . Podrás pagarla hasta en 24 cuotas sin interés Ejemplo: Vespa GTS 300 $6.990.000 24 cuotas $291.250 CAE 0.77%. . Disponibilidad segun stock disponible en tienda. . Solo Ventas en Motoplex Av La Dehesa 181 esquina Escriva de Balaguer Lo Barnechea. . Promoción hasta el 30 de Diciembre o hasta agotar stock. Motoplex y Vespa son Marca registrada. . Promoción válida hasta el 31 de diciembre de 2026. utilizando como medio de pago Tarjetas de Cré",
-   "pct": 77,
-   "rubro": "restaurantes",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/motoplex",
-   "imagen": "https://assets.bancochile.cl/uploads/000/027/106/b737fdc7-ca2b-4ed8-a2b9-db89daddaf23/original/logo-web-Motoplex.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Lo Barnechea"
-   ]
-  },
-  {
-   "id": "bancochile-ca33fd4944eb",
-   "banco": "bancochile",
-   "comercio": "Sportway",
-   "titulo": "Paga en 12 cuotas sin interés.",
-   "descripcion": "¡Encuentra todo lo que necesitas para tu deporte favorito! Balones de fútbol, básquetbol, vóleibol, accesorios deportivos, ropa y mucho más en www.sportway.cl . Paga en 12 cuotas sin interés. . Para una compra referencial de $200.000 en 3 cuotas . CAE: 0,19%, Costo total: $200.396. . Promoción válida hasta el 31 de diciembre de 2026. Para compras utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards) exclusivamente en modalidad 12 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, entregas de beneficios no",
-   "pct": 19,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/sportway-cuotas",
-   "imagen": "https://assets.bancochile.cl/uploads/000/027/584/b9235d03-7378-4042-8c1d-125447fc15d0/original/logo_Sportway.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Huechuraba"
-   ]
   },
   {
    "id": "bancochile-c2445a26c529",
@@ -4054,50 +3327,6 @@
     "Vitacura",
     "Viña del Mar"
    ]
-  },
-  {
-   "id": "bancochile-8e134ffcdac3",
-   "banco": "bancochile",
-   "comercio": "Be-electric",
-   "titulo": "Paga en 6 a 24 cuotas sin interés todos los días.",
-   "descripcion": "Es una empresa Social y ecológicamente responsable que promueve la electromovilidad, como medio de transporte eficiente, moderno y ecológico. Su meta es la democratización de la Electromovilidad ofreciendo producto de la más prestigiosas marcas de alta vanguardia tecnológica y calidad , como son DYU en e-Bikes urbanas , Sunra y LVNENG en e-motos, BBRobotics en e-Handicap y Onean e-surf entre otras marcas y productos. . Nuestra marca es un llamado a subirse a la electromobilidad y su aveja simboliza que somos social y ecológicamente responsables. . Con tus Tarjetas de Crédito paga en 6 a 24 cuo",
-   "pct": 47,
-   "rubro": "viajes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/be-electric",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/729/954de0e9-82a1-446c-8630-206b26c3e87b/original/logo-web-Be-electric.jpg",
-   "regiones": [],
-   "comunas": []
   },
   {
    "id": "bancochile-5d456a0ddd53",
@@ -6199,50 +5428,6 @@
    ]
   },
   {
-   "id": "bancochile-49e0c1c7d2ff",
-   "banco": "bancochile",
-   "comercio": "EnelX",
-   "titulo": "Paga en 13 a 24 cuotas sin interés.",
-   "descripcion": "Eficiencia, innovación y tecnología para tu hogar. En Enel X Store encontrarás productos con soluciones en categorías como Climatización, Energía solar, Temperado de agua, Calefacción, Smarthome, Electromovilidad y muchas más. Con nuestra nueva línea de productos para el hogar te ayudamos a reducir tu consumo hasta un 40%. Hazte parte de la transformación de la energía con los mejores productos y soluciones completas que necesitas para tu hogar. . Con Tus Tarjetas de Crédito del Chile paga en 13 a 24 cuotas sin interés. . Para una compra referencial de $4.000.000 en 24 cuotas de $166.667 . CAE",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/enelx",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/746/ba6d33bc-99c9-419e-a842-ab5adeafeab9/original/logo-web-EnelX.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-7bdc8d0f7f93",
    "banco": "bancochile",
    "comercio": "ESCUELA DE SURF PLAYA GRANDE",
@@ -6630,7 +5815,7 @@
    "titulo": "20% dto. en modelo URBAN",
    "descripcion": "Genera tu propia agua 100% purificada y sustentable. Dispensador con tecnología inteligente que genera agua purificada a partir del aire. El agua que se genera es una fuente alternativa y sustentable de agua segura y de alta calidad para consumo humano. Contribuye a mitigar enfermedades y aminorar los efectos del cambio climático. Con tú compra estarás aportando en la implementación de nuevos Puntos de Agua Sustentable en comunidades vulnerables. . Obtén un 20% de descuento en el modelo URBAN . La compra se realiza previa reserva, siguiendo los siguientes pasos: . Solicitar tu compra escribien",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -7325,47 +6510,6 @@
    ]
   },
   {
-   "id": "bancochile-9d4fb47a7680",
-   "banco": "bancochile",
-   "comercio": "HOME DESIGN",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Te invitamos a amoblar tu nuevo hogar o renovar tus espacios con nuestros diseños. . Nuestros principales pilares, innovación y vanguardia, nos han permitido crecer y llegar a ser hoy un referente en diseño y fabricación de mobiliario en nuestro país, entregando productos con terminaciones de calidad, elaborados con maderas nobles y materiales de alto estándar. . Para una compra referencial de $500.000 CAE: 1,47%, Costo Total: $503.960. . Promoción válida hasta el 31 de diciembre de 2026. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/home-design",
-   "imagen": "https://assets.bancochile.cl/uploads/000/048/879/cfae3a06-55eb-4063-a172-772014a71ed8/original/logo-web-HOME-DESIGN.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Lo Barnechea",
-    "Santiago"
-   ]
-  },
-  {
    "id": "bancochile-05bbf8180d36",
    "banco": "bancochile",
    "comercio": "Home Life",
@@ -7406,42 +6550,6 @@
    "vigencia_hasta": "2027-12-31",
    "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/home-life",
    "imagen": "https://assets.bancochile.cl/uploads/000/027/560/51e629ff-d2a3-40b7-8b8e-c2a62ec0fa7c/original/logo-web-Home-Life.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-d703e7778c7e",
-   "banco": "bancochile",
-   "comercio": "Homein",
-   "titulo": "Paga hasta en 24 cuotas sin interés.",
-   "descripcion": "Homein es la nueva forma de renovar tu nuevo o actual hogar a través de +60 marcas asociadas junto a la asesoría de arquitectos expertos, ofreciendo soluciones centralizadas, rápidas y adaptadas a tus necesidades y presupuesto junto a las mejores alternativas de financiamiento. . Para una compra referencial de $10.000.000 en 24 cuotas. CAE 0,77% Costo Total $1.008.000 Valor cuota: $416.667 . Promoción válida hasta el 31 de diciembre de 2026. Exclusivo para clientes que paguen con Tarjetas de credito emitidas por Banco de Chile y Banco Edwards y que soliciten el descuento al momento de pagar en",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/homein",
-   "imagen": "https://assets.bancochile.cl/uploads/000/087/715/e67c5810-f0c0-4d89-8cf9-e6c8af0e8eba/original/logo-web-Monal.jpg",
    "regiones": [],
    "comunas": []
   },
@@ -8275,41 +7383,6 @@
    ]
   },
   {
-   "id": "bancochile-8fbd52c62641",
-   "banco": "bancochile",
-   "comercio": "LA SILLERIA",
-   "titulo": "Paga en 4 a 6 cuotas sin interés.",
-   "descripcion": "Encuentra gran variedad de muebles de diseño, sillas, pisos, sitiales, mesas y decoración para hogar y proyectos. Envíos a todo Chile. . Somos una tienda que ocupa un lugar importante en Chile en el mundo de tiendas online de muebles de diseño y decoración. Nos distinguimos por seleccionar y entregar productos de alta calidad, garantizando a nuestros clientes poder diseñar espacios armónicos, ambientes de inspiración y decoraciones perfectas. . Con tus Tarjetas de Crédito del Chile, paga en 4 a 6 cuotas sin interés. . Para una compra referencial de $500.000 CAE: 1,47%, Costo Total: $503.960. .",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-silleria",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/735/82d7e5b1-9b7f-4f73-a4cf-984b6325bb53/original/logo-web-LA-SILLERIA.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-07ba28c2c3ea",
    "banco": "bancochile",
    "comercio": "LAM BURGUESA",
@@ -8669,7 +7742,7 @@
    "titulo": "Hasta 50% dto. todos los días",
    "descripcion": "En LTS Off Road Solutions, nos especializamos en brindar soluciones de alta calidad para vehículos todoterreno. Nuestra empresa, con sede en Puerto Varas, Región de Los Lagos, se dedica a ofrecer una amplia gama de productos y servicios diseñados para mejorar el rendimiento de los vehículos todoterreno. . Nuestros servicios incluyen la venta de accesorios tales como neumáticos, llantas, suspensiones, tapas cubre pick up y más. Trabajamos con marcas líderes en la industria para asegurar que nuestros clientes reciban solo lo mejor en términos de tecnología y fiabilidad. . Óbten 50% de descuento ",
    "pct": 50,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -9501,46 +8574,6 @@
    ]
   },
   {
-   "id": "bancochile-9a0f556753e5",
-   "banco": "bancochile",
-   "comercio": "Mobie Motos eléctricas",
-   "titulo": "Paga en 4 a 24 cuotas sin interés",
-   "descripcion": "Ahora la movilidad eléctrica está a tu alcance. Muévete sin contaminar en una moto eléctrica MOBIE . Aprovecha de 4 a 24 cuotas sin interés en productos MOBIE. Oferta exclusiva para clientes. . Para una compra referencial de $1.500.000 en 12 cuotas de $125.000 CAE: 1,47%, Costo Total: $1.511.880 . Promoción válida hasta el 31 de diciembre de 2026. para compras utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards), exclusivamente en modalidad de 04 a 24 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, en",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mobie-motos-electricas",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/750/eb402717-8deb-49c8-adc8-7fb93eb903de/original/logo-web-Mobie-Motos.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura"
-   ]
-  },
-  {
    "id": "bancochile-1ef87583b5a2",
    "banco": "bancochile",
    "comercio": "Moscowa Restobar",
@@ -9816,54 +8849,6 @@
    "vigencia_desde": null,
    "vigencia_hasta": "2026-12-31",
    "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/nevada-novias",
-   "imagen": "https://assets.bancochile.cl/uploads/000/074/373/9f262559-f191-4957-9c7b-9461f7ad2014/original/logo-web-Nevada-Novias.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura"
-   ]
-  },
-  {
-   "id": "bancochile-71fb33e5d684",
-   "banco": "bancochile",
-   "comercio": "Nevada Novias",
-   "titulo": "Paga en 4 a 24 cuotas sin interés.",
-   "descripcion": "Nevada Novias es la prueba de que los sueños se hacen realidad, y cada novia que nos elige es parte de ese sueño. . Para compras referencial de $1.000.000 en 24 cuotas CAE: 0,77% Valor cuota: $41.667 Costo total $1.008.000 . Promoción válida hasta el 31 de diciembre de 2026. para compras utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards), exclusivamente en modalidad de 4 a 24 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y ",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/nevada-novias-csi",
    "imagen": "https://assets.bancochile.cl/uploads/000/074/373/9f262559-f191-4957-9c7b-9461f7ad2014/original/logo-web-Nevada-Novias.jpg",
    "regiones": [
     "RM"
@@ -11585,42 +10570,6 @@
    ]
   },
   {
-   "id": "bancochile-93009b892f28",
-   "banco": "bancochile",
-   "comercio": "Samsung",
-   "titulo": "Paga hasta en 24 cuotas sin interés",
-   "descripcion": "Desde ahora podrás pagar hasta en 24 cuotas sin interés con tus Tarjetas de Crédito en compra online y tiendas Samsung. . Para una compra referencial de $400.000 en 12 cuotas de $33.333. . CAE:1,47%, Costo total: $403.168 . Promoción válida hasta el 31 de diciembre de 2026. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards y Banco CrediChile), exclusivamente en modalidad de 4 a 12 cuotas sin interés en productos en tiendas Samsung previamente mencionados No aplica a otras tarjetas de crédito. Las ofe",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/samsung",
-   "imagen": "https://assets.bancochile.cl/uploads/000/054/322/964dbc17-16ce-4b6c-abb8-92d6cc3d6418/original/logo-web-samsung.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-e01f9bfd0190",
    "banco": "bancochile",
    "comercio": "SANASALUD",
@@ -12621,42 +11570,6 @@
    ]
   },
   {
-   "id": "bancochile-1541f7f4ccc3",
-   "banco": "bancochile",
-   "comercio": "Universidad de Los Andes",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Sigue perfeccionándote con nuestros programas de Postgrado y Educación Continua y paga la matrícula y arancel en 4 a 12 cuotas sin interés con tus Tarjetas de Crédito del Chile en los programas adheridos.. . Para un monto referencial de $4.000.000 en 12 cuotas de $ $ 333.333 . CAE: 1,47% Costo Total: $ $ 4.031.680 . Convenio no incluye Programas de ESE. . Descuento no aplica para arancel pregrado. . Promoción válida para pago de arancel completo durante el proceso de matrícula. Excluye pago de arancel mediante plan de pagos. . Promoción válida hasta el 31 de diciembre de 2026. para compras onl",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/universidad-de-los-andes",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/748/0ced4f10-b6e4-4447-92fa-60dc758c9c73/original/logo-web-Universidad-de-Los-Andes.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-c332b2c6b445",
    "banco": "bancochile",
    "comercio": "Varvacoa",
@@ -12975,83 +11888,6 @@
    ]
   },
   {
-   "id": "bancochile-fe0012e006b8",
-   "banco": "bancochile",
-   "comercio": "WOM",
-   "titulo": "Paga en 13 a 24 cuotas sin interés.",
-   "descripcion": "Paga en 13 a 24 cuotas sin interés con tus Tarjetas del Chile en todos los productos en tiendas WOM. . Para una compra referencial de $400.000 en 24 cuotas. . CAE: 0,77% - Costo Total: $403.200 . Valor Cuota: $16.667 . Beneficio en todas las tiendas WOM a lo largo del país. . Promoción válida hasta el 31 de diciembre de 2026. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards y Banco CrediChile), exclusivamente en modalidad de 13 a 24 cuotas sin interés en productos en tiendas WOM. No aplica a otras t",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/wom",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/743/b38aa598-f838-46c5-80e3-eb49657f0135/original/logo-web-WOM.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-a79427af96a9",
-   "banco": "bancochile",
-   "comercio": "Xiaomi",
-   "titulo": "Paga en 4 a 24 cuotas sin interés.",
-   "descripcion": "En Xiaomi innovamos para que la tecnología esté al alcance de todos. Smartphones, wearables y ecosistemas inteligentes diseñados para acompañarte en cada momento de tu vida. . . Paga en 4 a 24 cuotas sin interés con tus Tarjetas de Crédito del Chile. . Promoción exclusiva en Cenco Costanera y Mall Vivo Imperio. . Para una compra referencial de $400.000 en 12 cuotas de $33.333. . CAE:1,47%, Costo total: $403.168 . Promoción válida hasta el 31 de diciembre de 2026. para compras utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards), exclusivamente e",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/xiaomi",
-   "imagen": "https://assets.bancochile.cl/uploads/000/097/270/ab7cd33b-b2a5-4f50-b62c-baf636e8737d/original/logo-web-Xiaomi.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Providencia",
-    "Santiago"
-   ]
-  },
-  {
    "id": "bancochile-a27fc6a7b506",
    "banco": "bancochile",
    "comercio": "YALE",
@@ -13192,53 +12028,13 @@
    ]
   },
   {
-   "id": "bancochile-6a23bc4fcb6b",
-   "banco": "bancochile",
-   "comercio": "Zenclinic Dental",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Clínica dental en La Dehesa con especialistas en carillas cerámicas, diseño de sonrisa, Invisalign, implantes dentales y rehabilitación oral. . Paga en 4 a 12 cuotas sin interés en Zenclinic Dental. . Zenclinic Dental es una clínica dental en La Dehesa, Lo Barnechea, con más de 12 años de trayectoria. Cada área está a cargo de un especialista con registro en la Superintendencia de Salud. Sus servicios incluyen: . . Carillas cerámicas IPS e.max y diseño de sonrisa. . Ortodoncia invisible Invisalign con un Invisalign Diamond Provider. . Implantes dentales MIS con planificación 3D y cirugía guiad",
-   "pct": 47,
-   "rubro": "farmacias",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/zenclinic",
-   "imagen": "https://assets.bancochile.cl/uploads/000/096/274/180e772f-d9f8-4ce9-bf7f-d8096be76abc/original/logo-web-Zenclinic.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Lo Barnechea"
-   ]
-  },
-  {
    "id": "bancochile-8fccb83cdadc",
    "banco": "bancochile",
    "comercio": "Zona Verde",
    "titulo": "Hasta 20% dto. todos los días en compra presencial y online.",
    "descripcion": "Empresa liderada por mujeres, conectada con la conciencia social, la vida saludable y con dejar un mundo mejor al que recibimos. . 4 años de existencia, entregando educación ambiental, asesorías. coaching ecológico y productos amigables con el planeta y contigo mismo. . Compra online: . Obtén 20% dto. ingresando los seis primeros dígitos de tu tarjeta al momento de finalizar compra en zonaverdespa.cl. . No acumulable con otras promociones. . Descuento no aplica al valor del despacho del producto. . Compra en nuestra tienda física: . 10% de descuento. . Solicitando el descuento al momento de la",
    "pct": 20,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -13368,59 +12164,6 @@
    "imagen": "https://assets.bancochile.cl/uploads/000/095/258/53142cc1-5223-484f-8361-b43a6da68bf0/original/logo-web-Aba-English.jpg",
    "regiones": [],
    "comunas": []
-  },
-  {
-   "id": "bancochile-aa93af60e709",
-   "banco": "bancochile",
-   "comercio": "Abastible",
-   "titulo": "Paga en 13 a 24 cuotas sin interés.",
-   "descripcion": "Ahorra hasta un 29% en combustible convirtiendo tu vehículo a gas licuado (GLP), aumenta la autonomía de tu vehículo por dualidad de combustibles (GLP/Gasolina) y estarás ayudando al medio ambiente. Convierte tu vehículo con Abastible Autogas y podrás pagar tu kit de conversión en 13 a 24 cuotas sin interés. Convierte con el líder del mercado de GLP, contamos con talleres certificados, expertos en conversión y nuestra red de estaciones de servicio de Arica a Puerto Montt. Cotiza en: https://www.abastible.cl/autogas/cotiza-tu-kit/?utm_source=BeneficiosBanco&utm_medium=Banner&utm_campaign=Alianz",
-   "pct": 77,
-   "rubro": "combustible",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/abastible",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/728/870ebd53-64f9-44e4-bb0f-7e41de9b1713/original/logo-web-Abastible.jpg",
-   "regiones": [
-    "VS",
-    "RM",
-    "LI",
-    "ML",
-    "BI",
-    "AR",
-    "LR",
-    "LL"
-   ],
-   "comunas": [
-    "Concepción",
-    "Curicó",
-    "Llanquihue",
-    "Rancagua",
-    "Talca",
-    "Temuco",
-    "Valdivia"
-   ]
   },
   {
    "id": "bancochile-3d293cb12586",
@@ -13800,7 +12543,7 @@
    "titulo": "20% dto. todos los días presencial",
    "descripcion": "DELTAMOTORS está contigo cuando más lo necesitas. Con profesionalismo y años de experiencia, nos encargamos de tu auto como si fuera nuestro. Ya sea un mantenimiento o un rescate en grúa, puedes confiar en que recibirás un servicio rápido, confiable y con la calidad que mereces. . . 20% dto. en mantenimiento por kilometraje. . 20% dto. en diagnóstico del estado mecánico del vehículo. . 20% dto. en traslado en grúa de rescate en la Región Metropolitana (beneficio sujeto a disponibilidad). . Solicita tu descuento al momento de pagar. . Beneficio no es acumulable con otras promociones y/o descuen",
    "pct": 20,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -16469,7 +15212,7 @@
    "titulo": "en Travel Duty o en Travel Club",
    "descripcion": "Canjea el 100% con tus Dólares-Premio en miles de productos o tu próximo viaje con tu Plan de Tarjeta Travel de Crédito Travel Infinite, Travel Black y Travel Platinum. . . Canjea 100% DP en Travel Duty con tu Plan Tarjeta de Crédito Travel Black y Travel Platinum . Canjea 100% DP en Travel Duty y Travel Club con tu Plan Tarjeta de Crédito Travel Infinite. . Promoción válida hasta el 31 de diciembre de 2026. Exclusivo para clientes Plan Travel Black e Infinite que paguen con sus Tarjetas Banco de Chile. La entrega de los beneficios es de exclusiva responsabilidad de cada comercio, no cabiéndol",
    "pct": 100,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [],
    "tarjetas": [
     "Visa Infinite crédito",
@@ -17339,54 +16082,6 @@
    ]
   },
   {
-   "id": "bancochile-1de5d5e12b9b",
-   "banco": "bancochile",
-   "comercio": "Iron Training",
-   "titulo": "Paga hasta en 24 cuotas sin interés",
-   "descripcion": "Centro de entrenamiento enfocado en el entrenamiento guiado y personalizado, donde cada persona entrena con estructura, corrección técnica y acompañamiento profesional. Complementa su servicio con kinesiología y nutrición, ofreciendo una experiencia integral orientada a mejorar la salud, el rendimiento y el bienestar en el día a día. . . Paga hasta en 24 cuotas sin interés . Exclusivo pagando con tus Tarjetas Crédito del Chile. . Para una compra referencial de $300.000 en 24 cuotas . CAE: 0,77% Valor cuota: $12.500 Costo total $302.400 . Para una compra referencial de $1.500.000 en 24 cuotas C",
-   "pct": 77,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/iron-training-dto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/102/887/3de447c9-2ccf-43c8-b848-cfa89333052f/original/logo-web-Iron-Training.jpg",
-   "regiones": [
-    "VS"
-   ],
-   "comunas": [
-    "Quilpué"
-   ]
-  },
-  {
    "id": "bancochile-8b45dbd328dc",
    "banco": "bancochile",
    "comercio": "Oasi di Bellezza",
@@ -17474,46 +16169,6 @@
    ],
    "comunas": [
     "Valdivia"
-   ]
-  },
-  {
-   "id": "bancochile-5b725a22b90a",
-   "banco": "bancochile",
-   "comercio": "Audiopartners",
-   "titulo": "Paga hasta en 24 cuotas sin interés",
-   "descripcion": "Audiopartners: Vuelve a Escuchar el Placer de la Vida En Audiopartners, en Magallanes, ofrecen audífonos Rexton con más de 70 años de historia y confiabilidad cuidando cada detalle: . . Visitas a domicilio para tu comodidad . Plan de mantenimiento sin cargo por 2 años . Atención personalizada adaptada a tus necesidades . Audífonos Rexton inteligentes que se adaptan al ruido del ambiente y entornos, incluso al viento . Porque oír no debe ser difícil. Disfruta las conversaciones que importan sin interferencias. Sus audífonos filtran el ruido ambiental y el viento para que escuches con claridad, ",
-   "pct": 77,
-   "rubro": "otros",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/audiopartners",
-   "imagen": "https://assets.bancochile.cl/uploads/000/102/945/c35c6ca4-2988-480d-b088-06f270cfdd48/original/logo-web-Audiopartners.jpg",
-   "regiones": [
-    "MA"
-   ],
-   "comunas": [
-    "Punta Arenas"
    ]
   },
   {
@@ -18351,54 +17006,6 @@
    ]
   },
   {
-   "id": "bancochile-1803f94e4a57",
-   "banco": "bancochile",
-   "comercio": "Glowmed",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Somos un Centro Odontológico y Médico ubicados en la comuna de La Florida. Contamos con profesionales altamente especializados. Ayudamos a nuestros pacientes a encontrar soluciones, brindando una atención de excelencia y gran calidez humana. . Paga todos tus tratamientos de 4 a 12 cuotas sin interés con tus Tarjetas de Crédito del Chile. . Para una compra referencial de $500.000 en 12 cuotas de $41.667 CAE : 1,47%, Costo total: $504.000 . Promoción válida hasta el 30 de septiembre de 2027. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas po",
-   "pct": 47,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2027-09-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/csi-siglowmed",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/418/56c7abdf-7567-421e-9697-64c2fdd7df8f/original/logo-web-Glowmed.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "La Florida"
-   ]
-  },
-  {
    "id": "bancochile-075c2ac400c6",
    "banco": "bancochile",
    "comercio": "LA BASE",
@@ -18638,40 +17245,6 @@
    "comunas": [
     "Providencia"
    ]
-  },
-  {
-   "id": "bancochile-232533786511",
-   "banco": "bancochile",
-   "comercio": "Apple Store Online",
-   "titulo": "Paga de 3 a 24 cuotas sin interés.",
-   "descripcion": "Apple Store llegó a Chile y con tus Tarjetas de Crédito del Chile podrás pagar en 3 a 24 cuotas comprando en apple.com/cl Para una compra referencial de $400.000 en 24 cuotas de $16.667 . CAE: 0,77%, Costo total: $403.200. . Promoción válida hasta 31 de diciembre de 2026. para compras en www.apple.com/cl, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards), exclusivamente en modalidad de 3 a 24 cuotas sin interés. No aplica a otras tarjetas de crédito. Beneficio no aplica a compras efectuadas a través de recaudadores o plataformas de pago. Las ",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/apple-store-online",
-   "imagen": null,
-   "regiones": [],
-   "comunas": []
   },
   {
    "id": "bancochile-c095de8258aa",
@@ -20706,196 +19279,6 @@
    "vigencia_hasta": "2026-12-31",
    "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/aethos",
    "imagen": "https://assets.bancochile.cl/uploads/000/095/673/0e84b9df-a76e-486a-afc3-cccbd3adf0c7/original/logo-web-Aethos.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-06f6ce0f812c",
-   "banco": "bancochile",
-   "comercio": "MacOnline - Apple",
-   "titulo": "Lo mejor de Apple en 3, 6, 12, 18 o 24 cuotas sin interés.",
-   "descripcion": "Con Tus Tarjetas de Crédito del Chile paga en 3, 6, 12, 18 o 24 cuotas sin interés. . Aplica para todas las compras excepto para Apple Watch, Audio Apple y compras menores a $999.999 que acceden a 3, 6 y 12 cuotas sin interés. . Para una compra referencial de $400.000 en 24 cuotas de $16.667 . CAE: 0,77%, Costo total: $403.200. . Promoción válida hasta el 31 de diciembre de 2026. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards y Banco CrediChile), exclusivamente en modalidad de 3, 6, 12, 18 o 24 cu",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/maconline-apple-dto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/027/006/83014578-10b9-4e06-883b-e9138776bc05/original/logo_2_mac.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-4158e701bf22",
-   "banco": "bancochile",
-   "comercio": "AUFBAU",
-   "titulo": "Paga en 13 a 24 cuotas sin interés",
-   "descripcion": "Con tus Tarjetas de Crédito del Chile paga en 13 a 24 cuotas sin interés. . Para una compra referencial de $400.000 en 24 cuotas de $16.667, CAE: 0,77%, Costo total: $403.200 . Promoción válida hasta el 31 de diciembre de 2026. Para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards y Banco CrediChile), exclusivamente en modalidad de 13 a 24 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/aufbau",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/496/042e3324-0852-4c01-86f5-043178da951b/original/logo-web-Aufbau.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-d68d0f179a32",
-   "banco": "bancochile",
-   "comercio": "Specialized",
-   "titulo": "Paga en 4 a 12 cuotas sin interés.",
-   "descripcion": "Compra tu nueva bicicleta Specialized en 4 a 12 cuotas sin interés. . Para una compra referencial de $500.000 en 12 cuotas de $41.667. . CAE : 1,47%, Costo total: $504.000 . Compras solo son válidas en tiendas asociadas y excluye las compras web. . Promoción válida hasta el 31 de diciembre de 2026. para compras en concesionarios asociados, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (Incluye Banco Edwards, excluye Credichile), exclusivamente en modalidad de 4 a 12 cuotas sin interés. No aplica a otras tarjetas de crédito. Las ofertas, ventas y descuentos, entr",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/specialized",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/762/90215992-fdf8-49a3-826b-4496ac839c56/original/logo-web-Specialized.jpg",
-   "regiones": [
-    "VS",
-    "RM",
-    "BI"
-   ],
-   "comunas": [
-    "Colina",
-    "Concepción",
-    "Concón",
-    "Las Condes",
-    "Vitacura"
-   ]
-  },
-  {
-   "id": "bancochile-658d6cc0b467",
-   "banco": "bancochile",
-   "comercio": "Movistar",
-   "titulo": "Paga en 13 hasta 24 cuotas sin interés.",
-   "descripcion": "Cambia tu Smartphone y disfruta el precio más conveniente para estar siempre conectado. Paga de 13 hasta 24 cuotas sin interés con tus tarjetas de crédito del Banco de Chile en cualquier sucursal Movistar o en www.movistar.cl para tu equipo con o sin plan. . Para una compra referencial de $400.000, 24 cuotas de $16.667 en 24 cuotas. . CAE: 0,77%, Costo total: $403.200 . Promoción válida hasta el 31 de diciembre de 2026. para compras en establecimientos adheridos, utilizando como medio de pago Tarjetas de Crédito emitidas por Banco de Chile (incluye Banco Edwards y Banco CrediChile), exclusivam",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/movistar",
-   "imagen": "https://assets.bancochile.cl/uploads/000/108/760/409141a3-ea50-4ee3-b7ee-056460c53f78/original/logo-web-Movistar.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancochile-25371278bac3",
-   "banco": "bancochile",
-   "comercio": "Entel",
-   "titulo": "Paga en 13 a 24 cuotas sin interés.",
-   "descripcion": "Compra lo que quieras en tiendas Entel con tus Tarjetas de Crédito de Banco de Chile y paga en 13 a 24 cuotas sin interés. . Renueva tu celular, cambia tus accesorios y mantente conectado con lo mejor de la tecnología. . Para una compra referencial de $400.000 en 24 cuotas. CAE: 0,77% - Costo Total: $403.200 - Valor Cuota: $16.667 . Promoción válida hasta el 31 de diciembre de 2026. Válido para clientes personas naturales y jurídicas titulares de Tarjetas de Crédito de Banco de Chile (incluye Banco Edwards) que utilicen dichas tarjetas como medio de pago en la compra en 13 a 24 cuotas sin inte",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/entel",
-   "imagen": "https://assets.bancochile.cl/uploads/000/105/996/1f913abb-5adb-430c-8214-9e6236c57885/original/logo-web-entel.jpg",
    "regiones": [],
    "comunas": []
   },
@@ -23730,7 +22113,7 @@
    "titulo": "30% dto. todos los días",
    "descripcion": "30% dto en www.brikaorganics.cl usando el código BK26BCH como cupón de descuento y pagando con las tarjetas de Banco de Chile y Banco Edwards. . 30% dto en todos los productos de la página en stock. . No acumulable con otros dctos. . Se excluyen productos en rebaja y uso de otros cupones al mismo tiempo. . Productos de cosmética italiana de alta calidad, natural y orgánica. Veganos y cruelty free. . Podrás escoger dentro de nuestras 3 colecciones: . Osmé Organic . Disfruta de una experiencia única con la mezcla de olores botánicos que tienen nuestros productos Osme Organics, manzanilla, hojas ",
    "pct": 30,
-   "rubro": "restaurantes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -24320,7 +22703,7 @@
    "titulo": "30% dto. todos los días online",
    "descripcion": "Avis Rent a Car es líder global de servicios de arriendo de vehículos con más de 5.000 oficinas de alquiler en cerca de 165 países de todo el mundo. En Chile la marca cuenta con presencia en las más importantes ciudades y aeropuertos nacionales. Además, Avis cuenta con una variada flota de vehículos que permiten satisfacer diversos requerimientos del mercado. . . 30% dto sobre T+K (Tarifa de Tiempo + Kilometraje) en reservas nacionales prepagadas en avis.cl o a través de Contact Center +56 2 27953900 . No aplica sobre CDW (seguro obligatorio). . No aplica sobre opcionales y servicios adicional",
    "pct": 30,
-   "rubro": "combustible",
+   "rubro": "viajes",
    "dias": [
     0,
     1,
@@ -27128,7 +25511,7 @@
    "titulo": "20% dto. todos los días presencial y online",
    "descripcion": "En Novamente brindamos atención integral en salud mental y neurodesarrollo para personas de todas las edades. Nuestro equipo de profesionales trabaja con un enfoque humano, basado en evidencia y centrado en las necesidades de cada persona, acompañando procesos de evaluación, diagnóstico y tratamiento para favorecer tu bienestar y calidad de vida. . . 20% dto. todos los días en clases presenciales y online. . Solicita tu descuento al momento de pagar. . No acumulable con otras promociones. . Descuento exclusivo pagando con tus Tarjetas del Chile. . Promoción válida hasta el 31 de julio de 2027.",
    "pct": 20,
-   "rubro": "farmacias",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -28031,54 +26414,6 @@
    ]
   },
   {
-   "id": "bancochile-1abd1990b1d7",
-   "banco": "bancochile",
-   "comercio": "Solar Fotovoltaica",
-   "titulo": "Paga en 36 cuotas sin interés.",
-   "descripcion": "¿Quieres pagar $0 en tu cuenta de luz? Instala un sistema solar fotovoltaico a tu medida y empieza a ahorrar desde el primer día. Rentabilidad 28% anual. . . Residencial y agrícola. . Tecnología de punta. Experiencia Alemana . Ahorro garantizado por 25 años. . Somos expertos en proyectos solares. ¡Conversemos y te mostramos cómo! Solar Fotovoltaica – Tu aliado solar. . Para una compra referencial de $4.000.000 en 36 cuotas de $111.111. CAE: 0,52%, Costo Total: $4.032.000. . Promoción válida hasta el 31 de diciembre de 2026, utilizando Tarjetas de Crédito Banco de Chile (Incluye Banco Edwards).",
-   "pct": 52,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/solar-fotovoltaica",
-   "imagen": "https://assets.bancochile.cl/uploads/000/075/107/cea43e2c-9b7f-4794-bdcf-e674ae6b256c/original/logo-web-Solar-Fotovoltaica.jpg",
-   "regiones": [
-    "MA"
-   ],
-   "comunas": [
-    "Punta Arenas"
-   ]
-  },
-  {
    "id": "bancochile-391a1ae3175b",
    "banco": "bancochile",
    "comercio": "Otra Cozza",
@@ -28570,7 +26905,7 @@
    "titulo": "20% dto. en el valor del programa",
    "descripcion": "El Magíster en Ingeniería de la Energía UC (MIE-UC) es un postgrado profesional acreditado y dictado por la Escuela de Ingeniería de la Pontificia Universidad Católica de Chile. El MIE-UC, con más de 17 años de trayectoria, entrega competencias con una visión integral del ecosistema energético, abarcando tecnología, política, economía, sociedad y medioambiente. Ofrece formación transversal en energías renovables, hidrógeno, almacenamiento, movilidad, regulación e innovación, junto con experiencias prácticas en laboratorios, terreno y un estrecho vínculo con el ecosistema energético nacional e ",
    "pct": 20,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -29400,7 +27735,7 @@
    "titulo": "30% dto. en arriendos de vehículos",
    "descripcion": "Ocarrol Rent a Car es una empresa con 50 años de experiencia en el mercado, especializada en ofrecer un servicio de calidad en el arriendo de vehículos. Contamos con sucursales a lo largo de Chile, así como en destinos internacionales como Miami, Madrid, Buenos Aires y Mendoza. Nos enfocamos en brindar soluciones personalizadas, con un servicio orientado al cliente para que disfruten de un viaje cómodo y seguro. . Solicita tu 30% descuento en arriendo en todas nuestras sucursales en Chile y el extranjero al momento de pagar con tus tarjetas del Banco. . No acumulable con otras promociones. . D",
    "pct": 30,
-   "rubro": "combustible",
+   "rubro": "viajes",
    "dias": [
     0,
     1,
@@ -29850,42 +28185,6 @@
    ]
   },
   {
-   "id": "bancochile-c3606530f051",
-   "banco": "bancochile",
-   "comercio": "CLARO",
-   "titulo": "Paga en 13 a 24 cuotas sin interés",
-   "descripcion": "Disfruta la tecnología comprando equipos y accesorios en Claro, pagando en 13 a 24 cuotas sin interés con tus Tarjetas de Crédito del Banco de Chile en cualquier Sucursal Claro o en www.clarochile.cl . Para una compra referencial de 500.000 en 24 cuotas cada cuota de $20.833 . CAE 0,77% Costo Total 504.000 . Promoción válida hasta el 31 de diciembre de 2026, utilizando Tarjetas de Crédito Banco de Chile (Incluye Banco Edwards). Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad de",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/claro",
-   "imagen": "https://assets.bancochile.cl/uploads/000/119/800/af84ca72-cf26-4e7c-b2d2-7ea5f96bbf29/original/logo-web-claro.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "bancochile-805efd3391f4",
    "banco": "bancochile",
    "comercio": "Clínica Dental Inacaliri",
@@ -29932,42 +28231,6 @@
    "comunas": [
     "Calama"
    ]
-  },
-  {
-   "id": "bancochile-43f28fdc43e9",
-   "banco": "bancochile",
-   "comercio": "Panorama Lumon",
-   "titulo": "Paga hasta en 36 cuotas sin interés",
-   "descripcion": "Panorama Lumon es la empresa #1 en cortinas de cristal plegables para terrazas, balcones y quinchos. . . Paga hasta en 36 cuotas sin interés . Descuento exclusivo pagando con tus Tarjetas Crédito del Chile. . Para una compra referencial de $1.500.000 en 36 cuotas . CAE: 0,52% Valor cuota: $41.667 Costo total $1.512.000 . Promoción válida hasta el 31 de diciembre de 2026, utilizando Tarjetas de Crédito Banco de Chile (Incluye Banco Edwards). Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva respo",
-   "pct": 52,
-   "rubro": "otros",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/panorama-lumon",
-   "imagen": "https://assets.bancochile.cl/uploads/000/103/413/a2e7a11e-4bc0-40d7-b1df-8d4242cf1c6c/original/logo-web-Panorama-Lumon.jpg",
-   "regiones": [],
-   "comunas": []
   },
   {
    "id": "bancochile-0a664c38db17",
@@ -30119,7 +28382,7 @@
    "titulo": "25% dto. todos los días presencial y online",
    "descripcion": "En Preuniversitario Alameda cuentan con más de 20 años de experiencia preparando a miles de estudiantes para su ingreso a la educación superior. A través de un equipo de profesores de excelencia, programas adaptados a todos los niveles y modalidades presenciales y online, ofrecen una preparación de calidad para enfrentar con éxito la PAES. . . 25% dto. en todos los programas y matrícula, presencial y en preualameda.cl . Para compra presencial solicita tu descuento al momento de pagar. . Para acceder al dto. online, agenda una asesoría en preualameda.cl e indica que vienes por la alianza para a",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -35826,7 +34089,7 @@
    "titulo": "Hasta 70% dto. todos los días online",
    "descripcion": "Poliglota es la plataforma líder en aprendizaje de idiomas en Latinoamérica, con más de 50.000 estudiantes y 550 empresas clientes. Ofrecemos clases en vivo con interacción en tiempo real, con práctica conversacional y acceso a herramientas digitales, todo con hasta un 70% dto. exclusivo pagando con tus Tarjetas del Chile en poliglota.org/banco-de-chile . . Clases grupales . Beneficio . Plan 6 meses 50% dto. . Plan 9 meses 60% dto. . Plan 12 meses 70% dto. . ¿Qué Incluye? . Evaluación de nivel. . Sesiones de práctica guiadas. . Sesiones de prácticas conversacionales ilimitadas. . Plataforma pa",
    "pct": 70,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -36188,7 +34451,7 @@
    "titulo": "30% dto. todos los días presencial",
    "descripcion": "Parque de Asís es el primer y más grande cementerio de mascotas de Chile, con más de 40 años de experiencia y más de 10.000 mascotas acogidas. Es un servicio de Bioparque Buinzoo, ubicado en Buin, que ofrece un entorno natural y tranquilo para despedir a tu mascota con dignidad y visitarla cuando lo necesites. . . 30% dto. en cremación de mascotas (incluye ánfora), sepultación y nichos de columbario para la conservación de cenizas. . Beneficio excluye el valor fijo del derecho a sepultura de $35.000 y la renovación anual de la sepultura. . Beneficio excluye la renovación anual del nicho. . Ben",
    "pct": 30,
-   "rubro": "farmacias",
+   "rubro": "entretencion",
    "dias": [
     0,
     1,
@@ -38525,7 +36788,7 @@
    "titulo": "Puede ser tuyo con el programa iPhone for life",
    "descripcion": "Renueva, ahorra, repite . Cambia tu iPhone cada 2 años y ahorra hasta un 30% del costo total de tu iPhone . Entrega tu iPhone en óptimas condiciones en parte de pago. . ¡Desde los 24 meses podrás volver a renovarlo! . Desde $40.278 al mes sin interés. . CAE de 0,52%, Calculado por un monto referencial de compra de $1.449.990 en 36 cuotas. Costo Total del Crédito: $1.461.590. Operación afecta a impuesto al crédito. . Recuerda: . Exclusivo en www.maconline.com pagando con tus Tarjetas de Crédito de Banco de Chile. . Los modelos de iPhone que podrás suscribir al programa iPhone for Life son: iPh",
    "pct": 52,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [],
    "tarjetas": [
     "Visa Infinite crédito",
@@ -38831,74 +37094,6 @@
    "imagen": "https://assets.bancochile.cl/uploads/000/047/148/d43f8b1b-d493-4266-94d9-cd6c6ec82bd6/original/logo-web.jpg",
    "regiones": [],
    "comunas": []
-  },
-  {
-   "id": "bancochile-5b30ff0b09ab",
-   "banco": "bancochile",
-   "comercio": "Rosen",
-   "titulo": "Paga hasta en 24 cuotas sin interés",
-   "descripcion": "Renueva tus espacios y paga en hasta 24 cuotas sin interés . Exclusivo para Tarjetas de Crédito Banco de Chile. . Consideraciones . Válido en rosen.cl y en tiendas Rosen y Babyrosen. . Ejemplo referencial . Compra de $1.000.000 . 24 cuotas de $41.667 . CAE de 0,77% . Costo total del crédito de $1.008.000 . Promoción válida hasta el 31 de diciembre de 2026, utilizando Tarjetas de Crédito Banco de Chile (Incluye Banco Edwards). Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del ",
-   "pct": 77,
-   "rubro": "vestuario",
-   "dias": [],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/rosen",
-   "imagen": "https://assets.bancochile.cl/uploads/000/123/994/3d051210-acfa-43f6-b50d-a899f1de40a3/original/logo-web-Rosen.jpg",
-   "regiones": [
-    "AN",
-    "CO",
-    "VS",
-    "RM",
-    "NB",
-    "BI",
-    "AR",
-    "LR",
-    "LL"
-   ],
-   "comunas": [
-    "Antofagasta",
-    "Chillán",
-    "Concepción",
-    "Huechuraba",
-    "La Florida",
-    "La Serena",
-    "Las Condes",
-    "Lo Barnechea",
-    "Maipú",
-    "Providencia",
-    "Puente Alto",
-    "Puerto Montt",
-    "Quilicura",
-    "San Joaquín",
-    "San Pedro de la Paz",
-    "Talcahuano",
-    "Temuco",
-    "Valdivia",
-    "Vitacura",
-    "Viña del Mar",
-    "Ñuñoa"
-   ]
   },
   {
    "id": "bancochile-7ea5a35ba0b0",
@@ -39396,57 +37591,13 @@
    ]
   },
   {
-   "id": "bancochile-8b2e2fdca212",
-   "banco": "bancochile",
-   "comercio": "PC Factory",
-   "titulo": "Paga hasta en 12 cuotas sin interés",
-   "descripcion": "Paga en hasta 12 cuotas sin interés. . Encuentra notebooks, computadores, componentes, periféricos, monitores y productos gamer. . Exclusivo para Tarjetas de Crédito Banco de Chile. . Consideraciones . Válido para compras en tiendas PC Factory de todo Chile y en pcfactory.cl . El beneficio aplica solo a productos seleccionados. . En tiendas puedes recibir asesoría para elegir tus productos. . Ejemplo referencial . Compra: $500.000 . 12 cuotas de $41.667 . CAE: 1,47% . Costo total del crédito: $503.960 Promoción válida hasta el 31 de diciembre de 2026, utilizando Tarjetas de Crédito Banco de Ch",
-   "pct": 47,
-   "rubro": "vestuario",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": null,
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/pc-factory",
-   "imagen": "https://assets.bancochile.cl/uploads/000/124/187/2bbe68f5-3864-4a24-9005-70ce9ef19129/original/logo-web-PC-Factory.jpg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
    "id": "santander-d55a9ca84135",
    "banco": "santander",
    "comercio": "FestiGame 2026",
    "titulo": "Hasta 25% dcto. hasta agotar stock",
    "descripcion": "Festival de video juegos, tecnología y cultura geek más grande de Chile. Recuerda que: . Exclusivo con tus Tarjetas de Crédito y Débito Santander. Hasta 10 tickets por rut, hasta agotar stock de 5.000 tickets. Cenco Mall Florida, La Florida. Evento Jueves 10 al domingo 13 de diciembre . Descuento en tienda oficial de FestiGame (merch oficial) . Hasta 25% de descuento en pagando con Tarjetas Santander Mastercard, exclusivo para clientes Santander hasta agotar stock. Aplican T&C. Entradas exclusivamente a través de Fever. Infórmese sobre la garantía estatal de los depósitos en su banco o en cmfc",
    "pct": 25,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [
     3,
     6
@@ -39941,7 +38092,7 @@
    "titulo": "15% dcto. todos los lunes y miércoles.",
    "descripcion": "Natura . Recuerda que: . Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas. No acumulable a otros descuentos. Excluye productos outlet. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósitos en su banco o en www.cmfchile.cl.",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     2
@@ -40126,7 +38277,7 @@
    "titulo": "15% dcto todos los jueves.",
    "descripcion": "RODA . Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y www.roda.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable a descuentos y promociones vigentes. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósitos en ",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -40160,7 +38311,7 @@
    "titulo": "20% dcto todos los jueves.",
    "descripcion": "Jack&Jones . Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y www.jackjones.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable a otros descuentos. Excluye tienda outlet. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de ",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     3
    ],
@@ -40188,7 +38339,7 @@
    "titulo": "20% dcto todos los jueves.",
    "descripcion": "ONLY . Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y www.only.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable a otros descuentos. Excluye tienda outlet. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósit",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     3
    ],
@@ -40842,7 +38993,7 @@
    "titulo": "20% dcto adicional. todos los martes y jueves",
    "descripcion": "Puzzles, Juegos de Mesa, Autos a escala y juguetes y más. Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y en www.toyng.cl por compras sobre $14.990. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Acumulable a otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello dem",
    "pct": 20,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [
     1,
     3
@@ -40905,7 +39056,7 @@
    "titulo": "15% dcto todos los martes",
    "descripcion": "Herramientas y cosmética Capilar . Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en www.auralis.cl. Se excluyen eventos cyber, black y eventos de descuentos internos de la marca. Excluye pack duo. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable a otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en l",
    "pct": 15,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -41105,7 +39256,7 @@
    "titulo": "Hasta 30% dcto. en Centro del Vino Concha y Toro con Visa",
    "descripcion": "Tours, degustaciones y beneficios. Experiencias Centro del Vino Concha y Toro . 30% de descuento en Ticket Acceso Temporada Baja (octubre a mayo). Máximo 2 tickets por credencial Visa. Beneficio sujeto a un máximo de 13.151 entradas con descuento durante la vigencia. WineShop Centro del Vino . 10% de descuento en compras presenciales durante Temporada Baja (octubre a mayo). Beneficio no aplicable a vinos íconos. Recuerda que: . Exclusivo pagando con Tarjetas Visa Signature e Infinite. Para experiencias, el descuento aplica online ingresando los primeros 6 dígitos de la tarjeta Visa en el campo",
    "pct": 30,
-   "rubro": "restaurantes",
+   "rubro": "otros",
    "dias": [],
    "tarjetas": [
     "WorldMember Limited Santander crédito"
@@ -41299,7 +39450,7 @@
    "titulo": "15% dcto los lunes",
    "descripcion": "Productos de belleza . Recuerda que:. Válido con Tarjetas de Crédito y Débito Santander. Válido en www.dbs.cl. No acumulable con otros descuentos o promociones. Excluye eventos Cyber, Black Friday y Giftcards. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantí",
    "pct": 15,
-   "rubro": "farmacias",
+   "rubro": "otros",
    "dias": [
     0
    ],
@@ -41327,7 +39478,7 @@
    "titulo": "20% dcto todos los días",
    "descripcion": "Tienda de anteojos de marcas lujo y fashion . Recuerda que:. Válido con Tarjetas de Crédito y Débito Santander. Exclusivo en Tienda JPT de Costanera Center. Excluye marca Cartier. Descuento no acumulable con otras ofertas/promociones. Tope de $200.000 de dcto. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los dep",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -41485,7 +39636,7 @@
    "titulo": "20% dcto todos los martes",
    "descripcion": "Cuadernos, Tarjetas, Organizadores, Álbumes, Lapicería y más . Recuerda que:. Válido con Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y en www.papelaria.cl. Excluye marcas nacionales y consignaciones. No acumulable a descuentos y promociones vigentes. Ingresa el cupón SANTANDER , como código de descuento al comprar por la web. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -41595,7 +39746,7 @@
    "titulo": "20% dcto en ovillo todos los lunes y 25% dcto en accesorios todos los lunes",
    "descripcion": "Comparte tu arte, crea hoy. Materiales perfectos para crochet, tejido a dos agujas y todo tipo de manualidades. Recuerda:. Válido con Tarjetas de Crédito y Débito Santander. Valido en tiendas físicas y en www.volkanica.cl. 20% de descuento en ovillos. No acumulable con otras promociones por compras sobre $20.000. 25% de descuento en accesorios. No incluye libros y sets. No acumulable con otras promociones por compras sobre $20.000. No acumulable a otros descuentos y promociones. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Las ofertas, ventas y descuentos, entregas de",
    "pct": 25,
-   "rubro": "entretencion",
+   "rubro": "vestuario",
    "dias": [
     0,
     1,
@@ -41629,7 +39780,7 @@
    "titulo": "15% dcto. todos los jueves",
    "descripcion": "Aromas para el Hogar de larga duración y fácil aplicación. Recuerda: . Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas y madisonyco.cl. Avenida Nueva Costanera 3900,Vitacura. Código de descuento: Madison&Santander_15%OFF . No acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese s",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -41725,7 +39876,7 @@
    "titulo": "15% dcto todos los días",
    "descripcion": "Toke . Recuerda que:. Válido con Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y en toke.cl. No acumulable a descuentos y promociones vigentes. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósitos en su banco o en ww",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -41759,7 +39910,7 @@
    "titulo": "Hasta 30% dcto. de lunes a jueves",
    "descripcion": "Petco . Recuerda que:. Válido con Tarjetas de Crédito y Débito Santander. 30% dcto. de lunes a jueves válido en Grooming. 25% dcto de lunes a jueves válido en tiendas física Patio Andino. 20% dcto de lunes a jueves válido en tienda física Los Dominicos y en petco.cl . SANTANDERPET , como código de descuento al comprar por la web. No acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -41850,7 +40001,7 @@
    "titulo": "20% dcto todos los días",
    "descripcion": "Arte adhesivo para pegar, despegar y volver a usar sin dañar tus muros. Recuerda que:. Válido con Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y en www.tiendapasquin.cl. Incluye personalizados. No acumulable a descuentos y promociones vigentes. Compras sobre $30.000. Cupón de descuento: SANTANDER20 . Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención qu",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42035,7 +40186,7 @@
    "titulo": "25% dcto todos los martes",
    "descripcion": "Tienda de accesorios para mujer . Recuerda que:. Exclusivo con tus Tarjetas Crédito y Débito Santander. Válido en tiendas físicas y en www.humanastore.cl. No acumulable a descuentos y promociones vigentes. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento al comprar por la web. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmes",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42127,7 +40278,7 @@
    "titulo": "15% dcto todos los días",
    "descripcion": "Acampa con estilo sin gastar una fortuna. Recuerda que:. Exclusivo con tus Tarjetas Crédito y Débito Santander. Válido en tienda y en www.terraforce.cl. Acumulable a otro descuentos y promociones. Excluye fecha Cyber. Tope de descuento $100.000. Ingresa el cupón SANTANDERTF , como código de descuento al comprar por la web. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención ",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42161,7 +40312,7 @@
    "titulo": "15% dcto todos los días",
    "descripcion": "Stand Up Paddle, Kayaks y Botes Inflables . Recuerda que:. Exclusivo con tus Tarjetas Crédito y Débito Santander. Válido en tienda y en www.aquaforce.cl. Acumulable a otro descuentos y promociones. Excluye fecha Cyber. Tope de descuento $100.000. Ingresa el cupón SANTANDERAF , como código de descuento al comprar por la web. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42389,7 +40540,7 @@
    "titulo": "3 a 6 cuotas sin interés + 30% dcto por compras de 2 o más productos",
    "descripcion": "3 a 6 cuotas sin interés . Recuerda que:. Pagando con tus Tarjetas de Crédito Santander. Válido en tiendas físicas, línea WhatsApp +56 9 8673 2392 y tienda online velez.cl. Descuento no aplica para chaquetas, fragancias, morral Archaeology, bowling Lili, bandolera Mini lili, bandolera Garniel, productos de cuidado del cuero, productos exclusivo online, costo de la marcación láser, producto personalizado de taller artesano (pigmentación), ni bonos regalo. Beneficio exclusivo para clientes que se registren en el programa Quiero Vélez. Redimible una (1) sola vez por persona. Cupón para compras on",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42455,7 +40606,7 @@
    "titulo": "25% dcto todos los días",
    "descripcion": "Descubre la gama de lentes ópticos y lentes de sol . Recuerda que:. Exclusivo con tus Tarjetas Crédito y Débito Santander. Válido lunes y miércoles en tiendas físicas. Válido todos los días en www.retrovision.cl. Válido en todos los anteojos ópticos y de sol marca Retrovisión. No acumulable con otros descuentos o promociones. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad n",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42681,7 +40832,7 @@
    "titulo": "20% dcto. todos los días.",
    "descripcion": "El mejor equipamiento de ciclismo . Recuerda que:. Exclusivo con tus Tarjetas Crédito y Débito Santander. Válido en tiendas físicas. No acumulable a otras promociones. Exclusivo en accesorios de ciclismo marca Trek. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósitos en su banco o en www.cmfchile.cl.",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -42787,7 +40938,7 @@
    "titulo": "20% dcto. todos los martes.",
    "descripcion": "Belleza en potencia. Recuerda que:. Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en www.tua.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable con otras promociones. Excluye marcas Loreal, Wahl y Braun. Descuento no aplica el valor del despacho. Tope de de descuento $500.000. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior",
    "pct": 20,
-   "rubro": "farmacias",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -43072,7 +41223,7 @@
    "titulo": "20% dcto. todos los miércoles",
    "descripcion": "Productos aromáticos para el hogar, jardín y oficina . Recuerda que:. Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido locales y en www.lipka.cl. Ingresa el cupón SANTANDERXLIPKA20 , como código de descuento al comprar por la web. No acumulable a otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garant",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     2
    ],
@@ -43316,7 +41467,7 @@
    "titulo": "Hasta 30% de dcto. todos los jueves.",
    "descripcion": "Encuentra una amplia variedad de productos de calidad superior. Desde lentes de contacto, anteojos ópticos y hasta lentes de sol de moda. Recuerda que:. Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas y www.ryk.cl. 30% de descuento en la compra de lentes de contacto FreeU y 20% en otras marcas, aplicable solo al adquirir un mínimo de un semestre (no aplica en lentes de contacto de especialidad). 25% de descuento en la compra de marcos + cristales ópticos a partir de pack bronce. 25% de descuento en la compra de armazones de sol sin receta. 25% de descuento en audífo",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     3
    ],
@@ -43507,7 +41658,7 @@
    "titulo": "15% dcto. lunes, miércoles y viernes",
    "descripcion": "Implementos para entrenar, mancuernas, barras, maquinas y más . Recuerda:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en www.ultimatefitness.cl. Tope de descuento $100.000. Ingresa el cupón SANTANDERUF , como código de descuento al comprar por la web. Excluye días cyber. Acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterio",
    "pct": 15,
-   "rubro": "restaurantes",
+   "rubro": "otros",
    "dias": [
     0,
     2,
@@ -43537,7 +41688,7 @@
    "titulo": "15% dcto. todos los días.",
    "descripcion": "La mejor calidad para el cuidado y bienestar . Recuerda:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en www.firstcare.cl. Tope de descuento $70.000. Ingresa el cupón SANTANDERFC , como código de descuento al comprar por la web. Excluye días cyber. Acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello dema",
    "pct": 15,
-   "rubro": "farmacias",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -43693,7 +41844,7 @@
    "titulo": "30% de dcto. todos los días.",
    "descripcion": "Maletas, mochilas y accesorios de viaje . Recuerda:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en www.zenitchile.com. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósit",
    "pct": 30,
-   "rubro": "viajes",
+   "rubro": "vestuario",
    "dias": [
     0,
     1,
@@ -43855,7 +42006,7 @@
    "titulo": "20% dcto. todos los martes.",
    "descripcion": "Cafeteras Gaggia Milano combinan elegancia italiana con tecnología avanzada, garantizando un espresso perfecto en cada taza . Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en www.gaggiamilano.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Excluye días cyber. No es acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco",
    "pct": 20,
-   "rubro": "restaurantes",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -43989,7 +42140,7 @@
    "titulo": "30% dcto. todos los días",
    "descripcion": "Calidez para tus ambientes con BëZen. Recuerda:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y www.bezen.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -44089,7 +42240,7 @@
    "titulo": "25% dcto. sábados a miércoles.",
    "descripcion": "Productos de belleza y cuidado personal . Recuerda:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en www.petrizzio.cl. Ingresa los 6 primeros dígitos de tus Tarjeta como código de descuento. No acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósito",
    "pct": 25,
-   "rubro": "farmacias",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -44514,7 +42665,7 @@
    "titulo": "20% dcto. todos los martes.",
    "descripcion": "Combina materias primas de calidad con diseño inteligente y actual en las prendas . Recuerda que: . Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas y www.trial.cl. Excluye días cyber. No acumulable a otras promociones. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ell",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -44585,7 +42736,7 @@
    "titulo": "20% dcto. todos los martes",
    "descripcion": "Calidad y estilo . Recuerda que: . Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas y www.perryellis.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Excluye días cyber. No acumulable con otros descuentos o promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estata",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -44869,7 +43020,7 @@
    "titulo": "15% dcto en el total de la compra",
    "descripcion": "Haz tu baño más seguro con rebajes para tina, para personas con movilidad reducida. Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas: Santiago y Concepción. No acumulable con otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósitos en su banc",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -45031,7 +43182,7 @@
    "titulo": "20% dcto en ecomovers.cl lunes a miércoles",
    "descripcion": "Mudanzas ecofriendly para hogares, startup, empresas e instituciones. Recuerda que:. Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en www.ecomovers.cl. Descuento válido para Región Metropolitana, Valparaíso y O'Higgins en la primera compra. Abonos de reserva no reembolsable. Tope de descuento $150.000. Ingresa el cupón SANTANDER2025 , como código de descuento al comprar por la web. No acumulable a otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabil",
    "pct": 20,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -45510,7 +43661,7 @@
    "titulo": "30% dcto. en todos los productos.",
    "descripcion": "¡Encuentra todo lo que buscas en artículos de computación! . Recuerda que:. Exclusivo con tus Tarjetas Crédito y Débito Santander. Válido en tiendas y en www.smartechchile.com. No acumulable a otras promociones. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. Mall Parque Arauco, piso 2, Las Condes. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención qu",
    "pct": 30,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -45739,7 +43890,7 @@
    "titulo": "20% dcto. en freemet.cl",
    "descripcion": "Productos de limpieza ecológicos y efectivos que cuidan el planeta y tu salud. Recuerda que:. Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en todos los productos en www.freemet.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable a otras promociones. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. ",
    "pct": 20,
-   "rubro": "farmacias",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -46511,7 +44662,7 @@
    "tope": "tope $30.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-08-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/aprovecha-este-descuento-todos-los-viernes-y-sabados-en-compras-presenciales-0ms8b0e",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Andesland_a2d79fdb_19-24_1.png",
    "regiones": [],
@@ -46553,7 +44704,7 @@
    "titulo": "Lunes - Presencial Todos los lunes",
    "descripcion": "Exclusivo con tus tarjetas de Crédito Bci Platinum,Signature, Infinite y Mastercard Black. Exclusivo con tus tarjetas de Crédito Bci Platinum, Signature, Infinite y Black. 20% de descuento los lunes comprando de forma presencial en las tiendas de Varsovienne, con un tope de $20.000 por compra, máximo 4 compras al mes. .Para hacer efectivo el descuento Bci, debes solicitarlo en el local antes de realizar la compra. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, ",
    "pct": 20,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0
    ],
@@ -47564,7 +45715,7 @@
    "titulo": "Todos los días",
    "descripcion": "Exclusivo con tus tarjetas de Crédito o Débito Bci. 20% descuento adicional en todos los productos de la tienda online. Para compras en online, ingresa los 6 primeros dígitos de tu Tarjeta Bci como código de descuento al momento de pagar. No incluye costo de envío. Descuento no acumulable con otras promociones y/o descuentos. Hasta agotar stock. Visita: www.zigzag.cl",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -47714,7 +45865,7 @@
    "tope": "tope de $20.000",
    "modalidad": null,
    "vigencia_desde": "2026-07-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/aprovecha-todos-los-dias-en-temuco-e3hr37l",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Allegro-Caf%C3%A9-%26-Gelat_ce14673b_17-12_1.png",
    "regiones": [
@@ -48885,7 +47036,7 @@
    "tope": "tope de $20.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-09-02",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/vina-del-mar-3j7rrng",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Ang%C3%A9lica_144fb953_13-21_1.png",
    "regiones": [
@@ -50668,7 +48819,7 @@
    "titulo": "Colección exclusiva",
    "descripcion": "Exclusivo con tus Tarjetas de Crédito o Débito Bci. Compra online: El descuento será de un 10% sobre el total de la compra en la tienda online sin tope, siempre que los clientes utilicen como medio de pago sus Tarjetas de Débito o Crédito Bci. El descuento se hara efectivo utilizando el código “BCI10” como cupón de descuento al momento de pagar. El descuento no es acumulable con otros descuentos o beneficios, promociones y ofertas vigentes. El descuento no incluye el costo de envío.",
    "pct": 10,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [],
    "tarjetas": [
     "Tarjetas de Crédito Bci",
@@ -53033,7 +51184,7 @@
    "titulo": "Todos los días",
    "descripcion": "Exclusivo con tus tarjetas de Crédito o Débito Bci. 25% de descuento en toda la tienda online, sin tope de descuento. Para compras online, ingresa \"\"MIZOSBCI\"\" como código de descuento al momento de pagar. Se excluye de la promoción la categoría \"\"packs\"\" No incluye costo de envío. Descuento no acumulable con otras promociones y/o descuentos. Hasta agotar stock.",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -53379,7 +51530,7 @@
    "titulo": "Obtén tu cupón de descuento para tur.com",
    "descripcion": "Exclusivo con tus tarjetas de Crédito Bci Platinium,Signature, infinite y Mastercard Black. Disfruta de un 25% de descuento en tours y actividades disponibles en Tur.com pagando con tu Tarjeta de Crédito Bci Platinum, Visa Signature, Visa Infinite o Mastercard Black. Además, entre el 19 de noviembre y el 15 de diciembre de 2026 cada compra cada compra será una opción para participar en el sorteo de 5 experiencias para 2 personas (valor máximo del premio $70.000 por persona). El sorteo se realizará el 23 de diciembre por Tur.com ¿Cómo obtengo el 25% ? 1.- Ingresa a tu App Bci. En el menú, selec",
    "pct": 25,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [],
    "tarjetas": [
     "Bci Mastercard Black crédito",
@@ -54474,7 +52625,7 @@
    "titulo": "Todos los días - Online",
    "descripcion": "Exclusivo con tus tarjetas de Crédito o Débito Bci. 20% de descuento sobre el total de la compra en la tienda online sin tope. Para hacer efectivo el descuento debes ingresar el cupón SIMPLITBCI cómo codigo de descuento antes de finalizar la compra. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
    "pct": 20,
-   "rubro": "supermercados",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -58509,7 +56660,7 @@
    "titulo": "$7.000 de dto. En compras online con tus Tarjetas BancoEstado.​",
    "descripcion": "En compras online con tus Tarjetas BancoEstado.​ Disfruta de beneficios exclusivos en Viña Santa Rita pagando con tus Tarjetas BancoEstado: $7.000 de descuento sobre el total de la compra realizada en el sitio web de Viña Santa Rita, excluyendo productos de la sección Turismo. El descuento se aplica sobre los precios y tarifas vigentes informados por el comercio. El beneficio de $7.000 de descuento es acumulable con otras ofertas, promociones, combos y códigos de descuento, excepto en la sección Turismo. Monto mínimo de compra $30.000. Dónde: Online en el sitio web de Viña Santa Rita www.santa",
    "pct": null,
-   "rubro": "viajes",
+   "rubro": "entretencion",
    "dias": [
     0,
     1,
@@ -61464,7 +59615,7 @@
    "titulo": "40% Dcto. en Atesorame — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 40% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. Excl",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -61704,7 +59855,7 @@
    "titulo": "20% Dcto. en Florsheim — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 20% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. D",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -61824,7 +59975,7 @@
    "titulo": "40% Dcto. en Mishka — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 40% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $100.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. ",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -61854,7 +60005,7 @@
    "titulo": "20% Dcto. en Gnomo — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 20% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. V",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62004,7 +60155,7 @@
    "titulo": "20% Dcto. en La Papelaria — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 20% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. No acumulable con otras promociones. Válido en tod",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62124,7 +60275,7 @@
    "titulo": "40% Dcto. en Mamás Mateas — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 40% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos del 24 de abril hasta el 17 de mayo de 2026. Descuento se hará efectivo mostrando tu Tarjeta de Crédito Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. No acumulable con otras promocion",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62152,7 +60303,7 @@
    "titulo": "20% Dcto. en Maria Cher — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 20% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. D",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62182,7 +60333,7 @@
    "titulo": "40% Dcto. en Mery Satt — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 40% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $100.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. ",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62362,7 +60513,7 @@
    "titulo": "40% Dcto. en Oz Cranberry — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 40% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. D",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62452,7 +60603,7 @@
    "titulo": "20% Dcto. en Raindoor — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 20% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. D",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62482,7 +60633,7 @@
    "titulo": "40% Dcto. en Rapsodia — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 40% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $100.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. ",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -62662,7 +60813,7 @@
    "titulo": "25% Dcto. en Prune — Viernes, sábado y domingo",
    "descripcion": "Disfruta de un 25% de descuento en tienda ubicada en Casacostanera todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Válida todos los viernes, sábados y domingos desde el 6 al 29 de noviembre de 2026, o hasta agotar fondo promocional de $2.000.000, lo que ocurra primero. Tope descuento de $50.000 por cliente titular. Descuento se hará efectivo mostrando tu Tarjeta Scotiabank en caja antes de pagar y pagando con ella. Promoción no acumulable sobre otras promociones. D",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4,
     5,
@@ -68230,7 +66381,7 @@
    "titulo": "Martes KIDS",
    "descripcion": "Martes Kids exclusivo Mall Plaza disfruta Hasta 50% de descuento",
    "pct": 50,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -78512,7 +76663,7 @@
    "titulo": "Dcto en Carvuk: Hasta 40% Sin Tope",
    "descripcion": "En servicios seleccionados. Regiones: Región Metropolitana de Santiago.",
    "pct": 40,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -79046,7 +77197,7 @@
    "titulo": "Ecodry: 25% de dcto",
    "descripcion": "Exclusivo Mallplaza Los Dominicos. Regiones: Región Metropolitana de Santiago.",
    "pct": 25,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -80786,7 +78937,7 @@
    "titulo": "Chilexpress: 20% Sin Tope",
    "descripcion": "Servicios seleccionados. Regiones: Región Metropolitana de Santiago.",
    "pct": 20,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     3
    ],
@@ -80818,7 +78969,7 @@
    "titulo": "Dcto en Restaurante: 40% Sin Tope",
    "descripcion": "Exclusivo Tarjeta CMR Elite. Regiones: Región Metropolitana de Santiago.",
    "pct": 40,
-   "rubro": "viajes",
+   "rubro": "restaurantes",
    "dias": [
     1
    ],
@@ -80930,7 +79081,7 @@
    "titulo": "Dcto en Restaurante: 40% Sin Tope",
    "descripcion": "Exclusivo Tarjeta CMR Elite. Regiones: Región Metropolitana de Santiago.",
    "pct": 40,
-   "rubro": "viajes",
+   "rubro": "restaurantes",
    "dias": [
     0
    ],
@@ -80958,7 +79109,7 @@
    "titulo": "RAC Asistencia: 25% Sin Tope",
    "descripcion": "servicios automotrices. Regiones: Región Metropolitana de Santiago.",
    "pct": 25,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -80996,7 +79147,7 @@
    "titulo": "RAC Asistencia: 20% Sin Tope",
    "descripcion": "servicios del hogar. Regiones: Región Metropolitana de Santiago.",
    "pct": 20,
-   "rubro": "viajes",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -85533,7 +83684,7 @@
    "titulo": "20% dcto. en ¡Preventa exclusiva!",
    "descripcion": "LUIS FONSI En tickets hasta agotar stock",
    "pct": 20,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [],
    "tarjetas": [
     "Tarjeta de Crédito Banco Ripley Mastercard Black",
@@ -85630,7 +83781,7 @@
    "titulo": "40% dcto en Revesderecho",
    "descripcion": "Tope $20.000 40% dcto. los jueves en tiendas físicas y online ingresando los 6 primeros dígitos de tu tarjeta al momento de pagar. Tope $20.000. Días: Jueves.",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     3
    ],
@@ -85659,7 +83810,7 @@
    "titulo": "30% dcto en Pasquín Murales",
    "descripcion": "en tienda física Mut y Web ($30.000 mínimo de compra) Hasta 30% dcto en compras en tienda física Mut y Web ($30.000 mínimo de compra) Días: Todos los días.",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -85723,7 +83874,7 @@
    "titulo": "$10.000 adicional. en Peterland Osorno",
    "descripcion": "Pagando $20.000 Pagando $20.000 con Tarjetas Banco Ripley. No incluye tarjeta de juego (valor $1.000). Exclusivo Osorno. Días: Sábado y domingo.",
    "pct": null,
-   "rubro": "entretencion",
+   "rubro": "vestuario",
    "dias": [
     5,
     6
@@ -85753,7 +83904,7 @@
    "titulo": "Entrada 2x1 en Cinépolis",
    "descripcion": "En entradas en locales Entradas 2x1 en películas 2D y 3D. En locales y cinepolischile.cl. No aplica para días festivos. Código en tu app Banco Ripley. Días: Viernes.",
    "pct": null,
-   "rubro": "entretencion",
+   "rubro": "vestuario",
    "dias": [
     4
    ],
@@ -85846,7 +83997,7 @@
    "titulo": "30% dcto. en Lapiz Lopez",
    "descripcion": "En la tienda y online Descuento de 30% de descuento en la tienda y online. En rubros seleccionados. Días: Todos los días.",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -86014,7 +84165,7 @@
    "titulo": "25% dcto. en Coney Park",
    "descripcion": "En juegos Coney Jump Obtén un 25% de descuento en los 40 minutos de juego en Coney Jump. Beneficio no aplica dias festivos. No acumulable con otras promociones. Días: Lunes a jueves.",
    "pct": 25,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -88561,7 +86712,7 @@
    "titulo": "Hasta 25% de descuento en Stanley",
    "descripcion": "Exclusivo en tienda online con tus Tarjetas Debit y One. Tienda online Hasta 25% de dcto. + Personalización a $1.000, en con tus Tarjetas Debit y One en tienda online. Ingresa como cupón los primeros 6 dígitos de tus Tarjetas Debit u One. Obtén el descuento en la personalización de tu producto a $1.000 ingresando a la categoría \"PERSONALIZA\" e ingresando como cupón de descuento los primeros 6 dígitos de tus Tarjetas Debit u One y agregando la letra P al final del cupón y el descuento se verá reflejado en el total a pagar. Descuento no acumulable con otras promociones y/o descuentos. Válido exc",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -88596,7 +86747,7 @@
    "titulo": "25% de descuento en Tessa",
    "descripcion": "Los sábados, exclusivo en tienda física con tu Tarjeta One. Vitacura. 25% de dcto. los sábados, exclusivo con tu Tarjeta One en tienda física. Válido en productos TESSA, en tienda física ubicada en Juan Bautista, Vitacura. Válido pagando con tu Tarjeta One directamente en la caja. Descuento válido solo para compras pagadas con Tarjeta One. Aplica exclusivamente en tienda física (no válido en compras online). Tope de descuento de $30.000 por transacción. No acumulable con otras promociones o descuentos vigentes. No aplica a packs de productos. TESSA es una marca chilena especializada en skincar",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     5
    ],
@@ -89248,7 +87399,7 @@
    "titulo": "20% de descuento en Cezé",
    "descripcion": "Los martes, exclusivo en tienda online con tus Tarjetas Debit y One. ceze.cl 20% de dcto. los martes, con tus Tarjetas Debit y One en tienda online. En tienda online ceze.cl, ingresando como cupón de descuento los primeros 6 dígitos de tus Tarjetas Debit u One. Tope de descuento de $40.000 por compra. Descuento no acumulable con otras promociones y/o descuentos. El descuento no aplica al costo de despacho. Cezé es una marca chilena de vestuario femenino atemporal, con diseño local y confección en Perú. Sus colecciones combinan líneas simples, detalles femeninos y materiales de calidad, con esp",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     1
    ],
@@ -89529,7 +87680,7 @@
    "titulo": "20% de dcto. adicional en Importclick",
    "descripcion": "En tienda online con tus Tarjetas Debit y One. importclick.cl 20% de dcto. adicional, con tus Tarjetas One y Debit en tienda online. Ingresa como cupón los primeros 6 dígitos de tu Tarjeta One o Debit. Descuento acumulable con otros descuentos ya existentes en la web. Descuento no aplica en el costo de despacho. Importclick es una empresa de venta y distribución de más de 4000 productos, clasificados entre más de 12 categorías, entre las cuales podemos destacar Salud y Belleza, Aire Libre, Automóvil, Bamboo, Infantil, Mascotas, Hogar, Gamer, Audio, Deportes, Tecnología, etc. Nuestra gama de ca",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -89564,7 +87715,7 @@
    "titulo": "Hasta 40% de descuento en Viñamar - Mastercard",
    "descripcion": "En compras presenciales y experiencias, con tu Tarjeta One, presencial y online con el código MASTERCARDMAR. Las Condes y sitio web. Hasta 40% de dcto. en compras presenciales y experiencias, con tus Tarjetas Mastercard One Banco Security en presencial y online con código MASTERCARDMAR. En compras tienda presencial. 20% de dcto. en experiencias Discover, Premium Wines y Winemaker Experience. Con el código MASTERCARDMAR. 20% de descuento en las experiencias Tour y Degustación Discover, Tour y Degustación Premium Wines y Winemaker Experience. Compra online y presencial. Válido de lunes a domingo",
    "pct": 40,
-   "rubro": "entretencion",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -89694,7 +87845,7 @@
    "titulo": "20% de descuento en Foodtech",
    "descripcion": "Los domingos, en tienda online con tus Tarjetas One y Debit. foodtech.cl 20% de dcto. los domingos, con tus Tarjetas One y Debit en tienda online. Ingresa como cupón los primeros 6 dígitos de tu Tarjeta One o Debit. Descuento no acumulable con otras promociones y/o descuentos. No válido en costo de despacho. Marca dedicada a la venta de suplementos y productos saludables, una marca amigable, de confianza e innovadora, líder en la venta e-commerce.",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     6
    ],
@@ -90243,7 +88394,7 @@
    "titulo": "15% de descuento + 12 CSI en Panorama Lumon",
    "descripcion": "Exclusivos en tienda online con tu Tarjeta One y Debit (CAE: 1,47%). panoramachile.cl 15% de dcto. + 12 cuotas sin interés, con tu Tarjeta One y Debit en tienda online (CAE: 1,47%). Descuento no acumulable con otras promociones y/o descuentos. Para hacer válido el beneficio, escribe al WhatsApp +569 59896092 y coordina la visita de un técnico para solicitar cotización. Recuerda solicitar tu descuento antes de pagar. Para hacer válido el beneficio de las 12 cuotas sin interés, pagando con tus Tarjetas One y Debit Banco Security. Panorama Lumon es una empresa chilena, representantes de LUMON Fin",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -90278,7 +88429,7 @@
    "titulo": "20% de descuento en Samsonite",
    "descripcion": "Los jueves, exclusivo en tienda online con tus tarjetas. samsonite.cl 20% de dcto. los jueves, con tu Tarjeta Debit y One en tienda online. Ingresa como cupón los primeros 6 dígitos de tu Tarjeta Debit o One. No acumulable con otras ofertas y/o descuentos. Beneficio no válido para costos de envío. Las maletas Samsonite son sinónimo de excelencia en equipaje, que combinan innovación y resistencia en cada producto para darte una experiencia de viaje única. Compra en samsonite.cl y recibe hoy o retira en 3 horas.",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     3
    ],
@@ -90307,7 +88458,7 @@
    "titulo": "40% de descuento. en Ventisquero",
    "descripcion": "Exclusivo en tienda online con tus Tarjetas One y Debit en categorías y versiones seleccionadas. tiendaventisquero.com 40% de dcto. todos los días, con tu Tarjeta Debit y One en tienda online en categorías Reserva, Gran Reserva y Premium en versiones de 6 a 12 unidades. Ingresar al sitio web tiendaventisquero.com e ingresa como cupón de descuento los 6 primeros dígitos de tu Tarjeta One o Debit Banco Security. El descuento se verá reflejado en el total de tu compra. No incluye costo de envío. No acumulable con otras promociones y/o descuentos. Descuento válido solo de manera personal, intransf",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -90744,7 +88895,7 @@
    "titulo": "30% de descuento en Caleta Bay",
    "descripcion": "Los miércoles, en tienda física y online con tu Tarjeta One. Puerto Montt. 30% de dcto. los miércoles, con tu Tarjeta One en tienda física y online. Para hacer válido el beneficio de forma online ingresa como cupón los primeros 6 dígitos de tu Tarjeta One en Para hacer válido el beneficio de forma presencial, debes indicar que eres cliente del banco y pagar con tu Tarjeta One. Pide tu descuento y paga con tu Tarjeta One. Tope de dcto. por compra $30.000. No válido en costo de despacho. No válido en sushis, lasagna y quiche de trucha. Comercialización de Trucha Arcoíris premium e-commerce. Hora",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     2
    ],
@@ -90806,7 +88957,7 @@
    "titulo": "20% de descuento en Carvuk",
    "descripcion": "En Lavado full, revisión técnica, revisión pre compra y más, en tienda online, con el cupón CARVUKBS26 y tus Tarjetas Debit y One. carvuk.com/banco-security 20% de dcto. en Lavado full, revisión técnica y revisión pre compra y más, en tienda online, con el cupón CARVUKBS26 y tus Tarjetas Debit y One. 20% de dcto. en los siguientes servicios: Lavado full, revisión técnica y revisión pre compra y $15.000 de dcto. en mantención por kilometraje en servicio Full y Light a través de carvuk.com/banco-security. Ingresando como cupón CARVUKBS26 y pagando con tus Tarjetas Debit y One. El beneficio se ve",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91040,7 +89191,7 @@
    "titulo": "20% de descuento adicional en Kitchen It",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. 20% de dcto. adicional todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito y crédito. No acumulable con otros cupones. Beneficio no incluye costo de despacho. Venta de electrodomésticos. <i class=\"coh-inline-element las",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91276,7 +89427,7 @@
    "titulo": "15% de descuento en Trauko",
    "descripcion": "Los lunes y martes, exclusivo en tienda online con tu Tarjeta Debit y One. traukochile.cl 15% de dcto. los lunes y martes, con tu Tarjeta Debit y One en tienda online. Pide tu descuento y paga con tu Tarjeta Debit o One. No acumulable con otras ofertas y/o promociones. Beneficio válido pagando con tu Tarjeta Debit y One. Descuento no aplica costo de despacho. No válido en fechas Cyber ni Black Friday. Trauko nace con el propósito de mantener viva nuestras tradiciones artesanales y nuestra historia, trabajando con artesanos a lo largo de todo chile, apoya el diseño, confección y venta de sus pr",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1
@@ -91475,7 +89626,7 @@
    "titulo": "15% de descuento en MyZoo",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. myzoo.cl 40% de dcto., con tus tarjetas en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. Descuento no acumulable con otras promociones y/o descuentos. No válido en costo de despacho. MyZoo, expertos en higiene y bienestar para mascotas. Desarrollamos productos innovadores, formulados en Australia y sustentables, pensados tanto para el cuidado y limpieza de las mascotas, como para la desinfección y eliminación de olores en sus ambientes. Todo diseñado para proteger lo que más quieres. Venta web. Horario aten",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91510,7 +89661,7 @@
    "titulo": "10% de descuento en Parfumerie D´Aquitaine",
    "descripcion": "En tienda online y física con tus tarjetas. Vitacura. 40% de dcto., con tus tarjetas en tienda online y física. En tienda online ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. De manera presencial, pagando directamente en caja con tus tarjetas Banco Security. Beneficio no acumulable con otras ofertas y/o promociones. Válido por compras con tarjeta de débito o crédito Banco Security. Beneficio no incluye costo de despacho en el caso de compras a través de la tienda online. Beneficio válido por compras en tienda online parfumeriedaquitaine.cl y tienda física ubicada en",
    "pct": 10,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91617,7 +89768,7 @@
    "titulo": "20% de descuento en Eshopex",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. 20% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Para hacer valido el descuento, te debes registrar en y luego ingresar el cupón de descuento en la casilla de pago. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. No aplica para la casilla de España. No aplica a productos peligrosos (baterías, perfumes, pilas, etc.), ya que requieren un manejo de carga especial. No es acumulable con otros descuentos o tarifas especiales. Somos una empresa de servicios de Cross Border e-commerce con más de 10 ",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91722,7 +89873,7 @@
    "titulo": "20% de descuento adicional en Torre",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. 20% de dcto. adicional todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. Descuento no aplica en costo de envío. No válido en fechas Cyber ni Black Friday. Descuento válido desde el 15 de febrero hasta el 31 de diciembre del 2026. Comercializadora de productos de oficina y escolar. Horario de atención: lunes a jueves de 08:00 a 17:30 hrs. | viernes de 08:00 a 16:30 hrs. <i class=\"coh-inline-element las",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91863,7 +90014,7 @@
    "titulo": "20% de descuento en Vinopolis",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. 20% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. 20% de dcto. en toda la tienda online , válido desde el 15 de enero hasta el 31 de diciembre del 2026; y 20% de dcto. en planes de suscripción de Club Vinopolis, válido desde el 1 de marzo hasta el 31 de diciembre del 2026. Descuento no acumulable con otras promociones y/o descuentos. Al momento de pagar ingresa los 6 primeros dígitos de tu tarjeta de débito o crédito y efectúa el pago de tu comp",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -91960,7 +90111,7 @@
    "titulo": "20% de descuento en Green Dolphin",
    "descripcion": "Exclusivo en tienda física con tus tarjetas y cupón \"BICESECURITY\". Mall Plaza Los Dominicos Av Padre Hurtado Sur 875, Local C 1057, Las Condes. | Mall Apumanque Avenida Manquehue Sur 31 Local 291, Las Condes. | Buenaventura Premium Outlet San Ignacio 500 Local 13A, Quilicura. 20% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda física y online. Ingresa como cupón: BICESECURITY. En tienda presencial: Solicitando el descuento y pagando con las tarjetas de crédito o débito. No válido en fechas Cyber. No aplica en costo de despacho ni otros descuentos. Somos una empresa que n",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92000,7 +90151,7 @@
    "titulo": "20% de descuento en Jugos AFE",
    "descripcion": "Todos los días, exclusivo en tienda online con tus tarjetas y cupón BSAFE26. 20% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón BSAFE26. Beneficio no acumulable a promociones y ofertas. No incluye costo de despacho. AFE nace en 1997 y fue pionera en la producción y comercialización de jugos 100% fruta en el mercado nacional. Hoy en día estamos presente en las principales cadenas del país, tiendas de conveniencia, petroleras entre otros. AFE es una empresa 100% integrada, que produce, procesa y comercializa sus propios jugos. Horario de atención",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92035,7 +90186,7 @@
    "titulo": "20% de descuento en McParking",
    "descripcion": "Exclusivo en tienda física con tus tarjetas. Radial Aeropuerto, Pudahuel, RM. 20% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta de crédito o débito. No válido con otras promociones y/o descuentos. Estaciona de forma económica y segura en el Aeropuerto de Santiago. Nuestro servicio de buses de traslado te llevará al terminal en solo unos minutos. Reserva tu espacio en el estacionamiento. <i class=\"coh-inline-element las",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92143,7 +90294,7 @@
    "titulo": "20% de descuento en Vanité Joyas",
    "descripcion": "Los días jueves, viernes, sábado y domingo, exclusivo en tienda online con tarjeta de débito y crédito. 20% de dcto. de jueves a domingo, con tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tarjeta débito o crédito. No aplica en costo de envío. No válido en fechas Cyber ni Black Friday. Venta online de maletas, bolsos, mochilas y otros accesorios de viaje. <i class=\"coh-inline-element las",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     3,
     4,
@@ -92214,7 +90365,7 @@
    "titulo": "20% de descuento en Lipka",
    "descripcion": "Los días lunes, en tienda física y online con tus tarjetas y cupón \"BICE20\". Open Kennedy, Las Condes. | Mercado Urbano Tobalaba, Las Condes. | C.C. Apumanque, Las Condes. | Mall del Centro Concepción, Concepción. | Tienda online. 20% de dcto. los lunes, con tu tarjeta de crédito y débito en tienda física y online. Ingresa como cupón \"BICE20\". Para hacer uso del descuento en tiendas físicas selecciona tus productos y al momento de pagar menciona que eres cliente del Banco y paga con tu tarjeta débito o crédito. No acumulable con otras promociones ni descuentos. No aplicable con costo de despac",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0
    ],
@@ -92243,7 +90394,7 @@
    "titulo": "15% de descuento en FreeMet",
    "descripcion": "Exclusivo en tienda online con tus tarjetas y cupón \"BSFREEMET26\". 15% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón: BSFREEMET26. No acumulable con otras ofertas y/o descuentos. Beneficio no válido para costos de envío. No aplica en Cyber o cualquier evento similar a éste Cyber, como cyber Day, saber week, Black Friday, etc). No acumulable con otras promociones vigentes. Somos una empresa formada por dos chilenas oriundas del Sur de Chile: Andrea y Carolina. Carolina es Bióloga Marina y Andrea MBA. Ambas mamás, emprendedoras y por, sobre todo",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92314,7 +90465,7 @@
    "titulo": "20% de dcto. adicional en A Las Rocas",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. 20% de dcto. adicional todos los días, con tu tarjeta de crédito o débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. Beneficio no aplica a costo de despacho, exclusivo en tienda online. Somos una empresa e-commerce con ventas al por mayor y menor de bebidas alcohólicas y no alcohólicas, nuestro sistema de pago es a través de mercado pago. Horario de atención de 07:30 a 16:30 hrs. <i class=\"coh-inline-element las",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92378,7 +90529,7 @@
    "titulo": "Hasta 30% de descuento en BBQ Store",
    "descripcion": "Todos los días, en tienda física en productos seleccionados con tus tarjetas. Lo Beltrán 1862, Vitacura. 30% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda física. Ingresa como cupón los primeros 6 dígitos de tu tarjeta débito o crédito. Beneficio no acumulable a promociones y ofertas. Beneficio no aplica a costo de despacho. BBQ Store nace inspirada en la pasión de ser parrillero y de estar rodeado de tus amigos en una buena reunión. Por ello, implementamos locales concepto, que tuvieran todo lo que un parrillero necesita para hacer de sus parrilladas el mejor evento.",
    "pct": 30,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92417,7 +90568,7 @@
    "titulo": "25% de descuento en Casa Nativa",
    "descripcion": "Exclusivo en tienda online con tus tarjetas y cupón BSNATIVA26. 25% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón de descuento el código \"BSNATIVA26\". No acumulable con otras ofertas y/o descuentos. Beneficio no válido para costos de envío. Somos un grupo de amigos amantes del emprendimiento y con ganas de cambiar el mundo. Nos conocimos trabajando en Wild Lama y luego de un par de años decidimos tomar nuestro propio rumbo. Nos dimos cuenta de que la industria de la limpieza era tóxica. Las dos empresas que dominan el mercado tienen una oferta",
    "pct": 25,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92452,7 +90603,7 @@
    "titulo": "15% de descuento en Ergo Baby",
    "descripcion": "Exclusivo en tienda online con tus tarjetas. 15% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta de crédito o débito. No acumulable con otras promociones ni descuentos. No aplicable con costo de despacho. Válido sólo por la página web ergobaby.cl/ Estamos dedicados a construir una comunidad global de padres confiados, con soluciones inteligentes y ergonómicas que permitan y fomenten el vínculo entre padres y bebés. <i class=\"coh-inline-element las",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92526,7 +90677,7 @@
    "titulo": "15% de descuento en Green Glass",
    "descripcion": "Exclusivo en tienda online con tus tarjetas y cupón \"BSGREEN26\". 15% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón: BSGREEN26. No aplica en fechas de eventos Cyber. No acumulable con otras promociones vigentes. No aplica en costos de envío. Green Glass, que se dedica al reciclaje de botellas de vino transformándolas en unos bellos vasos.",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92561,7 +90712,7 @@
    "titulo": "15% de descuento en Joyfitters",
    "descripcion": "Exclusivo en tienda online con tus tarjetas y cupón \"BICESECURITY\". 15% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón: BICESECURITY. No aplica sobre descuentos. No aplica en costo de despacho. Válido sólo en compra realizadas en tienda online. Slow Fashion Brand. Producción Latam por y para mujeres. Existimos para empoderar tu amor propio e inspirarte a disfrutar una vida activa con estilo. <i class=\"coh-inline-element las",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92660,7 +90811,7 @@
    "titulo": "40% de descuento en Club Softys",
    "descripcion": "Los días lunes, exclusivo en tienda online con tus tarjetas. 40% de dcto. los lunes, con tu tarjeta de crédito y débito en tienda online. Ingresa como cupón los primeros 6 dígitos de tu tarjeta de crédito o débito. No es acumulable con otras promociones, no válido en productos \"Outlet\" o \"Packs\". Sólo aplica a compras realizadas en la página web clubsoftys.cl. Compra mínima de $8.000. Encuentra en Club Softys todos los productos de artículos de aseo, higiene y cuidado de tus marcas preferidas. ¡Compra online y recibe con despacho a la puerta de tu casa! <i class=\"coh-inline-element las",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0
    ],
@@ -92724,7 +90875,7 @@
    "titulo": "20% de descuento en BYP",
    "descripcion": "Todos los días, en tienda física y online con tus tarjetas. Calle Santa Elena de Huechuraba 1895. 20% de dcto. todos los días, con tu tarjeta de crédito y débito en tienda física y online. Pide tu descuento y paga con tu tarjeta de crédito o débito. No acumulable con otras promociones y/o descuentos. No válido en costo de despacho. En ByP Iluminación somos líderes en la industria de iluminación a través de la más amplia variedad de productos de iluminación residencial, comercial e industrial. Horario de atención Showroom Huechuraba: lunes a viernes de 08:30 a 18:00 hrs. | sábado de 10:00 a 18:",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -92787,7 +90938,7 @@
    "titulo": "Hasta $10.000 Tenpesos de devolución.",
    "descripcion": "Ahorra pagando tus gastos comunes en la App Comunidad Feliz con Tenpo. Haz rendir el presupuesto de tu hogar este mes, obtén hasta $10.000 Tenpesos de devolución pagando tus gastos comunes a través de la App Comunidad Feliz con tus Tarjetas Tenpo.Obtén hasta un 4% de devolución si eres cliente nuevo de la App. Tope $10.000 Tenpesos. Válido hasta el 30 de noviembre o hasta agotar stock promocional",
    "pct": 4,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -93049,7 +91200,7 @@
    "titulo": "15% Dcto en Greenglass.cl",
    "descripcion": "Encuentra aquí tu cupón de descuento Con Tenpo tienes un 15% de descuento en tienda online www.greenglass.cl usando como cupón los 6 primeros dígitos de tu Tarjeta Tenpo.No acumulable con otras promociones y descuentos. No aplica sobre costo de envío. Válido del 1 al 30 de noviembre.",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -93540,7 +91691,7 @@
    "titulo": "$25.000 Tenpesos de devolución en Samsung.",
    "descripcion": "Ahorra y obtén la mejor tecnología pagando con tus Tarjetas de Crédito Tenpo. Obtén $25.000 Tenpesos de devolución comprando con tu Tarjeta de Crédito Tenpo en Samsung.com, compra mínima $250.000 (aplica para pasarelas de pago Transbank). 1 al 30 de noviembre o hasta agotar stock promocional",
    "pct": null,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -93572,7 +91723,7 @@
    "titulo": "20% de descuento",
    "descripcion": "Productos exclusivos y únicos pagando con Tenpo en tu compra online o presencial. Obtén 20% de descuento en tiendas Japi Jane, online en japijane.cl y presencial en tiendas. Para comprar online ingresa como cupón los 6 primeros dígitos de tu tarjeta. Martes de noviembre",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     1
    ],

@@ -36,12 +36,12 @@ RUBROS = {
 _RUBRO_KW = [
     ("delivery", ["delivery", "rappi", "pedidosya", "uber eats", "cornershop", "justo", "despacho de comida"]),
     ("combustible", ["combustible", "bencina", "copec", "shell", "aramco", "petrobras", "enex", "estacion de servicio", "estaciones de servicio", "gasolina", "diesel"]),
-    ("supermercados", ["supermercado", "jumbo", "lider", "santa isabel", "unimarc", "tottus", "acuenta", "mayorista", "alvi", "ok market", "botilleria", "almacen", "feria"]),
+    ("supermercados", ["supermercado", "super 10", "super10", "jumbo", "lider express", "express de lider", "supermercado lider", "supermercados lider", "lider.cl", "santa isabel", "unimarc", "tottus", "acuenta", "mayorista", "alvi", "ok market", "botilleria", "almacen", "feria"]),
     ("farmacias", ["farmacia", "salcobrand", "cruz verde", "ahumada", "dr. simi", "optica", "clinica", "dental", "salud", "bienestar", "gimnasio", "smartfit", "sportlife", "belleza", "peluqueria", "spa"]),
     ("viajes", ["viaje", "hotel", "aerolinea", "latam", "sky airline", "jetsmart", "turismo", "turbus", "pullman", "uber", "cabify", "didi", "arriendo de auto", "rent a car", "transporte", "metro", "estacionamiento", "peaje", "vuelo", "hostal", "lodge"]),
-    ("restaurantes", ["restaurant", "restoran", "gastronom", "cafe", "cafeteria", "sushi", "pizza", "burger", "hamburgues", "comida", "bar ", "heladeria", "helado", "pasteleria", "panaderia", "starbucks", "juan maestro", "dominos", "mcdonald", "kfc", "bistro", "parrilla", "cerveceria", "brunch"]),
+    ("restaurantes", ["restaurant*", "restoran*", "gastronom*", "pizzeria", "coffee", "dulceria", "chocolat*", "bakery", "panader*", "pasteler*", "empanada", "cocina", "food", "cafe", "cafeteria", "sushi", "pizza", "burger", "hamburgues*", "comida", "bar ", "heladeria", "helado", "pasteleria", "panaderia", "starbucks", "juan maestro", "dominos", "mcdonald", "kfc", "bistro", "parrilla", "cerveceria", "brunch"]),
     ("entretencion", ["cine", "cinemark", "cineplanet", "teatro", "concierto", "entretencion", "streaming", "spotify", "netflix", "videojuego", "juego", "parque", "museo", "evento", "ticket", "puntoticket", "musica", "libreria", "libro", "vina", "tour"]),
-    ("vestuario", ["vestuario", "ropa", "zapat", "calzado", "moda", "tienda", "falabella", "ripley", "paris", "hites", "la polar", "hogar", "sodimac", "easy", "construccion", "decoracion", "muebles", "tecnologia", "electro", "deporte", "outdoor", "mascota", "jugueteria", "retail", "mall"]),
+    ("vestuario", ["vestuario", "ropa", "boutique", "jeans", "lenceria", "joyeria", "accesorios", "carteras", "maletas", "equipaje", "zapat*", "calzado", "moda", "tienda", "falabella", "ripley", "paris", "hites", "la polar", "hogar", "sodimac", "easy", "construccion", "decoracion", "muebles", "tecnologia", "electro*", "deporte", "outdoor", "mascota", "jugueteria", "retail", "mall"]),
 ]
 
 _DIAS = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]
@@ -55,13 +55,39 @@ def limpiar(s: str | None) -> str:
     return re.sub(r"\s+", " ", s or "").strip()
 
 
-def adivinar_rubro(*textos: str) -> str:
-    t = " " + sin_tildes(" ".join(x or "" for x in textos)).lower() + " "
-    for rubro, kws in _RUBRO_KW:
-        # La palabra clave debe empezar una palabra ("spa" no coincide con "españa")
-        if any(re.search(r"(?<![a-z0-9])" + re.escape(kw.strip()), t) for kw in kws):
+def _kw_regex(kw: str) -> re.Pattern:
+    """Palabra completa (admite plural: "farmacias", "hoteles"). Con "*" al final es
+    un prefijo ("gastronom*" -> gastronomía, gastronómico)."""
+    kw = kw.strip()
+    if kw.endswith("*"):
+        return re.compile(r"(?<![a-z0-9])" + re.escape(kw[:-1]))
+    return re.compile(r"(?<![a-z0-9])" + re.escape(kw) + r"(?:s|es)?(?![a-z0-9])")
+
+
+# Palabras demasiado genéricas para usarlas en descripciones ("compra en nuestra tienda",
+# "válido para compras mayoristas", "la plataforma de tecnología..."): solo cuentan en nombre o título
+_KW_DEBILES = {"tienda", "tecnologia", "mayorista", "supermercado", "mall", "retail", "moda", "hogar", "salud",
+               "bienestar", "evento", "juego", "parque", "transporte", "comida", "musica", "deporte", "viaje",
+               "belleza", "ticket", "tour", "bar", "metro", "cocina", "food", "accesorios"}
+_RUBRO_RX = [(r, [_kw_regex(k) for k in kws]) for r, kws in _RUBRO_KW]
+_RUBRO_RX_DESC = [(r, [_kw_regex(k) for k in kws if k.strip() not in _KW_DEBILES]) for r, kws in _RUBRO_KW]
+
+
+def _rubro_texto(texto: str, tabla=None) -> str:
+    t = " " + sin_tildes(texto).lower() + " "
+    for rubro, rxs in tabla or _RUBRO_RX:
+        if any(rx.search(t) for rx in rxs):
             return rubro
     return "otros"
+
+
+def adivinar_rubro(comercio: str = "", titulo: str = "", *otros: str) -> str:
+    """Primero el nombre del comercio y el título; la descripción solo si no alcanzan
+    (suele traer frases de marketing como "plataforma líder")."""
+    r = _rubro_texto(f"{comercio or ''} {titulo or ''}")
+    if r != "otros" or not any(otros):
+        return r
+    return _rubro_texto(" ".join(x or "" for x in otros), _RUBRO_RX_DESC)
 
 
 def extraer_pct(*textos: str) -> int | None:
@@ -88,6 +114,12 @@ def extraer_dias(*textos: str) -> list[int]:
     if "fin de semana" in t or "fines de semana" in t:
         dias.update({5, 6})
     return sorted(dias)
+
+
+def es_solo_cuotas(titulo: str) -> bool:
+    """Ofertas de cuotas sin interés (no son descuentos): "Paga hasta en 24 cuotas sin interés"."""
+    t = sin_tildes(titulo or "").lower()
+    return bool(re.search(r"cuotas? sin interes", t)) and not re.search(r"\d\s?%|dcto|dto|descuento", t)
 
 
 def tipo_tarjeta(nombre: str) -> str:

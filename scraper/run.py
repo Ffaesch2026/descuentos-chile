@@ -18,6 +18,8 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
+from scraper.common import es_solo_cuotas
+
 ROOT = Path(__file__).resolve().parent.parent
 SALIDA = ROOT / "data" / "descuentos.json"
 WEB_DATA = ROOT / "web" / "data" / "descuentos.json"
@@ -50,6 +52,8 @@ def main(argv: list[str]) -> int:
         bid = info["id"]
         try:
             items = mod.scrape()
+            # Cuotas sin interés no son descuentos (criterio común a todos los bancos)
+            items = [d for d in items if not es_solo_cuotas(d["titulo"])]
             if not items:
                 raise RuntimeError("no se encontraron descuentos")
             vistos, unicos = set(), []
