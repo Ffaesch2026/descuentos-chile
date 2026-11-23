@@ -140,3 +140,11 @@ img{max-width:100%}
 .foot a{color:var(--accent)}
 .drawer a{color:var(--accent);word-break:break-all}
 .drawer .desc{font-size:.88rem;color:var(--muted);margin:0}
+
+.bankchip{padding:3px 11px 3px 4px}
+.bankchip .logo.sm{width:22px;height:22px;font-size:.58rem}
+.cardbtn:disabled{opacity:.5;cursor:not-allowed}
+.pop input.popsearch{width:100%;height:auto;margin-bottom:6px;position:sticky;top:0;z-index:1}
+#regPop label{padding-left:4px}
+.toggle{display:inline-flex;gap:6px;align-items:center;font-size:.82rem;color:var(--muted);cursor:pointer}
+.toggle input{accent-color:var(--accent);width:16px;height:16px}

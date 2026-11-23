@@ -28,10 +28,27 @@
     <div class="frow"><span class="flabel">Rubro</span><div class="chips" id="catChips"></div></div>
     <div class="frow"><span class="flabel">% Desc.</span><div class="chips" id="pctChips"></div></div>
     <div class="frow"><span class="flabel">Tipo</span><div class="chips" id="typeChips"></div></div>
+    <div class="frow"><span class="flabel">Institución</span><div class="chips" id="bankChips"></div></div>
+    <div class="frow">
+      <span class="flabel">Ubicación</span>
+      <div class="cardpick">
+        <button class="cardbtn" id="regBtn" aria-expanded="false" data-pop="regPop">Región <span class="count" id="regCount">Todas</span> ▾</button>
+        <div class="pop" id="regPop" hidden></div>
+      </div>
+      <div class="cardpick">
+        <button class="cardbtn" id="comBtn" aria-expanded="false" data-pop="comPop" disabled title="Elige primero una región">Comuna <span class="count" id="comCount">Todas</span> ▾</button>
+        <div class="pop" id="comPop" hidden>
+          <input class="search popsearch" id="comQ" type="search" placeholder="Buscar comuna…" aria-label="Buscar comuna">
+          <div id="comList"></div>
+        </div>
+      </div>
+      <label class="toggle" id="nacWrap" hidden><input type="checkbox" id="incNac" checked> Incluir descuentos válidos en todo Chile u online</label>
+      <div class="selchips" id="geoChips"></div>
+    </div>
     <div class="frow">
       <span class="flabel">Tarjetas</span>
       <div class="cardpick">
-        <button class="cardbtn" id="cardBtn" aria-expanded="false">Elegir tarjetas <span class="count" id="cardCount">Todas</span> ▾</button>
+        <button class="cardbtn" id="cardBtn" aria-expanded="false" data-pop="cardPop">Elegir tarjetas <span class="count" id="cardCount">Todas</span> ▾</button>
         <div class="pop" id="cardPop" hidden></div>
       </div>
       <div class="selchips" id="selChips"></div>

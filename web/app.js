@@ -36,8 +36,8 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<
 const key = (b, c) => b + "|" + c;
 const todayIdx = (new Date().getDay() + 6) % 7;
 
-let DATA = [], META = {};
-const st = { days: new Set(), cats: new Set(), pcts: new Set(), types: new Set(), cards: new Set(), q: "", view: "inst", z: 3, collapsed: new Set() };
+let DATA = [], META = {}, REGIONES = [];
+const st = { days: new Set(), cats: new Set(), pcts: new Set(), types: new Set(), cards: new Set(), banks: new Set(), regs: new Set(), coms: new Set(), incNac: true, comQ: "", q: "", view: "inst", z: 3, collapsed: new Set() };
 try { const z = +localStorage.getItem("dz"); if (z >= 1 && z <= 5) st.z = z; } catch (e) {}
 try { JSON.parse(localStorage.getItem("cards") || "[]").forEach((k) => st.cards.add(k)); } catch (e) {}
 const saveCards = () => { try { localStorage.setItem("cards", JSON.stringify([...st.cards])); } catch (e) {} };
@@ -67,6 +67,8 @@ function chips() {
     const c = DATA.filter((d) => inPct(d, i)).length;
     return c ? `<button class="chip" data-pct="${i}" aria-pressed="${st.pcts.has(i)}">${n} <span class="meta">(${c})</span></button>` : "";
   }).join("");
+  const used = new Set(DATA.map((d) => d.banco));
+  $("#bankChips").innerHTML = BANKS.filter((b) => used.has(b.id)).map((b) => `<button class="chip bankchip" data-bank="${b.id}" aria-pressed="${st.banks.has(b.id)}">${logo(b, true)}${esc(b.name)}</button>`).join("");
   $("#typeChips").innerHTML = Object.entries(TYPES).map(([k, n]) => `<button class="chip" data-type="${k}" aria-pressed="${st.types.has(k)}">${n}</button>`).join("");
 }
 function inPct(d, i) { const [, lo, hi] = PCTS[i]; return lo === null ? d.pct == null : d.pct != null && d.pct >= lo && d.pct <= hi; }
@@ -83,12 +85,49 @@ function cardPop() {
   $("#selChips").innerHTML = [...st.cards].map((k) => { const [b, c] = k.split("|"); return `<button class="selchip" data-rm="${esc(k)}" aria-label="Quitar ${esc(bank(b).name + " " + c)}">${esc(bank(b).name)} · ${esc(c)}</button>`; }).join("");
 }
 
+const regName = (id) => (REGIONES.find((r) => r.id === id) || { nombre: id }).nombre;
+const regOfCom = (c) => (REGIONES.find((r) => r.comunas.includes(c)) || {}).id;
+function geoPop() {
+  const nReg = {}, nCom = {};
+  DATA.forEach((d) => { (d.regiones || []).forEach((r) => (nReg[r] = (nReg[r] || 0) + 1)); (d.comunas || []).forEach((c) => (nCom[c] = (nCom[c] || 0) + 1)); });
+  $("#regPop").innerHTML = REGIONES.map((r) => `<label><input type="checkbox" data-reg="${r.id}" ${st.regs.has(r.id) ? "checked" : ""}>${esc(r.nombre)} <span class="meta">(${nReg[r.id] || 0})</span></label>`).join("");
+  const q = st.comQ.trim().toLowerCase();
+  $("#comList").innerHTML = REGIONES.filter((r) => st.regs.has(r.id)).map((r) => {
+    const cs = r.comunas.filter((c) => !q || c.toLowerCase().includes(q));
+    if (!cs.length) return "";
+    return `<div class="bank"><div class="bankhead">${esc(r.nombre)}</div>` + cs.map((c) => `<label><input type="checkbox" data-com="${esc(c)}" ${st.coms.has(c) ? "checked" : ""}>${esc(c)} <span class="meta">${nCom[c] ? "(" + nCom[c] + ")" : ""}</span></label>`).join("") + `</div>`;
+  }).join("") || `<p class="meta">Sin comunas que coincidan.</p>`;
+  $("#regCount").textContent = st.regs.size || "Todas";
+  $("#comCount").textContent = st.coms.size || "Todas";
+  const cb = $("#comBtn"); cb.disabled = !st.regs.size; cb.title = st.regs.size ? "" : "Elige primero una región";
+  $("#nacWrap").hidden = !st.regs.size;
+  $("#geoChips").innerHTML = [...st.regs].map((r) => `<button class="selchip" data-rmreg="${r}" aria-label="Quitar ${esc(regName(r))}">${esc(regName(r))}</button>`).join("") +
+    [...st.coms].map((c) => `<button class="selchip" data-rmcom="${esc(c)}" aria-label="Quitar ${esc(c)}">${esc(c)}</button>`).join("");
+}
+// Un descuento sin ubicación es válido en todo Chile u online.
+// Por cada región elegida: si se eligieron comunas de esa región, el descuento debe estar en alguna
+// de ellas (o valer para toda la región, sin comuna específica); si no, basta con la región.
+function inGeo(d) {
+  if (!st.regs.size) return true;
+  const regs = d.regiones || [], coms = d.comunas || [];
+  if (!regs.length) return st.incNac;
+  return regs.some((r) => {
+    if (!st.regs.has(r)) return false;
+    const elegidas = [...st.coms].filter((c) => regOfCom(c) === r);
+    if (!elegidas.length) return true;
+    const enRegion = coms.filter((c) => regOfCom(c) === r);
+    return !enRegion.length || enRegion.some((c) => st.coms.has(c));
+  });
+}
+
 function filtered() {
   const q = st.q.trim().toLowerCase();
   return DATA.filter((d) => (!st.days.size || d.dias.some((x) => st.days.has(x)))
     && (!st.cats.size || st.cats.has(d.rubro))
     && (!st.pcts.size || [...st.pcts].some((i) => inPct(d, i)))
     && (!st.types.size || d.tipos.some((t) => st.types.has(t)))
+    && (!st.banks.size || st.banks.has(d.banco))
+    && inGeo(d)
     && (!st.cards.size || d.tarjetas.some((c) => st.cards.has(key(d.banco, c))))
     && (!q || (d.comercio + " " + d.titulo).toLowerCase().includes(q)));
 }
@@ -101,7 +140,7 @@ const pctHtml = (d) => d.pct != null ? `<span class="pct">${d.pct}%</span>` : `<
 function tile(d) {
   return `<button class="tile" data-id="${esc(d.id)}" style="--rc:${catVar(d)}" title="${esc(d.comercio)}${d.pct != null ? " · " + d.pct + "%" : ""}">
   ${pctHtml(d)}<span class="merchant">${esc(d.comercio)}</span>${daysHtml(d)}
-  <span class="meta">${(CATS[d.rubro] || CATS.otros)[0]}${d.tope ? " · tope " + esc(d.tope) : ""}</span>
+  <span class="meta">${(CATS[d.rubro] || CATS.otros)[0]}${d.tope ? " · " + esc(/^tope/i.test(d.tope) ? d.tope : "tope " + d.tope) : ""}</span>
   <span class="cardtags">${d.tarjetas.slice(0, 6).map((c) => `<span>${esc(c)}</span>`).join("")}</span></button>`;
 }
 const byPct = (a, b) => (b.pct ?? -1) - (a.pct ?? -1);
@@ -161,6 +200,7 @@ function openDetail(id) {
   <dt>Tarjetas</dt><dd>${d.tarjetas.length ? d.tarjetas.map(esc).join(", ") : "Ver condiciones"}</dd>
   <dt>Tipo</dt><dd>${d.tipos.map((t) => TYPES[t]).join(", ")}</dd>
   <dt>Tope</dt><dd>${esc(money(d.tope))}</dd>
+  <dt>Ubicación</dt><dd>${(d.comunas || []).length ? esc(d.comunas.join(", ")) + (d.comunas.length ? " (" + esc([...new Set(d.regiones)].map(regName).join(", ")) + ")" : "") : (d.regiones || []).length ? esc(d.regiones.map(regName).join(", ")) : "Todo Chile u online"}</dd>
   <dt>Modalidad</dt><dd>${esc(d.modalidad || "Sin información")}</dd>
   <dt>Vigencia</dt><dd>${esc(vig)}</dd>
   ${d.url ? `<dt>Fuente</dt><dd><a href="${esc(d.url)}" target="_blank" rel="noopener">Ver en el sitio de ${esc(b.name)}</a></dd>` : ""}</dl>
@@ -172,15 +212,27 @@ function setZ(z) { st.z = Math.max(1, Math.min(5, z)); try { localStorage.setIte
 function toggle(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
 
 document.addEventListener("click", (e) => {
-  const pop = $("#cardPop");
-  if (!pop.hidden && !e.target.closest(".cardpick")) { pop.hidden = true; $("#cardBtn").setAttribute("aria-expanded", "false"); }
+  const inPick = e.target.closest(".cardpick");
+  document.querySelectorAll(".pop").forEach((p) => {
+    if (!p.hidden && (!inPick || !inPick.contains(p))) { p.hidden = true; p.previousElementSibling.setAttribute("aria-expanded", "false"); }
+  });
   const t = e.target.closest("button,input"); if (!t) return;
   const ds = t.dataset;
   if (ds.day) { toggle(st.days, +ds.day); chips(); render(); }
   else if (ds.cat) { toggle(st.cats, ds.cat); chips(); render(); }
   else if (ds.pct) { toggle(st.pcts, +ds.pct); chips(); render(); }
   else if (ds.type) { toggle(st.types, ds.type); chips(); render(); }
-  else if (t.id === "cardBtn") { pop.hidden = !pop.hidden; t.setAttribute("aria-expanded", !pop.hidden); }
+  else if (ds.pop) { const p = $("#" + ds.pop); p.hidden = !p.hidden; t.setAttribute("aria-expanded", !p.hidden); if (!p.hidden && ds.pop === "comPop") $("#comQ").focus(); }
+  else if (ds.bank) { toggle(st.banks, ds.bank); chips(); render(); }
+  else if (ds.reg) {
+    t.checked ? st.regs.add(ds.reg) : st.regs.delete(ds.reg);
+    if (!t.checked) [...st.coms].forEach((c) => { if (regOfCom(c) === ds.reg) st.coms.delete(c); });
+    geoPop(); render();
+  }
+  else if (ds.com) { t.checked ? st.coms.add(ds.com) : st.coms.delete(ds.com); geoPop(); render(); }
+  else if (ds.rmreg) { st.regs.delete(ds.rmreg); [...st.coms].forEach((c) => { if (regOfCom(c) === ds.rmreg) st.coms.delete(c); }); geoPop(); render(); }
+  else if (ds.rmcom) { st.coms.delete(ds.rmcom); geoPop(); render(); }
+  else if (t.id === "incNac") { st.incNac = t.checked; render(); }
   else if (ds.card) { t.checked ? st.cards.add(ds.card) : st.cards.delete(ds.card); saveCards(); cardPop(); render(); }
   else if (ds.all) {
     const cards = [...(cardsByBank().get(ds.all) || [])];
@@ -192,7 +244,7 @@ document.addEventListener("click", (e) => {
   else if (ds.toggle) { toggle(st.collapsed, ds.toggle); render(); }
   else if (ds.id) openDetail(ds.id);
   else if (t.id === "closeD") closeDetail();
-  else if (t.id === "clearAll") { ["days", "cats", "pcts", "types", "cards"].forEach((k) => st[k].clear()); st.q = ""; $("#q").value = ""; saveCards(); chips(); cardPop(); render(); }
+  else if (t.id === "clearAll") { ["days", "cats", "pcts", "types", "cards", "banks", "regs", "coms"].forEach((k) => st[k].clear()); st.q = ""; $("#q").value = ""; st.incNac = true; $("#incNac").checked = true; saveCards(); chips(); cardPop(); geoPop(); render(); }
   else if (t.id === "vInst" || t.id === "vWeek") {
     st.view = t.id === "vInst" ? "inst" : "week";
     $("#vInst").setAttribute("aria-pressed", st.view === "inst"); $("#vWeek").setAttribute("aria-pressed", st.view === "week"); render();
@@ -203,6 +255,7 @@ document.addEventListener("click", (e) => {
 $("#scrim").addEventListener("click", closeDetail);
 $("#zoomR").addEventListener("input", (e) => setZ(+e.target.value));
 $("#q").addEventListener("input", (e) => { st.q = e.target.value; render(); });
+$("#comQ").addEventListener("input", (e) => { st.comQ = e.target.value; geoPop(); });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeDetail();
   if (e.target.matches("input")) return;
@@ -213,10 +266,12 @@ $("#view").addEventListener("wheel", (e) => { if (e.ctrlKey) { e.preventDefault(
 
 async function load() {
   try {
-    const [data, logos] = await Promise.all([
+    const [data, logos, geo] = await Promise.all([
       fetch("data/descuentos.json", { cache: "no-cache" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
       fetch("logos/index.json").then((r) => (r.ok ? r.json() : {})).catch(() => ({})),
+      fetch("data/regiones.json").then((r) => (r.ok ? r.json() : { regiones: [] })).catch(() => ({ regiones: [] })),
     ]);
+    REGIONES = geo.regiones || [];
     LOGOS = logos || {};
     META = data; DATA = data.descuentos || [];
     const g = new Date(data.generado);
@@ -227,7 +282,7 @@ async function load() {
     // Descarta tarjetas guardadas que ya no existen
     const valid = new Set(DATA.flatMap((d) => d.tarjetas.map((c) => key(d.banco, c))));
     [...st.cards].forEach((k) => { if (!valid.has(k)) st.cards.delete(k); });
-    chips(); cardPop(); render();
+    chips(); cardPop(); geoPop(); render();
   } catch (e) {
     $("#view").innerHTML = `<div class="empty">No se pudieron cargar los descuentos (${esc(e.message)}). Recarga la página en unos minutos.</div>`;
   }

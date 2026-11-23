@@ -4,6 +4,7 @@ Uso:
     python -m scraper.run              # todos los bancos
     python -m scraper.run bci tenpo    # solo algunos
     python -m scraper.run --excluir santander,bancoestado
+    python -m scraper.run bci --salida /tmp/prueba.json   # prueba sin tocar los datos publicados
 
 Si un banco falla o no devuelve nada, se conservan sus descuentos de la ejecución
 anterior y se marca su estado como "error" para que la web lo indique.
@@ -30,6 +31,11 @@ def main(argv: list[str]) -> int:
     if "--excluir" in argv:
         i = argv.index("--excluir")
         excluir = {x.strip() for x in argv[i + 1].split(",") if x.strip()}
+        argv = argv[:i] + argv[i + 2:]
+    salidas = [SALIDA, WEB_DATA]
+    if "--salida" in argv:
+        i = argv.index("--salida")
+        salidas = [Path(argv[i + 1]).resolve()]
         argv = argv[:i] + argv[i + 2:]
     seleccion = [b for b in (argv or BANCOS) if b not in excluir]
     previo = json.loads(SALIDA.read_text("utf-8")) if SALIDA.exists() else {"bancos": {}, "descuentos": []}
@@ -66,10 +72,14 @@ def main(argv: list[str]) -> int:
 
     out = {"generado": ahora, "bancos": bancos, "descuentos": descuentos}
     txt = json.dumps(out, ensure_ascii=False, indent=1)
-    for p in (SALIDA, WEB_DATA):
+    for p in salidas:
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(txt, "utf-8")
-    print(f"Total: {len(descuentos)} descuentos -> {SALIDA.relative_to(ROOT)}")
+    if salidas[0] == SALIDA:
+        geo_web = WEB_DATA.parent / "regiones.json"
+        geo_web.write_text((ROOT / "scraper" / "regiones.json").read_text("utf-8"), "utf-8")
+    con_ubic = sum(1 for d in descuentos if d.get("regiones"))
+    print(f"Total: {len(descuentos)} descuentos ({con_ubic} con región) -> {salidas[0]}")
     return 0
 
 

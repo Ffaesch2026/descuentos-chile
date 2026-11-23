@@ -115,7 +115,19 @@ def nuevo_descuento(
     vigencia_hasta: str | None = None,
     url: str | None = None,
     imagen: str | None = None,
+    ubicaciones: list[str] | None = None,
+    regiones: list[str] | None = None,
 ) -> dict:
+    """ubicaciones: textos que son direcciones o lugares ("Av. X 123, Las Condes",
+    "Región de Valparaíso"); de ahí se deducen región y comuna.
+    regiones: ids de región ya conocidos (ver scraper/regiones.json, ej. "RM", "VS").
+    Sin ubicación = descuento válido en todo Chile u online."""
+    from scraper import geo
+
+    regs, coms = geo.ubicar([limpiar(u) for u in (ubicaciones or [])])
+    validas = {r["id"] for r in geo.regiones()}
+    regs = sorted(set(regs) | {r for r in (regiones or []) if r in validas},
+                  key=[r["id"] for r in geo.regiones()].index)
     comercio = limpiar(comercio)
     titulo = limpiar(titulo)
     descripcion = limpiar(descripcion)
@@ -142,6 +154,8 @@ def nuevo_descuento(
         "vigencia_hasta": vigencia_hasta,
         "url": url,
         "imagen": imagen,
+        "regiones": regs,
+        "comunas": coms,
     }
 
 
