@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-23T14:40:05+00:00",
+ "generado": "2026-11-23T14:59:00+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
@@ -7,7 +7,7 @@
    "sitio": "https://sitiospublicos.bancochile.cl/personas/beneficios",
    "estado": "ok",
    "cantidad": 853,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "falabella": {
@@ -16,7 +16,7 @@
    "sitio": "https://www.bancofalabella.cl/descuentos",
    "estado": "ok",
    "cantidad": 219,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "ripley": {
@@ -25,7 +25,7 @@
    "sitio": "https://www.bancoripley.cl/beneficios-y-promociones",
    "estado": "ok",
    "cantidad": 155,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "santander": {
@@ -43,7 +43,7 @@
    "sitio": "https://www.tarjetacencosud.cl/publico/beneficios/landing/inicio",
    "estado": "ok",
    "cantidad": 39,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "tenpo": {
@@ -52,7 +52,7 @@
    "sitio": "https://www.tenpo.cl/beneficios",
    "estado": "ok",
    "cantidad": 37,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "mach": {
@@ -61,7 +61,7 @@
    "sitio": "https://www.machbank.cl/beneficios",
    "estado": "ok",
    "cantidad": 17,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "security": {
@@ -70,7 +70,7 @@
    "sitio": "https://personas.bancosecurity.cl/beneficios",
    "estado": "ok",
    "cantidad": 165,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "bancoestado": {
@@ -80,7 +80,7 @@
    "estado": "error",
    "cantidad": 153,
    "actualizado": "2026-11-23T14:25:31+00:00",
-   "error": "FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?"
+   "error": "RuntimeError: BancoEstado: no se encontraron tarjetas de beneficios en las páginas"
   },
   "scotiabank": {
    "id": "scotiabank",
@@ -88,25 +88,25 @@
    "sitio": "https://www.scotiarewards.cl/scclubfront/categoria/mundos/descuentos",
    "estado": "ok",
    "cantidad": 262,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   },
   "itau": {
    "id": "itau",
    "nombre": "Itaú",
    "sitio": "https://itaubeneficios.cl/beneficios/",
-   "estado": "error",
+   "estado": "ok",
    "cantidad": 204,
-   "actualizado": "2026-11-23T14:25:31+00:00",
-   "error": "FeatureNotFound: Couldn't find a tree builder with the features you requested: lxml. Do you need to install a parser library?"
+   "actualizado": "2026-11-23T14:59:00+00:00",
+   "error": null
   },
   "bci": {
    "id": "bci",
    "nombre": "BCI",
    "sitio": "https://www.bci.cl/beneficios/beneficios-bci",
    "estado": "ok",
-   "cantidad": 290,
-   "actualizado": "2026-11-23T14:40:05+00:00",
+   "cantidad": 291,
+   "actualizado": "2026-11-23T14:59:00+00:00",
    "error": null
   }
  },
@@ -38529,6 +38529,28 @@
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/JetSmart_ff20f3fc_15-42_1.png"
   },
   {
+   "id": "bci-7e264c04dbe1",
+   "banco": "bci",
+   "comercio": "Ticketmaster",
+   "titulo": "20 por ciento de descuento con tarjetas de Crédito",
+   "descripcion": "Exclusivo con tus tarjetas de Crédito Bci. 20% Descuento TOPE $40.000 sólo para clientes de Banco Bci pagando con Tarjetas de Crédito desde el 20 de Noviembre de 2026 a las 12:01 pm y hasta agotar stock 1.500 entradas. Para acceder al beneficio se debe ingresar como código los 6 primeros dígitos de tu Tarjeta Bci en la web de Ticketmaster",
+   "pct": 20,
+   "rubro": "vestuario",
+   "dias": [],
+   "tarjetas": [
+    "Tarjetas de Crédito Bci"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "TOPE $40.000",
+   "modalidad": "Online",
+   "vigencia_desde": "2026-11-20",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/20-por-ciento-de-descuento-con-tarjetas-de-credito-1pjch1a",
+   "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Chile-Open_bdc3b83b_14-52_1.png"
+  },
+  {
    "id": "bci-6d91a6579ed6",
    "banco": "bci",
    "comercio": "Marriott",
@@ -74948,11 +74970,11 @@
    "imagen": "https://personas.bancosecurity.cl/sites/bancopersonas/files/styles/small_beneficios_listado/public/2026-11/Imagen%20-%202026-11-20T121446.120.png.webp?itok=iM7nKB-X"
   },
   {
-   "id": "security-8644922780c0",
+   "id": "security-8241ab37565b",
    "banco": "security",
    "comercio": "Mall Sport",
-   "titulo": "50% de descuento en Mastercard - Mall Sport",
-   "descripcion": "El primer fin de semana del mes en tiendas adheridas junto a Mastercard Weekend en Mall Sport, con tus Tarjetas Mastercard. Las Condes. Mastercard Weekend en Mall Sport. El primer fin de semana de cada mes, de viernes a domingo, Mall Sport se transformará en el punto de encuentro de beneficios exclusivos para clientes Mastercard. Las tiendas adheridas abarcarán deporte, outdoor, entretención y gastronomía, y ofrecerán descuentos especiales de hasta 50% pagando con tus Tarjetas Mastercard. Beneficio exclusivo pagando con Mastercard en las tiendas adheridas de manera presencial en Mall Sport.",
+   "titulo": "Hasta 50% de descuento en Mastercard - Mall Sport",
+   "descripcion": "El primer fin de semana del mes en tiendas adheridas junto a Mastercard Weekend en Mall Sport, con tus Tarjetas Mastercard. Las Condes. Hasta 50% el primer fin de semana de cada mes, pagando con tus Tarjetas Mastercard Banco Security. Mastercard Weekend en Mall Sport. El primer fin de semana de cada mes, de viernes a domingo, Mall Sport se transformará en el punto de encuentro de beneficios exclusivos para clientes Mastercard. Las tiendas adheridas abarcarán deporte, outdoor, entretención y gastronomía, y ofrecerán descuentos especiales de hasta 50% pagando con tus Tarjetas Mastercard. Benefic",
    "pct": 50,
    "rubro": "vestuario",
    "dias": [
