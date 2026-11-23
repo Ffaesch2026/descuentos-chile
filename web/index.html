@@ -22,16 +22,25 @@
 </header>
 <div class="notice" id="notice" hidden><div class="wrap" id="noticeText"></div></div>
 
-<section class="filters" aria-label="Filtros">
+<div class="mbar" id="mbar">
   <div class="wrap">
+    <label class="msel"><span>Rubro</span><select id="mCat" aria-label="Rubro"></select></label>
+    <label class="msel"><span>Región</span><select id="mReg" aria-label="Región"></select></label>
+    <button class="mfbtn" id="fBtn" aria-expanded="false" aria-controls="filters">Filtros <span class="count" id="fCount" hidden>0</span></button>
+  </div>
+</div>
+
+<section class="filters" id="filters" aria-label="Filtros">
+  <div class="wrap">
+    <div class="sheethead"><strong>Filtros</strong><button class="clear" id="clearAll2">Limpiar</button><button class="close" id="sheetClose" aria-label="Cerrar filtros">✕</button></div>
     <div class="frow"><span class="flabel">Día</span><div class="chips" id="dayChips"></div></div>
-    <div class="frow"><span class="flabel">Rubro</span><div class="chips" id="catChips"></div></div>
+    <div class="frow" id="catRow"><span class="flabel">Rubro</span><div class="chips" id="catChips"></div></div>
     <div class="frow"><span class="flabel">% Desc.</span><div class="chips" id="pctChips"></div></div>
     <div class="frow"><span class="flabel">Tipo</span><div class="chips" id="typeChips"></div></div>
     <div class="frow"><span class="flabel">Institución</span><div class="chips" id="bankChips"></div></div>
     <div class="frow">
       <span class="flabel">Ubicación</span>
-      <div class="cardpick">
+      <div class="cardpick" id="regPick">
         <button class="cardbtn" id="regBtn" aria-expanded="false" data-pop="regPop">Región <span class="count" id="regCount">Todas</span> ▾</button>
         <div class="pop" id="regPop" hidden></div>
       </div>
@@ -58,6 +67,7 @@
       <div class="seg" role="group" aria-label="Vista">
         <button id="vInst" aria-pressed="true">Por institución</button>
         <button id="vWeek" aria-pressed="false">Semana</button>
+        <button id="vTab" aria-pressed="false" class="mobonly">Tabla</button>
       </div>
       <div class="zoom" aria-label="Zoom">
         <button id="zOut" aria-label="Alejar">−</button>
@@ -66,6 +76,7 @@
         <span id="zLabel">Normal</span>
       </div>
     </div>
+    <div class="sheetfoot"><button id="sheetApply">Ver descuentos</button></div>
   </div>
 </section>
 

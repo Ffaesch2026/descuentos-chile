@@ -39,6 +39,15 @@ const todayIdx = (new Date().getDay() + 6) % 7;
 let DATA = [], META = {}, REGIONES = [];
 const st = { days: new Set(), cats: new Set(), pcts: new Set(), types: new Set(), cards: new Set(), banks: new Set(), regs: new Set(), coms: new Set(), incNac: true, comQ: "", q: "", view: "inst", z: 3, collapsed: new Set() };
 try { const z = +localStorage.getItem("dz"); if (z >= 1 && z <= 5) st.z = z; } catch (e) {}
+// Celular: rubro y región son obligatorios y se recuerdan; la vista por defecto es la tabla tipo afiche
+const MQ = window.matchMedia("(max-width: 760px)");
+let mobile = MQ.matches;
+const lsGet = (k, d) => { try { return localStorage.getItem(k) || d; } catch (e) { return d; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+st.mcat = lsGet("mcat", "restaurantes");
+st.mreg = lsGet("mreg", "RM");
+st.expanded = new Set();
+if (mobile) st.view = "tabla";
 try { JSON.parse(localStorage.getItem("cards") || "[]").forEach((k) => st.cards.add(k)); } catch (e) {}
 const saveCards = () => { try { localStorage.setItem("cards", JSON.stringify([...st.cards])); } catch (e) {} };
 
@@ -156,7 +165,12 @@ function render() {
   document.documentElement.style.setProperty("--z", [0, 1.3, 2.2, 3, 3.8, 4.8][st.z]);
   $("#zLabel").textContent = ["", "Mapa", "Compacto", "Normal", "Amplio", "Detalle"][st.z];
   $("#zoomR").value = st.z;
+  $("#sheetApply").textContent = list.length === 1 ? "Ver 1 descuento" : `Ver ${list.length} descuentos`;
+  const nf = st.days.size + st.pcts.size + st.types.size + st.banks.size + st.coms.size + st.cards.size + (st.q.trim() ? 1 : 0) + (st.incNac ? 0 : 1);
+  $("#fCount").textContent = nf; $("#fCount").hidden = !nf;
+  ["vInst", "vWeek", "vTab"].forEach((id) => $("#" + id).setAttribute("aria-pressed", st.view === { vInst: "inst", vWeek: "week", vTab: "tabla" }[id]));
   if (!list.length) { v.innerHTML = `<div class="empty">No hay descuentos con estos filtros. Prueba quitando un día, un rubro o un rango de %.</div>`; return; }
+  if (st.view === "tabla") { renderTabla(list); return; }
   const ids = [...new Set([...BANKS.map((b) => b.id), ...list.map((d) => d.banco)])];
   if (st.view === "inst") {
     v.innerHTML = ids.map((id) => {
@@ -244,9 +258,12 @@ document.addEventListener("click", (e) => {
   else if (ds.toggle) { toggle(st.collapsed, ds.toggle); render(); }
   else if (ds.id) openDetail(ds.id);
   else if (t.id === "closeD") closeDetail();
-  else if (t.id === "clearAll") { ["days", "cats", "pcts", "types", "cards", "banks", "regs", "coms"].forEach((k) => st[k].clear()); st.q = ""; $("#q").value = ""; st.incNac = true; $("#incNac").checked = true; saveCards(); chips(); cardPop(); geoPop(); render(); }
-  else if (t.id === "vInst" || t.id === "vWeek") {
-    st.view = t.id === "vInst" ? "inst" : "week";
+  else if (t.id === "fBtn" || t.id === "sheetClose" || t.id === "sheetApply") { setSheet(t.id === "fBtn" && !document.body.classList.contains("sheet-open")); }
+  else if (ds.more) { toggle(st.expanded, ds.more); render(); }
+  else if (t.id === "clearAll2") { $("#clearAll").click(); }
+  else if (t.id === "clearAll") { ["days", "cats", "pcts", "types", "cards", "banks", "regs", "coms"].forEach((k) => st[k].clear()); st.q = ""; $("#q").value = ""; st.incNac = true; $("#incNac").checked = true; saveCards(); if (mobile) applyMobile(); chips(); cardPop(); geoPop(); render(); }
+  else if (t.id === "vInst" || t.id === "vWeek" || t.id === "vTab") {
+    st.view = { vInst: "inst", vWeek: "week", vTab: "tabla" }[t.id];
     $("#vInst").setAttribute("aria-pressed", st.view === "inst"); $("#vWeek").setAttribute("aria-pressed", st.view === "week"); render();
   }
   else if (t.id === "zIn") setZ(st.z + 1);
@@ -257,12 +274,83 @@ $("#zoomR").addEventListener("input", (e) => setZ(+e.target.value));
 $("#q").addEventListener("input", (e) => { st.q = e.target.value; render(); });
 $("#comQ").addEventListener("input", (e) => { st.comQ = e.target.value; geoPop(); });
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeDetail();
+  if (e.key === "Escape") { closeDetail(); setSheet(false); }
   if (e.target.matches("input")) return;
   if (e.key === "+" || e.key === "=") setZ(st.z + 1);
   if (e.key === "-") setZ(st.z - 1);
 });
 $("#view").addEventListener("wheel", (e) => { if (e.ctrlKey) { e.preventDefault(); setZ(st.z + (e.deltaY < 0 ? 1 : -1)); } }, { passive: false });
+
+// ---------- Celular ----------
+const DSHORT = ["LUN", "MAR", "MIÉ", "JUE", "VIE", "SÁB", "DOM"];
+function fmtDias(dias) {
+  if (!dias.length) return "VER COND.";
+  if (dias.length === 7) return "TODOS";
+  const ds = [...dias].sort((a, b) => a - b);
+  const contiguo = ds.every((x, i) => i === 0 || x === ds[i - 1] + 1);
+  if (contiguo && ds.length >= 3) return `${DSHORT[ds[0]]}–${DSHORT[ds[ds.length - 1]]}`;
+  return ds.map((x) => DSHORT[x]).join(" · ");
+}
+const PER_BANK = 12;
+function renderTabla(list) {
+  const ids = [...new Set([...BANKS.map((b) => b.id), ...list.map((d) => d.banco)])];
+  const firstDay = (d) => (d.dias.length ? Math.min(...d.dias) : 9);
+  const groups = ids.map((id) => {
+    const all = list.filter((d) => d.banco === id);
+    if (!all.length) return "";
+    const b = bank(id);
+    const shown = (st.expanded.has(id) ? all : [...all].sort(byPct).slice(0, PER_BANK))
+      .sort((a, c) => firstDay(a) - firstDay(c) || (c.pct ?? -1) - (a.pct ?? -1));
+    const tipos = [...new Set(all.flatMap((d) => d.tipos))].map((t) => ({ credito: "Créd.", debito: "Déb.", prepago: "Prep." }[t])).join(" / ");
+    const topes = [...new Set(all.map((d) => d.tope).filter(Boolean))];
+    const tope = topes.length === 1 && all.every((d) => d.tope) ? `<span class="ptope">${esc(topes[0])}</span>` : "";
+    const rest = all.length - shown.length;
+    return `<section class="pgroup" style="--bc:${b.c}">
+      <div class="pbank">${logo(b, true)}<b>${esc(b.name)}</b><span>*${tipos}</span>${tope}</div>
+      <div class="prows">${shown.map((d) => `<button class="prow" data-id="${esc(d.id)}"><span class="pday">${fmtDias(d.dias)}</span><span class="pcom">${esc(d.comercio)}</span><span class="ppct">${d.pct != null ? d.pct + "%" : "★"}</span></button>`).join("")}
+      ${rest > 0 ? `<button class="pmore" data-more="${id}">Ver ${rest} más de ${esc(b.name)} ▾</button>` : st.expanded.has(id) && all.length > PER_BANK ? `<button class="pmore" data-more="${id}">Ver menos ▴</button>` : ""}</div>
+    </section>`;
+  }).join("");
+  const cat = (CATS[st.mcat] || CATS.otros)[0], reg = regName(st.mreg);
+  $("#view").innerHTML = `<div class="posterwrap"><div class="poster" id="poster">
+    <div class="phead"><b>${esc(cat)} · ${esc(reg)}</b><span>${esc($("#month").textContent)} · ${list.length} descuentos${st.incNac ? " (incluye válidos en todo Chile)" : ""}</span></div>
+    <div class="pcols">${groups}</div>
+    <p class="pnote">Toca una fila para ver condiciones. Pellizca la pantalla para ampliar.</p></div></div>`;
+  fitPoster();
+}
+function fitPoster() {
+  const p = $("#poster"); if (!p) return;
+  const w = p.parentElement.getBoundingClientRect().width;
+  p.style.zoom = Math.min(1, w / 720);
+}
+window.addEventListener("resize", () => { if (st.view === "tabla") fitPoster(); });
+
+function setSheet(open) {
+  document.body.classList.toggle("sheet-open", open);
+  $("#fBtn").setAttribute("aria-expanded", open);
+  $("#scrim").hidden = !open && $("#drawer").hidden;
+}
+function mobileSelects() {
+  const used = new Set(DATA.map((d) => d.rubro));
+  $("#mCat").innerHTML = Object.entries(CATS).filter(([k]) => used.has(k)).map(([k, [n]]) => `<option value="${k}" ${k === st.mcat ? "selected" : ""}>${n}</option>`).join("");
+  $("#mReg").innerHTML = REGIONES.map((r) => `<option value="${r.id}" ${r.id === st.mreg ? "selected" : ""}>${esc(r.nombre)}</option>`).join("");
+}
+function applyMobile() {
+  document.body.classList.toggle("is-mobile", mobile);
+  if (!mobile) return;
+  st.cats = new Set([st.mcat]);
+  st.regs = new Set([st.mreg]);
+  [...st.coms].forEach((c) => { if (regOfCom(c) !== st.mreg) st.coms.delete(c); });
+  st.expanded.clear();
+}
+$("#mCat").addEventListener("change", (e) => { st.mcat = e.target.value; lsSet("mcat", st.mcat); applyMobile(); chips(); geoPop(); render(); window.scrollTo(0, 0); });
+$("#mReg").addEventListener("change", (e) => { st.mreg = e.target.value; lsSet("mreg", st.mreg); applyMobile(); geoPop(); render(); window.scrollTo(0, 0); });
+MQ.addEventListener("change", (e) => {
+  mobile = e.matches;
+  if (mobile) { if (st.view !== "week") st.view = "tabla"; } else { setSheet(false); if (st.view === "tabla") st.view = "inst"; }
+  applyMobile(); chips(); geoPop(); render();
+});
+$("#scrim").addEventListener("click", () => setSheet(false));
 
 async function load() {
   try {
@@ -282,6 +370,9 @@ async function load() {
     // Descarta tarjetas guardadas que ya no existen
     const valid = new Set(DATA.flatMap((d) => d.tarjetas.map((c) => key(d.banco, c))));
     [...st.cards].forEach((k) => { if (!valid.has(k)) st.cards.delete(k); });
+    if (!Object.keys(CATS).includes(st.mcat) || !DATA.some((d) => d.rubro === st.mcat)) st.mcat = "restaurantes";
+    if (!REGIONES.some((r) => r.id === st.mreg)) st.mreg = "RM";
+    mobileSelects(); applyMobile();
     chips(); cardPop(); geoPop(); render();
   } catch (e) {
     $("#view").innerHTML = `<div class="empty">No se pudieron cargar los descuentos (${esc(e.message)}). Recarga la página en unos minutos.</div>`;

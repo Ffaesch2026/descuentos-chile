@@ -148,3 +148,72 @@ img{max-width:100%}
 #regPop label{padding-left:4px}
 .toggle{display:inline-flex;gap:6px;align-items:center;font-size:.82rem;color:var(--muted);cursor:pointer}
 .toggle input{accent-color:var(--accent);width:16px;height:16px}
+
+/* ---------- Celular: barra fija, panel de filtros y tabla tipo afiche ---------- */
+.mbar,.sheethead,.sheetfoot,.mobonly{display:none}
+.poster{width:720px;font-size:11px;line-height:1.25;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px}
+.phead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 2px 8px;border-bottom:2px solid var(--ink);margin-bottom:8px}
+.phead b{font-family:var(--display);font-size:15px;letter-spacing:-.01em}
+.phead span{color:var(--muted);font-size:10px;text-align:right}
+.pcols{columns:2;column-gap:8px}
+.pgroup{break-inside:avoid;display:grid;grid-template-columns:78px 1fr;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:8px;background:var(--surface)}
+.pbank{background:color-mix(in srgb,var(--bc) 16%,var(--surface));border-right:3px solid var(--bc);padding:6px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px}
+.pbank b{font-family:var(--display);font-size:11px;line-height:1.1;text-transform:uppercase;letter-spacing:.01em}
+.pbank span{font-size:9.5px;color:var(--muted)}
+.pbank .ptope{color:var(--ink);font-weight:600}
+.pbank .logo.sm{width:24px;height:24px}
+.prows{display:flex;flex-direction:column;min-width:0}
+.prow{display:grid;grid-template-columns:56px 1fr 30px;align-items:center;gap:4px;border:0;border-bottom:1px solid var(--line);background:none;padding:3px 5px;text-align:left;font-size:11px;min-height:19px}
+.prow:nth-child(even){background:color-mix(in srgb,var(--bc) 5%,var(--surface))}
+.prow:last-of-type{border-bottom:0}
+.pday{font-size:9px;font-weight:600;color:var(--muted);letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pcom{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500}
+.ppct{font-family:var(--display);font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.pmore{border:0;border-top:1px solid var(--line);background:none;color:var(--accent);font-size:10px;font-weight:600;padding:4px 5px;text-align:left}
+.pnote{color:var(--muted);font-size:10px;margin:4px 2px 0}
+.posterwrap{overflow:hidden}
+
+@media (max-width:760px){
+  .mobonly{display:inline-block}
+  header.top .wrap{padding-block:10px 8px;align-items:center}
+  h1{font-size:1.35rem}
+  h1 small{font-size:.66rem;margin-bottom:2px}
+  .stats{gap:12px}
+  .stat b{font-size:1rem}
+  .stat span{font-size:.62rem}
+  .stat:nth-child(3){display:none}
+  .notice{font-size:.72rem}
+  .mbar{display:block;position:sticky;top:env(safe-area-inset-top,0px);z-index:6;background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 6px 14px -12px rgb(0 0 0 / .4)}
+  .mbar .wrap{display:flex;gap:8px;align-items:flex-end;padding-block:8px}
+  .msel{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+  .msel span{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600}
+  .msel select{font:inherit;font-weight:600;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:8px 8px;width:100%;min-width:0}
+  .mfbtn{border:0;background:var(--ink);color:var(--bg);border-radius:10px;padding:9px 12px;font-weight:600;display:inline-flex;gap:6px;align-items:center;flex:none}
+  .mfbtn .count{background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:0 7px;font-size:.75rem}
+
+  /* Panel de filtros que sube desde abajo */
+  .filters{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:40;max-height:86vh;max-height:86dvh;overflow-y:auto;overscroll-behavior:contain;
+    background:var(--surface);border:0;border-radius:18px 18px 0 0;box-shadow:0 -20px 50px -20px rgb(0 0 0 / .45);backdrop-filter:none;
+    transform:translateY(105%);transition:transform .25s ease;visibility:hidden}
+  body.sheet-open .filters{transform:none;visibility:visible}
+  body.sheet-open{overflow:hidden}
+  .filters .wrap{gap:14px;padding-block:0 calc(12px + env(safe-area-inset-bottom,0px))}
+  .sheethead{display:flex;align-items:center;gap:10px;position:sticky;top:0;background:var(--surface);padding:14px 0 10px;z-index:2;border-bottom:1px solid var(--line)}
+  .sheethead strong{font-family:var(--display);font-size:1.15rem;margin-right:auto}
+  .sheethead .close{border:1px solid var(--line);background:none;border-radius:8px;width:34px;height:34px}
+  .sheetfoot{display:block;position:sticky;bottom:calc(-12px - env(safe-area-inset-bottom,0px));background:var(--surface);padding:10px 0 calc(12px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+  .sheetfoot button{width:100%;border:0;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700;padding:13px;font-size:1rem}
+  .frow{flex-direction:column;align-items:stretch;gap:6px}
+  .flabel{width:auto}
+  .is-mobile #catRow,.is-mobile #regPick,.zoom,.spacer{display:none}
+  .search{width:100%}
+  .seg{align-self:flex-start}
+  .cardpick{width:100%}
+  .cardbtn{width:100%;justify-content:space-between}
+  .pop{position:static;width:100%;max-height:none;box-shadow:none;margin-top:6px}
+  .chip{padding:7px 12px}
+  .clear#clearAll{display:none}
+  main .wrap{padding-block:10px 40px}
+  .scrim{z-index:35}
+  .drawer{z-index:50;top:auto;height:80vh;height:80dvh;width:100vw;border-left:0;border-radius:18px 18px 0 0}
+}
