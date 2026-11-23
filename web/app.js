@@ -165,8 +165,9 @@ function render() {
   document.documentElement.style.setProperty("--z", [0, 1.3, 2.2, 3, 3.8, 4.8][st.z]);
   $("#zLabel").textContent = ["", "Mapa", "Compacto", "Normal", "Amplio", "Detalle"][st.z];
   $("#zoomR").value = st.z;
+  mDaySync();
   $("#sheetApply").textContent = list.length === 1 ? "Ver 1 descuento" : `Ver ${list.length} descuentos`;
-  const nf = st.days.size + st.pcts.size + st.types.size + st.banks.size + st.coms.size + st.cards.size + (st.q.trim() ? 1 : 0) + (st.incNac ? 0 : 1);
+  const nf = (st.days.size > 1 ? st.days.size : 0) + st.pcts.size + st.types.size + st.banks.size + st.coms.size + st.cards.size + (st.q.trim() ? 1 : 0) + (st.incNac ? 0 : 1);
   $("#fCount").textContent = nf; $("#fCount").hidden = !nf;
   ["vInst", "vWeek", "vTab"].forEach((id) => $("#" + id).setAttribute("aria-pressed", st.view === { vInst: "inst", vWeek: "week", vTab: "tabla" }[id]));
   if (!list.length) { v.innerHTML = `<div class="empty">No hay descuentos con estos filtros. Prueba quitando un día, un rubro o un rango de %.</div>`; return; }
@@ -259,6 +260,10 @@ document.addEventListener("click", (e) => {
   else if (ds.id) openDetail(ds.id);
   else if (t.id === "closeD") closeDetail();
   else if (t.id === "fBtn" || t.id === "sheetClose" || t.id === "sheetApply") { setSheet(t.id === "fBtn" && !document.body.classList.contains("sheet-open")); }
+  else if (ds.mday !== undefined) {
+    st.days.clear(); if (ds.mday !== "") st.days.add(+ds.mday);
+    st.expanded.clear(); chips(); render();
+  }
   else if (ds.more) { toggle(st.expanded, ds.more); render(); }
   else if (t.id === "clearAll2") { $("#clearAll").click(); }
   else if (t.id === "clearAll") { ["days", "cats", "pcts", "types", "cards", "banks", "regs", "coms"].forEach((k) => st[k].clear()); st.q = ""; $("#q").value = ""; st.incNac = true; $("#incNac").checked = true; saveCards(); if (mobile) applyMobile(); chips(); cardPop(); geoPop(); render(); }
@@ -324,6 +329,14 @@ function fitPoster() {
   p.style.zoom = Math.min(1, w / 720);
 }
 window.addEventListener("resize", () => { if (st.view === "tabla") fitPoster(); });
+
+// Día (opcional) en la barra del celular: "Todos" o un día; en el panel se pueden marcar varios
+function mDaySync() {
+  const box = $("#mDays"); if (!box) return;
+  const one = st.days.size === 1 ? [...st.days][0] : null;
+  box.innerHTML = `<button class="mday" data-mday="" aria-pressed="${!st.days.size}">Todos</button>` +
+    DAYS.map((d, i) => `<button class="mday${i === todayIdx ? " today" : ""}" data-mday="${i}" aria-pressed="${one === i || (st.days.size > 1 && st.days.has(i))}">${i === todayIdx ? "Hoy" : d}</button>`).join("");
+}
 
 function setSheet(open) {
   document.body.classList.toggle("sheet-open", open);
