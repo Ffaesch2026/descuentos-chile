@@ -23,7 +23,7 @@ _NOMBRE_REGION = {
     "LI": ["libertador", "o'higgins", "ohiggins", "o higgins", "libertador general bernardo o'higgins", "libertador bernardo o'higgins"],
     "ML": ["maule"], "NB": ["nuble"], "BI": ["biobio", "bio bio", "bio-bio"], "AR": ["la araucania", "araucania"],
     "LR": ["los rios"], "LL": ["los lagos"], "AI": ["aysen", "aisen", "aysen del general carlos ibanez del campo"],
-    "MA": ["magallanes", "magallanes y la antartica chilena", "magallanes y antartica chilena"],
+    "MA": ["magallanes", "magallanes y la antartica chilena", "magallanes y de la antartica chilena", "magallanes y antartica chilena"],
 }
 _ROMANO = {"AP": "xv", "TA": "i", "AN": "ii", "AT": "iii", "CO": "iv", "VS": "v", "LI": "vi", "ML": "vii",
            "NB": "xvi", "BI": "viii", "AR": "ix", "LR": "xiv", "LL": "x", "AI": "xi", "MA": "xii"}
@@ -94,7 +94,7 @@ def ubicar(textos: list[str] | None) -> tuple[list[str], list[str]]:
 def region_por_nombre(nombre: str) -> str | None:
     """Id de región a partir de un campo estructurado que solo contiene el nombre
     ("Valparaíso", "Región Metropolitana", "VIII", "Biobío")."""
-    n = _norm(nombre).strip(" .")
+    n = _norm(nombre).strip(" .").replace("gral.", "general").replace("gral ", "general ")
     n = re.sub(r"^(?:region )?(?:de |del |de la )?", "", n)
     for rid, nombres in _NOMBRE_REGION.items():
         if n in nombres or n == _ROMANO.get(rid):

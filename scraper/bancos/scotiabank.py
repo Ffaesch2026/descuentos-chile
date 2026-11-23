@@ -16,7 +16,7 @@ import re
 import time
 from datetime import date, timedelta
 
-from scraper import common
+from scraper import common, geo
 
 BASE = "https://www.scotiarewards.cl/scclubfront"
 BANCO = {"id": "scotiabank", "nombre": "Scotiabank", "sitio": BASE + "/categoria/mundos/descuentos"}
@@ -189,6 +189,36 @@ def _sitios_js(h: str) -> list[dict]:
     return out
 
 
+# Números de región chilenos (campo id_region de la Ruta Gourmet) -> id
+_REGION_NUM = {1: "TA", 2: "AN", 3: "AT", 4: "CO", 5: "VS", 6: "LI", 7: "ML", 8: "BI", 9: "AR",
+               10: "LL", 11: "AI", 12: "MA", 13: "RM", 14: "LR", 15: "AP", 16: "NB"}
+
+
+def _lineas_direccion(h: str | None) -> list[str]:
+    """Campo `direcciones` (HTML) -> líneas que son direcciones. Se quitan URLs y las
+    líneas que describen cobertura nacional o excepciones ("todos los locales del país")."""
+    out = []
+    for l in re.split(r"<\s*/?\s*(?:br|p|li)\b[^>]*>|\|", h or "", flags=re.I):
+        l = htmlmod.unescape(re.sub(r"<[^>]+>", " ", l)).replace("\xa0", " ")
+        l = re.sub(r"\S*(?:https?://|www\.|@)\S*|\S+\.(?:cl|com)\S*", " ", l)
+        l = common.limpiar(l).strip(" -.•")
+        if l and not re.search(r"pais|salvo|excepto|todo chile|todos los locales|aplica en", _norm(l)):
+            out.append(l)
+    return out
+
+
+def _ubic_sitio(direccion: str | None) -> list[str]:
+    """Dirección(es) de la Ruta Gourmet ("Calle 123, Comuna| Otra 45, Comuna") -> comunas.
+    Solo el último tramo tras una coma: muchas calles se llaman como comunas
+    ("Padre Luis de Valdivia 327, Santiago", "Camino a San Miguel 4943, Talca")."""
+    out = []
+    for d in (direccion or "").split("|"):
+        partes = [x for x in d.split(",") if x.strip(" .")]
+        if len(partes) > 1:
+            out.append(partes[-1])
+    return out
+
+
 def _es_descuento(sub: str) -> bool:
     n = _norm(sub)
     return "%" in n or "dcto" in n or "descuento" in n or "devolucion" in n
@@ -213,6 +243,9 @@ def _rubro(comercio: str, tags: list[str], pagina: str) -> str | None:
         if r:
             return r
     return _PAGINA_RUBRO.get(pagina.split("/")[-1])
+
+
+_EXTRANJERO = re.compile(r"(?<![a-z])(lima|buenos aires|montevideo|punta del este|mendoza|cusco|arequipa|miraflores|peru|argentina|uruguay)(?![a-z])")
 
 
 def scrape() -> list[dict]:
@@ -259,6 +292,7 @@ def scrape() -> list[dict]:
                 vigencia_hasta=hasta,
                 url=url,
                 imagen=_imagen(d["imagen"]),
+                ubicaciones=_lineas_direccion(d["direcciones"]),
             ))
         for x in _sitios_js(h):
             key = ("sitio", x.get("id_sitio") or x.get("nombre"))
@@ -288,8 +322,18 @@ def scrape() -> list[dict]:
                 vigencia_hasta=hasta,
                 url=url,
                 imagen=_imagen(x.get("imagen")),
+                ubicaciones=_ubic_sitio(x.get("direccion")),
+                # id_region es el número de región chileno solo en la Ruta Gourmet
+                # (en la ruta internacional identifica otra cosa: Lima y Las Condes comparten 1).
+                regiones=[_REGION_NUM[x["id_region"]]] if pagina.endswith("rutagourmet")
+                and x.get("id_region") in _REGION_NUM else None,
             ))
         time.sleep(0.5)
     if not out:
         raise RuntimeError("Scotiabank: no se encontraron descuentos. " + "; ".join(errores))
+    # Restaurantes en el extranjero (Lima, Buenos Aires, Montevideo…): no son descuentos en Chile
+    def _extranjero(o: dict) -> bool:
+        m = re.search(r"Dirección: (.*)", o["descripcion"])
+        return not o["regiones"] and bool(m) and bool(_EXTRANJERO.search(_norm(m.group(1)[:300])))
+    out = [o for o in out if not _extranjero(o)]
     return out

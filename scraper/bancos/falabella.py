@@ -11,7 +11,7 @@ import json
 import re
 import time
 
-from scraper import common
+from scraper import common, geo
 
 BASE = "https://www.bancofalabella.cl"
 BANCO = {"id": "falabella", "nombre": "Banco Falabella / CMR", "sitio": f"{BASE}/descuentos"}
@@ -84,6 +84,20 @@ def _modalidad(texto: str) -> str | None:
     return " / ".join(partes) or None
 
 
+def _region_ids(nombres: list) -> list[str]:
+    """Ids de región del campo `region`; vacío si están todas (beneficio nacional)."""
+    ids: set[str] = set()
+    for n in nombres:
+        if not isinstance(n, str):
+            continue
+        rid = geo.region_por_nombre(n)
+        if rid:
+            ids.add(rid)
+        else:  # ej. "Región de Magallanes y de la Antártica Chilena"
+            ids.update(geo.ubicar([n])[0])
+    return [] if len(ids) >= len(geo.regiones()) else sorted(ids)
+
+
 def scrape() -> list[dict]:
     s = common.sesion()
     r = s.get(BANCO["sitio"], timeout=common.TIMEOUT)
@@ -152,5 +166,6 @@ def scrape() -> list[dict]:
             vigencia_hasta=_fecha(bc.get("endDate") or c.get("limitDate")),
             url=url,
             imagen=img,
+            regiones=_region_ids(regiones),
         ))
     return items

@@ -11,7 +11,7 @@ import html
 import re
 from datetime import datetime
 
-from scraper import common
+from scraper import common, geo
 
 BANCO = {
     "id": "santander",
@@ -97,6 +97,31 @@ def _tope(texto: str) -> str | None:
     return m.group(1) if m else None
 
 
+def _ubicacion(cf: dict, tags: list[str]) -> tuple[list[str], list[str]]:
+    """(ubicaciones, regiones) desde los campos "Región cobertura" y "Comuna cobertura"
+    (listas separadas por comas) o, si faltan, el tag "metropolitana" (sin "regiones"). Vacío = todo Chile."""
+    regs, ubic = [], []
+    for x in re.split(r",|\s+y\s+", cf.get("Región cobertura") or ""):
+        x = x.strip(" .")
+        rid = geo.region_por_nombre(x) if x else None
+        if rid:
+            regs.append(rid)
+        elif x:
+            ubic.append(f"Región de {x}")
+    for x in re.split(r",|\s+y\s+", cf.get("Comuna cobertura") or ""):
+        x = x.strip(" .")
+        if not x:
+            continue
+        rid = None if geo.ubicar([x])[1] else geo.region_por_nombre(x)
+        if rid:
+            regs.append(rid)  # a veces trae regiones: "Metropolitana, O'Higgins"
+        else:
+            ubic.append(x)
+    if not regs and not ubic and "metropolitana" in tags and "regiones" not in tags:
+        regs.append("RM")
+    return ubic, regs
+
+
 def _descargar() -> list[dict]:
     import json
 
@@ -149,6 +174,7 @@ def scrape() -> list[dict]:
         vig = cf.get("Vigencia", "")
         hasta = _fecha(vig, "hasta", hoy.year) or _fecha(cond, "hasta", None)
         desde = _fecha(vig, "desde", hoy.year) or _fecha(cond, "desde", None)
+        ubic, regs = _ubicacion(cf, tags)
         out.append(common.nuevo_descuento(
             banco=BANCO["id"],
             comercio=p.get("title") or "",
@@ -164,5 +190,7 @@ def scrape() -> list[dict]:
             vigencia_hasta=hasta,
             url=p.get("url") or BANCO["sitio"],
             imagen=(p.get("covers") or [None])[0],
+            ubicaciones=ubic,
+            regiones=regs,
         ))
     return out

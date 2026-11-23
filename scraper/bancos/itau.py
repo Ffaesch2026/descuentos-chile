@@ -18,7 +18,7 @@ import time
 
 from bs4 import BeautifulSoup
 
-from scraper import common
+from scraper import common, geo
 
 BASE = "https://itaubeneficios.cl"
 BANCO = {"id": "itau", "nombre": "Itaú", "sitio": BASE + "/beneficios/"}
@@ -88,6 +88,26 @@ def _items_listado(html: str) -> list[dict]:
             "imagen": logo.get("src") if logo else None,
         })
     return out
+
+
+def _ubicacion(lugar: str) -> tuple[list[str], list[str]]:
+    """(ubicaciones, regiones) desde la línea de ubicación del listado: "Vitacura, RM",
+    "Chillán, VII Región", "RM", "Todas las regiones". Se usa la comuna y no el número de
+    región, que en el sitio a veces está mal ("Punta Arenas, XIV Región")."""
+    n = _norm(lugar)
+    if not n or "todas las regiones" in n or n in ("regiones", "rm y regiones"):
+        return [], []
+    partes = [common.limpiar(x) for x in lugar.split(",", 1)]
+    comuna, region = partes[0], (partes[1] if len(partes) > 1 else "")
+    if _norm(comuna) == "santiago" and _norm(region) == "rm":
+        return [], ["RM"]  # "Santiago, RM" se usa para la ciudad completa, no la comuna
+    if geo.ubicar([comuna])[1]:
+        return [comuna], []
+    for x in (region, comuna):
+        rid = geo.region_por_nombre(x) or next(iter(geo.ubicar([x])[0]), None) if x else None
+        if rid:
+            return [], [rid]
+    return [], []
 
 
 def _promos(html: str) -> list[dict]:
@@ -184,6 +204,8 @@ def scrape() -> list[dict]:
             continue  # ya incluido desde "Días Itaú" con su día
         dias = common.extraer_dias(cat)  # "Lunes Gourmet" -> [0]
         modalidad = it["modalidad"] if it["modalidad"] in ("Presencial", "Online") else None
+        # Los beneficios solo online valen en todo Chile aunque el listado muestre una ciudad
+        ubic, regs = _ubicacion(it["lugar"]) if it["modalidad"] != "Online" else ([], [])
         out.append(common.nuevo_descuento(
             banco=BANCO["id"],
             comercio=it["nombre"],
@@ -196,6 +218,8 @@ def scrape() -> list[dict]:
             modalidad=modalidad,
             url=it["url"],
             imagen=it["imagen"],
+            ubicaciones=ubic,
+            regiones=regs,
         ))
     if not out:
         raise RuntimeError("Itaú: itaubeneficios.cl bloqueó el acceso (desafío de Cloudflare) en: "

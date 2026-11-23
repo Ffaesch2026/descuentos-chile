@@ -141,6 +141,33 @@ def _modalidad(texto: str) -> str | None:
     return None
 
 
+# Sectores/localidades que no son comunas -> nombre que geo.ubicar() reconoce
+_SECTORES = {"chicureo": "Colina", "la dehesa": "Lo Barnechea", "chiloe": "Región de Los Lagos",
+             "los rios": "Región de Los Ríos", "valle colchagua": "Región de O'Higgins"}
+_ONLINE = re.compile(r"\bweb\b|\bapp\b|online|\.(?:cl|com|life)\b|https?:|www\.", re.I)
+
+
+def _ubicaciones(lugar: str) -> list[str]:
+    """Ubicaciones a partir del campo "lugar" (ícono de mapa) de la tarjeta: comunas
+    ("Vitacura, Lo Barnechea y Providencia.") o direcciones separadas por " | ".
+    Si el beneficio también vale online/app, aplica en todo Chile -> sin ubicación."""
+    if not lugar or _ONLINE.search(lugar):
+        return []
+    out = []
+    for loc in lugar.split("|"):
+        partes = [p.strip(" .") for p in loc.split(",") if p.strip(" .")]
+        # "Av Padre Hurtado Sur 875, Local C 1057, Las Condes": la calle (con número) puede
+        # llamarse como una comuna, así que se descarta y se usa solo lo que sigue.
+        if len(partes) > 1 and re.search(r"\d|\bs/n\b", partes[0], re.I):
+            partes = partes[1:]
+        for p in partes:
+            for sector, nombre in _SECTORES.items():
+                if re.search(r"(?<!\w)" + sector + r"(?!\w)", common.sin_tildes(p), re.I):
+                    p += ", " + nombre
+            out.append(p)
+    return out
+
+
 def scrape() -> list[dict]:
     s = common.sesion()
     cards = _cards(s)
@@ -188,5 +215,6 @@ def scrape() -> list[dict]:
             vigencia_hasta=hasta,
             url=c["url"],
             imagen=c["imagen"],
+            ubicaciones=_ubicaciones(c["lugar"]),
         ))
     return out

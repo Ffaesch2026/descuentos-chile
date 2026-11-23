@@ -102,6 +102,28 @@ def _modalidad(texto: str) -> str | None:
     return " / ".join(partes) or None
 
 
+_REGION_TXT = re.compile(r"\b(?:[IVX]{1,4} regi[oó]n|regi[oó]n (?:de |del |de la )?[A-ZÁÉÍÓÚÑ][\w'’]+(?: (?:de |y )?[A-ZÁÉÍÓÚÑ][\w'’]+)*)", re.I)
+
+
+def _ubicacion(b: dict, cab: str, modalidad: str | None) -> tuple[list[str], list[str]]:
+    """(ubicaciones, regiones) del beneficio. `locations` es una lista de ciudades
+    (hoy solo "Santiago", que como ciudad equivale a la RM y no a la comuna).
+    Ofertas solo online/app no se restringen a la ciudad declarada."""
+    ubic, regs = [], []
+    if modalidad is None or "Presencial" in modalidad:
+        for l in b.get("locations") or []:
+            l = common.limpiar(l if isinstance(l, str) else (l or {}).get("name") or "")
+            if not l:
+                continue
+            if common.sin_tildes(l).lower() == "santiago":
+                regs.append("RM")
+            else:
+                ubic.append(l)
+    # Menciones explícitas de región en título/bajada ("¡Atención V Región!")
+    ubic += [m.group(0) for m in _REGION_TXT.finditer(cab)]
+    return ubic, regs
+
+
 def scrape() -> list[dict]:
     s = common.sesion()
     r = s.get(SITIO, timeout=common.TIMEOUT)
@@ -146,7 +168,8 @@ def scrape() -> list[dict]:
         rubro = common.adivinar_rubro(comercio, titulo, corta)
         if rubro == "otros":
             rubro = next((_CAT_RUBRO[c] for c in cats if c in _CAT_RUBRO), None)
-        locs = [common.limpiar(l if isinstance(l, str) else (l or {}).get("name") or "") for l in b.get("locations") or []]
+        modalidad = _modalidad(f"{cab} {legal}")
+        ubic, regs = _ubicacion(b, cab, modalidad)
         desc = " ".join(x for x in (corta, larga if larga != corta else "", legal) if x)
         items.append(common.nuevo_descuento(
             banco=BANCO["id"],
@@ -158,10 +181,12 @@ def scrape() -> list[dict]:
             dias=dias,
             tarjetas=_tarjetas(cats, f"{cab} {legal}"),
             tope=tope,
-            modalidad=_modalidad(f"{cab} {legal}"),
+            modalidad=modalidad,
             vigencia_desde=desde.isoformat() if desde else None,
             vigencia_hasta=hasta.isoformat() if hasta else None,
             url=b.get("url") or SITIO,
             imagen=b.get("logo_card") or b.get("card_img"),
+            ubicaciones=ubic,
+            regiones=regs,
         ))
     return items

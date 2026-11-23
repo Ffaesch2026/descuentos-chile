@@ -11,7 +11,7 @@ import html
 import re
 from datetime import date
 
-from scraper import common
+from scraper import common, geo
 
 BANCO = {"id": "mach", "nombre": "MACH", "sitio": "https://www.machbank.cl/beneficios"}
 
@@ -114,6 +114,21 @@ def _rubro(cat: str | None, comercio: str, titulo: str, desc: str, bases: str) -
     return r if r != "otros" else common.adivinar_rubro(comercio, titulo, desc, bases[:600])
 
 
+def _regiones(nombres: list[str]) -> list[str]:
+    """Ids de región del campo estructurado `region_de_promo` (nombres con guiones
+    blandos y formas largas como "región del libertador gral. bernardo o'higgins").
+    Si trae todas las regiones, el beneficio es nacional -> lista vacía."""
+    ids = set()
+    for n in nombres or []:
+        n = common.limpiar(str(n).replace("\xad", ""))
+        rid = geo.region_por_nombre(n) if n else None
+        if rid:
+            ids.add(rid)
+        elif n:
+            ids.update(geo.ubicar([n])[0])  # solo la región, no comunas
+    return [] if len(ids) >= len(geo.regiones()) else sorted(ids)
+
+
 def scrape() -> list[dict]:
     s = common.sesion()
     r = s.get(API, params={"per_page": 10000, "meta.tag": "beneficios"}, timeout=common.TIMEOUT,
@@ -176,5 +191,6 @@ def scrape() -> list[dict]:
             vigencia_hasta=hasta,
             url=DETALLE + meta["slug"] if meta.get("slug") else BANCO["sitio"],
             imagen=img,
+            regiones=_regiones(f.get("region_de_promo") or []),
         ))
     return out

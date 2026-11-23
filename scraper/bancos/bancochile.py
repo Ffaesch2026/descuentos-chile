@@ -10,7 +10,7 @@ import re
 import time
 from datetime import datetime, timedelta, timezone
 
-from scraper import common
+from scraper import common, geo
 
 BANCO = {
     "id": "bancochile",
@@ -111,6 +111,45 @@ def _rubro(cat: str, tags: list[str]) -> str | None:
     return None
 
 
+def _comunas_exactas() -> dict[str, str]:
+    return {common.sin_tildes(c).lower(): c for r in geo.regiones() for c in r["comunas"]}
+
+
+def _ubicacion(sucursales: str | None, tags: list[str], modalidad: str | None) -> tuple[list[str], list[str]]:
+    """(ubicaciones, regiones) del beneficio.
+
+    "Sucursales" es HTML con un <li> por local: "lugar; dirección; región; comuna; teléfono[; lat; lng]".
+    Si no hay locales, se usan los tags de región/comuna (filtros del sitio), salvo "todo-chile".
+    Beneficios solo online = todo Chile.
+    """
+    if modalidad == "Online":
+        return [], []
+    ubic, regs = [], []
+    for li in re.findall(r"<li[^>]*>(.*?)</li>", sucursales or "", re.S):
+        partes = [common.limpiar(html.unescape(re.sub(r"<[^>]+>", " ", x))) for x in li.split(";")]
+        if len(partes) < 4:
+            continue
+        region, comuna = partes[2], partes[3]
+        rid = geo.region_por_nombre(region)
+        if rid:
+            regs.append(rid)
+        elif region and region.upper() not in ("VACIO", "#N/D"):
+            # "Región del Libertador Gral. Bdo OHiggins", "Magallanes y de la Antártica", "Concón"...
+            ubic.append(region if re.match(r"(?i)regi[oó]n", region) else f"Región {region}")
+        if comuna and comuna.upper() != "VACIO":
+            ubic.append(comuna)
+    if ubic or regs or "todo-chile" in tags:
+        return ubic, regs
+    comunas = _comunas_exactas()
+    for t in tags:
+        rid = geo.region_por_nombre(t)
+        if rid:
+            regs.append(rid)
+        elif t in comunas:
+            ubic.append(comunas[t])
+    return ubic, regs
+
+
 def scrape() -> list[dict]:
     s = common.sesion()
     entradas, page, total = [], 1, 1
@@ -142,6 +181,8 @@ def scrape() -> list[dict]:
             tarjetas.remove("Tarjetas Banco de Chile")
         comercio = f.get("Titulo") or meta.get("name") or ""
         vigencia = common.limpiar(f.get("Vigencia"))
+        modalidad = _modalidad(f"{extracto} {desc}")
+        ubic, regs = _ubicacion(f.get("Sucursales"), tags, modalidad)
         out.append(common.nuevo_descuento(
             banco=BANCO["id"],
             comercio=comercio,
@@ -152,10 +193,12 @@ def scrape() -> list[dict]:
             dias=dias,
             tarjetas=tarjetas,
             tope=_tope(f"{desc} {cond}"),
-            modalidad=_modalidad(f"{extracto} {desc}"),
+            modalidad=modalidad,
             vigencia_desde=None,
             vigencia_hasta=_fecha_es(vigencia) or _fecha_es(cond) or _desde_utc(meta.get("unpublish_at")),
             url=DETALLE + meta["slug"] if meta.get("slug") else BANCO["sitio"],
             imagen=(f.get("Logo") or {}).get("url"),
+            ubicaciones=ubic,
+            regiones=regs,
         ))
     return out

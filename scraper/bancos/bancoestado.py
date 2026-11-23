@@ -16,7 +16,7 @@ import time
 
 from bs4 import BeautifulSoup
 
-from scraper import common
+from scraper import common, geo
 
 BASE = "https://www.bancoestado.cl"
 RAIZ = BASE + "/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas"
@@ -129,6 +129,27 @@ def _subfiltros(card) -> dict:
         return {}
 
 
+def _regiones_zona(sub: dict) -> list[str]:
+    """Filtro estructurado "zona" ("Región Metropolitana", "V Región"…) -> ids de región.
+    Vacío si cubre todo Chile."""
+    ids = set(geo.ubicar(sub.get("zona", []))[0])
+    return [] if len(ids) >= len(geo.regiones()) else sorted(ids)
+
+
+def _ubic_locales(locales: list[str]) -> list[str]:
+    """Locales del modal ("Calle 123, Comuna" o "V Región") -> textos de ubicación. De las
+    direcciones se usa solo el último tramo tras una coma, porque muchas calles se llaman
+    como comunas ("Constitución 241, Providencia", "Parque Arauco, …, Las Condes")."""
+    out = []
+    for l in locales:
+        partes = [x for x in l.split(",") if x.strip(" .")]
+        if len(partes) > 1:
+            out.append(partes[-1])
+        elif "region" in _norm(l):
+            out.append(l)
+    return out
+
+
 def _abs(href: str | None) -> str | None:
     if not href:
         return None
@@ -218,6 +239,7 @@ def _desde_ficha(page, card, categoria: str, sub: dict, vistos: set) -> dict | N
         vigencia_hasta=hasta,
         url=url,
         imagen=_abs((card.select_one("img") or {}).get("src")),
+        regiones=_regiones_zona(sub),
     )
 
 
@@ -274,6 +296,8 @@ def scrape() -> list[dict]:
                 vigencia_hasta=hasta,
                 url=SABORES + "#" + (card.get("data-card-id") or ""),
                 imagen=_abs((card.select_one("img") or {}).get("src")),
+                ubicaciones=_ubic_locales(locales),
+                regiones=_regiones_zona(sub),
             ))
 
         # 2) Entretención: eventos y panoramas activos (se omiten preventas agotadas).

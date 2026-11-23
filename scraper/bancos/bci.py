@@ -11,7 +11,7 @@ import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from scraper import common
+from scraper import common, geo
 
 BANCO = {
     "id": "bci",
@@ -100,6 +100,78 @@ def _tope(texto: str) -> str | None:
     return m.group(1) if m else None
 
 
+def _comunas_exactas() -> dict[str, str]:
+    return {common.sin_tildes(c).lower(): c for r in geo.regiones() for c in r["comunas"]}
+
+
+def _lugar(texto: str, comunas: dict[str, str]) -> tuple[str | None, str | None]:
+    """(comuna, id de región) si el texto completo es una comuna o una región."""
+    n = common.sin_tildes(common.limpiar(texto)).lower().strip(" .")
+    if n in comunas:
+        return comunas[n], None
+    return None, geo.region_por_nombre(n) if n else None
+
+
+def _ubicacion(o: dict, tags: list[str], titulo: str) -> tuple[list[str], list[str]]:
+    """(ubicaciones, regiones) desde campos estructurados de la oferta.
+
+    1) "keywords": "(region): Todo Chile excepto X, Y;(comuna): ..." o "LAS CONDES; MARTES; ; ".
+    2) Si no, los tags del sitio ("R. Metropolitana", "R. Calama", "Las Condes") y el título
+       cuando termina en una comuna ("Lunes - Temuco", "Sábados en Buin").
+    Sin nada de eso (o "Todo Chile") = todo Chile.
+    """
+    comunas = _comunas_exactas()
+    ubic: list[str] = []
+    regs: list[str] = []
+    kw = common.limpiar(o.get("keywords"))
+    if kw.startswith("(region)"):
+        campos = dict(re.findall(r"\((\w[\w ]*)\):\s*([^;]*)", kw))
+        reg = common.sin_tildes(campos.get("region", "")).lower()
+        if reg.startswith("todo chile"):
+            if "excepto" in reg:
+                fuera = {geo.region_por_nombre(x) for x in reg.split("excepto", 1)[1].split(",")}
+                regs = [r["id"] for r in geo.regiones() if r["id"] not in fuera]
+        else:
+            for x in campos.get("region", "").split(","):
+                c, r = _lugar(x, comunas)
+                ubic += [c] if c else []
+                regs += [r] if r else []
+        for x in campos.get("comuna", "").split(","):
+            c, _ = _lugar(x, comunas)
+            ubic += [c] if c else []
+        return ubic, regs
+    if ";" in kw:
+        for x in kw.split(";", 1)[0].split(","):
+            c, r = _lugar(x, comunas)
+            ubic += [c] if c else []
+            regs += [r] if r else []
+        if ubic or regs:
+            return ubic, regs
+    for t in tags:
+        t = common.limpiar(t)
+        if t.startswith("R. "):
+            r = geo.region_por_nombre(t[3:])
+            if r:
+                regs.append(r)
+            else:
+                c, _ = _lugar(t[3:], comunas)  # "R. Calama", "R. Iquique"
+                ubic += [c] if c else []
+        else:
+            c, _ = _lugar(t, comunas)
+            ubic += [c] if c else []
+    # Título con forma de lugar: "Las Condes y Lo Barnechea", "Lunes - Temuco", "Brunch en Vitacura".
+    # Solo cuentan los trozos que son exactamente una comuna.
+    trozos = re.split(r"\s+[-–]\s*|\s*[-–]\s+|,|\s+y\s+", titulo)
+    m = re.search(r"\ben\s+([^-–,]+?)\s*$", titulo, re.I)
+    for x in trozos + ([m.group(1)] if m else []):
+        c, r = _lugar(x, comunas)
+        if c and c not in ubic:
+            ubic.append(c)
+        if r:
+            regs.append(r)  # "Viernes - Araucanía"
+    return ubic, regs
+
+
 def _descargar(clave: str) -> list[dict]:
     s = common.sesion()
     s.headers.update({"ocp-apim-subscription-key": clave, "Referer": "https://www.bci.cl/",
@@ -158,6 +230,7 @@ def scrape() -> list[dict]:
                      "Online" if "online" in tl else "Presencial" if "presencial" in tl else None)
         comercio = (o.get("comercio") or {}).get("nombre") or titulo
         dias_txt = sched.get("recurrenceLabel") or ""
+        ubic, regs = _ubicacion(o, tags, titulo)
         out.append(common.nuevo_descuento(
             banco=BANCO["id"],
             comercio=comercio,
@@ -173,5 +246,7 @@ def scrape() -> list[dict]:
             vigencia_hasta=_fecha(o.get("fechaTermino")) if o.get("tieneFechaTermino", True) else None,
             url=DETALLE + o["slug"] if o.get("slug") else BANCO["sitio"],
             imagen=(o.get("imagenes") or {}).get("imagen1"),
+            ubicaciones=ubic,
+            regiones=regs,
         ))
     return out

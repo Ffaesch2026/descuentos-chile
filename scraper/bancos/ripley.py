@@ -108,6 +108,13 @@ def _lista(details: dict, key: str) -> list[str]:
             if common.limpiar(a.get("txtItem", {}).get("value"))]
 
 
+def _ubicaciones(direcciones: list[str], cobertura: list[str]) -> list[str]:
+    """Direcciones "Calle 123, Comuna" -> solo el último tramo tras una coma, para que calles o
+    malls con nombre de comuna ("La Concepción 415, Quillota", "Parque Arauco, Las Condes") no cuenten."""
+    out = [([x for x in d.split(",") if x.strip()] or [d])[-1] for d in direcciones]
+    return out + cobertura
+
+
 def scrape() -> list[dict]:
     s = common.sesion()
     secciones = _call(s, "/api/sp/beneficios/get-sections-beneficios", method="GET")
@@ -196,5 +203,6 @@ def scrape() -> list[dict]:
                 vigencia_hasta=hasta.isoformat() if hasta else None,
                 url=link if link.startswith("http") else f"{SITIO}#nav-{route}",
                 imagen=_v(p, "imgLogo") or _v(p, "imgBackground") or None,
+                ubicaciones=_ubicaciones(direcciones, _lista(det, "arrCobertura")),
             ))
     return items
