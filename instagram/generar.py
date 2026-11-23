@@ -60,6 +60,9 @@ def fmt_dias(dias: list[int]) -> str:
     ds = sorted(dias)
     if len(ds) >= 3 and all(b == a + 1 for a, b in zip(ds, ds[1:])):
         return f"{DSHORT[ds[0]]}–{DSHORT[ds[-1]]}"
+    faltan = [d for d in range(7) if d not in ds]
+    if len(faltan) <= 2:
+        return "SALVO " + " ".join(DSHORT[d] for d in faltan)
     if len(ds) >= 3:
         return " ".join(DSHORT[d] for d in ds[:2]) + "<br>" + " ".join(DSHORT[d] for d in ds[2:])
     return " ".join(DSHORT[d] for d in ds)
@@ -111,6 +114,16 @@ def valor(d: dict) -> tuple[str, float] | None:
     m = monto_por_litro(d.get("comercio", ""), d.get("titulo", ""))
     if m:
         return f"${m}/L", m / 10  # $100/L se ordena como un 10 %, solo para ordenar dentro de un banco
+    import re as _re
+    t = f'{d.get("comercio", "")} {d.get("titulo", "")}'.lower()
+    if _re.search(r"(?<!\d)2\s?x\s?1(?!\d)", t):
+        return "2x1", 50.0
+    if _re.search(r"(?<!\d)3\s?x\s?2(?!\d)", t):
+        return "3x2", 33.0
+    mf = _re.search(r"\$\s?(\d{1,3}(?:\.\d{3})+|\d{4,6})\s*(?:de\s*)?(?:dto|dcto|descuento)", t)
+    if mf:
+        n = int(mf.group(1).replace(".", ""))
+        return f"${n:,}".replace(",", "."), 15.0  # monto fijo: se ordena después de los % altos
     return None
 
 
@@ -264,8 +277,20 @@ def _dias_texto(dias: list[int]) -> str:
     ds = sorted(dias)
     if len(ds) >= 3 and all(b == a + 1 for a, b in zip(ds, ds[1:])):
         return f"{DIAS_LARGOS[ds[0]]} a {DIAS_LARGOS[ds[-1]]}"
+    faltan = [d for d in range(7) if d not in ds]
+    if len(faltan) <= 2:
+        return "todos los días salvo " + " y ".join(DIAS_LARGOS[d] for d in faltan)
     nombres = [DIAS_LARGOS[d] for d in ds]
     return nombres[0] if len(nombres) == 1 else ", ".join(nombres[:-1]) + " y " + nombres[-1]
+
+
+def _valor_texto(v: str) -> str:
+    """Valor para la descripción: "$100/L" -> "$100 por litro", "$7.000" -> "$7.000 de descuento"."""
+    if v.endswith("/L"):
+        return v.replace("/L", " por litro")
+    if v.startswith("$"):
+        return f"{v} de descuento"
+    return v
 
 
 def _link(url: str | None) -> str:
@@ -283,7 +308,7 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
     destacados = []
     for bid, filas in sel.items():
         d = max(filas, key=lambda x: (x["_orden"], -len(x["dias"])))
-        destacados.append(f"• {nombres[bid]}: {d['_valor'].replace('/L', ' por litro')} en {nombre_comercio(d)} ({_dias_texto(d['dias'])})")
+        destacados.append(f"• {nombres[bid]}: {_valor_texto(d['_valor'])} en {nombre_comercio(d)} ({_dias_texto(d['dias'])})")
     lectura = ("💳 Cómo leerlo: en cada banco, la franja de color indica a qué tarjetas aplica "
                "(crédito y débito, solo crédito o solo tarjetas premium como Black o Infinite)."
                if a.por_tarjeta else "")
