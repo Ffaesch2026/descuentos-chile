@@ -372,8 +372,17 @@ def main():
         if len(paginar(sel)) + 2 <= MAX_IMAGENES or por_banco <= 5:
             break
         por_banco -= 1
+    # Si bajando hasta 4 descuentos por banco ningún banco queda cortado entre columnas, se usa eso
+    def cortes(sl):
+        return sum(1 for img in paginar(sl) for col in img for b in col if b[2])
+    if cortes(sel):
+        for n in range(por_banco - 1, max(por_banco - 5, 4), -1):
+            alt = seleccionar(data["descuentos"], a.rubro, a.region, n, not a.sin_nacionales, a.por_tarjeta)
+            if not cortes(alt):
+                sel, por_banco = alt, n
+                break
     if por_banco != a.por_banco:
-        print(f"Se muestran {por_banco} descuentos por banco para que quepa en {MAX_IMAGENES} imágenes.")
+        print(f"Se muestran {por_banco} descuentos por banco (para que quepa en {MAX_IMAGENES} imágenes sin cortar bancos).")
     tipos = {b: " / ".join(TIPOS[t] for t in ("credito", "debito", "prepago")
                            if any(t in d["tipos"] for d in filas)) for b, filas in sel.items()}
     paginas = paginar(sel)
