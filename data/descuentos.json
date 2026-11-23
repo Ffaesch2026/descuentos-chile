@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-23T18:24:48+00:00",
+ "generado": "2026-11-23T19:51:20+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
@@ -7,7 +7,7 @@
    "sitio": "https://sitiospublicos.bancochile.cl/personas/beneficios",
    "estado": "ok",
    "cantidad": 810,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "falabella": {
@@ -15,8 +15,8 @@
    "nombre": "Banco Falabella / CMR",
    "sitio": "https://www.bancofalabella.cl/descuentos",
    "estado": "ok",
-   "cantidad": 219,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "cantidad": 220,
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "ripley": {
@@ -25,7 +25,7 @@
    "sitio": "https://www.bancoripley.cl/beneficios-y-promociones",
    "estado": "ok",
    "cantidad": 155,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "santander": {
@@ -34,7 +34,7 @@
    "sitio": "https://banco.santander.cl/beneficios",
    "estado": "ok",
    "cantidad": 207,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "cencosud": {
@@ -43,7 +43,7 @@
    "sitio": "https://www.tarjetacencosud.cl/publico/beneficios/landing/inicio",
    "estado": "ok",
    "cantidad": 39,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "tenpo": {
@@ -52,7 +52,7 @@
    "sitio": "https://www.tenpo.cl/beneficios",
    "estado": "ok",
    "cantidad": 37,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "mach": {
@@ -61,7 +61,7 @@
    "sitio": "https://www.machbank.cl/beneficios",
    "estado": "ok",
    "cantidad": 17,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "security": {
@@ -70,7 +70,7 @@
    "sitio": "https://personas.bancosecurity.cl/beneficios",
    "estado": "ok",
    "cantidad": 165,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "bancoestado": {
@@ -79,7 +79,7 @@
    "sitio": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios.html",
    "estado": "ok",
    "cantidad": 153,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "scotiabank": {
@@ -88,7 +88,7 @@
    "sitio": "https://www.scotiarewards.cl/scclubfront/categoria/mundos/descuentos",
    "estado": "ok",
    "cantidad": 248,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "itau": {
@@ -97,7 +97,7 @@
    "sitio": "https://itaubeneficios.cl/beneficios/",
    "estado": "ok",
    "cantidad": 204,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   },
   "bci": {
@@ -106,7 +106,7 @@
    "sitio": "https://www.bci.cl/beneficios/beneficios-bci",
    "estado": "ok",
    "cantidad": 291,
-   "actualizado": "2026-11-23T18:24:48+00:00",
+   "actualizado": "2026-11-23T19:51:20+00:00",
    "error": null
   }
  },
@@ -29920,7 +29920,7 @@
    "titulo": "15% dto. en mantención todos los días.",
    "descripcion": "Con más de 15 años de experiencia en el sector automotriz, NS Automotriz se especializa en ofrecer soluciones integrales para vehículos diésel y bencineros. Nuestro enfoque abarca desde el mantenimiento preventivo y correctivo hasta el diagnóstico avanzado de sistemas DPF e Inyección diésel. Nos destacamos por brindar atención personalizada, utilizando repuestos originales para asegurar la máxima calidad en cada servicio. . Además, priorizamos la eficiencia y rapidez para que nuestros clientes puedan seguir con su rutina diaria sin interrupciones. Confía en NS Automotriz, donde tu vehículo est",
    "pct": 15,
-   "rubro": "combustible",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -30379,48 +30379,6 @@
    ]
   },
   {
-   "id": "bancochile-460ebf8d556d",
-   "banco": "bancochile",
-   "comercio": "Local Burger",
-   "titulo": "40% dto. lunes y domingo de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. lunes y domingo de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promoci",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    0,
-    6
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/local-burger-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/057/764/13c4f8c2-6941-4910-ae9f-707bbf1d5505/original/banner-web-Local-Burger.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Las Condes",
-    "Providencia",
-    "Ñuñoa"
-   ]
-  },
-  {
    "id": "bancochile-f1feda695034",
    "banco": "bancochile",
    "comercio": "YADO BY ASIA",
@@ -30457,45 +30415,6 @@
    ],
    "comunas": [
     "Iquique"
-   ]
-  },
-  {
-   "id": "bancochile-8eb296659461",
-   "banco": "bancochile",
-   "comercio": "La Joya Cantina",
-   "titulo": "40% dto. jueves de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    3
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/joya-cantina-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/738/fbf89208-dc0f-4c58-84d2-6f4611de4eab/original/logo-web-La-Joya-Cantina.jpg",
-   "regiones": [
-    "VS"
-   ],
-   "comunas": [
-    "Valparaíso"
    ]
   },
   {
@@ -30540,84 +30459,6 @@
    ]
   },
   {
-   "id": "bancochile-4ca3cd1885f3",
-   "banco": "bancochile",
-   "comercio": "Matureo",
-   "titulo": "40% dto. miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan ",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/matureo-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/085/260/922f960f-1cfd-4d30-96c6-6b27e6d7728f/original/logo-web-Matureo.jpg",
-   "regiones": [
-    "LL"
-   ],
-   "comunas": [
-    "Osorno"
-   ]
-  },
-  {
-   "id": "bancochile-7574712540e7",
-   "banco": "bancochile",
-   "comercio": "Mora Sushi",
-   "titulo": "40% dto. viernes de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. viernes de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Que",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    4
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mora-sushi-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/077/970/8767a545-c199-4903-83e5-5dad81d6de8d/original/logo-web-Mora-Sushi-Bar.jpg",
-   "regiones": [
-    "AR"
-   ],
-   "comunas": [
-    "Pucón"
-   ]
-  },
-  {
    "id": "bancochile-6ad82d4f6bb0",
    "banco": "bancochile",
    "comercio": "ÁGAPÉ",
@@ -30649,162 +30490,6 @@
    "vigencia_hasta": "2026-11-30",
    "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/agape-40dscto",
    "imagen": "https://assets.bancochile.cl/uploads/000/042/098/bdfdb37a-4a21-4019-b564-5d0b7a84ad7a/original/logo-web-agape.jpg",
-   "regiones": [
-    "VS"
-   ],
-   "comunas": [
-    "Viña del Mar"
-   ]
-  },
-  {
-   "id": "bancochile-2bf2bd07bb82",
-   "banco": "bancochile",
-   "comercio": "NINA",
-   "titulo": "40% dto. miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. ",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/nina-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/118/575/5e6dca88-9486-411d-8120-7215ec30dfb3/original/logo-web-Nina.jpg",
-   "regiones": [
-    "VS"
-   ],
-   "comunas": [
-    "Viña del Mar"
-   ]
-  },
-  {
-   "id": "bancochile-8c9e9fb0f76c",
-   "banco": "bancochile",
-   "comercio": "Lebol Restobar",
-   "titulo": "40% dto. sábados de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. sábados de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan exc",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    5
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/lebol-restobar-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/107/448/a8ec8ef2-2d55-486a-b7a4-519515e3ff1b/original/logo-web-Lebol-Restobar.jpg",
-   "regiones": [
-    "BI"
-   ],
-   "comunas": [
-    "Concepción"
-   ]
-  },
-  {
-   "id": "bancochile-563420886093",
-   "banco": "bancochile",
-   "comercio": "Jazz Restaurant",
-   "titulo": "40% dto. martes de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. martes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan exc",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    1
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/jazz-restaurant-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/118/609/540295c8-b632-4280-a79e-d602c4ceb856/original/logo-web-Jazz-Restaurant.jpg",
-   "regiones": [
-    "BI"
-   ],
-   "comunas": [
-    "Concepción"
-   ]
-  },
-  {
-   "id": "bancochile-15dcbbafaa5b",
-   "banco": "bancochile",
-   "comercio": "Mirazu",
-   "titulo": "40% dto. sábados de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. sábados de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan exc",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    5
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mirazu-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/118/611/e499fae0-612f-48db-b26b-a55c8a16937f/original/logo-web-Mirazu.jpg",
    "regiones": [
     "VS"
    ],
@@ -31077,45 +30762,6 @@
    ],
    "comunas": [
     "La Florida"
-   ]
-  },
-  {
-   "id": "bancochile-19079f1e018b",
-   "banco": "bancochile",
-   "comercio": "Güeros - Terrazas San Cristobal",
-   "titulo": "40% dto. jueves de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    3
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/gueros-terrazas-san-cristobal-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/110/466/15474a93-ddf5-44bf-a9fc-9880a25dd8fb/original/logo-web-Gueros.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Providencia"
    ]
   },
   {
@@ -31526,85 +31172,6 @@
    "comunas": []
   },
   {
-   "id": "bancochile-a085ade7916f",
-   "banco": "bancochile",
-   "comercio": "La Cocina de Javier",
-   "titulo": "40% dto. martes y miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. martes y miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras prom",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    1,
-    2
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-cocina-de-javier-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/055/285/68be8da0-a204-44ae-9aaf-63334f09291b/original/logo-web-La-Cocina-de-Javier.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura"
-   ]
-  },
-  {
-   "id": "bancochile-4808fca4f24c",
-   "banco": "bancochile",
-   "comercio": "Margarita Bar",
-   "titulo": "40% dto miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones.",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/margarita-bar-40dscto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/026/977/f185bf70-e2aa-4483-a88b-fac717f588be/original/logo_web_margarita_bar_bch.jpg",
-   "regiones": [
-    "BI"
-   ],
-   "comunas": [
-    "Concepción"
-   ]
-  },
-  {
    "id": "bancochile-f5651fd4894f",
    "banco": "bancochile",
    "comercio": "Casa Abierta",
@@ -31684,127 +31251,6 @@
    ],
    "comunas": [
     "Lo Barnechea"
-   ]
-  },
-  {
-   "id": "bancochile-2f4c4f99bce9",
-   "banco": "bancochile",
-   "comercio": "Miscelaneo Bar",
-   "titulo": "40% dto. martes, miércoles, jueves y sábado de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. martes, miércoles, jueves y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulabl",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    1,
-    2,
-    3,
-    5
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/miscelaneo-bar-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/079/840/4061906d-9bc8-452f-b4e1-128cdcb7357c/original/logo-web-Miscelaneo-Bar.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura"
-   ]
-  },
-  {
-   "id": "bancochile-70a169ace3f5",
-   "banco": "bancochile",
-   "comercio": "Majka Bistro",
-   "titulo": "40% dto. miércoles y sábado de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. miércoles y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras prom",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    3
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/majka-bistro-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/095/710/351d7faa-1325-41e6-9b89-7f2469e088de/original/logo-web-Majka.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "La Reina"
-   ]
-  },
-  {
-   "id": "bancochile-01bd9665c23d",
-   "banco": "bancochile",
-   "comercio": "La Birrería",
-   "titulo": "40% dto. miércoles y sábado de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. miércoles y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras pro",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    2,
-    5
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-birreria",
-   "imagen": "https://assets.bancochile.cl/uploads/000/102/836/d35e890e-c608-4e26-a852-b9bd4660f0c7/original/logo-web-La-Birreria.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Huechuraba"
    ]
   },
   {
@@ -31888,125 +31334,6 @@
    ]
   },
   {
-   "id": "bancochile-efccac065c13",
-   "banco": "bancochile",
-   "comercio": "Le Rouge",
-   "titulo": "40% dto. lunes a miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. lunes a miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones.",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    0,
-    1,
-    2
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/le-rouge-visa40dto",
-   "imagen": "https://assets.bancochile.cl/uploads/000/118/557/e0ab17c9-0b4d-4abb-9a03-b3db8171b09d/original/logo-web-Le-Rouge.jpg",
-   "regiones": [
-    "VS"
-   ],
-   "comunas": [
-    "Concón"
-   ]
-  },
-  {
-   "id": "bancochile-641cc83da55a",
-   "banco": "bancochile",
-   "comercio": "Jardín Ulriksen",
-   "titulo": "40% dto lunes de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. lunes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Que",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    0
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/jardin-ulriksen",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/405/e9f0e988-599b-40fe-a2a3-5487bcda9854/original/logo-web-JARDIN-ULRIKSEN.jpg",
-   "regiones": [
-    "CO"
-   ],
-   "comunas": [
-    "La Serena"
-   ]
-  },
-  {
-   "id": "bancochile-6fb845bcc5aa",
-   "banco": "bancochile",
-   "comercio": "Otto Burger",
-   "titulo": "40% dto. viernes de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. viernes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope de dto. $50.000 . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan ",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    4
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope de dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/otto-burger",
-   "imagen": "https://assets.bancochile.cl/uploads/000/056/233/2bac657d-a572-412a-a525-bd57cc7167ff/original/LOGO_OTTO_BURGER_OF.jpeg",
-   "regiones": [
-    "ML"
-   ],
-   "comunas": [
-    "Curicó"
-   ]
-  },
-  {
    "id": "bancochile-77a753becfc2",
    "banco": "bancochile",
    "comercio": "Sello de Raza",
@@ -32043,84 +31370,6 @@
    ],
    "comunas": [
     "Valdivia"
-   ]
-  },
-  {
-   "id": "bancochile-4dcc78a40156",
-   "banco": "bancochile",
-   "comercio": "Mosto",
-   "titulo": "40% dto. martes de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. martes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Que",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    1
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mosto-visa40",
-   "imagen": "https://assets.bancochile.cl/uploads/000/105/152/acfba469-59ed-4e47-a7d1-8e75e25d4fd7/original/logo-web-Mosto.jpg",
-   "regiones": [
-    "LL"
-   ],
-   "comunas": [
-    "Puerto Varas"
-   ]
-  },
-  {
-   "id": "bancochile-d7a2eb97d4ec",
-   "banco": "bancochile",
-   "comercio": "Kechua - Terrazas San Cristóbal",
-   "titulo": "40% dto. jueves de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    3
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/kechua-terrazas-san-cristobal-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/110/463/59e84b86-6cde-4102-982c-76ee123890fc/original/logo-web-Kechua.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Providencia"
    ]
   },
   {
@@ -32199,45 +31448,6 @@
    ],
    "comunas": [
     "Providencia"
-   ]
-  },
-  {
-   "id": "bancochile-bba54d8f0ab9",
-   "banco": "bancochile",
-   "comercio": "ICA RESTAURANTE",
-   "titulo": "40% dto. sábado de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Qu",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    5
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/ica-restaurente-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/047/324/072b92b3-7e88-4a29-a7bf-3b8667e5e0d1/original/logo-web-ICA-RESTAURANTE.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Las Condes"
    ]
   },
   {
@@ -33627,87 +32837,6 @@
    "comunas": []
   },
   {
-   "id": "bancochile-f360489959f6",
-   "banco": "bancochile",
-   "comercio": "Kechua",
-   "titulo": "40% dto. miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/kechua-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/027/637/6e406cc8-86e1-4bfb-b6d0-50ab99ab5edb/original/logo-web-kechua.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Vitacura",
-    "Ñuñoa"
-   ]
-  },
-  {
-   "id": "bancochile-432a4a19182f",
-   "banco": "bancochile",
-   "comercio": "Majestic",
-   "titulo": "40% dto. jueves, viernes y sábado de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. jueves, viernes y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial en www. majestic.cl o llamando al 242450337. . Dto no válido para el 14 de febrero día de los enamorados. . Tope dcto. $50.000 por mesa. . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Ed",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    3,
-    4,
-    5
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/majestic-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/077/212/9148b61b-a089-4d47-bd19-75e79a0e4c19/original/logo-web-magestic.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Las Condes"
-   ]
-  },
-  {
    "id": "bancochile-f5cf8f4e0701",
    "banco": "bancochile",
    "comercio": "Hush Puppies",
@@ -34036,45 +33165,6 @@
    "vigencia_hasta": "2026-11-30",
    "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/zacarias-40visa",
    "imagen": "https://assets.bancochile.cl/uploads/000/110/472/c0283576-9324-4b63-b31b-527fa1ab7e77/original/logo-web-Zacarias.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Providencia"
-   ]
-  },
-  {
-   "id": "bancochile-306f79cf9c43",
-   "banco": "bancochile",
-   "comercio": "La Chimba - Terrazas San Cristóbal",
-   "titulo": "40% dto. jueves de noviembre",
-   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    3
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dcto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-chimba-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/110/477/b3f577e1-b619-4fbf-83da-b171276308ec/original/logo-web-La-Chimba.jpg",
    "regiones": [
     "RM"
    ],
@@ -34538,6 +33628,87 @@
    ]
   },
   {
+   "id": "bancochile-460ebf8d556d",
+   "banco": "bancochile",
+   "comercio": "Local Burger",
+   "titulo": "40% dto. lunes y domingo de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. lunes y domingo de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promoci",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0,
+    6
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/local-burger-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/057/764/13c4f8c2-6941-4910-ae9f-707bbf1d5505/original/banner-web-Local-Burger.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes",
+    "Providencia",
+    "Ñuñoa"
+   ]
+  },
+  {
+   "id": "bancochile-bba54d8f0ab9",
+   "banco": "bancochile",
+   "comercio": "ICA RESTAURANTE",
+   "titulo": "40% dto. sábado de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Qu",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    5
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/ica-restaurente-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/047/324/072b92b3-7e88-4a29-a7bf-3b8667e5e0d1/original/logo-web-ICA-RESTAURANTE.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
+   ]
+  },
+  {
    "id": "bancochile-79d95b4789a4",
    "banco": "bancochile",
    "comercio": "Supremo Grill Alerce",
@@ -34665,9 +33836,128 @@
    ]
   },
   {
-   "id": "bancochile-97a39bc78992",
+   "id": "bancochile-01bd9665c23d",
    "banco": "bancochile",
-   "comercio": "Güeros - Ñuñoa",
+   "comercio": "La Birrería",
+   "titulo": "40% dto. miércoles y sábado de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. miércoles y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras pro",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2,
+    5
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-birreria",
+   "imagen": "https://assets.bancochile.cl/uploads/000/102/836/d35e890e-c608-4e26-a852-b9bd4660f0c7/original/logo-web-La-Birreria.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Huechuraba"
+   ]
+  },
+  {
+   "id": "bancochile-70a169ace3f5",
+   "banco": "bancochile",
+   "comercio": "Majka Bistro",
+   "titulo": "40% dto. miércoles y sábado de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. miércoles y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras prom",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/majka-bistro-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/095/710/351d7faa-1325-41e6-9b89-7f2469e088de/original/logo-web-Majka.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "La Reina"
+   ]
+  },
+  {
+   "id": "bancochile-a085ade7916f",
+   "banco": "bancochile",
+   "comercio": "La Cocina de Javier",
+   "titulo": "40% dto. martes y miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. martes y miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras prom",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-cocina-de-javier-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/055/285/68be8da0-a204-44ae-9aaf-63334f09291b/original/logo-web-La-Cocina-de-Javier.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bancochile-f360489959f6",
+   "banco": "bancochile",
+   "comercio": "Kechua",
    "titulo": "40% dto. miércoles de noviembre",
    "descripcion": "Válido para consumo presencial. . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones",
    "pct": 40,
@@ -34694,52 +33984,14 @@
    "modalidad": "Presencial",
    "vigencia_desde": null,
    "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/gueros-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/110/466/15474a93-ddf5-44bf-a9fc-9880a25dd8fb/original/logo-web-Gueros.jpg",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/kechua-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/027/637/6e406cc8-86e1-4bfb-b6d0-50ab99ab5edb/original/logo-web-kechua.jpg",
    "regiones": [
     "RM"
    ],
    "comunas": [
+    "Vitacura",
     "Ñuñoa"
-   ]
-  },
-  {
-   "id": "bancochile-1498205dae64",
-   "banco": "bancochile",
-   "comercio": "PF CHANGS",
-   "titulo": "40% dto. lunes de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. lunes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Qued",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    0
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": "Tope dto. $50.000",
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/pf-changs-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/454/bd66100d-81fd-411c-b850-64ae88b797cc/original/logo-web-PF-CHANGS.jpg",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Las Condes"
    ]
   },
   {
@@ -35009,15 +34261,133 @@
    ]
   },
   {
-   "id": "bancochile-2393517dcc13",
+   "id": "bancochile-4dcc78a40156",
    "banco": "bancochile",
-   "comercio": "LA BARRA ANDALUE",
-   "titulo": "40% dto. lunes y miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. lunes y miércoles de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. ",
+   "comercio": "Mosto",
+   "titulo": "40% dto. martes de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. martes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Que",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mosto-visa40",
+   "imagen": "https://assets.bancochile.cl/uploads/000/105/152/acfba469-59ed-4e47-a7d1-8e75e25d4fd7/original/logo-web-Mosto.jpg",
+   "regiones": [
+    "LL"
+   ],
+   "comunas": [
+    "Puerto Varas"
+   ]
+  },
+  {
+   "id": "bancochile-4808fca4f24c",
+   "banco": "bancochile",
+   "comercio": "Margarita Bar",
+   "titulo": "40% dto miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/margarita-bar-40dscto",
+   "imagen": "https://assets.bancochile.cl/uploads/000/026/977/f185bf70-e2aa-4483-a88b-fac717f588be/original/logo_web_margarita_bar_bch.jpg",
+   "regiones": [
+    "BI"
+   ],
+   "comunas": [
+    "Concepción"
+   ]
+  },
+  {
+   "id": "bancochile-641cc83da55a",
+   "banco": "bancochile",
+   "comercio": "Jardín Ulriksen",
+   "titulo": "40% dto lunes de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. lunes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Que",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/jardin-ulriksen",
+   "imagen": "https://assets.bancochile.cl/uploads/000/042/405/e9f0e988-599b-40fe-a2a3-5487bcda9854/original/logo-web-JARDIN-ULRIKSEN.jpg",
+   "regiones": [
+    "CO"
+   ],
+   "comunas": [
+    "La Serena"
+   ]
+  },
+  {
+   "id": "bancochile-efccac065c13",
+   "banco": "bancochile",
+   "comercio": "Le Rouge",
+   "titulo": "40% dto. lunes a miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. lunes a miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones.",
    "pct": 40,
    "rubro": "restaurantes",
    "dias": [
     0,
+    1,
     2
    ],
    "tarjetas": [
@@ -35039,13 +34409,169 @@
    "modalidad": "Presencial",
    "vigencia_desde": null,
    "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-barra-andalue-visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/043/306/c1795775-a237-490b-b2e8-c98429f05489/original/logo-web-La-Barra-Andalue.jpg",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/le-rouge-visa40dto",
+   "imagen": "https://assets.bancochile.cl/uploads/000/118/557/e0ab17c9-0b4d-4abb-9a03-b3db8171b09d/original/logo-web-Le-Rouge.jpg",
+   "regiones": [
+    "VS"
+   ],
+   "comunas": [
+    "Concón"
+   ]
+  },
+  {
+   "id": "bancochile-1498205dae64",
+   "banco": "bancochile",
+   "comercio": "PF CHANGS",
+   "titulo": "40% dto. lunes de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. lunes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Qued",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/pf-changs-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/042/454/bd66100d-81fd-411c-b850-64ae88b797cc/original/logo-web-PF-CHANGS.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
+   ]
+  },
+  {
+   "id": "bancochile-4ca3cd1885f3",
+   "banco": "bancochile",
+   "comercio": "Matureo",
+   "titulo": "40% dto. miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan ",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/matureo-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/085/260/922f960f-1cfd-4d30-96c6-6b27e6d7728f/original/logo-web-Matureo.jpg",
+   "regiones": [
+    "LL"
+   ],
+   "comunas": [
+    "Osorno"
+   ]
+  },
+  {
+   "id": "bancochile-2bf2bd07bb82",
+   "banco": "bancochile",
+   "comercio": "NINA",
+   "titulo": "40% dto. miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. ",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/nina-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/118/575/5e6dca88-9486-411d-8120-7215ec30dfb3/original/logo-web-Nina.jpg",
+   "regiones": [
+    "VS"
+   ],
+   "comunas": [
+    "Viña del Mar"
+   ]
+  },
+  {
+   "id": "bancochile-563420886093",
+   "banco": "bancochile",
+   "comercio": "Jazz Restaurant",
+   "titulo": "40% dto. martes de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. martes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan exc",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/jazz-restaurant-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/118/609/540295c8-b632-4280-a79e-d602c4ceb856/original/logo-web-Jazz-Restaurant.jpg",
    "regiones": [
     "BI"
    ],
    "comunas": [
-    "San Pedro de la Paz"
+    "Concepción"
    ]
   },
   {
@@ -35620,6 +35146,48 @@
    ]
   },
   {
+   "id": "bancochile-2f4c4f99bce9",
+   "banco": "bancochile",
+   "comercio": "Miscelaneo Bar",
+   "titulo": "40% dto. martes, miércoles, jueves y sábado de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. martes, miércoles, jueves y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulabl",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/miscelaneo-bar-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/079/840/4061906d-9bc8-452f-b4e1-128cdcb7357c/original/logo-web-Miscelaneo-Bar.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
    "id": "bancochile-793bfdd392b5",
    "banco": "bancochile",
    "comercio": "Verde Sazón",
@@ -35665,17 +35233,17 @@
    ]
   },
   {
-   "id": "bancochile-476c10db1867",
+   "id": "bancochile-432a4a19182f",
    "banco": "bancochile",
-   "comercio": "PAD THAI",
-   "titulo": "40% dto. miércoles a viernes de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. miércoles a viernes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . El día 31/12 el beneficio no aplica para cenas o eventos de año nuevo. . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al ",
+   "comercio": "Majestic",
+   "titulo": "40% dto. jueves, viernes y sábado de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. jueves, viernes y sábado de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial en www. majestic.cl o llamando al 242450337. . Dto no válido para el 14 de febrero día de los enamorados. . Tope dcto. $50.000 por mesa. . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Ed",
    "pct": 40,
    "rubro": "restaurantes",
    "dias": [
-    2,
     3,
-    4
+    4,
+    5
    ],
    "tarjetas": [
     "Visa Infinite crédito",
@@ -35692,12 +35260,129 @@
     "credito",
     "debito"
    ],
-   "tope": "Tope dto. $50.000",
+   "tope": "Tope dcto. $50.000",
    "modalidad": "Presencial",
    "vigencia_desde": null,
    "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/pad-thai-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/042/758/3098b294-a622-4ecf-91cd-6400ecfa2eb5/original/logo-web-PAD-THAI.jpg",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/majestic-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/077/212/9148b61b-a089-4d47-bd19-75e79a0e4c19/original/logo-web-magestic.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
+   ]
+  },
+  {
+   "id": "bancochile-d7a2eb97d4ec",
+   "banco": "bancochile",
+   "comercio": "Kechua - Terrazas San Cristóbal",
+   "titulo": "40% dto. jueves de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/kechua-terrazas-san-cristobal-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/110/463/59e84b86-6cde-4102-982c-76ee123890fc/original/logo-web-Kechua.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Providencia"
+   ]
+  },
+  {
+   "id": "bancochile-19079f1e018b",
+   "banco": "bancochile",
+   "comercio": "Güeros - Terrazas San Cristobal",
+   "titulo": "40% dto. jueves de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/gueros-terrazas-san-cristobal-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/110/466/15474a93-ddf5-44bf-a9fc-9880a25dd8fb/original/logo-web-Gueros.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Providencia"
+   ]
+  },
+  {
+   "id": "bancochile-306f79cf9c43",
+   "banco": "bancochile",
+   "comercio": "La Chimba - Terrazas San Cristóbal",
+   "titulo": "40% dto. jueves de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-chimba-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/110/477/b3f577e1-b619-4fbf-83da-b171276308ec/original/logo-web-La-Chimba.jpg",
    "regiones": [
     "RM"
    ],
@@ -35864,6 +35549,45 @@
    ]
   },
   {
+   "id": "bancochile-8eb296659461",
+   "banco": "bancochile",
+   "comercio": "La Joya Cantina",
+   "titulo": "40% dto. jueves de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. jueves de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Q",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/joya-cantina-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/042/738/fbf89208-dc0f-4c58-84d2-6f4611de4eab/original/logo-web-La-Joya-Cantina.jpg",
+   "regiones": [
+    "VS"
+   ],
+   "comunas": [
+    "Valparaíso"
+   ]
+  },
+  {
    "id": "bancochile-0b0172840796",
    "banco": "bancochile",
    "comercio": "The Clock",
@@ -35945,6 +35669,45 @@
    ]
   },
   {
+   "id": "bancochile-7574712540e7",
+   "banco": "bancochile",
+   "comercio": "Mora Sushi",
+   "titulo": "40% dto. viernes de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. viernes de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Que",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mora-sushi-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/077/970/8767a545-c199-4903-83e5-5dad81d6de8d/original/logo-web-Mora-Sushi-Bar.jpg",
+   "regiones": [
+    "AR"
+   ],
+   "comunas": [
+    "Pucón"
+   ]
+  },
+  {
    "id": "bancochile-3bea6c40b9dc",
    "banco": "bancochile",
    "comercio": "Carbón",
@@ -36021,15 +35784,15 @@
    ]
   },
   {
-   "id": "bancochile-73594508f5ab",
+   "id": "bancochile-15dcbbafaa5b",
    "banco": "bancochile",
-   "comercio": "Novu",
-   "titulo": "40% dto. miércoles de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones.",
+   "comercio": "Mirazu",
+   "titulo": "40% dto. sábados de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. sábados de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan exc",
    "pct": 40,
    "rubro": "restaurantes",
    "dias": [
-    2
+    5
    ],
    "tarjetas": [
     "Visa Infinite crédito",
@@ -36046,17 +35809,56 @@
     "credito",
     "debito"
    ],
-   "tope": "Tope dcto. $50.000",
+   "tope": "Tope $50.000",
    "modalidad": "Presencial",
    "vigencia_desde": null,
    "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/novu-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/054/535/58343529-2492-4f39-89bc-91be237a8eac/original/logo-web-novu.jpg",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/mirazu-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/118/611/e499fae0-612f-48db-b26b-a55c8a16937f/original/logo-web-Mirazu.jpg",
    "regiones": [
-    "ML"
+    "VS"
    ],
    "comunas": [
-    "Curicó"
+    "Viña del Mar"
+   ]
+  },
+  {
+   "id": "bancochile-8c9e9fb0f76c",
+   "banco": "bancochile",
+   "comercio": "Lebol Restobar",
+   "titulo": "40% dto. sábados de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. sábados de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan exc",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    5
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/lebol-restobar-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/107/448/a8ec8ef2-2d55-486a-b7a4-519515e3ff1b/original/logo-web-Lebol-Restobar.jpg",
+   "regiones": [
+    "BI"
+   ],
+   "comunas": [
+    "Concepción"
    ]
   },
   {
@@ -36096,6 +35898,45 @@
    ],
    "comunas": [
     "Puerto Varas"
+   ]
+  },
+  {
+   "id": "bancochile-6fb845bcc5aa",
+   "banco": "bancochile",
+   "comercio": "Otto Burger",
+   "titulo": "40% dto. viernes de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. viernes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope de dto. $50.000 . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Quedan ",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope de dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/otto-burger",
+   "imagen": "https://assets.bancochile.cl/uploads/000/056/233/2bac657d-a572-412a-a525-bd57cc7167ff/original/LOGO_OTTO_BURGER_OF.jpeg",
+   "regiones": [
+    "ML"
+   ],
+   "comunas": [
+    "Curicó"
    ]
   },
   {
@@ -36855,15 +36696,56 @@
    ]
   },
   {
-   "id": "bancochile-1f882191f6ed",
+   "id": "bancochile-476c10db1867",
    "banco": "bancochile",
-   "comercio": "LA CHINGANA DEL BARRIO",
-   "titulo": "40% dto. martes de noviembre",
-   "descripcion": "Válido para consumo presencial . 40% dto. martes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Qu",
+   "comercio": "PAD THAI",
+   "titulo": "40% dto. miércoles a viernes de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. miércoles a viernes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dto. $50.000 por mesa . El día 31/12 el beneficio no aplica para cenas o eventos de año nuevo. . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al ",
    "pct": 40,
    "rubro": "restaurantes",
    "dias": [
-    1
+    2,
+    3,
+    4
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/pad-thai-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/042/758/3098b294-a622-4ecf-91cd-6400ecfa2eb5/original/logo-web-PAD-THAI.jpg",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Providencia"
+   ]
+  },
+  {
+   "id": "bancochile-97a39bc78992",
+   "banco": "bancochile",
+   "comercio": "Güeros - Ñuñoa",
+   "titulo": "40% dto. miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial. . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
    ],
    "tarjetas": [
     "Visa Infinite crédito",
@@ -36884,13 +36766,13 @@
    "modalidad": "Presencial",
    "vigencia_desde": null,
    "vigencia_hasta": "2026-11-30",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-chingana-del-barrio-40visa",
-   "imagen": "https://assets.bancochile.cl/uploads/000/121/870/0fa05067-fb4d-4023-921b-9b5a6784fee9/original/logo-web-Chingana.jpg",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/gueros-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/110/466/15474a93-ddf5-44bf-a9fc-9880a25dd8fb/original/logo-web-Gueros.jpg",
    "regiones": [
-    "VS"
+    "RM"
    ],
    "comunas": [
-    "Viña del Mar"
+    "Ñuñoa"
    ]
   },
   {
@@ -37094,6 +36976,124 @@
    "imagen": "https://assets.bancochile.cl/uploads/000/047/148/d43f8b1b-d493-4266-94d9-cd6c6ec82bd6/original/logo-web.jpg",
    "regiones": [],
    "comunas": []
+  },
+  {
+   "id": "bancochile-73594508f5ab",
+   "banco": "bancochile",
+   "comercio": "Novu",
+   "titulo": "40% dto. miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. miércoles de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/novu-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/054/535/58343529-2492-4f39-89bc-91be237a8eac/original/logo-web-novu.jpg",
+   "regiones": [
+    "ML"
+   ],
+   "comunas": [
+    "Curicó"
+   ]
+  },
+  {
+   "id": "bancochile-2393517dcc13",
+   "banco": "bancochile",
+   "comercio": "LA BARRA ANDALUE",
+   "titulo": "40% dto. lunes y miércoles de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. lunes y miércoles de noviembre . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope $50.000 de dto . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. ",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0,
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-barra-andalue-visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/043/306/c1795775-a237-490b-b2e8-c98429f05489/original/logo-web-La-Barra-Andalue.jpg",
+   "regiones": [
+    "BI"
+   ],
+   "comunas": [
+    "San Pedro de la Paz"
+   ]
+  },
+  {
+   "id": "bancochile-1f882191f6ed",
+   "banco": "bancochile",
+   "comercio": "LA CHINGANA DEL BARRIO",
+   "titulo": "40% dto. martes de noviembre",
+   "descripcion": "Válido para consumo presencial . 40% dto. martes de noviembre. . . Solicita el descuento al momento de pagar en el restaurant. . Descuento es exclusivo pagando con tu Tarjeta de Crédito o Débito VISA del Chile. . No acumulable con otras promociones. . Te sugerimos realizar reserva para consumo presencial. . Tope dcto. $50.000 por mesa . Promoción válida del 01 al 30 de noviembre de 2026. Exclusivo para clientes que paguen con Tarjetas Visa Banco de Chile (Incluye Banco Edwards) y que soliciten el descuento al momento de pagar en el restaurante. Descuento no acumulable con otras promociones. Qu",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": "Tope dcto. $50.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/la-chingana-del-barrio-40visa",
+   "imagen": "https://assets.bancochile.cl/uploads/000/121/870/0fa05067-fb4d-4023-921b-9b5a6784fee9/original/logo-web-Chingana.jpg",
+   "regiones": [
+    "VS"
+   ],
+   "comunas": [
+    "Viña del Mar"
+   ]
   },
   {
    "id": "bancochile-7ea5a35ba0b0",
@@ -42828,7 +42828,7 @@
    "titulo": "30% dcto. en arriendo diario más 3 a 6 cuotas sin interés",
    "descripcion": "¡Arriendos de autos con precios únicos! . Recuerda que:. Exclusivo con tus Tarjetas de Crédito y Débito Santander. Válido en www.mitta.cl. Descuento válido para arriendo diario de hasta 5 días. Ingresando los 6 primeros dígitos de tu Tarjeta como código de descuento. Promoción sujeta a disponibilidad de categorías. La tarifa publicada incluye CDW (colisión) que no es descontable. Descuento aplica solamente en arriendos de personas naturales. No aplica sobre opcionales y servicios adicionales (seguros, TAG, bencina, cargo aeropuerto, impuesto). No acumulable a otras promociones. Las ofertas, ve",
    "pct": 30,
-   "rubro": "combustible",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -44193,10 +44193,10 @@
    ]
   },
   {
-   "id": "bci-0e07ba638e39",
+   "id": "bci-2d11ef82ba90",
    "banco": "bci",
    "comercio": "Antonella Bar",
-   "titulo": "Vitacura Lu - Ma - Mi - Do",
+   "titulo": "Las Condes y Vitacura Lu - Ma - Mi - Do",
    "descripcion": "Exclusivo con tus tarjetas de crédito o débito Bci. 20% de descuento sin tope al momento de pagar en el comercio. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
    "pct": 20,
    "rubro": "restaurantes",
@@ -44217,13 +44217,14 @@
    "tope": "sin tope al momento de pagar en el comercio",
    "modalidad": null,
    "vigencia_desde": "2026-10-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/las-condes-y-vitacura-mnqaxi",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Antonella-Bar_b8c598da_18-43_1.png",
    "regiones": [
     "RM"
    ],
    "comunas": [
+    "Las Condes",
     "Vitacura"
    ]
   },
@@ -46954,7 +46955,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-09-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/en-concepcion-o5p6bib",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Augusta-Bar_1a8946c3_16-9_1.png",
    "regiones": [
@@ -48103,7 +48104,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-10-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/miercoles-providencia-f03tos",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bar-Italia_3a74408a_21-8_1.png",
    "regiones": [
@@ -48538,7 +48539,7 @@
    "tope": "tope de $30.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-10-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/concepcion-52ybqx7",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bandura-Restobar_b334ecbd_19-57_1.png",
    "regiones": [
@@ -48576,7 +48577,7 @@
    "tope": "tope de $20.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-10-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/todos-los-dias-santiago-sdgph5",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bar-La-Trova_f1764bf0_20-21_1.png",
    "regiones": [
@@ -49205,7 +49206,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-11-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/las-condes-y-lo-barnechea-j55gpam",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Ari-Nikkei_dbc7502b_14-44_1.png",
    "regiones": [
@@ -71697,6 +71698,40 @@
    ]
   },
   {
+   "id": "falabella-b91067872f10",
+   "banco": "falabella",
+   "comercio": "Descuentos exclusivos Sodimac",
+   "titulo": "Descuentos exclusivos en Sodimac: Conoce Beneficios Especiales",
+   "descripcion": "Aprovecha pagando con tu CMR.",
+   "pct": null,
+   "rubro": "vestuario",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "CMR Mastercard",
+    "CMR Mastercard Premium",
+    "CMR Mastercard Elite"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": null,
+   "vigencia_desde": "2026-11-18",
+   "vigencia_hasta": "2027-09-30",
+   "url": "https://www.bancofalabella.cl/descuentos/detalle/descuentos-exclusivos-sodimac",
+   "imagen": "https://images.ctfassets.net/p6eyia4djstu/55ss5WtB4D4vBwEsvyHUJ9/9443a37e9f3b6cee0a8923f85dbfa8b7/logo_web_sodimac.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
    "id": "falabella-b9b27ebe641f",
    "banco": "falabella",
    "comercio": "Calendario de Adviento Juguetería",
@@ -75633,7 +75668,7 @@
    "titulo": "Descuento en Shell: $$100 dcto/litro Tope: 70 lt",
    "descripcion": "Todos los miércoles.",
    "pct": null,
-   "rubro": "viajes",
+   "rubro": "combustible",
    "dias": [
     2
    ],
@@ -83550,7 +83585,7 @@
    "titulo": "$100 dcto. por litro en Aramco",
    "descripcion": "$125 dcto para Silver y $150 Gold Además, $125 dcto. para clientes silver y $150 dcto para clientes gold. Además, acumula Doble Ripley Puntos Go. Tope devolución mensual $8.000 por cliente. Devolución se realiza todos los viernes del mes. Días: Miércoles.",
    "pct": null,
-   "rubro": "viajes",
+   "rubro": "combustible",
    "dias": [
     2
    ],

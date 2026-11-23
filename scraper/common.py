@@ -116,6 +116,33 @@ def extraer_dias(*textos: str) -> list[int]:
     return sorted(dias)
 
 
+_COMBUSTIBLE_RX = re.compile(r"(?<![a-z])(combustible|bencina|copec|shell|aramco|petrobras|enex|gasolina|diesel|"
+                             r"estacion(?:es)? de servicio)(?![a-z])")
+_POR_LITRO_RX = re.compile(r"(por|/|x)\s*(litro|lt)\b")
+
+
+def _rubro_final(rubro: str | None, comercio: str, titulo: str, descripcion: str) -> str:
+    """Rubro del banco si lo informa, si no el deducido; con dos correcciones para Combustible:
+    un descuento "por litro" de una bencinera es Combustible aunque el banco lo ponga en otro
+    rubro, y Combustible exige que el comercio o el título hablen de combustible
+    (mantenciones o arriendo de autos no lo son)."""
+    r = rubro if rubro in RUBROS else adivinar_rubro(comercio, titulo, descripcion)
+    ct = sin_tildes(f"{comercio} {titulo}").lower()
+    if _COMBUSTIBLE_RX.search(ct) and (_POR_LITRO_RX.search(ct) or "dcto combustible" in ct or "descuento en combustible" in ct):
+        return "combustible"
+    if r == "combustible" and not _COMBUSTIBLE_RX.search(ct):
+        r2 = adivinar_rubro(comercio, titulo)
+        return r2 if r2 != "combustible" else "otros"
+    return r
+
+
+def monto_por_litro(*textos: str) -> int | None:
+    """Descuento en pesos por litro ("$100 dcto. por litro", "$$100 dcto/litro") -> 100."""
+    t = sin_tildes(" ".join(x or "" for x in textos)).lower()
+    m = re.search(r"\$+\s?(\d{2,4})\s*(?:de\s*)?(?:dcto\.?|descuento|dto\.?)?\s*(?:por|/|x)\s*(?:litro|lt)", t)
+    return int(m.group(1)) if m else None
+
+
 def es_solo_cuotas(titulo: str) -> bool:
     """Ofertas de cuotas sin interés (no son descuentos): "Paga hasta en 24 cuotas sin interés"."""
     t = sin_tildes(titulo or "").lower()
@@ -176,7 +203,7 @@ def nuevo_descuento(
         "titulo": titulo,
         "descripcion": descripcion[:600],
         "pct": pct,
-        "rubro": rubro if rubro in RUBROS else adivinar_rubro(comercio, titulo, descripcion),
+        "rubro": _rubro_final(rubro, comercio, titulo, descripcion),
         "dias": sorted(set(dias)),
         "tarjetas": tarjetas,
         "tipos": sorted({tipo_tarjeta(t) for t in tarjetas}) or ["credito"],

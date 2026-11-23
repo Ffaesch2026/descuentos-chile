@@ -97,20 +97,42 @@ def grupo_tarjetas(d: dict) -> tuple[int, str]:
     return 10 + len(gamas), f"Solo {nombre}"
 
 
+def nombre_comercio(d: dict) -> str:
+    """Nombre limpio para mostrar ("Shell Dcto Combustible" -> "Shell")."""
+    import re as _re
+    return _re.sub(r"\s*(dcto\.?|descuento)\s+(en\s+)?combustible\s*$", "", d["comercio"], flags=_re.I).strip() or d["comercio"]
+
+
+def valor(d: dict) -> tuple[str, float] | None:
+    """(texto, orden) del beneficio: "40%" o "$100/L". None si no hay un valor que mostrar."""
+    if d.get("pct"):
+        return f"{d['pct']}%", float(d["pct"])
+    from scraper.common import monto_por_litro
+    m = monto_por_litro(d.get("comercio", ""), d.get("titulo", ""))
+    if m:
+        return f"${m}/L", m / 10  # $100/L se ordena como un 10 %, solo para ordenar dentro de un banco
+    return None
+
+
 def seleccionar(descuentos, rubro, region, por_banco, incluir_nacionales, por_tarjeta=False):
+    seleccionar.recortado = False
     out = {}
     for bid, _, _ in BANCOS:
-        items = [d for d in descuentos if d["banco"] == bid and d["rubro"] == rubro and d.get("pct")
+        items = [d for d in descuentos if d["banco"] == bid and d["rubro"] == rubro and valor(d)
                  and d["comercio"].strip().lower() not in GENERICOS
-                 and ((region in d.get("regiones", [])) or (incluir_nacionales and not d.get("regiones")))]
+                 and (region == "CL" or (region in d.get("regiones", [])) or (incluir_nacionales and not d.get("regiones")))]
         # Un mismo comercio una sola vez por banco (el de mayor %)
         mejor = {}
-        for d in sorted(items, key=lambda d: -d["pct"]):
+        for d in items:
+            d["_valor"], d["_orden"] = valor(d)
+        for d in sorted(items, key=lambda d: -d["_orden"]):
             mejor.setdefault(d["comercio"].strip().lower(), d)
-        top = sorted(mejor.values(), key=lambda d: -d["pct"])[:por_banco]
+        if len(mejor) > por_banco:
+            seleccionar.recortado = True
+        top = sorted(mejor.values(), key=lambda d: -d["_orden"])[:por_banco]
         for d in top:
             d["_grupo"] = grupo_tarjetas(d) if por_tarjeta else (0, "")
-        top.sort(key=lambda d: (d["_grupo"], min(d["dias"]) if d["dias"] else 9, -d["pct"], d["comercio"].lower()))
+        top.sort(key=lambda d: (d["_grupo"], min(d["dias"]) if d["dias"] else 9, -d["_orden"], d["comercio"].lower()))
         if top:
             out[bid] = top
     return out
@@ -158,11 +180,11 @@ body{width:1080px;height:1350px;background:#f3f5f4;color:#15201d;font-family:'In
 .bh span{font-size:18px;font-weight:600;opacity:.9;text-align:right;line-height:1.1}
 .grp{background:color-mix(in srgb,var(--c) 16%,#fff);color:color-mix(in srgb,var(--c) 75%,#000);font-size:17px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;height:46px;display:flex;align-items:center;padding:0 14px;border-top:2px solid color-mix(in srgb,var(--c) 35%,#fff)}
 .grp::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--c);margin-right:10px;flex:none}
-.row{display:grid;grid-template-columns:104px 1fr 80px;align-items:center;height:46px;padding:0 14px;border-top:1px solid #e6ebe9;font-size:26px}
+.row{display:grid;grid-template-columns:104px 1fr auto;align-items:center;height:46px;padding:0 14px;border-top:1px solid #e6ebe9;font-size:26px}
 .row:nth-child(even of .row){background:color-mix(in srgb,var(--c) 6%,#fff)}
 .d{font-size:17px;font-weight:700;color:#5d6a66;letter-spacing:.02em;line-height:1.2}
 .m{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:8px}
-.p{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;text-align:right;color:var(--c)}
+.p{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;min-width:72px;text-align:right;color:var(--c)}
 .foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:21px;color:#5d6a66;font-weight:600}
 .foot b{color:#15201d;font-size:24px}
 /* portada y cierre */
@@ -188,13 +210,13 @@ def pagina(cuerpo: str) -> str:
     return f"<!doctype html><html lang='es'><head><meta charset='utf-8'><style>{CSS}</style></head><body>{cuerpo}</body></html>"
 
 
-def html_portada(rubro_txt, region_txt, mes_txt, total, nbancos, bancos):
+def html_portada(rubro_txt, region_txt, mes_txt, total, nbancos, bancos, todos=False):
     chips = "".join(f"<span>{e(n)}</span>" for n in bancos)
     return pagina(f"""<div class="slide cover">
   <div><div class="k">Descuentos con tarjeta · {e(mes_txt)}</div>
   <h1>{e(rubro_txt)}</h1><div class="reg">{e(region_txt)}</div>
   <div class="big"><div><b>{total}</b><span>descuentos</span></div><div><b>{nbancos}</b><span>bancos y tarjetas</span></div></div>
-  <p class="lead">Los mejores de cada banco, ordenados por día de la semana.</p></div>
+  <p class="lead">{"Todos los descuentos del mes" if todos else "Los mejores de cada banco"}, ordenados por día de la semana.</p></div>
   <div class="chips">{chips}</div>
   <div class="bottom"><span>{CUENTA}</span><span class="swipe">Desliza →</span></div>
 </div>""")
@@ -209,7 +231,7 @@ def html_tabla(cols, sel_tipos, titulo, sub, n, total):
             if d["_grupo"] != previo and d["_grupo"][1]:
                 partes.append(f'<div class="grp">{e(d["_grupo"][1])}</div>')
                 previo = d["_grupo"]
-            partes.append(f'<div class="row"><span class="d">{fmt_dias(d["dias"])}</span><span class="m">{e(d["comercio"])}</span><span class="p">{d["pct"]}%</span></div>')
+            partes.append(f'<div class="row"><span class="d">{fmt_dias(d["dias"])}</span><span class="m">{e(nombre_comercio(d))}</span><span class="p">{e(d["_valor"])}</span></div>')
         return (f'<div class="blk" style="--c:{color}"><div class="bh"><b>{e(nombre)}{" (cont.)" if cont else ""}</b></div>'
                 f'{"".join(partes)}</div>')
     columnas = "".join(f'<div class="col">{"".join(bloque(*b) for b in col)}</div>' for col in cols)
@@ -255,13 +277,13 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
     banco, cómo leer las imágenes, links a la página de beneficios de cada banco y hashtags."""
     nombres = {b: n for b, n, _ in BANCOS}
     total = sum(len(f) for f in sel.values())
-    cab = (f"{EMOJI[a.rubro]} {rubro_txt} en la {region_txt} · {mes_txt}\n\n"
-           f"{total} descuentos con tarjeta de {len(sel)} bancos y tarjetas, ordenados por día de la semana. "
+    cab = (f"{EMOJI[a.rubro]} {rubro_txt} {a.region_en} · {mes_txt}\n\n"
+           f"{total} descuentos con tarjeta de {len(sel)} bancos y tarjetas{'' if seleccionar.recortado else ' (todos los del mes)'}, ordenados por día de la semana. "
            f"👉 Desliza para verlos todos y guarda el post para usarlo durante el mes.")
     destacados = []
     for bid, filas in sel.items():
-        d = max(filas, key=lambda x: (x["pct"], -len(x["dias"])))
-        destacados.append(f"• {nombres[bid]}: {d['pct']}% en {d['comercio']} ({_dias_texto(d['dias'])})")
+        d = max(filas, key=lambda x: (x["_orden"], -len(x["dias"])))
+        destacados.append(f"• {nombres[bid]}: {d['_valor'].replace('/L', ' por litro')} en {nombre_comercio(d)} ({_dias_texto(d['dias'])})")
     lectura = ("💳 Cómo leerlo: en cada banco, la franja de color indica a qué tarjetas aplica "
                "(crédito y débito, solo crédito o solo tarjetas premium como Black o Infinite)."
                if a.por_tarjeta else "")
@@ -269,8 +291,9 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
              if data["bancos"].get(b, {}).get("sitio")]
     aviso = (f"⚠️ Información de los sitios oficiales de cada banco al {gen:%d-%m-%Y}. Descuentos, topes, días "
              f"y vigencias pueden cambiar: confírmalos antes de usarlos. Cuenta no afiliada a ningún banco.")
-    tags = (f"#descuentos #descuentoschile #{a.rubro} #{HASHTAG_REGION.get(a.region, 'chile')} #chile "
-            f"#tarjetadecredito #tarjetadedebito #ahorro #ofertas #beneficios")
+    extra = {"combustible": " #bencina #copec #shell #aramco"}.get(a.rubro, "")
+    tags = (f"#descuentos #descuentoschile #{a.rubro} #{HASHTAG_REGION.get(a.region, 'chile')} "
+            f"{'' if a.region == 'CL' else '#chile '}#tarjetadecredito #tarjetadedebito #ahorro #ofertas #beneficios{extra}")
 
     def armar(n_dest: int, con_links: bool) -> str:
         partes = [cab]
@@ -295,7 +318,7 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rubro", default="restaurantes", choices=list(RUBROS))
-    ap.add_argument("--region", default="RM")
+    ap.add_argument("--region", default="RM", help='id de región (RM, VS…) o CL para todo Chile')
     ap.add_argument("--por-banco", type=int, default=20)
     ap.add_argument("--por-tarjeta", action="store_true",
                     help="dentro de cada banco, agrupar por tipo de tarjeta (crédito y débito, solo crédito, solo Black…)")
@@ -306,8 +329,13 @@ def main():
     data = json.loads(DATA.read_text("utf-8"))
     gen = datetime.fromisoformat(data["generado"])
     mes_txt = f"{MESES[gen.month - 1].capitalize()} {gen.year}"
-    region = next(r for r in REGIONES if r["id"] == a.region)
-    region_txt = "Región Metropolitana" if a.region == "RM" else f"Región de {region['nombre']}"
+    if a.region == "CL":
+        region_txt, region_en = "Todo Chile", "en todo Chile"
+    else:
+        region = next(r for r in REGIONES if r["id"] == a.region)
+        region_txt = "Región Metropolitana" if a.region == "RM" else f"Región de {region['nombre']}"
+        region_en = f"en la {region_txt}"
+    a.region_en = region_en
     rubro_txt = RUBROS[a.rubro]
 
     # Si no cabe en un carrusel (máx. 10 imágenes), se muestran menos descuentos por banco
@@ -330,7 +358,7 @@ def main():
 
     nombres = {b: n for b, n, _ in BANCOS}
     htmls = [html_portada(rubro_txt, region_txt, mes_txt, sum(len(f) for f in sel.values()), len(sel),
-                          [nombres[b] for b in sel])]
+                          [nombres[b] for b in sel], todos=not seleccionar.recortado)]
     for i, cols in enumerate(paginas, start=2):
         htmls.append(html_tabla(cols, tipos, f"{rubro_txt} · {region_txt}", mes_txt, i, total_img))
     htmls.append(html_cierre(mes_txt, gen.strftime("%d-%m-%Y")))
