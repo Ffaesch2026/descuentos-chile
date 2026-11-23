@@ -18,7 +18,7 @@ import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scraper.common import es_solo_cuotas
+from scraper.common import es_solo_cuotas, nuevo_descuento
 
 ROOT = Path(__file__).resolve().parent.parent
 SALIDA = ROOT / "data" / "descuentos.json"
@@ -26,6 +26,30 @@ WEB_DATA = ROOT / "web" / "data" / "descuentos.json"
 
 BANCOS = ["bancochile", "santander", "bci", "bancoestado", "scotiabank", "itau",
           "falabella", "ripley", "cencosud", "security", "tenpo", "mach"]
+
+
+MANUALES = ROOT / "data" / "manuales.json"
+
+
+def agregar_manuales(bancos: dict, descuentos: list, ahora: str) -> None:
+    """Agrega los descuentos de data/manuales.json (instituciones que no se pueden leer
+    automáticamente). Reemplaza los de la ejecución anterior y omite los vencidos."""
+    if not MANUALES.exists():
+        return
+    hoy = ahora[:10]
+    inst = json.loads(MANUALES.read_text("utf-8")).get("instituciones", {})
+    descuentos[:] = [d for d in descuentos if d["banco"] not in inst]
+    campos = {"comercio", "titulo", "descripcion", "pct", "rubro", "dias", "tarjetas", "tope", "modalidad",
+              "vigencia_desde", "vigencia_hasta", "url", "ubicaciones", "regiones"}
+    for bid, info in inst.items():
+        vigentes = [x for x in info.get("descuentos", []) if not x.get("vigencia_hasta") or x["vigencia_hasta"] >= hoy]
+        for x in vigentes:
+            d = nuevo_descuento(banco=bid, **{k: v for k, v in x.items() if k in campos})
+            d["fuente"] = x.get("fuente")
+            descuentos.append(d)
+        bancos[bid] = {"id": bid, "nombre": info["nombre"], "sitio": info.get("sitio"), "estado": "manual",
+                       "cantidad": len(vigentes), "actualizado": ahora, "error": None}
+        print(f"[manual] {bid}: {len(vigentes)} descuentos")
 
 
 def main(argv: list[str]) -> int:
@@ -74,6 +98,7 @@ def main(argv: list[str]) -> int:
             traceback.print_exc()
         bancos[bid] = info
 
+    agregar_manuales(bancos, descuentos, ahora)
     out = {"generado": ahora, "bancos": bancos, "descuentos": descuentos}
     txt = json.dumps(out, ensure_ascii=False, indent=1)
     for p in salidas:

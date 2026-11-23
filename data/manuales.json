@@ -1,0 +1,25 @@
+{
+ "_ayuda": "Descuentos ingresados a mano para instituciones cuyo sitio no se puede leer automáticamente. Cada descuento usa los mismos campos que el resto (comercio, titulo, pct o monto en el título, dias 0=lunes…6=domingo, tarjetas, tope, modalidad, vigencia_desde, vigencia_hasta AAAA-MM-DD, url, rubro, regiones). Los descuentos con vigencia_hasta anterior a hoy se omiten solos. 'fuente' indica de dónde se tomó el dato.",
+ "instituciones": {
+  "bice": {
+   "nombre": "Banco BICE",
+   "sitio": "https://banco.bice.cl/personas/beneficios",
+   "descuentos": [
+    {
+     "comercio": "App Shell",
+     "titulo": "$100 de dcto. por litro en Shell pagando con la App Shell",
+     "descripcion": "Domingos. Pagando en la App Shell con tarjeta de crédito BICE. Una carga al mes por cliente; tope de $5.000 al mes. Puede requerir activar un cupón antes de pagar.",
+     "rubro": "combustible",
+     "dias": [6],
+     "tarjetas": ["Tarjeta de Crédito BICE"],
+     "tope": "$5.000 al mes",
+     "modalidad": "App",
+     "vigencia_desde": "2026-11-01",
+     "vigencia_hasta": "2026-11-30",
+     "url": "https://banco.bice.cl/personas/beneficios",
+     "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/11/02/como-ahorrar-bencina-en-noviembre-hasta-300-de-descuento-por-litro-en-las-principales-estaciones.shtml"
+    }
+   ]
+  }
+ }
+}

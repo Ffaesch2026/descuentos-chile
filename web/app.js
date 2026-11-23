@@ -28,6 +28,7 @@ const BANKS = [
   ["security", "Banco Security", "Se", "#6d1f6b"],
   ["tenpo", "Tenpo", "T", "#00a88a"],
   ["mach", "MACH", "M", "#6c2bd9"],
+  ["bice", "Banco BICE", "BICE", "#0a2d6e"],
 ].map(([id, name, mono, c]) => ({ id, name, mono, c }));
 let LOGOS = {}; // id -> archivo, desde logos/index.json
 

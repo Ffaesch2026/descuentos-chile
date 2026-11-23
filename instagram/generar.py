@@ -36,7 +36,7 @@ BANCOS = [
     ("bancoestado", "BancoEstado", "#e05a00"), ("scotiabank", "Scotiabank", "#b01d2b"), ("itau", "Itaú", "#ec6608"),
     ("falabella", "Banco Falabella", "#3a8f2a"), ("ripley", "Banco Ripley", "#5b2a86"),
     ("cencosud", "Tarjeta Cencosud", "#0068b3"), ("security", "Banco Security", "#6d1f6b"),
-    ("tenpo", "Tenpo", "#00a88a"), ("mach", "MACH", "#6c2bd9"),
+    ("tenpo", "Tenpo", "#00a88a"), ("mach", "MACH", "#6c2bd9"), ("bice", "Banco BICE", "#0a2d6e"),
 ]
 # Filas cuyo "comercio" es en realidad una categoría (ej. MACH publica "Restaurantes")
 GENERICOS = {"restaurantes", "restaurant", "cuponera generica", "cuponera genérica", "restaurantes adheridos", "comercios adheridos", "supermercados", "farmacias"}
