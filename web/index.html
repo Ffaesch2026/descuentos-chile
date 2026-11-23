@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mapa de Descuentos</title>
+<meta name="description" content="Todos los descuentos del mes con tarjetas de crédito, débito y prepago de los bancos de Chile, en una sola mirada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1><small>Descuentos con tarjeta · Chile</small><span id="month">Cargando…</span></h1>
+    <div class="stats">
+      <div class="stat"><b id="sCount">0</b><span>descuentos</span></div>
+      <div class="stat"><b id="sBanks">0</b><span>instituciones</span></div>
+      <div class="stat"><b id="sMax">0%</b><span>mayor descuento</span></div>
+    </div>
+  </div>
+</header>
+<div class="notice" id="notice" hidden><div class="wrap" id="noticeText"></div></div>
+
+<section class="filters" aria-label="Filtros">
+  <div class="wrap">
+    <div class="frow"><span class="flabel">Día</span><div class="chips" id="dayChips"></div></div>
+    <div class="frow"><span class="flabel">Rubro</span><div class="chips" id="catChips"></div></div>
+    <div class="frow"><span class="flabel">% Desc.</span><div class="chips" id="pctChips"></div></div>
+    <div class="frow"><span class="flabel">Tipo</span><div class="chips" id="typeChips"></div></div>
+    <div class="frow">
+      <span class="flabel">Tarjetas</span>
+      <div class="cardpick">
+        <button class="cardbtn" id="cardBtn" aria-expanded="false">Elegir tarjetas <span class="count" id="cardCount">Todas</span> ▾</button>
+        <div class="pop" id="cardPop" hidden></div>
+      </div>
+      <div class="selchips" id="selChips"></div>
+      <span class="spacer"></span>
+      <input class="search" id="q" type="search" placeholder="Buscar comercio…" aria-label="Buscar comercio">
+      <button class="clear" id="clearAll">Limpiar filtros</button>
+      <div class="seg" role="group" aria-label="Vista">
+        <button id="vInst" aria-pressed="true">Por institución</button>
+        <button id="vWeek" aria-pressed="false">Semana</button>
+      </div>
+      <div class="zoom" aria-label="Zoom">
+        <button id="zOut" aria-label="Alejar">−</button>
+        <input id="zoomR" type="range" min="1" max="5" step="1" value="3" aria-label="Nivel de zoom">
+        <button id="zIn" aria-label="Acercar">+</button>
+        <span id="zLabel">Normal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main><div class="wrap" id="view"><div class="empty">Cargando descuentos…</div></div></main>
+<footer class="wrap foot" id="foot"></footer>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Detalle del descuento"></aside>
+<script src="app.js"></script>
+</body>
+</html>
