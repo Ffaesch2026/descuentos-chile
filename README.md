@@ -45,10 +45,9 @@ y abrir http://localhost:8000
 
 ## Actualización y publicación automática
 
-`.github/workflows/actualizar.yml` corre los lunes, los jueves y el día 1 de cada mes (también se puede lanzar a mano desde la pestaña **Actions → Run workflow**): lee los bancos, guarda los datos en el repositorio y publica la carpeta `web/` en **GitHub Pages**.
+`.github/workflows/actualizar.yml` corre los lunes, los jueves y el día 1 de cada mes (también se puede lanzar a mano en **Actions → Actualizar descuentos → Run workflow**). Lee los bancos y guarda los datos nuevos en el repositorio.
 
-Para activarlo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-GitHub Pages en un repositorio privado requiere un plan de pago de GitHub; con el plan gratuito, el repositorio debe ser público.
+La web se publica en **Vercel**: `vercel.json` le indica que es un sitio estático y que publique la carpeta `web/`. Cada commit en `main` (incluidos los de la actualización automática) genera una nueva publicación.
 
 ## Agregar o arreglar un banco
 
