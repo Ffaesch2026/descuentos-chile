@@ -21,7 +21,7 @@ REGIONES = json.loads((ROOT / "scraper" / "regiones.json").read_text("utf-8"))["
 
 CUENTA = "@descuentosalmes"
 W, H = 1080, 1350
-FILAS_COLUMNA = 20          # filas de descuentos por columna (2 columnas por imagen)
+FILAS_COLUMNA = 21          # filas de descuentos por columna (2 columnas por imagen)
 ENCABEZADO = 2              # un encabezado de banco ocupa lo mismo que ~2 filas
 MAX_IMAGENES = 10           # límite de un carrusel de Instagram
 
@@ -65,7 +65,39 @@ def fmt_dias(dias: list[int]) -> str:
     return " ".join(DSHORT[d] for d in ds)
 
 
-def seleccionar(descuentos, rubro, region, por_banco, incluir_nacionales):
+# ---- Agrupación por tipo de tarjeta ----
+# Gamas "de entrada": si una oferta las incluye, vale para casi todos los clientes del banco
+_GAMA_BASE = {"fan", "gold", "dorada", "clasica", "one", "platinum", "cuentarut", "cuenta rut"}
+# Gamas premium, en el orden en que se muestran
+_GAMA_PREMIUM = ["black", "infinite", "signature", "singular", "legend", "elite", "worldmember limited",
+                 "premium", "wealth management", "air"]
+_ORDEN_TIPOS = {("credito", "debito"): 0, ("credito", "debito", "prepago"): 0, ("credito",): 1,
+                ("credito", "prepago"): 1, ("debito",): 2, ("debito", "prepago"): 2, ("prepago",): 3}
+_NOMBRE_TIPOS = {("credito", "debito"): "Crédito y débito", ("credito", "debito", "prepago"): "Crédito, débito y prepago",
+                 ("credito",): "Solo crédito", ("credito", "prepago"): "Crédito y prepago", ("debito",): "Solo débito",
+                 ("debito", "prepago"): "Débito y prepago", ("prepago",): "Solo prepago"}
+
+
+def _norm(t: str) -> str:
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", t.lower()) if unicodedata.category(c) != "Mn")
+
+
+def grupo_tarjetas(d: dict) -> tuple[int, str]:
+    """(orden, etiqueta) del grupo de tarjetas al que aplica el descuento.
+    Ej.: "Crédito y débito", "Solo crédito", "Solo Black · Infinite · Signature"."""
+    nombres = [_norm(t) for t in d.get("tarjetas") or []]
+    tipos = tuple(sorted(set(d.get("tipos") or ["credito"])))
+    general = not nombres or any(
+        any(b in n for b in _GAMA_BASE) or not any(g in n for g in _GAMA_PREMIUM) for n in nombres)
+    if general:
+        return _ORDEN_TIPOS.get(tipos, 4), _NOMBRE_TIPOS.get(tipos, "Otras tarjetas")
+    gamas = [g for g in _GAMA_PREMIUM if any(g in n for n in nombres)]
+    nombre = " · ".join(g.title() if g != "worldmember limited" else "WorldMember Limited" for g in gamas[:3])
+    return 10 + len(gamas), f"Solo {nombre}"
+
+
+def seleccionar(descuentos, rubro, region, por_banco, incluir_nacionales, por_tarjeta=False):
     out = {}
     for bid, _, _ in BANCOS:
         items = [d for d in descuentos if d["banco"] == bid and d["rubro"] == rubro and d.get("pct")
@@ -76,7 +108,9 @@ def seleccionar(descuentos, rubro, region, por_banco, incluir_nacionales):
         for d in sorted(items, key=lambda d: -d["pct"]):
             mejor.setdefault(d["comercio"].strip().lower(), d)
         top = sorted(mejor.values(), key=lambda d: -d["pct"])[:por_banco]
-        top.sort(key=lambda d: (min(d["dias"]) if d["dias"] else 9, -d["pct"], d["comercio"].lower()))
+        for d in top:
+            d["_grupo"] = grupo_tarjetas(d) if por_tarjeta else (0, "")
+        top.sort(key=lambda d: (d["_grupo"], min(d["dias"]) if d["dias"] else 9, -d["pct"], d["comercio"].lower()))
         if top:
             out[bid] = top
     return out
@@ -91,14 +125,17 @@ def paginar(sel):
     columnas: list[list] = []
     libre: list[int] = []
     for bid, filas in sel.items():
-        alto = len(filas) + ENCABEZADO
+        alto = len(filas) + ENCABEZADO + len({d["_grupo"] for d in filas if d["_grupo"][1]})
         k = next((i for i, l in enumerate(libre) if l >= alto), None)
         if k is not None:
             columnas[k].append((bid, filas, False)); libre[k] -= alto
             continue
         resto, cont = list(filas), False
         while resto:
-            n = min(len(resto), cap - ENCABEZADO)
+            n = cap - ENCABEZADO
+            while n > 1 and n + len({d["_grupo"] for d in resto[:n] if d["_grupo"][1]}) > cap - ENCABEZADO:
+                n -= 1
+            n = min(len(resto), n)
             columnas.append([(bid, resto[:n], cont)]); libre.append(cap - n - ENCABEZADO)
             resto, cont = resto[n:], True
     return [columnas[i:i + 2] for i in range(0, len(columnas), 2)]
@@ -119,8 +156,10 @@ body{width:1080px;height:1350px;background:#f3f5f4;color:#15201d;font-family:'In
 .bh{background:var(--c);color:#fff;padding:10px 16px;display:flex;justify-content:space-between;gap:10px;height:72px;align-items:center}
 .bh b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:28px;letter-spacing:-.01em}
 .bh span{font-size:18px;font-weight:600;opacity:.9;text-align:right;line-height:1.1}
+.grp{background:color-mix(in srgb,var(--c) 16%,#fff);color:color-mix(in srgb,var(--c) 75%,#000);font-size:17px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;height:46px;display:flex;align-items:center;padding:0 14px;border-top:2px solid color-mix(in srgb,var(--c) 35%,#fff)}
+.grp::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--c);margin-right:10px;flex:none}
 .row{display:grid;grid-template-columns:104px 1fr 80px;align-items:center;height:46px;padding:0 14px;border-top:1px solid #e6ebe9;font-size:26px}
-.row:nth-child(odd){background:color-mix(in srgb,var(--c) 6%,#fff)}
+.row:nth-child(even of .row){background:color-mix(in srgb,var(--c) 6%,#fff)}
 .d{font-size:17px;font-weight:700;color:#5d6a66;letter-spacing:.02em;line-height:1.2}
 .m{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:8px}
 .p{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;text-align:right;color:var(--c)}
@@ -165,11 +204,14 @@ def html_tabla(cols, sel_tipos, titulo, sub, n, total):
     nombres = {b: (n_, c) for b, n_, c in BANCOS}
     def bloque(bid, filas, cont):
         nombre, color = nombres[bid]
-        filas_html = "".join(
-            f'<div class="row"><span class="d">{fmt_dias(d["dias"])}</span><span class="m">{e(d["comercio"])}</span><span class="p">{d["pct"]}%</span></div>'
-            for d in filas)
-        return (f'<div class="blk" style="--c:{color}"><div class="bh"><b>{e(nombre)}{" (cont.)" if cont else ""}</b>'
-                f'<span>{e(sel_tipos[bid])}</span></div>{filas_html}</div>')
+        partes, previo = [], None
+        for d in filas:
+            if d["_grupo"] != previo and d["_grupo"][1]:
+                partes.append(f'<div class="grp">{e(d["_grupo"][1])}</div>')
+                previo = d["_grupo"]
+            partes.append(f'<div class="row"><span class="d">{fmt_dias(d["dias"])}</span><span class="m">{e(d["comercio"])}</span><span class="p">{d["pct"]}%</span></div>')
+        return (f'<div class="blk" style="--c:{color}"><div class="bh"><b>{e(nombre)}{" (cont.)" if cont else ""}</b></div>'
+                f'{"".join(partes)}</div>')
     columnas = "".join(f'<div class="col">{"".join(bloque(*b) for b in col)}</div>' for col in cols)
     return pagina(f"""<div class="slide">
   <div class="top"><h2><small>{e(sub)}</small>{e(titulo)}</h2><span class="pg">{n}/{total}</span></div>
@@ -193,6 +235,8 @@ def main():
     ap.add_argument("--rubro", default="restaurantes", choices=list(RUBROS))
     ap.add_argument("--region", default="RM")
     ap.add_argument("--por-banco", type=int, default=20)
+    ap.add_argument("--por-tarjeta", action="store_true",
+                    help="dentro de cada banco, agrupar por tipo de tarjeta (crédito y débito, solo crédito, solo Black…)")
     ap.add_argument("--sin-nacionales", action="store_true", help="excluir descuentos válidos en todo Chile/online")
     ap.add_argument("--salida", default=None)
     a = ap.parse_args()
@@ -204,9 +248,17 @@ def main():
     region_txt = "Región Metropolitana" if a.region == "RM" else f"Región de {region['nombre']}"
     rubro_txt = RUBROS[a.rubro]
 
-    sel = seleccionar(data["descuentos"], a.rubro, a.region, a.por_banco, not a.sin_nacionales)
-    if not sel:
-        raise SystemExit("No hay descuentos para ese rubro y región.")
+    # Si no cabe en un carrusel (máx. 10 imágenes), se muestran menos descuentos por banco
+    por_banco = a.por_banco
+    while True:
+        sel = seleccionar(data["descuentos"], a.rubro, a.region, por_banco, not a.sin_nacionales, a.por_tarjeta)
+        if not sel:
+            raise SystemExit("No hay descuentos para ese rubro y región.")
+        if len(paginar(sel)) + 2 <= MAX_IMAGENES or por_banco <= 5:
+            break
+        por_banco -= 1
+    if por_banco != a.por_banco:
+        print(f"Se muestran {por_banco} descuentos por banco para que quepa en {MAX_IMAGENES} imágenes.")
     tipos = {b: " / ".join(TIPOS[t] for t in ("credito", "debito", "prepago")
                            if any(t in d["tipos"] for d in filas)) for b, filas in sel.items()}
     paginas = paginar(sel)
