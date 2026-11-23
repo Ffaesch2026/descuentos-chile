@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-23T22:46:37+00:00",
+ "generado": "2026-11-23T23:09:33+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
@@ -113,9 +113,9 @@
    "id": "bice",
    "nombre": "Banco BICE",
    "sitio": "https://banco.bice.cl/personas/beneficios",
-   "estado": "manual",
-   "cantidad": 1,
-   "actualizado": "2026-11-23T22:46:37+00:00",
+   "estado": "ok",
+   "cantidad": 63,
+   "actualizado": "2026-11-23T23:09:33+00:00",
    "error": null
   }
  },
@@ -92608,6 +92608,1754 @@
    "comunas": []
   },
   {
+   "id": "bice-235f6bef032c",
+   "banco": "bice",
+   "comercio": "Aurea Restaurant",
+   "titulo": "50% dcto. en Aurea Restaurant",
+   "descripcion": "50% los jueves, pagando con tarjeta visa crédito limitless bice. Solicitar el beneficio al pagar. No acumulable. Excluye propinas, menús y happy hours. Tope $100.000 por cuenta.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $100.000 por cuenta",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/aurea-restaurant-limitless",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-5a89e8eefcdf",
+   "banco": "bice",
+   "comercio": "Don Carlos",
+   "titulo": "50% dcto. en Don Carlos",
+   "descripcion": "50% los sábado, pagando con tarjeta visa crédito limitless bice. Solicitar el beneficio al pagar. No acumulable. Excluye propinas, menús y happy hours. Tope $100.000 por cuenta.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    5
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $100.000 por cuenta",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/don-carlos-limitless",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
+   ]
+  },
+  {
+   "id": "bice-aeccce7cd191",
+   "banco": "bice",
+   "comercio": "La Punta - Justo",
+   "titulo": "50% dcto. en La Punta - Justo",
+   "descripcion": "50% los martes de noviembre2026 en web del comercio o App Justo. Iniciar sesión, ingresar primeros seis dígitos de TC BICE como cupón y pagar con TC BICE. Compra y entrega el mismo martes. Tope $10.000/canje; máximo dos canjes por cliente/mes compartidos entre restaurantes Justo de la campaña, sujeto a400 canjes. Excluye despacho, propina y acumulaciones. Excluye Visa Universal, Pago, Credivida, Empresarial y Business.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $10.000 por canje; dos canjes/cliente/mes compartidos en campaña Justo",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/la-punta",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-5c32baa4e789",
+   "banco": "bice",
+   "comercio": "Maribérico - Justo",
+   "titulo": "50% dcto. en Maribérico - Justo",
+   "descripcion": "50% los viernes de noviembre2026 en web del comercio o App Justo. Iniciar sesión, ingresar primeros seis dígitos de TC BICE como cupón y pagar con TC BICE. Compra y entrega el mismo viernes. Tope $10.000/canje; máximo dos canjes por cliente/mes compartidos entre restaurantes Justo de la campaña, sujeto a400 canjes. Excluye despacho, propina y acumulaciones. Excluye Visa Universal, Pago, Credivida, Empresarial y Business.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $10.000 por canje; dos canjes/cliente/mes compartidos en campaña Justo",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/mariberico",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-7b4d8d0ecc50",
+   "banco": "bice",
+   "comercio": "Pastamore",
+   "titulo": "50% dcto. en Pastamore",
+   "descripcion": "50% los lunes, pagando con tarjeta visa crédito limitless bice. Solicitar el beneficio al pagar. No acumulable. Excluye propinas, menús y happy hours. Tope $100.000 por cuenta.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $100.000 por cuenta",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/pastamore-limitless",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-d956c17400cd",
+   "banco": "bice",
+   "comercio": "Pescados Capitales",
+   "titulo": "50% dcto. en Pescados Capitales",
+   "descripcion": "50% de dcto. 50% de dcto. los sábados de noviembre de la Selección del chef exclusivo con tu T arjeta de Crédito Signature, Infinite y Limitless Banco BICE.…",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    5
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/pescados-capitales-limitless",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-31724165f408",
+   "banco": "bice",
+   "comercio": "Pescados Capitales",
+   "titulo": "50% dcto. en Pescados Capitales",
+   "descripcion": "50% Presencial 50% de dcto. todos los lunes del mes, pagando con Tarjeta de Crédito Visa Limitless. Promoción 5 0% de descuento vigente todos los lunes del…",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/pescados-capitales-limitless-1",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-69b108e297f8",
+   "banco": "bice",
+   "comercio": "Street Wrap - Justo",
+   "titulo": "50% dcto. en Street Wrap - Justo",
+   "descripcion": "50% los viernes de noviembre2026 en web del comercio o App Justo. Iniciar sesión, ingresar primeros seis dígitos de TC BICE como cupón y pagar con TC BICE. Compra y entrega el mismo viernes. Tope $10.000/canje; máximo dos canjes por cliente/mes compartidos entre restaurantes Justo de la campaña, sujeto a400 canjes. Excluye despacho, propina y acumulaciones. Excluye Visa Universal, Pago, Credivida, Empresarial y Business.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $10.000 por canje; dos canjes/cliente/mes compartidos en campaña Justo",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/street-wrap",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-01f3c25e9c49",
+   "banco": "bice",
+   "comercio": "Sushi Ryge - Justo",
+   "titulo": "50% dcto. en Sushi Ryge - Justo",
+   "descripcion": "50% los viernes de noviembre2026 en web del comercio o App Justo. Iniciar sesión, ingresar primeros seis dígitos de TC BICE como cupón y pagar con TC BICE. Compra y entrega el mismo viernes. Tope $10.000/canje; máximo dos canjes por cliente/mes compartidos entre restaurantes Justo de la campaña, sujeto a400 canjes. Excluye despacho, propina y acumulaciones. Excluye Visa Universal, Pago, Credivida, Empresarial y Business.",
+   "pct": 50,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $10.000 por canje; dos canjes/cliente/mes compartidos en campaña Justo",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/sushi-ryge-1",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-112fd4febd21",
+   "banco": "bice",
+   "comercio": "Aurelia Bistró",
+   "titulo": "40% dcto. en Aurelia Bistró",
+   "descripcion": "40% de dcto. 40% de dcto. los miércoles . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los miércoles de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/aurelia-bistro",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-4ddb070491b6",
+   "banco": "bice",
+   "comercio": "Barbazul",
+   "titulo": "40% dcto. en Barbazul",
+   "descripcion": "40% Presencial 40% de dcto. los jueves con Tarjeta de Crédito de Banco BICE . Exclusivo Local Las Condes y Vitacura . Exclusivo con Tarjeta de Crédito para…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/barbazul-b",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes",
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-4673dc6b4a48",
+   "banco": "bice",
+   "comercio": "Barquillería",
+   "titulo": "40% dcto. en Barquillería",
+   "descripcion": "40% los lunes, pagando con tarjetas de crédito bice. Solicitar el beneficio al pagar. No acumulable. Solo compras presenciales inmediatas con boleta; una compra diaria por cliente. Tope $30.000; 1 compra diaria por cliente. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $30.000; 1 compra diaria por cliente",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/barquilleria",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-6084451b9fc0",
+   "banco": "bice",
+   "comercio": "Barra Olivo",
+   "titulo": "40% dcto. en Barra Olivo",
+   "descripcion": "40% de dcto. 40% de dcto. todos los jueves . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los jueves de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/barra-olivo",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Colina"
+   ]
+  },
+  {
+   "id": "bice-c26ea059c2a9",
+   "banco": "bice",
+   "comercio": "Batard",
+   "titulo": "40% dcto. en Batard",
+   "descripcion": "40% de dcto. 40% de dcto. todos los martes . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40 % de descuento vigente todos los martes . Solicita tu…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/batard",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-d4d7fa4c81aa",
+   "banco": "bice",
+   "comercio": "Bohmoz & Co",
+   "titulo": "40% dcto. en Bohmoz & Co",
+   "descripcion": "40% los viernes, pagando con tarjetas de crédito bice. Solicitar el beneficio al pagar. No acumulable. Compras presenciales con boleta; excluye propinas. Tope $30.000 por cuenta. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $30.000 por cuenta",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/bohmoz-and-co",
+   "imagen": null,
+   "regiones": [
+    "BI"
+   ],
+   "comunas": [
+    "Concepción"
+   ]
+  },
+  {
+   "id": "bice-a30505edbe62",
+   "banco": "bice",
+   "comercio": "Brunapoli",
+   "titulo": "40% dcto. en Brunapoli",
+   "descripcion": "40% de dcto. 40% de dcto. todos los lunes . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los lunes de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/brunapoli",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes",
+    "Lo Barnechea",
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-d43fd154a597",
+   "banco": "bice",
+   "comercio": "Café Malva",
+   "titulo": "40% dcto. en Café Malva",
+   "descripcion": "40% de dcto. 40% de dcto. todos los martes. Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 4 0% de descuento vigente todos los martes. Solicita tu…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/cafe-malva",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-5fbc9a3c4955",
+   "banco": "bice",
+   "comercio": "Cakao",
+   "titulo": "40% dcto. en Cakao",
+   "descripcion": "40% de dcto. 40% de dcto. todos los lunes en locales seleccionados, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los lunes en…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/cakao-chocolateria-1",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-e9b9b0621fe2",
+   "banco": "bice",
+   "comercio": "Caoba Bar",
+   "titulo": "40% dcto. en Caoba Bar",
+   "descripcion": "40% Presencial 40% de dcto. los martes con Tarjeta de Crédito de Banco BICE . Exclusivo con Tarjeta de Crédito para clientes Banca Joven y GO BICE. Promoción…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/caoba-bar-banca-joven",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-e0f1f4434446",
+   "banco": "bice",
+   "comercio": "Caramel",
+   "titulo": "40% dcto. en Caramel",
+   "descripcion": "40% de dcto. 40% de dcto. todos los martes en locales, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los martes en locales,…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/caramel",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-88cfc3e5b57a",
+   "banco": "bice",
+   "comercio": "Casa Vitalis",
+   "titulo": "40% dcto. en Casa Vitalis",
+   "descripcion": "40% Presencial 40% de dcto. los jueves con Tarjeta de Crédito de Banco BICE . Exclusivo con Tarjeta de Crédito para clientes Banca Joven y GO BICE. Promoción…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/casa-vitalis",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-14c0355adba9",
+   "banco": "bice",
+   "comercio": "Ciao Amore",
+   "titulo": "40% dcto. en Ciao Amore",
+   "descripcion": "40% los sábado, pagando con tarjetas de crédito bice. Solicitar el beneficio al pagar. No acumulable. Solo compras presenciales inmediatas con boleta; una compra diaria por cliente. Tope $10.000; 1 compra diaria por cliente. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    5
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $10.000; 1 compra diaria por cliente",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/heladeria-ciao-amore",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-e9e9a60f5748",
+   "banco": "bice",
+   "comercio": "Dulcería Frutillar",
+   "titulo": "40% dcto. en Dulcería Frutillar",
+   "descripcion": "40% Presencial 40% de dcto. todos los miércoles en locales, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los miércoles en…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/dulceria-frutillar",
+   "imagen": null,
+   "regiones": [
+    "LL"
+   ],
+   "comunas": [
+    "Frutillar"
+   ]
+  },
+  {
+   "id": "bice-c10aa0a7c096",
+   "banco": "bice",
+   "comercio": "Dulcería Praliné",
+   "titulo": "40% dcto. en Dulcería Praliné",
+   "descripcion": "40% los miércoles, pagando con tarjetas de crédito bice. Solicitar el beneficio al pagar. No acumulable. Solo compras presenciales inmediatas con boleta; una compra diaria por cliente. Tope $30.000; 1 compra diaria por cliente. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $30.000; 1 compra diaria por cliente",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/dulceria-praline-1",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-5e66d5298d94",
+   "banco": "bice",
+   "comercio": "Dulces Issa",
+   "titulo": "40% dcto. en Dulces Issa",
+   "descripcion": "40% Online y Presencial 40% de dcto. todos los martes en tienda física de las condes, y tienda online, exclusivo pagando con tu Tarjeta de Crédito Banco BICE.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/dulces-issa",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
+   ]
+  },
+  {
+   "id": "bice-0535630b3a2d",
+   "banco": "bice",
+   "comercio": "Durán Bar de Carnes",
+   "titulo": "40% dcto. en Durán Bar de Carnes",
+   "descripcion": "40% de dcto. 40% de dcto. todos los jueves . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los jueves de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/duran-bar-de-carnes",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-6b36338bcf7a",
+   "banco": "bice",
+   "comercio": "El Fogón Austral",
+   "titulo": "40% dcto. en El Fogón Austral",
+   "descripcion": "40% los viernes, pagando con tarjetas de crédito bice. Solicitar el beneficio al pagar. No acumulable. Excluye propinas, menús y happy hours. Tope $40.000 por cuenta. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $40.000 por cuenta",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/el-fogon-austral",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-02e31e72cc8b",
+   "banco": "bice",
+   "comercio": "Fogón del Mar",
+   "titulo": "40% dcto. en Fogón del Mar",
+   "descripcion": "40% de dcto. 40% de dcto. todos los viernes . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los viernes de…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/fogon-del-mar",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-63c4fd4de8e2",
+   "banco": "bice",
+   "comercio": "Fuegos de Raidho",
+   "titulo": "40% dcto. en Fuegos de Raidho",
+   "descripcion": "40% de dcto. 40% de dcto. todos los jueves . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los jueves de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/fuegos-de-raidho",
+   "imagen": null,
+   "regiones": [
+    "ML"
+   ],
+   "comunas": [
+    "Talca"
+   ]
+  },
+  {
+   "id": "bice-f30c3e5f4969",
+   "banco": "bice",
+   "comercio": "Gusto Restobar",
+   "titulo": "40% dcto. en Gusto Restobar",
+   "descripcion": "40% de dcto. 40% de dcto. los miércoles, exclusivo con tarjeta de crédito. Promoción 40% de descuento vigentes los miércoles. Solicita tu descuento al momento…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $30.000",
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/gusto-restobar",
+   "imagen": null,
+   "regiones": [
+    "BI"
+   ],
+   "comunas": [
+    "Concepción"
+   ]
+  },
+  {
+   "id": "bice-74ab25cc52f7",
+   "banco": "bice",
+   "comercio": "Infiltrados Steakbar",
+   "titulo": "40% dcto. en Infiltrados Steakbar",
+   "descripcion": "40% de dcto. 40% de dcto. todos los martes . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los martes de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/copy-of-infiltrados-steakbar-bice",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-2efb4c0ee1a3",
+   "banco": "bice",
+   "comercio": "Kura Nikkei",
+   "titulo": "40% dcto. en Kura Nikkei",
+   "descripcion": "40% de dcto. 40% de dcto. todos los miércoles . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los miércoles de…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/kura-nikkei",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-675d1d58d914",
+   "banco": "bice",
+   "comercio": "La Dulcería Apoquindo",
+   "titulo": "40% dcto. en La Dulcería Apoquindo",
+   "descripcion": "40% Presencial 40% de dcto. todos los viernes en tienda física, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los viernes en…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/dulceria-apoquindo",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
+   ]
+  },
+  {
+   "id": "bice-737134d8aec9",
+   "banco": "bice",
+   "comercio": "La Fabbrica",
+   "titulo": "40% dcto. en La Fabbrica",
+   "descripcion": "40% de dcto. 40% de dcto. todos los jueves . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los jueves de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/la-fabbrica",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "La Reina",
+    "Lo Barnechea"
+   ]
+  },
+  {
+   "id": "bice-761ba381895b",
+   "banco": "bice",
+   "comercio": "La Hacienda Machalí",
+   "titulo": "40% dcto. en La Hacienda Machalí",
+   "descripcion": "40% de dcto. 40% de dcto. todos los martes . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los martes de noviembre.…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/la-hacienda-machali",
+   "imagen": null,
+   "regiones": [
+    "LI"
+   ],
+   "comunas": [
+    "Machalí"
+   ]
+  },
+  {
+   "id": "bice-ed47d96e9f6d",
+   "banco": "bice",
+   "comercio": "La Plâce Pastelería",
+   "titulo": "40% dcto. en La Plâce Pastelería",
+   "descripcion": "40% Presencial 40% de dcto. todos los martes en tienda física, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los martes en tienda…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/la-place-pasteleria",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-46072e187677",
+   "banco": "bice",
+   "comercio": "La Santoria",
+   "titulo": "40% dcto. en La Santoria",
+   "descripcion": "40% los lunes y martes y miércoles y domingo, pagando con tarjetas de crédito y débito visa bice. Solicitar el beneficio al pagar. No acumulable. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0,
+    1,
+    2,
+    6
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE",
+    "Tarjeta de débito BICE"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/la-santoria",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Providencia"
+   ]
+  },
+  {
+   "id": "bice-f747ef6eb02b",
+   "banco": "bice",
+   "comercio": "Las Genovesas",
+   "titulo": "40% dcto. en Las Genovesas",
+   "descripcion": "40% Presencial 40% de dcto. todos los lunes en tienda física, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los lunes en tienda…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/las-genovesas",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-f12ad14826c6",
+   "banco": "bice",
+   "comercio": "Le Grenier",
+   "titulo": "40% dcto. en Le Grenier",
+   "descripcion": "40% de dcto. 40% de dcto. todos los jueves. Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 4 0% de descuento vigente todos los jueves . Solicita tu…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/le-grenier",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-6fce6cc4854e",
+   "banco": "bice",
+   "comercio": "Le Vice",
+   "titulo": "40% dcto. en Le Vice",
+   "descripcion": "40% Presencial 40% de dcto. todos los viernes en locales, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los viernes en locales,…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/le-vice",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-e5458b00491a",
+   "banco": "bice",
+   "comercio": "Lumiere",
+   "titulo": "40% dcto. en Lumiere",
+   "descripcion": "40% de dcto. 40% de dcto. todos los miércoles . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40% de descuento vigente todos los miércoles de…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-01",
+   "url": "https://banco.bice.cl/personas/beneficios/lumiere",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-0b875ac575be",
+   "banco": "bice",
+   "comercio": "Mamba Bar y Cafetería",
+   "titulo": "40% dcto. en Mamba Bar y Cafetería",
+   "descripcion": "Mamba Bar y Cafetería / Miércoles · Restaurante · Fecha límite: Hasta 30 de Noviembre de 2026 · ¿Dónde?: Presencial · Visítanos en: · Dirección · Guillermo…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/mamba",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-309747fe5456",
+   "banco": "bice",
+   "comercio": "Melinas",
+   "titulo": "40% dcto. en Melinas",
+   "descripcion": "40% Online y Presencial 40% de dcto. todos los martes en tienda física de Vitacura, Chicureo y Las Condes, y tienda online, exclusivo pagando con tu Tarjeta de…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/melinas",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Colina",
+    "Las Condes",
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-23c3e6cd12d0",
+   "banco": "bice",
+   "comercio": "Ora Café",
+   "titulo": "40% dcto. en Ora Café",
+   "descripcion": "40% de dcto. 40% de dcto. todos los lunes. Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 4 0% de descuento vigente todos los lunes . Solicita tu…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/ora-cafe",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-9623ac8d90ba",
+   "banco": "bice",
+   "comercio": "Pastelería Tere Young",
+   "titulo": "40% dcto. en Pastelería Tere Young",
+   "descripcion": "40% Presencial 40% de dcto. todos los jueves en locales, exclusivo pagando con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los jueves en locales,…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/pasteleria-tere-young",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-faac65c1c614",
+   "banco": "bice",
+   "comercio": "Poga Heladería",
+   "titulo": "40% dcto. en Poga Heladería",
+   "descripcion": "40% Presencial 40% de dcto. todos los viernes de forma presencial, exclusivo con tu Tarjeta de Crédito Banco BICE. 40% de dcto. todos los viernes de forma…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    4
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/heladeria-poga",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-a0b8fdda9bb9",
+   "banco": "bice",
+   "comercio": "Reqle Café Bar",
+   "titulo": "40% dcto. en Reqle Café Bar",
+   "descripcion": "40% de dcto. 40% de dcto. todos los lunes. Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 4 0% de descuento vigente todos los lunes del mes Solicita…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/reqle-cafe-bar",
+   "imagen": null,
+   "regiones": [
+    "AR"
+   ],
+   "comunas": [
+    "Temuco"
+   ]
+  },
+  {
+   "id": "bice-ae5ace3a0253",
+   "banco": "bice",
+   "comercio": "Reveler",
+   "titulo": "40% dcto. en Reveler",
+   "descripcion": "40% de dcto. 40% de dcto. todos los jueves. Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 4 0% de descuento vigente todos los jueves. Solicita tu…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/reveler",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-4007fd633c73",
+   "banco": "bice",
+   "comercio": "Ruta 41",
+   "titulo": "40% dcto. en Ruta 41",
+   "descripcion": "40% Presencial 40% de dcto. los miércoles con Tarjeta de Crédito de Banco BICE . Exclusivo con Tarjeta de Crédito para clientes Banca Joven. Promoción 40% de…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/ruta-41",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-b2ef23f1a4df",
+   "banco": "bice",
+   "comercio": "Zía Bistró",
+   "titulo": "40% dcto. en Zía Bistró",
+   "descripcion": "40% de dcto. 40% de dcto. todos los domingos . Exclusivo con tu Tarjeta de Crédito Banco BICE. Promoción 40 % de descuento vigente todos los domingos .…",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    6
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/zia-bistro",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Lo Barnechea"
+   ]
+  },
+  {
+   "id": "bice-c1c2c0414f9e",
+   "banco": "bice",
+   "comercio": "Rappi",
+   "titulo": "30% dcto. en Rappi",
+   "descripcion": "30% dcto. Online Hasta 30% dcto. los días lunes, miércoles, viernes y domingos, con Tarjeta de Crédito BICE. Exclusivo con Tarjeta de Crédito, para clientes…",
+   "pct": 30,
+   "rubro": "restaurantes",
+   "dias": [
+    0,
+    2,
+    4,
+    6
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/rappi-banca-joven",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-4d886212fd80",
+   "banco": "bice",
+   "comercio": "Chat Noir",
+   "titulo": "20% dcto. en Chat Noir",
+   "descripcion": "20% de dcto. 20% de dcto. los jueves , exclusivo con tarjeta de crédito y débito Banco BICE. Promoción 2 0% de descuento vigente los jueves . Solicita tu…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/chat-noir",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-6a0d96a86c89",
+   "banco": "bice",
+   "comercio": "Chiuso Ristorante",
+   "titulo": "20% dcto. en Chiuso Ristorante",
+   "descripcion": "20% los martes, pagando con tarjetas de crédito bice. Solicitar el beneficio al pagar. No acumulable. Excluye propinas, menús y happy hours. Tope $40.000 por cuenta. Excluye Visa Universal, Pago, Credivida y Empresarial.",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $40.000 por cuenta",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/chiuso-ristorante-permanente",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Vitacura"
+   ]
+  },
+  {
+   "id": "bice-f9725d2262b1",
+   "banco": "bice",
+   "comercio": "Club Gordos",
+   "titulo": "20% dcto. en Club Gordos",
+   "descripcion": "20% Presencial 20% de dcto. todos los martes y jueves de forma presencial. Pagando con tus Tarjetas de Crédito y Débito Banco BICE. 20% de dcto. todos los…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/club-gordos",
+   "imagen": null,
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Providencia"
+   ]
+  },
+  {
+   "id": "bice-d4f8f848a6fb",
+   "banco": "bice",
+   "comercio": "Fast Not Junk",
+   "titulo": "20% dcto. en Fast Not Junk",
+   "descripcion": "20% Presencial 20% de dcto. todos los martes y jueves de forma presencial. Pagando con tus Tarjetas de Crédito y Débito Banco BICE. 20% de dcto. todos los…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/fast-not-junk",
+   "imagen": null,
+   "regiones": [
+    "VS"
+   ],
+   "comunas": [
+    "Viña del Mar"
+   ]
+  },
+  {
+   "id": "bice-a380e1e1d3e3",
+   "banco": "bice",
+   "comercio": "Foodtech",
+   "titulo": "20% dcto. en Foodtech",
+   "descripcion": "20% Tienda Online 20% de dcto . en tienda online los domingos. Pagando con tus tarjetas de crédito y débito Banco BICE. 20% de dcto . en tienda online los…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    6
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/foodtech",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-13071d932204",
+   "banco": "bice",
+   "comercio": "Fud Mrkt",
+   "titulo": "20% dcto. en Fud Mrkt",
+   "descripcion": "20% Presencial 20% de dcto. todos los martes y jueves de forma presencial. Pagando con tus Tarjetas de Crédito y Débito Banco BICE. 20% de dcto. todos los…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/fud-mrkt",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-9d6ef11188bf",
+   "banco": "bice",
+   "comercio": "GRDS",
+   "titulo": "20% dcto. en GRDS",
+   "descripcion": "20% Presencial 20% de dcto. todos los martes y jueves de forma presencial. Pagando con tus Tarjetas de Crédito y Débito Banco BICE. 20% de dcto. todos los…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/grds",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-f2044fc53828",
+   "banco": "bice",
+   "comercio": "María Clarita",
+   "titulo": "20% dcto. en María Clarita",
+   "descripcion": "20% Presencial 20% de dcto. todos los martes y jueves de forma presencial. Pagando con tus Tarjetas de Crédito y Débito Banco BICE. 20% de dcto. todos los…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1,
+    3
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE",
+    "Visa Infinite crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/maria-clarita",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "bice-1f8522f08b0d",
+   "banco": "bice",
+   "comercio": "Vinopolis",
+   "titulo": "20% dcto. en Vinopolis",
+   "descripcion": "20% dcto. 20% de dcto. todos los días en vinopolis.cl 20% de dcto. todos los días en tienda online pagando con tu Tarjeta de Débito o Crédito Banco BICE. Venta…",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito BICE",
+    "Visa Signature crédito BICE",
+    "Visa Platinum crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://banco.bice.cl/personas/beneficios/vinopolis",
+   "imagen": null,
+   "regiones": [],
+   "comunas": []
+  },
+  {
    "id": "bice-48e2daa09669",
    "banco": "bice",
    "comercio": "App Shell",
@@ -92632,7 +94380,70 @@
    "imagen": null,
    "regiones": [],
    "comunas": [],
-   "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/11/02/como-ahorrar-bencina-en-noviembre-hasta-300-de-descuento-por-litro-en-las-principales-estaciones.shtml"
+   "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/11/02/como-ahorrar-bencina-en-noviembre-hasta-300-de-descuento-por-litro-en-las-principales-estaciones.shtml",
+   "manual": true
+  },
+  {
+   "id": "bice-c74b5e4507f1",
+   "banco": "bice",
+   "comercio": "Copec",
+   "titulo": "$100 de dcto. por litro en Copec pagando con App Copec",
+   "descripcion": "Domingos. Pagando con la App Copec y tu Tarjeta de Crédito Visa Limitless BICE.",
+   "pct": null,
+   "rubro": "combustible",
+   "dias": [
+    6
+   ],
+   "tarjetas": [
+    "Visa Limitless crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "App",
+   "vigencia_desde": "2026-11-01",
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios",
+   "imagen": null,
+   "regiones": [],
+   "comunas": [],
+   "fuente": "https://banco.bice.cl/personas/beneficios (vía búsqueda web; el sitio bloquea la lectura automática)",
+   "manual": true
+  },
+  {
+   "id": "bice-9999ff9b1a11",
+   "banco": "bice",
+   "comercio": "PedidosYa",
+   "titulo": "30% dcto. en PedidosYa con cupón",
+   "descripcion": "Cupón de 30% pagando con Tarjeta de Crédito BICE. Tope $6.000 por pedido.",
+   "pct": 30,
+   "rubro": "delivery",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "Tarjeta de crédito BICE"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "$6.000 por pedido",
+   "modalidad": "App",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-11-30",
+   "url": "https://banco.bice.cl/personas/beneficios/pedidosya",
+   "imagen": null,
+   "regiones": [],
+   "comunas": [],
+   "fuente": "https://banco.bice.cl/personas/beneficios/pedidosya",
+   "manual": true
   }
  ]
 }

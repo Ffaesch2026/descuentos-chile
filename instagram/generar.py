@@ -72,7 +72,7 @@ def fmt_dias(dias: list[int]) -> str:
 # Gamas "de entrada": si una oferta las incluye, vale para casi todos los clientes del banco
 _GAMA_BASE = {"fan", "gold", "dorada", "clasica", "one", "platinum", "cuentarut", "cuenta rut"}
 # Gamas premium, en el orden en que se muestran
-_GAMA_PREMIUM = ["black", "infinite", "signature", "singular", "legend", "elite", "worldmember limited",
+_GAMA_PREMIUM = ["limitless", "black", "infinite", "signature", "singular", "legend", "elite", "worldmember limited",
                  "premium", "wealth management", "air"]
 _ORDEN_TIPOS = {("credito", "debito"): 0, ("credito", "debito", "prepago"): 0, ("credito",): 1,
                 ("credito", "prepago"): 1, ("debito",): 2, ("debito", "prepago"): 2, ("prepago",): 3}

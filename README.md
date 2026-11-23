@@ -71,7 +71,7 @@ Eso instala lo necesario, programa una tarea de Windows (lunes y jueves 9:00 y e
 
 ## Descuentos ingresados a mano
 
-`data/manuales.json` guarda descuentos de instituciones cuyo sitio no se puede leer automáticamente (por ejemplo Banco BICE, protegido contra lectura automática). Cada descuento lleva su fuente y `vigencia_hasta`; al vencer deja de aparecer solo. Se incorporan en cada actualización.
+`data/manuales.json` guarda descuentos que no se pueden leer automáticamente. Banco BICE bloquea la lectura de su sitio: sus restaurantes se toman de tarjetiando.cl (que enlaza la página oficial de cada beneficio) y sus otros rubros (combustible, delivery) se ingresan aquí a mano. Cada descuento lleva su fuente y `vigencia_hasta`; al vencer deja de aparecer solo. Se incorporan en cada actualización.
 
 ## Agregar o arreglar un banco
 

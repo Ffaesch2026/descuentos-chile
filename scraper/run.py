@@ -25,7 +25,7 @@ SALIDA = ROOT / "data" / "descuentos.json"
 WEB_DATA = ROOT / "web" / "data" / "descuentos.json"
 
 BANCOS = ["bancochile", "santander", "bci", "bancoestado", "scotiabank", "itau",
-          "falabella", "ripley", "cencosud", "security", "tenpo", "mach"]
+          "falabella", "ripley", "cencosud", "security", "tenpo", "mach", "bice"]
 
 
 MANUALES = ROOT / "data" / "manuales.json"
@@ -38,7 +38,7 @@ def agregar_manuales(bancos: dict, descuentos: list, ahora: str) -> None:
         return
     hoy = ahora[:10]
     inst = json.loads(MANUALES.read_text("utf-8")).get("instituciones", {})
-    descuentos[:] = [d for d in descuentos if d["banco"] not in inst]
+    descuentos[:] = [d for d in descuentos if not d.get("manual")]
     campos = {"comercio", "titulo", "descripcion", "pct", "rubro", "dias", "tarjetas", "tope", "modalidad",
               "vigencia_desde", "vigencia_hasta", "url", "ubicaciones", "regiones"}
     for bid, info in inst.items():
@@ -46,9 +46,13 @@ def agregar_manuales(bancos: dict, descuentos: list, ahora: str) -> None:
         for x in vigentes:
             d = nuevo_descuento(banco=bid, **{k: v for k, v in x.items() if k in campos})
             d["fuente"] = x.get("fuente")
+            d["manual"] = True
             descuentos.append(d)
-        bancos[bid] = {"id": bid, "nombre": info["nombre"], "sitio": info.get("sitio"), "estado": "manual",
-                       "cantidad": len(vigentes), "actualizado": ahora, "error": None}
+        if bid in bancos and bancos[bid].get("estado") in ("ok", "error"):
+            bancos[bid]["cantidad"] = sum(1 for d in descuentos if d["banco"] == bid)
+        else:
+            bancos[bid] = {"id": bid, "nombre": info["nombre"], "sitio": info.get("sitio"), "estado": "manual",
+                           "cantidad": len(vigentes), "actualizado": ahora, "error": None}
         print(f"[manual] {bid}: {len(vigentes)} descuentos")
 
 
