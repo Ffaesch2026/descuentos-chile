@@ -30,7 +30,9 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m playwright install --with-deps chromium
       - name: Leer descuentos de cada banco
-        run: python -m scraper.run
+        # Santander y BancoEstado bloquean a los servidores de GitHub:
+        # se actualizan desde un computador personal (scripts/actualizar-local.ps1)
+        run: python -m scraper.run --excluir santander,bancoestado
       - name: Actualizar logos
         run: python -m scraper.logos
         continue-on-error: true

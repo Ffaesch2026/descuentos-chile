@@ -3,6 +3,7 @@
 Uso:
     python -m scraper.run              # todos los bancos
     python -m scraper.run bci tenpo    # solo algunos
+    python -m scraper.run --excluir santander,bancoestado
 
 Si un banco falla o no devuelve nada, se conservan sus descuentos de la ejecución
 anterior y se marca su estado como "error" para que la web lo indique.
@@ -25,7 +26,12 @@ BANCOS = ["bancochile", "santander", "bci", "bancoestado", "scotiabank", "itau",
 
 
 def main(argv: list[str]) -> int:
-    seleccion = argv or BANCOS
+    excluir: set[str] = set()
+    if "--excluir" in argv:
+        i = argv.index("--excluir")
+        excluir = {x.strip() for x in argv[i + 1].split(",") if x.strip()}
+        argv = argv[:i] + argv[i + 2:]
+    seleccion = [b for b in (argv or BANCOS) if b not in excluir]
     previo = json.loads(SALIDA.read_text("utf-8")) if SALIDA.exists() else {"bancos": {}, "descuentos": []}
     ahora = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
