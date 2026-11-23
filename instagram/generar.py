@@ -39,7 +39,7 @@ BANCOS = [
     ("tenpo", "Tenpo", "#00a88a"), ("mach", "MACH", "#6c2bd9"),
 ]
 # Filas cuyo "comercio" es en realidad una categoría (ej. MACH publica "Restaurantes")
-GENERICOS = {"restaurantes", "restaurant", "restaurantes adheridos", "comercios adheridos", "supermercados", "farmacias"}
+GENERICOS = {"restaurantes", "restaurant", "cuponera generica", "cuponera genérica", "restaurantes adheridos", "comercios adheridos", "supermercados", "farmacias"}
 HASHTAG_REGION = {"AP": "arica", "TA": "iquique", "AN": "antofagasta", "AT": "copiapo", "CO": "laserena",
                   "VS": "valparaiso", "RM": "santiago", "LI": "rancagua", "ML": "talca", "NB": "chillan",
                   "BI": "concepcion", "AR": "temuco", "LR": "valdivia", "LL": "puertomontt", "AI": "coyhaique",
@@ -230,6 +230,68 @@ def html_cierre(mes_txt, fecha_txt):
 </div>""")
 
 
+LIMITE_TEXTO = 2200   # máximo de caracteres de una descripción de Instagram
+DIAS_LARGOS = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+
+
+def _dias_texto(dias: list[int]) -> str:
+    if not dias:
+        return "ver condiciones"
+    if len(dias) == 7:
+        return "todos los días"
+    ds = sorted(dias)
+    if len(ds) >= 3 and all(b == a + 1 for a, b in zip(ds, ds[1:])):
+        return f"{DIAS_LARGOS[ds[0]]} a {DIAS_LARGOS[ds[-1]]}"
+    nombres = [DIAS_LARGOS[d] for d in ds]
+    return nombres[0] if len(nombres) == 1 else ", ".join(nombres[:-1]) + " y " + nombres[-1]
+
+
+def _link(url: str | None) -> str:
+    return (url or "").replace("https://", "").replace("http://", "").rstrip("/")
+
+
+def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
+    """Descripción del post (máx. 2200 caracteres): resumen, el mejor descuento de cada
+    banco, cómo leer las imágenes, links a la página de beneficios de cada banco y hashtags."""
+    nombres = {b: n for b, n, _ in BANCOS}
+    total = sum(len(f) for f in sel.values())
+    cab = (f"{EMOJI[a.rubro]} {rubro_txt} en la {region_txt} · {mes_txt}\n\n"
+           f"{total} descuentos con tarjeta de {len(sel)} bancos y tarjetas, ordenados por día de la semana. "
+           f"👉 Desliza para verlos todos y guarda el post para usarlo durante el mes.")
+    destacados = []
+    for bid, filas in sel.items():
+        d = max(filas, key=lambda x: (x["pct"], -len(x["dias"])))
+        destacados.append(f"• {nombres[bid]}: {d['pct']}% en {d['comercio']} ({_dias_texto(d['dias'])})")
+    lectura = ("💳 Cómo leerlo: en cada banco, la franja de color indica a qué tarjetas aplica "
+               "(crédito y débito, solo crédito o solo tarjetas premium como Black o Infinite)."
+               if a.por_tarjeta else "")
+    links = [f"{nombres[b]}: {_link(data['bancos'].get(b, {}).get('sitio'))}" for b in sel
+             if data["bancos"].get(b, {}).get("sitio")]
+    aviso = (f"⚠️ Información de los sitios oficiales de cada banco al {gen:%d-%m-%Y}. Descuentos, topes, días "
+             f"y vigencias pueden cambiar: confírmalos antes de usarlos. Cuenta no afiliada a ningún banco.")
+    tags = (f"#descuentos #descuentoschile #{a.rubro} #{HASHTAG_REGION.get(a.region, 'chile')} #chile "
+            f"#tarjetadecredito #tarjetadedebito #ahorro #ofertas #beneficios")
+
+    def armar(n_dest: int, con_links: bool) -> str:
+        partes = [cab]
+        if n_dest:
+            partes.append("🔥 El mejor de cada banco:\n" + "\n".join(destacados[:n_dest]))
+        if lectura:
+            partes.append(lectura)
+        if con_links and links:
+            partes.append("🔗 Condiciones en el sitio de cada banco:\n" + "\n".join(links))
+        partes += [aviso, tags]
+        return "\n\n".join(partes)
+
+    # Si no cabe, primero se acortan los destacados y, en último caso, se quitan los links
+    for con_links in (True, False):
+        for n in range(len(destacados), -1, -1):
+            t = armar(n, con_links)
+            if len(t) <= LIMITE_TEXTO:
+                return t
+    return armar(0, False)[:LIMITE_TEXTO]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rubro", default="restaurantes", choices=list(RUBROS))
@@ -288,12 +350,7 @@ def main():
         b.close()
 
     total = sum(len(f) for f in sel.values())
-    texto = (f"{EMOJI[a.rubro]} {total} descuentos en {rubro_txt.lower()} con tarjeta en la {region_txt} · {mes_txt}\n\n"
-             f"Los mejores descuentos de {len(sel)} bancos y tarjetas, ordenados por día. "
-             f"Desliza para ver todos y guarda el post para tenerlo a mano.\n\n"
-             f"Los descuentos pueden cambiar: revisa topes y condiciones en el sitio de tu banco antes de usarlos.\n\n"
-             f"#descuentos #descuentoschile #{a.rubro} #{HASHTAG_REGION.get(a.region, 'chile')} "
-             f"#tarjetadecredito #ahorro #chile")
+    texto = descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen)
     (out / "texto.txt").write_text(texto, "utf-8")
     print(f"{total_img} imágenes en {out}")
 
