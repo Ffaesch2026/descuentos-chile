@@ -93,6 +93,11 @@ def main() -> int:
     a = ap.parse_args()
 
     hoy = datetime.strptime(a.hoy, "%Y-%m-%d") if a.hoy else datetime.now(CHILE)
+    import os
+    if a.publicar and not os.environ.get("IG_TOKEN", "").strip():
+        # Aún no se conecta la cuenta de Instagram: se generan las imágenes para subirlas a mano
+        print("Sin IG_TOKEN: se generan las imágenes y el texto para publicarlos a mano (no se publica).")
+        a.publicar = False
     if a.rubro or a.region:
         if not (a.rubro and a.region):
             print("Indica --rubro y --region juntos.")
@@ -118,7 +123,7 @@ def main() -> int:
             pngs = generar(t["rubro"], t["region"], tmp)
             texto = (tmp / "texto.txt").read_text("utf-8")
             if not a.publicar:
-                print(f"[prueba] {len(pngs)} imágenes en {tmp} (no se publicó)")
+                print(f"[listo para subir a mano] {len(pngs)} imágenes y texto.txt en {tmp}")
                 continue
             jpgs = a_jpeg(pngs, CARPETA_PUBLICA / clave)
             sha = subir(jpgs, f"Imágenes para Instagram: {clave}")
