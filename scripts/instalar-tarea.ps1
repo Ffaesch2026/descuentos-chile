@@ -1,4 +1,4 @@
-﻿# Prepara este computador y programa la actualización automática de Santander y BancoEstado.
+﻿# Prepara este computador y programa la actualización automática de Santander, BancoEstado y BICE.
 # Ejecutar UNA vez, desde la carpeta del repositorio:
 #     powershell -ExecutionPolicy Bypass -File scripts\instalar-tarea.ps1
 #
@@ -8,7 +8,7 @@ $ErrorActionPreference = "Stop"
 $Repo = Split-Path -Parent $PSScriptRoot
 $Venv = Join-Path $Repo ".venv"
 $Python = Join-Path $Venv "Scripts\python.exe"
-$Tarea = "Descuentos Chile - Santander y BancoEstado"
+$Tarea = "Descuentos Chile - Santander, BancoEstado y BICE"
 
 Write-Host "1/4  Revisando Python y Git..."
 $py = Get-Command py -ErrorAction SilentlyContinue
@@ -37,7 +37,7 @@ $mensual.Enabled = $true
 $ajustes = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable `
     -ExecutionTimeLimit (New-TimeSpan -Minutes 30) -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 Register-ScheduledTask -TaskName $Tarea -Action $accion -Trigger @($semanal, $mensual) -Settings $ajustes `
-    -Description "Lee los descuentos de Santander y BancoEstado y los sube a GitHub (descuentos-chile)." -Force | Out-Null
+    -Description "Lee los descuentos de Santander, BancoEstado y BICE y los sube a GitHub (descuentos-chile)." -Force | Out-Null
 
 Write-Host "4/4  Primera ejecución de prueba..."
 & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $script

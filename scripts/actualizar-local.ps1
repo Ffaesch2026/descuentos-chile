@@ -1,5 +1,6 @@
 ﻿# Actualiza desde este computador los bancos que bloquean a los servidores de GitHub
-# (Santander y BancoEstado) y sube los datos al repositorio. Vercel publica solo.
+# (Santander, BancoEstado y los beneficios de BICE fuera de restaurantes) y sube los datos
+# al repositorio. Vercel publica solo.
 #
 # Uso manual:  powershell -ExecutionPolicy Bypass -File scripts\actualizar-local.ps1
 # Para dejarlo automático, ejecutar una vez scripts\instalar-tarea.ps1
@@ -22,6 +23,9 @@ function Invoke-Git { & git.exe -C $Repo @args; if ($LASTEXITCODE -ne 0) { throw
 
 function Leer-Bancos {
     Push-Location $Repo
+    # BICE (sitio oficial, navegador visible): beneficios fuera de restaurantes. Si falla, se sigue igual.
+    $ErrorActionPreference = "Continue"
+    & $Python -m scraper.bice_sitio 2>&1 | ForEach-Object { Escribir $_ }
     # Python escribe avisos en stderr; no deben detener el script
     $ErrorActionPreference = "Continue"
     try {

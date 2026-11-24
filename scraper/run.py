@@ -34,10 +34,22 @@ MANUALES = ROOT / "data" / "manuales.json"
 def agregar_manuales(bancos: dict, descuentos: list, ahora: str) -> None:
     """Agrega los descuentos de data/manuales.json (instituciones que no se pueden leer
     automáticamente). Reemplaza los de la ejecución anterior y omite los vencidos."""
-    if not MANUALES.exists():
-        return
     hoy = ahora[:10]
-    inst = json.loads(MANUALES.read_text("utf-8")).get("instituciones", {})
+    inst = json.loads(MANUALES.read_text("utf-8")).get("instituciones", {}) if MANUALES.exists() else {}
+    # Beneficios de BICE leídos desde un computador personal (scraper/bice_sitio.py). Solo se usan
+    # si son de este mes: los que no traen fecha de término vencen con el mes en que se leyeron.
+    bice_sitio = ROOT / "data" / "bice_sitio.json"
+    if bice_sitio.exists():
+        bs = json.loads(bice_sitio.read_text("utf-8"))
+        del_mes = bs.get("generado", "")[:7] == ahora[:7]
+        extra = [x for x in bs.get("descuentos", []) if x.get("vigencia_hasta") or del_mes]
+        if extra:
+            info = inst.setdefault("bice", {"nombre": "Banco BICE", "sitio": "https://banco.bice.cl/personas/beneficios",
+                                            "descuentos": []})
+            info = {**info, "descuentos": list(info.get("descuentos", [])) + extra}
+            inst["bice"] = info
+    if not inst:
+        return
     descuentos[:] = [d for d in descuentos if not d.get("manual")]
     campos = {"comercio", "titulo", "descripcion", "pct", "rubro", "dias", "tarjetas", "tope", "modalidad",
               "vigencia_desde", "vigencia_hasta", "url", "ubicaciones", "regiones"}
