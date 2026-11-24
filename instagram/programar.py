@@ -72,7 +72,7 @@ def publicar_via_make(urls: list[str], texto: str, clave: str) -> dict:
     r = requests.post(os.environ["MAKE_WEBHOOK_URL"].strip(), timeout=120, json={
         "clave": clave,
         "texto": texto,
-        "imagenes": [{"url": u} for u in urls],
+        "imagenes": [{"media_type": "IMAGE", "url": u} for u in urls],
         "urls": urls,
     })
     if r.status_code >= 400:
@@ -107,7 +107,13 @@ def main() -> int:
     ap.add_argument("--publicar", action="store_true", help="publicar en Instagram (si no, solo genera las imágenes)")
     ap.add_argument("--forzar", action="store_true", help="publicar aunque ya se haya publicado este mes")
     ap.add_argument("--hoy", help="fecha a simular, AAAA-MM-DD")
+    ap.add_argument("--probar-make", action="store_true",
+                    help="envía un ejemplo al webhook de Make para que aprenda la estructura (no publica si el escenario está detenido)")
     a = ap.parse_args()
+    if a.probar_make:
+        ej = [f"{REPO_RAW}/main/web/logos/{n}" for n in ("tenpo.png", "mach.png")]
+        print(publicar_via_make(ej, "Prueba de estructura desde GitHub (no publicar)", "prueba"))
+        return 0
 
     hoy = datetime.strptime(a.hoy, "%Y-%m-%d") if a.hoy else datetime.now(CHILE)
     import os

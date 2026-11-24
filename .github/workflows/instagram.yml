@@ -31,6 +31,10 @@ on:
         description: "Publicar aunque ya se haya publicado este mes"
         type: boolean
         default: false
+      probar_make:
+        description: "Solo enviar un ejemplo a Make.com para configurar el escenario (no genera ni publica)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -74,6 +78,7 @@ jobs:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
         run: |
+          if [ "${{ inputs.probar_make }}" = "true" ]; then python -m instagram.programar --probar-make; exit $?; fi
           ARGS=""
           if [ -n "${{ inputs.rubro }}" ]; then ARGS="$ARGS --rubro ${{ inputs.rubro }} --region ${{ inputs.region }}"; fi
           if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.publicar }}" = "true" ]; then ARGS="$ARGS --publicar"; fi
