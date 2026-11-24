@@ -533,7 +533,7 @@ def armar_regiones(data, a, rubro_txt, mes_txt, gen):
     destacados = []
     for c, rid, rnom, f, n in sorted(comunas, key=lambda x: -x[4])[:12]:
         d = max(f, key=lambda x: x["_orden"])
-        destacados.append(f"• {c}: {_valor_texto(d['_valor'])} en {nombre_comercio(d)} con {nombres[d['banco']]} ({_dias_texto(d['dias'])})")
+        destacados.append(f"• {c}: {_valor_texto(d['_valor'])} en {_sin_comuna(nombre_comercio(d))} con {nombres[d['banco']]} ({_dias_texto(d['dias'])})")
     links = [f"{nombres[b]}: {_link(data['bancos'].get(b, {}).get('sitio'))}" for b in bancos
              if data["bancos"].get(b, {}).get("sitio")]
     cab = (f"{EMOJI[a.rubro]} {rubro_txt} en regiones · {mes_txt}\n\n"
