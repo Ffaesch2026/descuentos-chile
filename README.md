@@ -59,7 +59,7 @@ Estos dos bancos bloquean a los servidores de GitHub, así que la actualización
 2. Clonar el repositorio: `git clone https://github.com/Ffaesch2026/descuentos-chile.git`
 3. En esa carpeta, ejecutar una vez: `powershell -ExecutionPolicy Bypass -File scripts\instalar-tarea.ps1`
 
-Eso instala lo necesario, programa una tarea de Windows (lunes y jueves 9:00 y el día 1 de cada mes; si el computador está apagado, corre al encenderlo) y hace una primera ejecución. El registro queda en `scripts\actualizar-local.log`. No edites archivos en esa copia del repositorio: el script la deja igual a GitHub antes de cada ejecución.
+Eso instala lo necesario, programa una tarea de Windows (todos los días a las 9:00; actualiza el día 1 de cada mes y cada 3 días; si el computador está apagado, corre al encenderlo) y hace una primera ejecución. El registro queda en `scripts\actualizar-local.log`. No edites archivos en esa copia del repositorio: el script la deja igual a GitHub antes de cada ejecución.
 
 ## Instagram (@descuentosalmes)
 

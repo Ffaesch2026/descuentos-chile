@@ -5,6 +5,8 @@
 # Uso manual:  powershell -ExecutionPolicy Bypass -File scripts\actualizar-local.ps1
 # Para dejarlo automático, ejecutar una vez scripts\instalar-tarea.ps1
 
+param([switch]$Forzar)  # -Forzar: actualizar aunque no toque
+
 $ErrorActionPreference = "Stop"
 $Repo = Split-Path -Parent $PSScriptRoot
 $Python = Join-Path $Repo ".venv\Scripts\python.exe"
@@ -34,7 +36,17 @@ function Leer-Bancos {
     } finally { Pop-Location }
 }
 
+$Marca = Join-Path $Repo "scripts\ultima-actualizacion.txt"
+
 try {
+    # La tarea corre todos los días; solo se actualiza el día 1 de cada mes o si pasaron 3 días o más
+    if (-not $Forzar -and (Test-Path $Marca) -and (Get-Date).Day -ne 1) {
+        $ultima = [datetime]::ParseExact((Get-Content $Marca -Raw).Trim(), "yyyy-MM-dd", $null)
+        if (((Get-Date).Date - $ultima).TotalDays -lt 3) {
+            Escribir "Última actualización: $($ultima.ToString('yyyy-MM-dd')). Nada que hacer hoy."
+            exit 0
+        }
+    }
     if (-not (Test-Path $Python)) { throw "No existe $Python. Ejecuta primero scripts\instalar-tarea.ps1" }
     Escribir "Inicio: $($Bancos -join ', ')"
 
@@ -57,6 +69,7 @@ try {
         Invoke-Git reset --quiet --hard origin/main
         if ($intento -eq 2) { throw "No se pudo subir después de 2 intentos" }
     }
+    Set-Content -Path $Marca -Value (Get-Date -Format "yyyy-MM-dd") -Encoding ASCII
     Escribir "Fin."
 } catch {
     Escribir "ERROR: $_"
