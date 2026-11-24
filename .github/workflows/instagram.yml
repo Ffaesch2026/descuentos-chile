@@ -12,7 +12,10 @@ name: Publicar en Instagram
 
 on:
   schedule:
-    - cron: "23 13 * * *"   # 10:23 hora de Chile (verano) / 9:23 (invierno)
+    # 7:00 AM hora de Chile. GitHub usa UTC y Chile cambia de horario (UTC-3 / UTC-4), así que
+    # corre a las 9:57, 10:57 y 11:57 UTC y el script solo publica en la que cae cerca de las 7:00
+    # en Chile (las otras no hacen nada; además nunca se publica dos veces lo mismo).
+    - cron: "57 9,10,11 * * *"
   workflow_dispatch:
     inputs:
       rubro:
@@ -89,6 +92,7 @@ jobs:
           if [ -n "$REGION" ]; then ARGS+=(--region "$REGION"); fi
           if [ "$PUBLICAR" = "true" ]; then ARGS+=(--publicar); fi
           if [ "$FORZAR" = "true" ]; then ARGS+=(--forzar); fi
+          if [ "${{ github.event_name }}" = "schedule" ]; then ARGS+=(--solo-entre 06:55-08:59); fi
           python -m instagram.programar "${ARGS[@]}"
 
       - name: Guardar imágenes para revisar

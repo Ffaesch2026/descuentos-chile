@@ -65,6 +65,8 @@ Eso instala lo necesario, programa una tarea de Windows (lunes y jueves 9:00 y e
 
 - `python -m instagram.generar --rubro restaurantes --region RM` genera un carrusel (1080×1350) y un texto sugerido en `instagram/salida/`.
 - `instagram/calendario.json` define qué se publica cada mes (día, rubro, región, `activo`).
+- Se publica a las **7:00 AM hora de Chile** (verano e invierno). Cada mes tiene su **color de fondo** (`TEMAS_MES` en `instagram/generar.py`; diciembre = rojo) para distinguir la información de un mes y la del siguiente.
+- Un banco que no se actualizó en el mes (por ejemplo Santander o BancoEstado si no corrió el computador local) **no aparece** en los carruseles de ese mes.
 - `.github/workflows/instagram.yml` corre todos los días, publica lo que toca según el calendario y lo anota en `instagram/publicados.json` para no repetir. Las imágenes se suben a `publicaciones/` porque Instagram las descarga desde una URL pública.
 - También se puede lanzar a mano: **Actions → Publicar en Instagram → Run workflow**, con rubro y región. Si no se marca "Publicar", solo genera las imágenes y quedan para descargar en la ejecución (sección *Artifacts*).
 - Si no se puede crear una app en Meta for Developers, se puede publicar a través de **Make.com**: guardar como secreto `MAKE_WEBHOOK_URL` el webhook de un escenario de Make (Webhooks → Instagram for Business, carrusel). GitHub le envía `{"clave", "texto", "imagenes": [{"url"}], "urls"}`.

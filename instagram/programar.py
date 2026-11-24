@@ -126,6 +126,7 @@ def main() -> int:
     ap.add_argument("--publicar", action="store_true", help="publicar en Instagram (si no, solo genera las imágenes)")
     ap.add_argument("--forzar", action="store_true", help="publicar aunque ya se haya publicado este mes")
     ap.add_argument("--hoy", help="fecha a simular, AAAA-MM-DD")
+    ap.add_argument("--solo-entre", help="publicar solo si la hora de Chile está en este rango, HH:MM-HH:MM")
     ap.add_argument("--probar-make", action="store_true",
                     help="envía un ejemplo al webhook de Make para que aprenda la estructura (no publica si el escenario está detenido)")
     a = ap.parse_args()
@@ -138,6 +139,11 @@ def main() -> int:
         return 0
 
     hoy = datetime.strptime(a.hoy, "%Y-%m-%d") if a.hoy else datetime.now(CHILE)
+    if a.solo_entre and not a.hoy:
+        desde, hasta = a.solo_entre.split("-")
+        if not (desde <= f"{hoy:%H:%M}" <= hasta):
+            print(f"Son las {hoy:%H:%M} en Chile; se publica solo entre {desde} y {hasta}.")
+            return 0
     via_make = bool(os.environ.get("MAKE_WEBHOOK_URL", "").strip()) and not os.environ.get("IG_TOKEN", "").strip()
     if a.publicar and not os.environ.get("IG_TOKEN", "").strip() and not via_make:
         # Aún no se conecta la cuenta de Instagram: se generan las imágenes para subirlas a mano

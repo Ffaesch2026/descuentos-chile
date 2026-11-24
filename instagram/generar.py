@@ -190,15 +190,15 @@ def paginar(sel):
 CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{width:1080px;height:1350px;background:#f3f5f4;color:#15201d;font-family:'Instrument Sans',system-ui,sans-serif;overflow:hidden}
+body{width:1080px;height:1350px;background:var(--fondo);color:var(--tinta);font-family:'Instrument Sans',system-ui,sans-serif;overflow:hidden}
 .slide{width:1080px;height:1350px;display:flex;flex-direction:column;padding:56px 52px 40px}
-.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:5px solid #15201d;padding-bottom:18px;margin-bottom:22px}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:5px solid var(--tinta);padding-bottom:18px;margin-bottom:22px}
 .top h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.02em;line-height:1}
-.top h2 small{display:block;font-family:'Instrument Sans';font-weight:600;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:#0b7a5c;margin-bottom:8px}
-.top .pg{font-size:24px;font-weight:600;color:#5d6a66}
+.top h2 small{display:block;font-family:'Instrument Sans';font-weight:600;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--etiqueta);margin-bottom:8px}
+.top .pg{font-size:24px;font-weight:600;color:var(--suave)}
 .cols{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:22px;align-content:start}
 .col{display:flex;flex-direction:column;gap:14px}
-.blk{background:#fff;border-radius:14px;overflow:hidden;border:2px solid #dbe2df}
+.blk{background:#fff;color:#15201d;border-radius:14px;overflow:hidden;border:2px solid #dbe2df}
 .bh{background:var(--c);color:#fff;padding:10px 16px;display:flex;justify-content:space-between;gap:10px;height:72px;align-items:center}
 .bh b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:28px;letter-spacing:-.01em}
 .bh span{font-size:18px;font-weight:600;opacity:.9;text-align:right;line-height:1.1}
@@ -209,29 +209,62 @@ body{width:1080px;height:1350px;background:#f3f5f4;color:#15201d;font-family:'In
 .d{font-size:17px;font-weight:700;color:#5d6a66;letter-spacing:.02em;line-height:1.2}
 .m{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:8px}
 .p{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;min-width:72px;text-align:right;color:var(--c)}
-.foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:21px;color:#5d6a66;font-weight:600}
-.foot b{color:#15201d;font-size:24px}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:21px;color:var(--suave);font-weight:600}
+.foot b{color:var(--tinta);font-size:24px}
 /* portada y cierre */
-.cover{background:#15201d;color:#f3f5f4;justify-content:space-between;padding:80px 72px}
-.cover .k{font-size:28px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#3ccf9f}
+.cover{background:var(--c-fondo);color:var(--c-tinta);justify-content:space-between;padding:80px 72px}
+.cover .k{font-size:28px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c-acento)}
 .cover h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:150px;line-height:.92;letter-spacing:-.04em;margin:26px 0 30px}
 .cover .reg{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:58px;line-height:1.05}
 .cover .big{display:flex;gap:56px;margin-top:56px}
-.cover .big div b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:96px;line-height:1;color:#3ccf9f}
-.cover .big div span{font-size:26px;font-weight:600;color:#c9d3cf}
+.cover .big div b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:96px;line-height:1;color:var(--c-acento)}
+.cover .big div span{font-size:26px;font-weight:600;color:var(--c-suave)}
 .chips{display:flex;flex-wrap:wrap;gap:12px}
-.chips span{border:2px solid #3a4743;border-radius:999px;padding:8px 18px;font-size:24px;font-weight:600}
-.cover .lead{font-size:32px;color:#c9d3cf;margin-top:40px;max-width:820px;line-height:1.3}
+.chips span{border:2px solid var(--c-borde);border-radius:999px;padding:8px 18px;font-size:24px;font-weight:600}
+.cover .lead{font-size:32px;color:var(--c-suave);margin-top:40px;max-width:820px;line-height:1.3}
 .cover .bottom{display:flex;justify-content:space-between;align-items:center;font-size:30px;font-weight:700}
-.cover .swipe{background:#3ccf9f;color:#0b1411;border-radius:999px;padding:14px 30px}
+.cover .swipe{background:var(--c-acento);color:var(--c-boton);border-radius:999px;padding:14px 30px}
 .end h1{font-size:110px}
-.end p{font-size:34px;line-height:1.35;color:#c9d3cf;max-width:860px}
-.end .note{font-size:24px;color:#97a49f;line-height:1.4}
+.end p{font-size:34px;line-height:1.35;color:var(--c-suave);max-width:860px}
+.end .note{font-size:24px;color:var(--c-nota);line-height:1.4}
 """
 
 
+# Un color por mes, para distinguir de un vistazo la información de un mes y la del otro.
+# fondo/tinta/etiqueta/suave: imágenes con tablas; c-*: portada y cierre.
+_BASE = {"fondo": "#f3f5f4", "tinta": "#15201d", "etiqueta": "#0b7a5c", "suave": "#5d6a66",
+         "c-fondo": "#15201d", "c-tinta": "#f3f5f4", "c-acento": "#3ccf9f", "c-suave": "#c9d3cf",
+         "c-borde": "#3a4743", "c-boton": "#0b1411", "c-nota": "#97a49f"}
+
+
+def _tema_color(fondo: str, oscuro: str, acento: str) -> dict:
+    """Tema de color de fondo intenso: tablas sobre el color y portada en su tono oscuro."""
+    return {"fondo": fondo, "tinta": "#ffffff", "etiqueta": acento, "suave": "#ffffffd9",
+            "c-fondo": oscuro, "c-tinta": "#ffffff", "c-acento": acento, "c-suave": "#ffffffcc",
+            "c-borde": "#ffffff55", "c-boton": oscuro, "c-nota": "#ffffffa6"}
+
+
+TEMAS_MES = {
+    1: _tema_color("#1d4ed8", "#132f80", "#fde68a"),   # enero: azul
+    2: _tema_color("#7c3aed", "#4c1d95", "#fde68a"),   # febrero: morado
+    3: _tema_color("#c2410c", "#7c2d12", "#fef08a"),   # marzo: naranjo
+    4: _tema_color("#0f766e", "#134e4a", "#fde68a"),   # abril: verde azulado
+    5: _tema_color("#be185d", "#831843", "#fde68a"),   # mayo: fucsia
+    6: _tema_color("#1e40af", "#172554", "#a5f3fc"),   # junio: azul marino
+    7: _tema_color("#15803d", "#14532d", "#fef08a"),   # julio: verde
+    8: _tema_color("#b45309", "#78350f", "#fef3c7"),   # agosto: ámbar
+    9: _tema_color("#0e7490", "#164e63", "#fde68a"),   # septiembre: cian
+    10: _tema_color("#6d28d9", "#3b0764", "#bbf7d0"),  # octubre: violeta
+    11: _BASE,                                         # noviembre: claro (diseño original)
+    12: _tema_color("#c1121f", "#7f0d16", "#ffd166"),  # diciembre: rojo
+}
+MES_TEMA = 11  # se fija en main() según el mes de los datos
+
+
 def pagina(cuerpo: str) -> str:
-    return f"<!doctype html><html lang='es'><head><meta charset='utf-8'><style>{CSS}</style></head><body>{cuerpo}</body></html>"
+    t = TEMAS_MES.get(MES_TEMA, _BASE)
+    variables = ":root{" + ";".join(f"--{k}:{v}" for k, v in t.items()) + "}"
+    return f"<!doctype html><html lang='es'><head><meta charset='utf-8'><style>{CSS}</style><style>{variables}</style></head><body>{cuerpo}</body></html>"
 
 
 def html_portada(rubro_txt, region_txt, mes_txt, total, nbancos, bancos, todos=False):
@@ -360,10 +393,20 @@ def main():
                     help="dentro de cada banco, agrupar por tipo de tarjeta (crédito y débito, solo crédito, solo Black…)")
     ap.add_argument("--sin-nacionales", action="store_true", help="excluir descuentos válidos en todo Chile/online")
     ap.add_argument("--salida", default=None)
+    ap.add_argument("--mes-color", type=int, help="usar los colores de otro mes (1-12), para probar")
     a = ap.parse_args()
 
     data = json.loads(DATA.read_text("utf-8"))
     gen = datetime.fromisoformat(data["generado"])
+    global MES_TEMA
+    MES_TEMA = a.mes_color or gen.month
+    # Bancos que no se actualizaron este mes (p. ej. Santander o BancoEstado si no corrió el
+    # computador local) se dejan fuera: no se publican descuentos de un mes anterior
+    mes = data["generado"][:7]
+    viejos = {b for b, info in data.get("bancos", {}).items() if (info.get("actualizado") or "")[:7] != mes}
+    if viejos:
+        print(f"Se omiten por no estar actualizados este mes: {', '.join(sorted(viejos))}")
+        data["descuentos"] = [d for d in data["descuentos"] if d["banco"] not in viejos]
     mes_txt = f"{MESES[gen.month - 1].capitalize()} {gen.year}"
     if a.region == "CL":
         region_txt, region_en = "Todo Chile", "en todo Chile"
