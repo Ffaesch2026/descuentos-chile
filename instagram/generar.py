@@ -384,10 +384,181 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
     return armar(0, False)[:LIMITE_TEXTO]
 
 
+def renderizar(htmls: list[str], out: Path) -> None:
+    out.mkdir(parents=True, exist_ok=True)
+    for f in out.glob("*.png"):
+        f.unlink()
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as p:
+        kw = {"executable_path": os.environ["CHROMIUM_PATH"]} if os.environ.get("CHROMIUM_PATH") else {}
+        b = p.chromium.launch(**kw)
+        pg = b.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
+        for i, h in enumerate(htmls, start=1):
+            pg.set_content(h, wait_until="networkidle")
+            pg.screenshot(path=str(out / f"{i:02d}.png"))
+        b.close()
+
+
+# ---- Regiones: tabla por comuna (fuera de la Región Metropolitana), de norte a sur ----
+MAX_COMUNAS_LOCAL = 4   # un descuento con locales en más comunas es una cadena: va en los posts generales
+BANCO_CORTO = {"bancochile": "B. de Chile", "santander": "Santander", "bci": "BCI", "bancoestado": "BancoEstado",
+               "scotiabank": "Scotiabank", "itau": "Itaú", "falabella": "Falabella", "ripley": "Ripley",
+               "cencosud": "Cencosud", "security": "Security", "tenpo": "Tenpo", "mach": "MACH", "bice": "BICE"}
+CSS_REG = """
+.rrow{display:grid;grid-template-columns:64px 112px 1fr auto;align-items:center;height:40px;padding:0 10px;border-top:1px solid #e6ebe9;font-size:22px;gap:6px}
+.rrow:nth-child(even of .rrow){background:#f4f6f5}
+.rrow .d{font-size:13px;letter-spacing:0}
+.bk{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+.bk b{font-size:15px;font-weight:800;color:var(--bc);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk i{font-style:normal;font-size:11px;font-weight:600;color:#5d6a66;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rrow .m{font-size:19px;letter-spacing:-.01em}
+.rrow .p{font-size:23px;color:#15201d;min-width:54px}
+.ch{background:#15201d;color:#fff;height:58px;padding:0 14px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.ch{align-items:center}
+.ch b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px}
+.ch span{font-size:15px;font-weight:600;opacity:.8;text-transform:uppercase;letter-spacing:.06em}
+"""
+FILA_REG = 40 / 46       # alto de una fila de regiones en "filas" del diseño normal
+CAB_REG = 58 / 46
+
+
+def _tarjeta_corta(d: dict) -> str:
+    g = grupo_tarjetas(d)[1]
+    return {"Crédito y débito": "Créd. y déb.", "Solo crédito": "Crédito", "Solo débito": "Débito",
+            "Crédito y prepago": "Créd. y prep.", "Crédito, débito y prepago": "Todas"}.get(g, g.replace("Solo ", ""))
+
+
+def seleccionar_regiones(descuentos, rubro, por_comuna):
+    rm = {c for r in REGIONES if r["id"] == "RM" for c in r["comunas"]}
+    orden_reg = [r["id"] for r in REGIONES]
+    region_de = {c: r for r in REGIONES for c in r["comunas"]}
+    por = {}
+    for d in descuentos:
+        if d["rubro"] != rubro or d["comercio"].strip().lower() in GENERICOS:
+            continue
+        v = valor(d)
+        coms = [c for c in d.get("comunas", []) if c not in rm]
+        if not v or not coms or len(d.get("comunas", [])) > MAX_COMUNAS_LOCAL:
+            continue
+        d["_valor"], d["_orden"] = v
+        for c in coms:
+            por.setdefault(c, {})
+            k = (d["banco"], d["comercio"].strip().lower())
+            if k not in por[c] or por[c][k]["_orden"] < d["_orden"]:
+                por[c][k] = d
+    out = []
+    for c, items in por.items():
+        top = sorted(items.values(), key=lambda d: (-d["_orden"], d["comercio"].lower()))[:por_comuna]
+        top.sort(key=lambda d: (min(d["dias"]) if d["dias"] else 9, -d["_orden"], d["comercio"].lower()))
+        out.append((c, region_de[c]["id"], region_de[c]["nombre"], top, len(items)))
+    out.sort(key=lambda x: (orden_reg.index(x[1]), -x[4], x[0]))
+    return out
+
+
+def paginar_regiones(comunas):
+    """Columnas de comunas; una comuna puede seguir en la columna siguiente."""
+    cap = (FILAS_COLUMNA + ENCABEZADO + BLOQUE_EXTRA)
+    cols, actual, libre = [], [], cap
+    for c, rid, rnom, filas, _ in comunas:
+        resto, cont = list(filas), False
+        while resto:
+            if libre < CAB_REG + 2 * FILA_REG + BLOQUE_EXTRA:
+                cols.append(actual); actual, libre = [], cap
+            n = min(len(resto), int((libre - CAB_REG - BLOQUE_EXTRA) / FILA_REG))
+            actual.append((c, rnom, resto[:n], cont))
+            libre -= CAB_REG + n * FILA_REG + BLOQUE_EXTRA
+            resto, cont = resto[n:], True
+    if actual:
+        cols.append(actual)
+    return [cols[i:i + 2] for i in range(0, len(cols), 2)]
+
+
+def _sin_comuna(nombre: str) -> str:
+    """"Roof Burger - Concón" -> "Roof Burger" (la comuna ya está en el encabezado del bloque)."""
+    import re as _re
+    from scraper import geo
+    m = _re.match(r"^(.+?)\s+[-–]\s+(.+)$", nombre)
+    if m and (geo.ubicar([m.group(2)])[1] or geo.ubicar([m.group(2)])[0]):
+        return m.group(1)
+    return nombre
+
+
+def html_tabla_regiones(cols, titulo, sub, n, total):
+    colores = {b: c for b, _, c in BANCOS}
+    def bloque(c, rnom, filas, cont):
+        filas_html = "".join(
+            f'<div class="rrow"><span class="d">{fmt_dias(d["dias"])}</span>'
+            f'<span class="bk" style="--bc:{colores.get(d["banco"], "#333")}"><b>{e(BANCO_CORTO.get(d["banco"], d["banco"]))}</b>'
+            f'<i>{e(_tarjeta_corta(d))}</i></span>'
+            f'<span class="m">{e(_sin_comuna(nombre_comercio(d)))}</span><span class="p">{e(d["_valor"])}</span></div>' for d in filas)
+        return (f'<div class="blk"><div class="ch"><b>{e(c)}{" (cont.)" if cont else ""}</b><span>{e(rnom)}</span></div>'
+                f'{filas_html}</div>')
+    columnas = "".join(f'<div class="col">{"".join(bloque(*b) for b in col)}</div>' for col in cols)
+    return pagina(f"""<style>{CSS_REG}</style><div class="slide">
+  <div class="top"><h2><small>{e(sub)}</small>{e(titulo)}</h2><span class="pg">{n}/{total}</span></div>
+  <div class="cols">{columnas}</div>
+  <div class="foot"><b>{CUENTA}</b><span>Revisa en el sitio de tu banco qué locales aplican</span></div>
+</div>""")
+
+
+def armar_regiones(data, a, rubro_txt, mes_txt, gen):
+    # La mayor cantidad por comuna que cabe en un carrusel (máx. 10 imágenes)
+    for por_comuna in range(10, 2, -1):
+        comunas = seleccionar_regiones(data["descuentos"], a.rubro, por_comuna)
+        paginas = paginar_regiones(comunas)
+        if len(paginas) + 2 <= MAX_IMAGENES:
+            break
+    if not comunas:
+        raise SystemExit("No hay descuentos por comuna fuera de la Región Metropolitana.")
+    print(f"Regiones: {len(comunas)} comunas, hasta {por_comuna} descuentos por comuna.")
+    total_img = len(paginas) + 2
+    filas = [d for _, _, _, f, _ in comunas for d in f]
+    bancos = sorted({d["banco"] for d in filas}, key=[b for b, _, _ in BANCOS].index)
+    nombres = {b: n for b, n, _ in BANCOS}
+    regiones_txt = []
+    for _, rid, rnom, _, _ in comunas:
+        if rnom not in regiones_txt:
+            regiones_txt.append(rnom)
+    portada = html_portada(rubro_txt, "Regiones", mes_txt, len(filas), len(bancos), regiones_txt, todos=False)
+    # En la portada: "Regiones" como título grande y el rubro debajo; los chips son las regiones
+    portada = portada.replace(f"<h1>{e(rubro_txt)}</h1><div class=\"reg\">Regiones</div>",
+                              f"<h1>Regiones</h1><div class=\"reg\">{e(rubro_txt)} · {len({c for c, *_ in comunas})} comunas de norte a sur</div>")
+    portada = portada.replace("Los mejores de cada banco", "Los mejores de cada comuna")
+    htmls = [portada]
+    for i, cols in enumerate(paginas, start=2):
+        htmls.append(html_tabla_regiones(cols, f"{rubro_txt} · Regiones", mes_txt, i, total_img))
+    htmls.append(html_cierre(mes_txt, gen.strftime("%d-%m-%Y")))
+
+    # Descripción: el mejor descuento de las comunas con más opciones y links de los bancos
+    destacados = []
+    for c, rid, rnom, f, n in sorted(comunas, key=lambda x: -x[4])[:12]:
+        d = max(f, key=lambda x: x["_orden"])
+        destacados.append(f"• {c}: {_valor_texto(d['_valor'])} en {nombre_comercio(d)} con {nombres[d['banco']]} ({_dias_texto(d['dias'])})")
+    links = [f"{nombres[b]}: {_link(data['bancos'].get(b, {}).get('sitio'))}" for b in bancos
+             if data["bancos"].get(b, {}).get("sitio")]
+    cab = (f"{EMOJI[a.rubro]} {rubro_txt} en regiones · {mes_txt}\n\n"
+           f"{len(filas)} descuentos con tarjeta en {len({c for c, *_ in comunas})} comunas, de Arica a Punta Arenas, "
+           f"ordenados por comuna y día. 👉 Desliza, busca tu comuna y guarda el post.")
+    aviso = (f"⚠️ Información de los sitios oficiales de cada banco al {gen:%d-%m-%Y}. Revisa qué locales aplican, "
+             f"topes y condiciones antes de ir. Cuenta no afiliada a ningún banco.")
+    tags = ("#descuentos #descuentoschile #regiones #restaurantes #vinadelmar #concepcion #temuco #antofagasta "
+            "#laserena #puertomontt #tarjetadecredito #ahorro")
+    for n_dest in range(len(destacados), -1, -1):
+        partes = [cab]
+        if n_dest:
+            partes.append("🔥 El mejor de cada comuna:\n" + "\n".join(destacados[:n_dest]))
+        partes += ["🔗 Condiciones en el sitio de cada banco:\n" + "\n".join(links), aviso, tags]
+        texto = "\n\n".join(partes)
+        if len(texto) <= LIMITE_TEXTO:
+            break
+    return htmls, texto
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rubro", default="restaurantes", choices=list(RUBROS))
-    ap.add_argument("--region", default="RM", help='id de región (RM, VS…) o CL para todo Chile')
+    ap.add_argument("--region", default="RM",
+                    help='id de región (RM, VS…), CL para todo Chile o REG para regiones (por comuna, sin la RM)')
     ap.add_argument("--por-banco", type=int, default=20)
     ap.add_argument("--por-tarjeta", action="store_true",
                     help="dentro de cada banco, agrupar por tipo de tarjeta (crédito y débito, solo crédito, solo Black…)")
@@ -410,12 +581,22 @@ def main():
     mes_txt = f"{MESES[gen.month - 1].capitalize()} {gen.year}"
     if a.region == "CL":
         region_txt, region_en = "Todo Chile", "en todo Chile"
+    elif a.region == "REG":
+        region_txt, region_en = "Regiones", "en regiones"
     else:
         region = next(r for r in REGIONES if r["id"] == a.region)
         region_txt = "Región Metropolitana" if a.region == "RM" else f"Región de {region['nombre']}"
         region_en = f"en la {region_txt}"
     a.region_en = region_en
     rubro_txt = RUBROS[a.rubro]
+    out = Path(a.salida or ROOT / "instagram" / "salida" / f"{gen:%Y-%m}-{a.rubro}-{a.region}")
+
+    if a.region == "REG":
+        htmls, texto = armar_regiones(data, a, rubro_txt, mes_txt, gen)
+        renderizar(htmls, out)
+        (out / "texto.txt").write_text(texto, "utf-8")
+        print(f"{len(htmls)} imágenes en {out}")
+        return
 
     # Si no cabe en un carrusel (máx. 10 imágenes), se muestran menos descuentos por banco
     por_banco = a.por_banco
@@ -459,19 +640,7 @@ def main():
         htmls.append(html_tabla(cols, tipos, f"{rubro_txt} · {region_txt}", mes_txt, i, total_img))
     htmls.append(html_cierre(mes_txt, gen.strftime("%d-%m-%Y")))
 
-    out = Path(a.salida or ROOT / "instagram" / "salida" / f"{gen:%Y-%m}-{a.rubro}-{a.region}")
-    out.mkdir(parents=True, exist_ok=True)
-    for f in out.glob("*.png"):
-        f.unlink()
-    from playwright.sync_api import sync_playwright
-    with sync_playwright() as p:
-        kw = {"executable_path": os.environ["CHROMIUM_PATH"]} if os.environ.get("CHROMIUM_PATH") else {}
-        b = p.chromium.launch(**kw)
-        pg = b.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
-        for i, h in enumerate(htmls, start=1):
-            pg.set_content(h, wait_until="networkidle")
-            pg.screenshot(path=str(out / f"{i:02d}.png"))
-        b.close()
+    renderizar(htmls, out)
 
     total = sum(len(f) for f in sel.values())
     texto = descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen)

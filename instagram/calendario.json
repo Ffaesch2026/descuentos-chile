@@ -1,5 +1,5 @@
 {
- "_ayuda": "Cada entrada se publica el 'dia' indicado de cada mes a las 7:00 AM hora de Chile (unos minutos después, según la carga de GitHub). Varias entradas el mismo día se publican una tras otra. Solo se publican las que tienen \"activo\": true. Rubros: restaurantes, supermercados, combustible, farmacias, viajes, entretencion, vestuario, delivery, otros. Regiones: AP, TA, AN, AT, CO, VS, RM, LI, ML, NB, BI, AR, LR, LL, AI, MA, o CL para todo Chile. Cada mes tiene su color de fondo (instagram/generar.py, TEMAS_MES; diciembre = rojo).",
+ "_ayuda": "Cada entrada se publica el 'dia' indicado de cada mes a las 7:00 AM hora de Chile (unos minutos después, según la carga de GitHub). Varias entradas el mismo día se publican una tras otra. Solo se publican las que tienen \"activo\": true. Rubros: restaurantes, supermercados, combustible, farmacias, viajes, entretencion, vestuario, delivery, otros. Regiones: AP, TA, AN, AT, CO, VS, RM, LI, ML, NB, BI, AR, LR, LL, AI, MA, CL para todo Chile o REG para Regiones (tabla por comuna, sin la Región Metropolitana). Cada mes tiene su color de fondo (instagram/generar.py, TEMAS_MES; diciembre = rojo).",
  "publicaciones": [
   {
    "dia": 2,
@@ -41,6 +41,12 @@
    "dia": 6,
    "rubro": "vestuario",
    "region": "RM",
+   "activo": true
+  },
+  {
+   "dia": 7,
+   "rubro": "restaurantes",
+   "region": "REG",
    "activo": true
   },
   {
