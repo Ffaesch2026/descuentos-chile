@@ -178,6 +178,13 @@ def main() -> int:
             esperar_urls(urls)
             print(f"[publicando] {clave}: {len(urls)} imágenes")
             res = publicar_via_make(urls, texto, clave) if via_make else publicar_carrusel(urls, texto)
+            # Releer el registro desde GitHub justo antes de escribir, por si otra ejecución
+            # publicó mientras tanto (si no, se pisarían las anotaciones)
+            try:
+                git("pull", "--rebase", "-q", "origin", "main")
+            except subprocess.CalledProcessError:
+                pass
+            publicados = json.loads(PUBLICADOS.read_text("utf-8")) if PUBLICADOS.exists() else {}
             publicados[clave] = {"fecha": datetime.now(CHILE).isoformat(timespec="minutes"), **res}
             PUBLICADOS.write_text(json.dumps(publicados, ensure_ascii=False, indent=1), "utf-8")
             subir([PUBLICADOS], f"Publicado en Instagram: {clave}")
