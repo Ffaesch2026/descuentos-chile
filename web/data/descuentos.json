@@ -1,13 +1,13 @@
 {
- "generado": "2026-11-23T23:09:33+00:00",
+ "generado": "2026-11-24T12:19:02+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
    "nombre": "Banco de Chile",
    "sitio": "https://sitiospublicos.bancochile.cl/personas/beneficios",
    "estado": "ok",
-   "cantidad": 810,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "cantidad": 811,
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "falabella": {
@@ -15,8 +15,8 @@
    "nombre": "Banco Falabella / CMR",
    "sitio": "https://www.bancofalabella.cl/descuentos",
    "estado": "ok",
-   "cantidad": 220,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "cantidad": 221,
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "ripley": {
@@ -25,7 +25,7 @@
    "sitio": "https://www.bancoripley.cl/beneficios-y-promociones",
    "estado": "ok",
    "cantidad": 155,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "santander": {
@@ -34,7 +34,7 @@
    "sitio": "https://banco.santander.cl/beneficios",
    "estado": "ok",
    "cantidad": 207,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "cencosud": {
@@ -43,7 +43,7 @@
    "sitio": "https://www.tarjetacencosud.cl/publico/beneficios/landing/inicio",
    "estado": "ok",
    "cantidad": 39,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "tenpo": {
@@ -52,7 +52,7 @@
    "sitio": "https://www.tenpo.cl/beneficios",
    "estado": "ok",
    "cantidad": 37,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "mach": {
@@ -61,7 +61,7 @@
    "sitio": "https://www.machbank.cl/beneficios",
    "estado": "ok",
    "cantidad": 17,
-   "actualizado": "2026-11-23T22:46:37+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "security": {
@@ -70,7 +70,7 @@
    "sitio": "https://personas.bancosecurity.cl/beneficios",
    "estado": "ok",
    "cantidad": 165,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "bancoestado": {
@@ -79,7 +79,7 @@
    "sitio": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios.html",
    "estado": "ok",
    "cantidad": 153,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "scotiabank": {
@@ -88,7 +88,7 @@
    "sitio": "https://www.scotiarewards.cl/scclubfront/categoria/mundos/descuentos",
    "estado": "ok",
    "cantidad": 248,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "itau": {
@@ -97,7 +97,7 @@
    "sitio": "https://itaubeneficios.cl/beneficios/",
    "estado": "ok",
    "cantidad": 204,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "bci": {
@@ -106,7 +106,7 @@
    "sitio": "https://www.bci.cl/beneficios/beneficios-bci",
    "estado": "ok",
    "cantidad": 291,
-   "actualizado": "2026-11-23T19:51:20+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   },
   "bice": {
@@ -115,7 +115,7 @@
    "sitio": "https://banco.bice.cl/personas/beneficios",
    "estado": "ok",
    "cantidad": 63,
-   "actualizado": "2026-11-23T23:09:33+00:00",
+   "actualizado": "2026-11-24T12:19:02+00:00",
    "error": null
   }
  },
@@ -25662,49 +25662,6 @@
    ]
   },
   {
-   "id": "bancochile-d3c651d3aaed",
-   "banco": "bancochile",
-   "comercio": "Bold Barber Lounge Club",
-   "titulo": "20% dto. lunes y martes presencial",
-   "descripcion": "Bold Barber Lounge Club es una barbería especializada en cortes de cabello, servicios de barba y cuidado masculino. Ofrece una experiencia con atención personalizada, profesionales altamente capacitados, productos de primera calidad y un ambiente diseñado para que disfrutes cada visita. . . 20% dto. lunes y martes en todos los servicios. . Solicita tu descuento indicando los 6 primeros dígitos de tu Tarjeta. . No acumulable con otras promociones. . Descuento exclusivo pagando con tus Tarjetas del Chile. . Promoción válida hasta el 31 de julio 2027. Exclusivo para clientes que paguen con Tarjet",
-   "pct": 20,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2027-07-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/bold-barber-lounge-club",
-   "imagen": "https://assets.bancochile.cl/uploads/000/112/047/be7c2977-c306-4270-9f2d-04466e50cd2d/original/logo-web-Bold-Barber.png",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": [
-    "Las Condes"
-   ]
-  },
-  {
    "id": "bancochile-8d30723d808c",
    "banco": "bancochile",
    "comercio": "La Hacienda Talca",
@@ -28333,58 +28290,6 @@
    ]
   },
   {
-   "id": "bancochile-a15da3f4cf3b",
-   "banco": "bancochile",
-   "comercio": "Antiage TUA",
-   "titulo": "25% dto. martes y jueves presencial y online",
-   "descripcion": "Antiage TUA es una propuesta de belleza y cuidado de la piel inspirada en las tendencias de K-Beauty y skincare coreano, enfocada en rutinas de cuidado facial, hidratación, luminosidad y prevención de los signos del envejecimiento. Su propuesta combina innovación, bienestar y cuidado diario para lograr una piel más saludable, uniforme y radiante. . . 25% dto. martes y jueves en compra presencial y en tua.cl/antiagetua . Para compra presencial solicita tu descuento al momento de pagar. . Para compra online ingresa los 6 primeros dígitos de tu Tarjeta como cupón de descuento. . Descuento no apli",
-   "pct": 25,
-   "rubro": "farmacias",
-   "dias": [
-    1,
-    3
-   ],
-   "tarjetas": [
-    "Visa Infinite crédito",
-    "Visa Signature crédito",
-    "Visa Platinum crédito",
-    "Visa FAN crédito",
-    "Mastercard Black crédito",
-    "Mastercard Platinum crédito",
-    "Visa Infinite débito",
-    "Visa Signature débito",
-    "Visa débito Banco de Chile",
-    "Visa Cuenta FAN débito",
-    "Visa Gold crédito",
-    "Mastercard Dorada crédito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Presencial y Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": "2027-08-31",
-   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/antiage-tua",
-   "imagen": "https://assets.bancochile.cl/uploads/000/115/687/9bd0ecba-43ff-4005-a62b-59f068a54d9f/original/logo-web-Antiage-TUA.jpg",
-   "regiones": [
-    "CO",
-    "VS",
-    "RM",
-    "BI"
-   ],
-   "comunas": [
-    "Cerrillos",
-    "Concepción",
-    "Coquimbo",
-    "Huechuraba",
-    "La Florida",
-    "Puente Alto",
-    "Viña del Mar"
-   ]
-  },
-  {
    "id": "bancochile-94258c58279a",
    "banco": "bancochile",
    "comercio": "Preuniversitario Alameda",
@@ -28911,6 +28816,101 @@
    ],
    "comunas": [
     "Concepción"
+   ]
+  },
+  {
+   "id": "bancochile-a15da3f4cf3b",
+   "banco": "bancochile",
+   "comercio": "Antiage TUA",
+   "titulo": "25% dto. martes y jueves presencial y online",
+   "descripcion": "Antiage TUA es una propuesta de belleza y cuidado de la piel inspirada en las tendencias de K-Beauty y skincare coreano, enfocada en rutinas de cuidado facial, hidratación, luminosidad y prevención de los signos del envejecimiento. Su propuesta combina innovación, bienestar y cuidado diario para lograr una piel más saludable, uniforme y radiante. . . 25% dto. martes y jueves en compra presencial y en tua.cl/antiagetua . Para compra presencial solicita tu descuento al momento de pagar. . Para compra online ingresa los 6 primeros dígitos de tu Tarjeta como cupón de descuento. . Descuento no apli",
+   "pct": 25,
+   "rubro": "farmacias",
+   "dias": [
+    1,
+    3
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Mastercard Black crédito",
+    "Mastercard Platinum crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito",
+    "Mastercard Dorada crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial y Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2027-08-31",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/antiage-tua",
+   "imagen": "https://assets.bancochile.cl/uploads/000/115/687/9bd0ecba-43ff-4005-a62b-59f068a54d9f/original/logo-web-Antiage-TUA.jpg",
+   "regiones": [
+    "CO",
+    "VS",
+    "RM",
+    "BI"
+   ],
+   "comunas": [
+    "Cerrillos",
+    "Concepción",
+    "Coquimbo",
+    "Huechuraba",
+    "La Florida",
+    "Puente Alto",
+    "Viña del Mar"
+   ]
+  },
+  {
+   "id": "bancochile-d3c651d3aaed",
+   "banco": "bancochile",
+   "comercio": "Bold Barber Lounge Club",
+   "titulo": "20% dto. lunes y martes presencial",
+   "descripcion": "Bold Barber Lounge Club es una barbería especializada en cortes de cabello, servicios de barba y cuidado masculino. Ofrece una experiencia con atención personalizada, profesionales altamente capacitados, productos de primera calidad y un ambiente diseñado para que disfrutes cada visita. . . 20% dto. lunes y martes en todos los servicios. . Solicita tu descuento indicando los 6 primeros dígitos de tu Tarjeta. . No acumulable con otras promociones. . Descuento exclusivo pagando con tus Tarjetas del Chile. . Promoción válida hasta el 31 de julio 2027. Exclusivo para clientes que paguen con Tarjet",
+   "pct": 20,
+   "rubro": "farmacias",
+   "dias": [
+    0,
+    1
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Mastercard Black crédito",
+    "Mastercard Platinum crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito",
+    "Mastercard Dorada crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2027-07-31",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/bold-barber-lounge-club",
+   "imagen": "https://assets.bancochile.cl/uploads/000/112/047/be7c2977-c306-4270-9f2d-04466e50cd2d/original/logo-web-Bold-Barber.png",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": [
+    "Las Condes"
    ]
   },
   {
@@ -37600,13 +37600,57 @@
    ]
   },
   {
+   "id": "bancochile-ca1b907d889e",
+   "banco": "bancochile",
+   "comercio": "Panini",
+   "titulo": "30% dto. todos los dias online",
+   "descripcion": "¡Vive la emoción del fútbol español con Panini! Celebra a España, actual campeona del mundo, con la colección completa de La Liga. Encuentra reunidos a los equipos, jugadores y protagonistas de una de las competiciones más importantes del fútbol internacional. Una colección imperdible para disfrutar, compartir y conservar. . . 30% dto. todos los dias en tiendapanini.cl . Genera tu código de descuento e ingrésalo en tiendapanini.cl . 2 códigos por cliente. . Beneficio aplica solo para la compra de la colección La Liga. . Descuento no aplica para valor del despacho. . No acumulable con otras pro",
+   "pct": 30,
+   "rubro": "entretencion",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "Visa Infinite crédito",
+    "Visa Signature crédito",
+    "Visa Platinum crédito",
+    "Visa FAN crédito",
+    "Mastercard Black crédito",
+    "Mastercard Platinum crédito",
+    "Visa Infinite débito",
+    "Visa Signature débito",
+    "Visa débito Banco de Chile",
+    "Visa Cuenta FAN débito",
+    "Visa Gold crédito",
+    "Mastercard Dorada crédito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://sitiospublicos.bancochile.cl/personas/beneficios/detalle/panini",
+   "imagen": "https://assets.bancochile.cl/uploads/000/124/288/2b0cf5f5-19b3-45c3-94ea-13da9d16c39d/original/logo-web-Panini.jpg",
+   "regiones": [],
+   "comunas": []
+  },
+  {
    "id": "santander-d55a9ca84135",
    "banco": "santander",
    "comercio": "FestiGame 2026",
    "titulo": "Hasta 25% dcto. hasta agotar stock",
    "descripcion": "Festival de video juegos, tecnología y cultura geek más grande de Chile. Recuerda que: . Exclusivo con tus Tarjetas de Crédito y Débito Santander. Hasta 10 tickets por rut, hasta agotar stock de 5.000 tickets. Cenco Mall Florida, La Florida. Evento Jueves 10 al domingo 13 de diciembre . Descuento en tienda oficial de FestiGame (merch oficial) . Hasta 25% de descuento en pagando con Tarjetas Santander Mastercard, exclusivo para clientes Santander hasta agotar stock. Aplican T&C. Entradas exclusivamente a través de Fever. Infórmese sobre la garantía estatal de los depósitos en su banco o en cmfc",
    "pct": 25,
-   "rubro": "otros",
+   "rubro": "entretencion",
    "dias": [
     3,
     6
@@ -39265,7 +39309,7 @@
    "titulo": "Hasta 30% dcto. en Centro del Vino Concha y Toro con Visa",
    "descripcion": "Tours, degustaciones y beneficios. Experiencias Centro del Vino Concha y Toro . 30% de descuento en Ticket Acceso Temporada Baja (octubre a mayo). Máximo 2 tickets por credencial Visa. Beneficio sujeto a un máximo de 13.151 entradas con descuento durante la vigencia. WineShop Centro del Vino . 10% de descuento en compras presenciales durante Temporada Baja (octubre a mayo). Beneficio no aplicable a vinos íconos. Recuerda que: . Exclusivo pagando con Tarjetas Visa Signature e Infinite. Para experiencias, el descuento aplica online ingresando los primeros 6 dígitos de la tarjeta Visa en el campo",
    "pct": 30,
-   "rubro": "otros",
+   "rubro": "entretencion",
    "dias": [],
    "tarjetas": [
     "WorldMember Limited Santander crédito"
@@ -44306,7 +44350,7 @@
    "titulo": "20 por ciento de descuento con tarjetas de Crédito",
    "descripcion": "Exclusivo con tus tarjetas de Crédito Bci. 20% Descuento TOPE $40.000 sólo para clientes de Banco Bci pagando con Tarjetas de Crédito desde el 20 de Noviembre de 2026 a las 12:01 pm y hasta agotar stock 1.500 entradas. Para acceder al beneficio se debe ingresar como código los 6 primeros dígitos de tu Tarjeta Bci en la web de Ticketmaster",
    "pct": 20,
-   "rubro": "vestuario",
+   "rubro": "entretencion",
    "dias": [],
    "tarjetas": [
     "Tarjetas de Crédito Bci"
@@ -45191,7 +45235,7 @@
    "titulo": "Cilindros de gas natural para la calefacción y funcionamiento de tu hogar.",
    "descripcion": "Exclusivo con tus de Crédito Bci Platinum, Signature, Infinite y Mastercard Black. 40% dcto todos los días con tope $10.000, pagando con tus tarjetas de crédito Bci Infinite, Signature, Black y Platinum. Para obtener el beneficio, solicita tu código de descuento en la App de Bci, luego ingréselo en LipiApp MiCilindro al momento de pagar. Solo para clientes registrados con cuenta Lipiapp MiCilindro. Máximo 1 compra al mes con 1 carga. Beneficio aplica solo para formatos 5, 11, 11 plus y 15 kilos. Descuento no aplica para canales presenciales de Lipigas. No acumulable con otras ofertas, descuent",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -45908,7 +45952,7 @@
    "tope": "tope de $20.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-07-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/aprovecha-los-martes-y-miercoles-en-calama-vtspos",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Blind-Bar_b7b82eda_21-37_1.png",
    "regiones": [
@@ -46199,7 +46243,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-08-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/miercoles-arica-gzp7w89",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Amalfi-Trattoria-Bar_60da08cb_15-38_1.png",
    "regiones": [
@@ -46229,7 +46273,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-08-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/para-disfrutar-tu-escapada-en-pichilemu-5fhzh1",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bocas-del-Mar_8a11e495_19-33_1.png",
    "regiones": [
@@ -46430,7 +46474,7 @@
    "tope": "tope de $50.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-08-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/de-martes-a-sabado-en-providencia-xj8u07j",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bar-Porfirio_2d54a96e_19-0_1.png",
    "regiones": [
@@ -47371,7 +47415,7 @@
    "tope": "tope de $40.000",
    "modalidad": null,
    "vigencia_desde": "2026-09-04",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/nunoa-6ln4spe",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Barra-de-Pickles_4d7897ac_18-4_1.png",
    "regiones": [
@@ -47433,7 +47477,7 @@
    "tope": "tope de $20.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-09-04",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/vina-del-mar-5fgqx8",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Burgery_edfd5f4b_19-16_1.png",
    "regiones": [
@@ -49655,7 +49699,7 @@
    "banco": "bci",
    "comercio": "Bassotto Café",
    "titulo": "Domingo de Brunch en Las Condes Todos los domingos",
-   "descripcion": "Exclusivo con tus Tarjetas de Crédito Bci. 40% de descuento con tope de $40.000 al momento de pagar en el comercio. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
+   "descripcion": "Exclusivo con tus tarjetas de Crédito Bci. 40% de descuento con tope de $40.000 al momento de pagar en el comercio. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
    "pct": 40,
    "rubro": "restaurantes",
    "dias": [
@@ -49670,7 +49714,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-11-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/domingo-de-brunch-en-las-condes-zhh46xm",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bassotto-Caf%C3%A9_df1af528_14-33_1.png",
    "regiones": [
@@ -49982,7 +50026,7 @@
    "banco": "bci",
    "comercio": "Batard",
    "titulo": "Miércoles de Brunch en Providencia Todos los miércoles",
-   "descripcion": "Exclusivo con tus Tarjetas de Crédito Bci. 40% de descuento con tope de $40.000 al momento de pagar en el comercio. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
+   "descripcion": "Exclusivo con tus tarjetas de Crédito Bci. 40% de descuento con tope de $40.000 al momento de pagar en el comercio. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
    "pct": 40,
    "rubro": "restaurantes",
    "dias": [
@@ -49997,7 +50041,7 @@
    "tope": "tope de $40.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-11-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/miercoles-de-brunch-en-providencia-zf1059k",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Batard_86211691_12-40_1.png",
    "regiones": [
@@ -50498,7 +50542,7 @@
    "banco": "bci",
    "comercio": "Brontos",
    "titulo": "La Reina Lu - Ma - Mi - Ju",
-   "descripcion": "Exclusivo con tus Tarjetas de Crédito o Débito Bci. 20% de descuento con tope de $20.000 por cliente al día. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
+   "descripcion": "Exclusivo con tus tarjetas de Crédito o Débito Bci. 20% de descuento con tope de $20.000 por cliente al día. Para hacer efectivo el descuento Bci, debes solicitarlo en el restaurante antes de realizar la compra. Descuento no aplica sobre el costo de propina. No acumulable con otras promociones y/o descuentos. Se excluyen de este beneficio Tarjetas de Crédito Corporate, tarjetas emitidas por filiales y sociedades de apoyo al giro de Bci, como Tarjeta Líder Bci.",
    "pct": 20,
    "rubro": "restaurantes",
    "dias": [
@@ -50518,7 +50562,7 @@
    "tope": "tope de $20.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-11-06",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/la-reina-d1jsqxp",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Brontos_1037a71d_17-16_1.png",
    "regiones": [
@@ -51413,7 +51457,7 @@
    "tope": "sin tope",
    "modalidad": "Presencial y Online",
    "vigencia_desde": "2026-06-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/aprovecha-este-increible-beneficio-todos-los-dias-wydngj",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Blackdrop-Coffee_4cec8527_21-26_1.png",
    "regiones": [],
@@ -52268,7 +52312,7 @@
    "tope": "tope de $20.000",
    "modalidad": "Presencial",
    "vigencia_desde": "2026-10-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/providencia-3qwqhe5",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Caf%C3%A9-Meche_bf349878_15-38_1.png",
    "regiones": [
@@ -52556,7 +52600,7 @@
    "tope": "sin tope",
    "modalidad": "Online",
    "vigencia_desde": "2026-05-01",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/todos-los-dias-6qbby38",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/By-Turquia_24874ad6_19-15_1.png",
    "regiones": [],
@@ -52737,7 +52781,7 @@
    "tope": null,
    "modalidad": "Online",
    "vigencia_desde": "2026-07-13",
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://www.bci.cl/beneficios/beneficios-bci/detalle/disfruta-10-por-ciento-de-desc.-adicional-todos-los-dias-di0y1o5",
    "imagen": "https://www.bciplus.cl/storages/loyalty/campaigns-images/Bebesit_2cb62a3b_16-57_1.png",
    "regiones": [],
@@ -57527,7 +57571,7 @@
    "titulo": "Hasta $7.000 de descuento. a través de la App LipiApp MiCilindro.",
    "descripcion": "a través de la App LipiApp MiCilindro. Descuentos en cilindros Lipigas utilizando Tus Tarjetas BancoEstado: Cilindro de 5 kg: $1.000 descuento, más $500 si pagas por la App. Cilindro de 11 kg: $2.500 descuento, más $500 si pagas por la App. Cilindro de 15 kg : $3.000 descuento, más $500 si pagas por la App. Cilindro de 45 kg: $7.000 descuento, más $500 si pagas por la App. Dónde: Solo debes ingresar los 6 números de tu Tarjeta BancoEstado antes de pagar, adicionalmente, si pagas a través del botón BancoEstado , tienes $1.000 de descuento en el total de tu compra. Descuento válido solo por Lipi",
    "pct": null,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -58234,7 +58278,7 @@
    "titulo": "40% Dcto. en Gasco — Todos los viernes",
    "descripcion": "Disfruta de un 40% de descuento todos los viernes de noviembre de 2026 en Gasco . Accede a un 40% Dcto. en Gasco válido para compras en carga de gas de 5, 11, 15 y 45 KG a través de la App Gasco. El descuento se hará efectivo al momento del pago enrolando tu Tarjeta Scotiabank a través de OneClick dentro de la App Gasco. Las cargas no son acumulativas, se debe seleccionar solo una opción. El descuento se hará efectivo al momento del pago enrolando tu Tarjeta Scotiabank a través de OneClick dentro de la App Gasco. Tope de descuento $30.000 por cliente titular. Máximo 1 uso de cupón por cliente.",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     4
    ],
@@ -71707,11 +71751,47 @@
    ]
   },
   {
+   "id": "falabella-3f070fdc5d0b",
+   "banco": "falabella",
+   "comercio": "Descuentos Exclusivos Tottus",
+   "titulo": "Descuentos exclusivos en Tottus: Conoce Beneficios Especiales",
+   "descripcion": "Sólo pagando con CMR o Débito BF.",
+   "pct": null,
+   "rubro": "supermercados",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "CMR Mastercard",
+    "CMR Mastercard Premium",
+    "CMR Mastercard Elite",
+    "Tarjeta Débito Banco Falabella"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": null,
+   "vigencia_desde": "2026-11-18",
+   "vigencia_hasta": "2027-12-31",
+   "url": "https://www.bancofalabella.cl/descuentos/detalle/descuentos-exclusivos-tottus",
+   "imagen": "https://images.ctfassets.net/p6eyia4djstu/6mqOwdSG5Plk57tRyLTg0r/83af17bc0cea71adb383b7a240bc008c/Cards_Tottus_Logo_Tottus.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
    "id": "falabella-b91067872f10",
    "banco": "falabella",
    "comercio": "Descuentos exclusivos Sodimac",
    "titulo": "Descuentos exclusivos en Sodimac: Conoce Beneficios Especiales",
-   "descripcion": "Aprovecha pagando con tu CMR.",
+   "descripcion": "Sólo pagando con tarjeta CMR.",
    "pct": null,
    "rubro": "vestuario",
    "dias": [
@@ -75641,7 +75721,7 @@
    "titulo": "Dcto en Viña Sutil: 40% Sin Tope",
    "descripcion": "Online.",
    "pct": 40,
-   "rubro": "vestuario",
+   "rubro": "entretencion",
    "dias": [
     0,
     1,
@@ -76314,7 +76394,7 @@
    "titulo": "Dcto en Prosegur: Hasta 65% Sin Tope",
    "descripcion": "Exclusivo Tarjeta CMR. Regiones: Región Metropolitana de Santiago.",
    "pct": 65,
-   "rubro": "vestuario",
+   "rubro": "otros",
    "dias": [
     0,
     1,
@@ -83790,7 +83870,7 @@
    "titulo": "15% dcto. en Kidzania",
    "descripcion": "Presencial y web 15% descuento en tus entradas para Kidzania pagando con Banco Ripley (primeros 6 dígitos online) Días: Todos los días.",
    "pct": 15,
-   "rubro": "vestuario",
+   "rubro": "entretencion",
    "dias": [
     0,
     1,
@@ -83948,7 +84028,7 @@
    "titulo": "Entrada 2x1 en Cinépolis",
    "descripcion": "En entradas en locales Entradas 2x1 en películas 2D y 3D. En locales y cinepolischile.cl. No aplica para días festivos. Código en tu app Banco Ripley. Días: Viernes.",
    "pct": null,
-   "rubro": "vestuario",
+   "rubro": "entretencion",
    "dias": [
     4
    ],

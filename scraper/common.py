@@ -40,7 +40,7 @@ _RUBRO_KW = [
     ("farmacias", ["farmacia", "salcobrand", "cruz verde", "ahumada", "dr. simi", "optica", "clinica", "dental", "salud", "bienestar", "gimnasio", "smartfit", "sportlife", "belleza", "peluqueria", "spa"]),
     ("viajes", ["viaje", "hotel", "aerolinea", "latam", "sky airline", "jetsmart", "turismo", "turbus", "pullman", "uber", "cabify", "didi", "arriendo de auto", "rent a car", "transporte", "metro", "estacionamiento", "peaje", "vuelo", "hostal", "lodge"]),
     ("restaurantes", ["restaurant*", "restoran*", "gastronom*", "pizzeria", "coffee", "dulceria", "chocolat*", "bakery", "panader*", "pasteler*", "empanada", "cocina", "food", "cafe", "cafeteria", "sushi", "pizza", "burger", "hamburgues*", "comida", "bar ", "heladeria", "helado", "pasteleria", "panaderia", "starbucks", "juan maestro", "dominos", "mcdonald", "kfc", "bistro", "parrilla", "cerveceria", "brunch"]),
-    ("entretencion", ["cine", "cinemark", "cineplanet", "teatro", "concierto", "entretencion", "streaming", "spotify", "netflix", "videojuego", "juego", "parque", "museo", "evento", "ticket", "puntoticket", "musica", "libreria", "libro", "vina", "tour"]),
+    ("entretencion", ["cine", "cinemark", "cineplanet", "teatro", "concierto", "entretencion", "streaming", "spotify", "netflix", "videojuego", "juego", "parque", "museo", "evento", "ticket", "puntoticket", "musica", "libreria", "libro", "vina", "tour", "kidzania", "ticketmaster", "cinepolis", "cineplanet", "entradas"]),
     ("vestuario", ["vestuario", "ropa", "boutique", "jeans", "lenceria", "joyeria", "accesorios", "carteras", "maletas", "equipaje", "zapat*", "calzado", "moda", "tienda", "falabella", "ripley", "paris", "hites", "la polar", "hogar", "sodimac", "easy", "construccion", "decoracion", "muebles", "tecnologia", "electro*", "deporte", "outdoor", "mascota", "jugueteria", "retail", "mall"]),
 ]
 
@@ -128,6 +128,14 @@ def _rubro_final(rubro: str | None, comercio: str, titulo: str, descripcion: str
     (mantenciones o arriendo de autos no lo son)."""
     r = rubro if rubro in RUBROS else adivinar_rubro(comercio, titulo, descripcion)
     ct = sin_tildes(f"{comercio} {titulo}").lower()
+    # Los bancos usan "Vestuario/Hogar" u "Otros" como categoría amplia: si el nombre del comercio
+    # indica claramente otro rubro (un cine, una boletería, una farmacia...), gana el nombre
+    if r == "vestuario" and re.search(r"(?<![a-z])(lipigas|abastible|gasco|prosegur)(?![a-z])", sin_tildes(comercio).lower()):
+        return "otros"  # gas licuado y seguridad: no son vestuario ni hogar
+    if r in ("vestuario", "otros"):
+        por_nombre = _rubro_texto(comercio, _RUBRO_RX_DESC)
+        if por_nombre not in ("otros", "vestuario", r):
+            r = por_nombre
     if _COMBUSTIBLE_RX.search(ct) and (_POR_LITRO_RX.search(ct) or "dcto combustible" in ct or "descuento en combustible" in ct):
         return "combustible"
     if r == "combustible" and not _COMBUSTIBLE_RX.search(ct):
