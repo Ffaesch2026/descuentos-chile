@@ -154,6 +154,8 @@ def monto_por_litro(*textos: str) -> int | None:
 def es_solo_cuotas(titulo: str) -> bool:
     """Ofertas de cuotas sin interés (no son descuentos): "Paga hasta en 24 cuotas sin interés"."""
     t = sin_tildes(titulo or "").lower()
+    if re.search(r"cuotas? con tasa preferencial|tasa preferencial|credito de consumo|avance en efectivo", t):
+        return True
     return bool(re.search(r"cuotas? sin interes", t)) and not re.search(r"\d\s?%|dcto|dto|descuento", t)
 
 
@@ -246,7 +248,8 @@ def navegador():
     from playwright.sync_api import sync_playwright
 
     with sync_playwright() as p:
-        kw = {"headless": True}
+        # NAVEGADOR_VISIBLE=1 (computador local): algunos sitios bloquean el navegador invisible
+        kw = {"headless": os.environ.get("NAVEGADOR_VISIBLE", "") not in ("1", "true", "si")}
         if chromium_path():
             kw["executable_path"] = chromium_path()
         b = p.chromium.launch(**kw)

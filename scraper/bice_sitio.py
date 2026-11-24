@@ -77,6 +77,8 @@ def _leer_beneficio(pg, url: str) -> dict | None:
     litro = common.monto_por_litro(resumen)
     if not pct and not litro and not re.search(r"(?i)2\s?x\s?1|\$\s?\d", resumen):
         return None
+    if common.es_solo_cuotas(nombre) or common.es_solo_cuotas(comercio):
+        return None  # cuotas sin interés o tasas preferenciales: no son descuentos
     rubro = common.adivinar_rubro(comercio, nombre, texto)
     if rubro == "restaurantes":
         return None  # ya vienen de tarjetiando.cl

@@ -31,6 +31,11 @@ BANCOS = ["bancochile", "santander", "bci", "bancoestado", "scotiabank", "itau",
 MANUALES = ROOT / "data" / "manuales.json"
 
 
+def common_norm(t: str) -> str:
+    from scraper.common import sin_tildes
+    return " ".join(sin_tildes(t or "").lower().replace("-", " ").split())
+
+
 def agregar_manuales(bancos: dict, descuentos: list, ahora: str) -> None:
     """Agrega los descuentos de data/manuales.json (instituciones que no se pueden leer
     automáticamente). Reemplaza los de la ejecución anterior y omite los vencidos."""
@@ -42,7 +47,11 @@ def agregar_manuales(bancos: dict, descuentos: list, ahora: str) -> None:
     if bice_sitio.exists():
         bs = json.loads(bice_sitio.read_text("utf-8"))
         del_mes = bs.get("generado", "")[:7] == ahora[:7]
-        extra = [x for x in bs.get("descuentos", []) if x.get("vigencia_hasta") or del_mes]
+        # Sin repetir lo que ya trae la lectura automática de BICE (restaurantes vía tarjetiando)
+        ya = {common_norm(d["comercio"]) for d in descuentos if d["banco"] == "bice" and not d.get("manual")}
+        extra = [x for x in bs.get("descuentos", [])
+                 if (x.get("vigencia_hasta") or del_mes) and common_norm(x["comercio"]) not in ya
+                 and not es_solo_cuotas(x.get("titulo", "")) and not es_solo_cuotas(x.get("comercio", ""))]
         if extra:
             info = inst.setdefault("bice", {"nombre": "Banco BICE", "sitio": "https://banco.bice.cl/personas/beneficios",
                                             "descuentos": []})

@@ -13,6 +13,7 @@ $Python = Join-Path $Repo ".venv\Scripts\python.exe"
 $Bancos = @("santander", "bancoestado")
 $Log = Join-Path $Repo "scripts\actualizar-local.log"
 $env:PYTHONUTF8 = "1"
+$env:NAVEGADOR_VISIBLE = "1"   # Santander, BancoEstado y BICE bloquean el navegador invisible
 $env:PYTHONIOENCODING = "utf-8"
 
 function Escribir($msg) {
