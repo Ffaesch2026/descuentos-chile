@@ -151,27 +151,38 @@ def seleccionar(descuentos, rubro, region, por_banco, incluir_nacionales, por_ta
     return out
 
 
+BLOQUE_EXTRA = 0.4          # espacio entre bloques y bordes, en filas
+
+
+def _grupos(filas) -> int:
+    return len({d["_grupo"] for d in filas if d["_grupo"][1]})
+
+
+def _alto(filas) -> float:
+    """Alto de un bloque de banco en filas: encabezado + franjas de tarjeta + descuentos + margen."""
+    return len(filas) + _grupos(filas) + ENCABEZADO + BLOQUE_EXTRA
+
+
 def paginar(sel):
     """Reparte los bancos en columnas: cada banco va a la primera columna donde cabe
     completo (así los bancos chicos comparten columna); si no cabe en ninguna, abre una
     nueva y, si es más largo que una columna, sigue en la próxima. Devuelve
     imágenes = [[columna1, columna2], ...]."""
-    cap = FILAS_COLUMNA + ENCABEZADO
+    cap = FILAS_COLUMNA + ENCABEZADO + BLOQUE_EXTRA
     columnas: list[list] = []
-    libre: list[int] = []
+    libre: list[float] = []
     for bid, filas in sel.items():
-        alto = len(filas) + ENCABEZADO + len({d["_grupo"] for d in filas if d["_grupo"][1]})
-        k = next((i for i, l in enumerate(libre) if l >= alto), None)
+        alto = _alto(filas)
+        k = next((i for i, l in enumerate(libre) if l >= alto - 1e-9), None)
         if k is not None:
             columnas[k].append((bid, filas, False)); libre[k] -= alto
             continue
         resto, cont = list(filas), False
         while resto:
-            n = cap - ENCABEZADO
-            while n > 1 and n + len({d["_grupo"] for d in resto[:n] if d["_grupo"][1]}) > cap - ENCABEZADO:
+            n = len(resto)
+            while n > 1 and _alto(resto[:n]) > cap:
                 n -= 1
-            n = min(len(resto), n)
-            columnas.append([(bid, resto[:n], cont)]); libre.append(cap - n - ENCABEZADO)
+            columnas.append([(bid, resto[:n], cont)]); libre.append(cap - _alto(resto[:n]))
             resto, cont = resto[n:], True
     return [columnas[i:i + 2] for i in range(0, len(columnas), 2)]
 
@@ -372,15 +383,23 @@ def main():
         if len(paginar(sel)) + 2 <= MAX_IMAGENES or por_banco <= 5:
             break
         por_banco -= 1
-    # Si bajando hasta 4 descuentos por banco ningún banco queda cortado entre columnas, se usa eso
+    # Entre la cantidad pedida y 6 menos, elige la que no corta bancos entre columnas y deja el
+    # carrusel en 8 imágenes o menos, mostrando la mayor cantidad de descuentos posible
     def cortes(sl):
         return sum(1 for img in paginar(sl) for col in img for b in col if b[2])
-    if cortes(sel):
-        for n in range(por_banco - 1, max(por_banco - 5, 4), -1):
-            alt = seleccionar(data["descuentos"], a.rubro, a.region, n, not a.sin_nacionales, a.por_tarjeta)
-            if not cortes(alt):
-                sel, por_banco = alt, n
-                break
+    mejor = None
+    for n in range(por_banco, max(por_banco - 7, 4), -1):
+        alt = sel if n == por_banco else seleccionar(data["descuentos"], a.rubro, a.region, n, not a.sin_nacionales, a.por_tarjeta)
+        imgs = len(paginar(alt)) + 2
+        if imgs > MAX_IMAGENES:
+            continue
+        clave = (cortes(alt) > 0, max(imgs, 8), -n)
+        if mejor is None or clave < mejor[0]:
+            mejor = (clave, alt, n)
+    if mejor:
+        _, sel, por_banco = mejor
+    # Se vuelve a seleccionar con la cantidad elegida (deja bien la marca de "todos los del mes")
+    sel = seleccionar(data["descuentos"], a.rubro, a.region, por_banco, not a.sin_nacionales, a.por_tarjeta)
     if por_banco != a.por_banco:
         print(f"Se muestran {por_banco} descuentos por banco (para que quepa en {MAX_IMAGENES} imágenes sin cortar bancos).")
     tipos = {b: " / ".join(TIPOS[t] for t in ("credito", "debito", "prepago")
