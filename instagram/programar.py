@@ -111,6 +111,9 @@ def main() -> int:
                     help="envía un ejemplo al webhook de Make para que aprenda la estructura (no publica si el escenario está detenido)")
     a = ap.parse_args()
     if a.probar_make:
+        if not os.environ.get("MAKE_WEBHOOK_URL", "").strip():
+            print("Falta el secreto MAKE_WEBHOOK_URL (la dirección del webhook de Make.com).")
+            return 1
         ej = [f"{REPO_RAW}/main/web/logos/{n}" for n in ("tenpo.png", "mach.png")]
         print(publicar_via_make(ej, "Prueba de estructura desde GitHub (no publicar)", "prueba"))
         return 0
