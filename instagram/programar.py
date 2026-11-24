@@ -68,7 +68,6 @@ def esperar_urls(urls: list[str]) -> None:
 def publicar_via_make(urls: list[str], texto: str, clave: str) -> dict:
     """Envía el carrusel a un escenario de Make.com (webhook) que lo publica en Instagram.
     Para cuando no hay token propio de la API de Instagram (sin cuenta de Meta for Developers)."""
-    import os
     r = requests.post(os.environ["MAKE_WEBHOOK_URL"].strip(), timeout=120, json={
         "clave": clave,
         "texto": texto,
@@ -119,7 +118,6 @@ def main() -> int:
         return 0
 
     hoy = datetime.strptime(a.hoy, "%Y-%m-%d") if a.hoy else datetime.now(CHILE)
-    import os
     via_make = bool(os.environ.get("MAKE_WEBHOOK_URL", "").strip()) and not os.environ.get("IG_TOKEN", "").strip()
     if a.publicar and not os.environ.get("IG_TOKEN", "").strip() and not via_make:
         # Aún no se conecta la cuenta de Instagram: se generan las imágenes para subirlas a mano
