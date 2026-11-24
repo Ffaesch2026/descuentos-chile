@@ -72,7 +72,7 @@ _SINONIMOS = {"restaurant": "restaurantes", "restaurante": "restaurantes", "comi
               "supermercado": "supermercados", "super": "supermercados", "bencina": "combustible",
               "combustibles": "combustible", "salud": "farmacias", "farmacia": "farmacias",
               "salud y farmacias": "farmacias", "entretenimiento": "entretencion", "viaje": "viajes",
-              "transporte": "viajes", "ropa": "vestuario", "hogar": "vestuario", "vestuario y hogar": "vestuario"}
+              "transporte": "viajes", "viajes y transporte": "viajes", "ropa": "vestuario", "hogar": "vestuario", "vestuario y hogar": "vestuario"}
 
 
 def normalizar_rubro(texto: str) -> str:
@@ -144,10 +144,12 @@ def main() -> int:
         print("Sin IG_TOKEN ni MAKE_WEBHOOK_URL: se generan las imágenes y el texto para publicarlos a mano (no se publica).")
         a.publicar = False
     if a.rubro or a.region:
-        if not (a.rubro and a.region):
-            print("Indica --rubro y --region juntos.")
+        if not a.rubro:
+            print("Indica el rubro (--rubro).")
             return 2
-        tareas = [{"rubro": normalizar_rubro(a.rubro), "region": a.region.strip().upper()}]
+        rubro = normalizar_rubro(a.rubro)
+        region = (a.region or "").strip().upper() or ("CL" if rubro == "combustible" else "RM")
+        tareas = [{"rubro": rubro, "region": region}]
     else:
         cal = json.loads(CALENDARIO.read_text("utf-8"))["publicaciones"]
         tareas = [p for p in cal if p.get("activo") and int(p["dia"]) == hoy.day]

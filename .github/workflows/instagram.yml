@@ -20,7 +20,7 @@ on:
         required: false
         default: ""
       region:
-        description: "Región (RM, VS, BI…)"
+        description: "Región (RM, VS, BI… o CL para todo Chile; vacío = RM, o todo Chile en combustible)"
         required: false
         default: ""
       publicar:
@@ -77,13 +77,19 @@ jobs:
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
+          RUBRO: ${{ inputs.rubro }}
+          REGION: ${{ inputs.region }}
+          PUBLICAR: ${{ github.event_name == 'schedule' || inputs.publicar }}
+          FORZAR: ${{ inputs.forzar }}
+          PROBAR_MAKE: ${{ inputs.probar_make }}
         run: |
-          if [ "${{ inputs.probar_make }}" = "true" ]; then python -m instagram.programar --probar-make; exit $?; fi
-          ARGS=""
-          if [ -n "${{ inputs.rubro }}" ]; then ARGS="$ARGS --rubro ${{ inputs.rubro }} --region ${{ inputs.region }}"; fi
-          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.publicar }}" = "true" ]; then ARGS="$ARGS --publicar"; fi
-          if [ "${{ inputs.forzar }}" = "true" ]; then ARGS="$ARGS --forzar"; fi
-          python -m instagram.programar $ARGS
+          if [ "$PROBAR_MAKE" = "true" ]; then python -m instagram.programar --probar-make; exit $?; fi
+          ARGS=()
+          if [ -n "$RUBRO" ]; then ARGS+=(--rubro "$RUBRO"); fi
+          if [ -n "$REGION" ]; then ARGS+=(--region "$REGION"); fi
+          if [ "$PUBLICAR" = "true" ]; then ARGS+=(--publicar); fi
+          if [ "$FORZAR" = "true" ]; then ARGS+=(--forzar); fi
+          python -m instagram.programar "${ARGS[@]}"
 
       - name: Guardar imágenes para revisar
         if: always()
