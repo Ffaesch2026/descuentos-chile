@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-24T16:44:38+00:00",
+ "generado": "2026-11-24T16:57:43+00:00",
  "bancos": {
   "bancochile": {
    "id": "bancochile",
@@ -32,10 +32,10 @@
    "id": "santander",
    "nombre": "Santander Chile",
    "sitio": "https://banco.santander.cl/beneficios",
-   "estado": "error",
+   "estado": "ok",
    "cantidad": 207,
-   "actualizado": "2026-11-24T12:19:02+00:00",
-   "error": "RuntimeError: Santander bloqueó la consulta a promociones.json (HTTP 403)"
+   "actualizado": "2026-11-24T16:57:43+00:00",
+   "error": null
   },
   "cencosud": {
    "id": "cencosud",
@@ -77,10 +77,10 @@
    "id": "bancoestado",
    "nombre": "BancoEstado",
    "sitio": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios.html",
-   "estado": "error",
+   "estado": "ok",
    "cantidad": 153,
-   "actualizado": "2026-11-24T12:19:02+00:00",
-   "error": "RuntimeError: BancoEstado: no se encontraron tarjetas de beneficios en las páginas"
+   "actualizado": "2026-11-24T16:57:43+00:00",
+   "error": null
   },
   "scotiabank": {
    "id": "scotiabank",
@@ -82324,6 +82324,507 @@
    "comunas": []
   },
   {
+   "id": "mach-695f71d3dda9",
+   "banco": "mach",
+   "comercio": "Pedidos Ya",
+   "titulo": "40% descuento en Market con PedidosYa Plus",
+   "descripcion": "Solo para usuarios PedidosYa Plus, 40% de descuento en Market los días martes. Tope 3 lucas, dos usos mensuales. Conoce el beneficio en PedidosYa Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Solo para usuarios PedidosYa Plus, 40% de descuento en Market los días martes. Tope 3.000, dos usos mensuales. Paga con MACHBANK en PedidosYa: 1 Abre la app PedidosYa y arma tu pedido. 2 Al momento de pagar, selecciona \"App MACHBANK\" 3 PedidosYa te redirigirá a la app MACHBANK, ahí podrás ingresar tu pin MACHBANK y confirmar tu pago. Bases y condiciones Pr",
+   "pct": 40,
+   "rubro": "delivery",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "MACHBANK QR / Botón de pago (cuenta débito)"
+   ],
+   "tipos": [
+    "debito"
+   ],
+   "tope": "Tope de $3.000",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/40percent-descuento-en-market-con-pedidosya-plus",
+   "imagen": "https://cdn3.bci.cl/uploads/d73960a9-4725-46a3-8be1-bfce43c51a9a/original/pedidosya-descuento-mercados-out.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-8ccd306b7df9",
+   "banco": "mach",
+   "comercio": "Papa John's",
+   "titulo": "40% de descuento en Papa John's con Tarjeta de Crédito",
+   "descripcion": "Aprovecha 40% de descuento en PapaJohns online y presencial pagando con tu Tarjeta de Crédito MACHBANK. Válido para compras de mínimo $20.000. Conoce el descuento en Papa John's Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Aprovecha 40% de descuento en PapaJohns online y presencial pagando con tu Tarjeta de Crédito MACHBANK. Válido para compras de mínimo $20.000. Cómo pagar en PapaJohns.cl: 1 Entra en PapaJohns.cl y arma tu pedido de mínimo $20.000. 2 Ingresa los primeros 6 dígitos de tu Tarjeta de Crédito Virtual como cupón de descuento. ¡Ojo",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial y Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/40-descuento-papa-johns-credito",
+   "imagen": "https://cdn3.bci.cl/uploads/fdfb3e85-7fb6-4e6f-8f1b-dbc1cc1e0cc5/original/cashback-en-papajohns-con-credito-out.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-23069b098732",
+   "banco": "mach",
+   "comercio": "McDonald's",
+   "titulo": "40% de descuento en la App McDonald's con Tarjeta de Crédito",
+   "descripcion": "40% de descuento en la App McDonald's solo con Tarjeta de Crédito, todos los martes. Conoce el descuento en McDonald's Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 40% de descuento en la App McDonald's, todos los martes, sin tope, en compras mínimas $12.000 con Tarjeta de Crédito MACHBANK Cómo pagar en McDonald's con MACHBANK 1 Abre la app de McDonald's, realiza tu pedido mayor a $12.000 y selecciona retiro en tienda o delivery. 2 Al momento de pagar, selecciona tu tarjeta de crédito MACHBANK ya enrolada en la app o ingrésala ahí mismo para qu",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Sin tope",
+   "modalidad": "App",
+   "vigencia_desde": "2026-02-01",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.machbank.cl/beneficios/detalle/40-descuento-app-mcdonald",
+   "imagen": "https://cdn3.bci.cl/uploads/c1859d36-34db-4cbe-ab21-a514fe361353/original/mcd2.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-94b46e73a6fb",
+   "banco": "mach",
+   "comercio": "Starbucks",
+   "titulo": "30% de descuento en Starbucks",
+   "descripcion": "30% de descuento todos los lunes en bebidas preparadas en barra en tiendas presenciales Starbucks. Conoce el beneficio en Starbucks Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 30% de descuento todos los lunes en bebidas preparadas en barra en tiendas presenciales Starbucks. Cómo pagar en Starbucks: 1 Ve presencialmente a un Starbucks. 2 Al momento de pagar, indica que quieres pagar con tarjeta MACHBANK. 3 Paga en el terminal de pago con tu tarjeta MACHBANK y listo. Bases y condiciones Promoción válida todos los Lunes. Beneficio es válido en l",
+   "pct": 30,
+   "rubro": "restaurantes",
+   "dias": [
+    0
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito",
+    "MACHBANK Tarjeta Débito",
+    "MACHBANK Tarjeta Prepago"
+   ],
+   "tipos": [
+    "credito",
+    "debito",
+    "prepago"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/30-descuento-starbucks-lunes-bebidas-preparadas",
+   "imagen": "https://cdn3.bci.cl/uploads/25c19985-0dcb-4ab1-980a-ec98c87d9bfc/original/cashback_starbucks_in.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-5c2f3c447b98",
+   "banco": "mach",
+   "comercio": "Preunic",
+   "titulo": "20% de cashback online y presencial en Preunic",
+   "descripcion": "Aprovecha de 20% de cashback online y presencial en tu primera compra en Preunic, tope $5.000 por una transacción Conoce el descuento en Preunic Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 20% de cashback comprando en tiendas u online. Cómo pagar en Preunic.cl: 1 Entra a Preunic.cl y elige tus productos. 2 Elige MACHBANK como medio de pago. 3 Confirma tu compra y ¡listo! Cómo comprar en tiendas: 1 Indica que pagas con tu app MACHBANK y dicta tu rut. 2 Abre la notificación en tu teléfono que te derivará a tu app MACHBANK 2 Confirma tu compra y",
+   "pct": 20,
+   "rubro": "farmacias",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK QR / Botón de pago (cuenta débito)"
+   ],
+   "tipos": [
+    "debito"
+   ],
+   "tope": "tope $5.000 por una",
+   "modalidad": "Presencial y Online",
+   "vigencia_desde": "2024-05-01",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.machbank.cl/beneficios/detalle/20percent-de-cashback-en-preunic",
+   "imagen": "https://cdn3.bci.cl/uploads/633abf58-2c18-43ce-9bf9-fa86809f5955/original/cashbacl-en-preunic-con-MACH_2-out.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-c29d9e9e3f69",
+   "banco": "mach",
+   "comercio": "Copec",
+   "titulo": "Ahorra $100 por litro de bencina con tarjeta de crédito",
+   "descripcion": "Promoción de $100 de descuento por litro de combustible los sábados en Copec. Solo por app Copec enrolando y pagando con tu Tarjeta de Crédito Virtual MACHBANK. Promoción sujeta a cambios o hasta agotar stock. Conoce el descuento en bencina Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Ahorra $100 por litro de bencina pagando a través de app Copec enrolando tu tarjeta de crédito virtual MACHBANK los sábados del mes. Cómo pagar con tarjeta de crédito virtual a través de app Copec: 1 Abre la app Copec. 2 Ingresa los datos de tu tarjeta de crédito",
+   "pct": null,
+   "rubro": "combustible",
+   "dias": [
+    5
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Sin tope",
+   "modalidad": "App",
+   "vigencia_desde": "2026-01-01",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.machbank.cl/beneficios/detalle/cashback-en-bencina-con-tarjeta-credito-virtual",
+   "imagen": "https://cdn3.bci.cl/uploads/d8afe99e-2223-45a1-b416-972d52094ff2/original/cashback_en_bencina_credito-out.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-e24f4f10b942",
+   "banco": "mach",
+   "comercio": "McDonald's",
+   "titulo": "20% de descuento en la App McDonald's con Tarjeta de Débito",
+   "descripcion": "20% de descuento en la App McDonald's solo con Tarjeta de Debito o Prepago, todos los martes. Conoce el descuento en McDonald's Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 20% de descuento en la App McDonald's, todos los martes, sin tope, en compras mínimas $12.000 con Tarjeta de Débito o Prepago MACHBANK Cómo pagar en McDonald's con MACHBANK 1 Abre la app de McDonald's, realiza tu pedido mayor a $12.000 y selecciona retiro en tienda o delivery. 2 Al momento de pagar, selecciona tu tarjeta de Débito o Prepago MACHBANK ya enrolada en la app o ",
+   "pct": 20,
+   "rubro": "restaurantes",
+   "dias": [
+    1
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta Débito",
+    "MACHBANK Tarjeta Prepago"
+   ],
+   "tipos": [
+    "debito",
+    "prepago"
+   ],
+   "tope": "Sin tope",
+   "modalidad": "App",
+   "vigencia_desde": "2026-02-01",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.machbank.cl/beneficios/detalle/20-descuento-app-mcdonald",
+   "imagen": "https://cdn3.bci.cl/uploads/a2ee8bba-ca5d-469a-9dfb-37e0accddd2c/original/mcd2.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-c58f09e652bd",
+   "banco": "mach",
+   "comercio": "Flixbus",
+   "titulo": "15% de descuento en Flixbus con Tarjetas MACHBANK",
+   "descripcion": "15% de descuento con Tarjetas MACHBANK ingresando el código de descuento MACHFXBF antes de pagar Conoce el descuento en Flixbus Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 15% de descuento en Flixbus todos los días, con Tarjetas MACHBANK y código MACHFXBF Cómo pagar en Flixbus con MACHBANK 1 Ingresa a https://www.flixbus.cl/, escoje tu destino favorito y selecciona el día, hora y asiento 2 Antes de pagar, revisa el detalle de tu compra e ingresa el código MACHFXBF como cupón de descuento 3 Verifica que aplique correctamente el 15%, paga con T",
+   "pct": 15,
+   "rubro": "viajes",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito",
+    "MACHBANK Tarjeta Débito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/15-descuento-en-flixbus",
+   "imagen": "https://cdn3.bci.cl/uploads/02b9fc23-d368-476d-ace8-e1468f455666/original/flixbus2.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-5cc312f55f43",
+   "banco": "mach",
+   "comercio": "Restaurantes",
+   "titulo": "30% OFF en restaurantes seleccionados con el cupón MACHBANK30",
+   "descripcion": "Pide tu comida favorita en la web, paga con MACHBANK y recibe 30% OFF (la promoción aplica solo como descuento ingresando el cupón MACHBANK30 en los comercios adheridos) Conoce el beneficio en Restaurantes Conoce el beneficio ¿Cuáles son los restaurantes? ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 30% OFF pagando con MACHBANK en la página del comercio adherido a la promoción. Por este mes, la promoción aplica solo como descuento ingresando el cupón MACHBANK30 en los comercios adheridos. Tope $8.000 de descuento. Válido viernes y sábado. Máximo 1 transacción por",
+   "pct": 30,
+   "rubro": "restaurantes",
+   "dias": [
+    4,
+    5
+   ],
+   "tarjetas": [
+    "MACHBANK QR / Botón de pago (cuenta débito)"
+   ],
+   "tipos": [
+    "debito"
+   ],
+   "tope": "Tope $8.000",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/30-off-en-restaurantes-seleccionados",
+   "imagen": "https://cdn3.bci.cl/uploads/ca615452-91c3-4484-8d8c-ff7a354ab8da/original/descuento-en-pedidosya-restaurantes-out.webp",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-f6a00deae7bd",
+   "banco": "mach",
+   "comercio": "Salcobrand",
+   "titulo": "20% descuento con MACHBANK en la primera unidad",
+   "descripcion": "20% de descuento en la primera unidad de productos adheridos al programa Mi Salcobrand. Válido con Tarjetas MACHBANK. Todos los días. Conoce el beneficio en Salcobrand Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 20% de descuento presencial en la primera unidad de productos adheridos al programa Mi Salcobrand . Cómo pagar en Salcobrand: 1 Ve a un local Salcobrand, elige tus productos y ve a pagar. 2 Al pagar, dicta al cajero el código que debes sacar de la app Salcobrand 3 Si el producto es parte del programa y es la primera unidad, paga con T",
+   "pct": 20,
+   "rubro": "farmacias",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito",
+    "MACHBANK Tarjeta Débito",
+    "MACHBANK Tarjeta Prepago"
+   ],
+   "tipos": [
+    "credito",
+    "debito",
+    "prepago"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/mi-salcobrand-20-descuento-en-la-primera-unidad",
+   "imagen": "https://cdn3.bci.cl/uploads/9d2739ae-5535-40e6-b9cb-d48aeebe772a/original/tienda_salco.jpeg",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-7ed9831758ed",
+   "banco": "mach",
+   "comercio": "miCoca-Cola",
+   "titulo": "Hasta 30% de descuento en miCoca-Cola.cl",
+   "descripcion": "Aprovecha todos los meses descuento en tus productos favoritos en https://andina.micoca-cola.cl y además, ¡despacho gratis! Conoce el beneficio en miCoca-Cola Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Hasta 30% de descuento con Tarjeta de Crédito todos los meses. Aplican TyC. Revisa el detalle de este beneficio en tu App MACHBANK. . Cómo pagar en miCoca-Cola: 1 Ingresa a https://andina.micoca-cola.cl, escoge tus productos y llena tu carrito 2 Antes de pagar, ingresa como cupón de descuento los primeros 6 dígitos de tu Tarjeta de Crédito MAC",
+   "pct": 30,
+   "rubro": "restaurantes",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/descuento-en-micoca-colacl",
+   "imagen": "https://cdn3.bci.cl/uploads/457a87a6-6ca2-4139-956d-6907f1069037/original/cocacola2.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-4a772f04da2d",
+   "banco": "mach",
+   "comercio": "bip!QR",
+   "titulo": "$2.000 de cashback con bip!QR",
+   "descripcion": "Gana $2.000 de cashback luego de la tercera recarga de mínimo $3.000 a través de bip!QR en MACHBANK. Conoce el beneficio en Metro y Micros con bip!QR Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: $2.000 de cashback pagando tu pasaje con bip!QR Cómo pagar en el Metro y Micro: 1 Entra a tu App MACHBANK. 2 Toca bip!QR para cargar tu saldo. 3 Carga el monto, genera el QR ¡y listo! Bases y condiciones La responsabilidad de la promoción y entrega del premio indicado, será única y exclusivamente de la sociedad “Krip SpA.” Se deja expresamente establec",
+   "pct": null,
+   "rubro": "viajes",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK QR / Botón de pago (cuenta débito)"
+   ],
+   "tipos": [
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/2000-cashback-bipqr",
+   "imagen": "https://cdn3.bci.cl/uploads/1132e5ef-9c04-4bc3-9005-30950c4daef6/original/head-bipqr.png",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": []
+  },
+  {
+   "id": "mach-a69b011c7cd1",
+   "banco": "mach",
+   "comercio": "JetSMART",
+   "titulo": "Hasta 20% dcto. en Vuelos Nacionales e Internacionales",
+   "descripcion": "Paga con Tarjeta de Débito o Prepago con el código BCIMACHD Conoce el beneficio en JetSMART Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Hasta 20% dcto. en Vuelos Nacionales e Internacionales pagando con tu Tarjeta de Débito o Prepago con el código BCIMACHD. Válido para compras realizadas con al menos 14 días de anticipación al vuelo, y para volar hasta el 22 de diciembre de 2026. Compra tus vuelos en JetSMART 1 Entra a JetSMART.com y elige tu vuelo. 2 Ingresa el código promocional en JetSMART al momento de cotizar tu vuelo (verifica que apliq",
+   "pct": 20,
+   "rubro": "viajes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta Débito",
+    "MACHBANK Tarjeta Prepago"
+   ],
+   "tipos": [
+    "debito",
+    "prepago"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/15-debito-jetsmart-nacional-e-internacional",
+   "imagen": "https://cdn3.bci.cl/uploads/5c2916e8-b37e-438c-a127-1a83dc3a42b3/original/atacama.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-67a33c4faac2",
+   "banco": "mach",
+   "comercio": "JetSMART",
+   "titulo": "Hasta 30% de descuento en JetSMART",
+   "descripcion": "Aprovecha todos los miércoles de hasta 30% de descuento en Vuelos Nacionales e Internacionales con Tarjeta de Crédito en JetSMART. Conoce el beneficio en JetSMART Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Todos los miércoles, hasta 30% de descuento en Vuelos Nacionales e Internacionales online con cupón MACHC y pagando con tu Tarjeta de Crédito MACHBANK. Válido para vuelos del 6 de julio al 29 de noviembre 2026, comprando con al menos 14 días de anticipación. Cómo pagar en JetSMART: 1 Selecciona tu destino y tus vuelos de preferencia 2 Ante",
+   "pct": 30,
+   "rubro": "viajes",
+   "dias": [
+    2
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/30-de-descuento-en-vuelos-jetsmart",
+   "imagen": "https://cdn3.bci.cl/uploads/7e9937b1-8c8a-4f75-82f5-3077a126e6a7/original/verano2_1.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-3dcac41cc30a",
+   "banco": "mach",
+   "comercio": "Cabify",
+   "titulo": "40% de descuento en Cabify",
+   "descripcion": "Aprovecha 40% de descuento en dos viajes al mes en Cabify utilizando el código MACH07 Conoce el beneficio en Cabify Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Todos los días, 40% de descuento en dos viajes al mes por usuario pagando con tarjetas MACHBANK en app Cabify. Tope $3.000 por viaje. Cómo pagar en Cabify: 1 Ingresa al botón Cabify Club dentro de la app y selecciona Descuentos con tu banco o tarjeta 2 Selecciona la promoción de 40% dcto con MACHBANK y activa el descuento. 3 Añade tu tarjeta MACHBANK (prepago, débito o crédito), ingres",
+   "pct": 40,
+   "rubro": "viajes",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK Tarjeta de Crédito",
+    "MACHBANK Tarjeta Débito",
+    "MACHBANK Tarjeta Prepago"
+   ],
+   "tipos": [
+    "credito",
+    "debito",
+    "prepago"
+   ],
+   "tope": "Tope $3.000 por viaje",
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/40-de-descuento-en-cabify-con-todas-las-tarjetas",
+   "imagen": "https://cdn3.bci.cl/uploads/c6449526-daa5-460a-961a-bf069df2b0a5/original/cabify.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-9d89ec591c18",
+   "banco": "mach",
+   "comercio": "AgendaPro",
+   "titulo": "40% de descuento app AgendaPro",
+   "descripcion": "40% de descuento agendando servicios en app AgendaPro y pagando con botón MACHBANK. Conoce el beneficio en AgendaPro: Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 40% de descuento agendando servicios en app AgendaPro y pagando con botón MACHBANK. Agendar y pagar cualquier día de la semana, pero el servicio tiene que ser ejecutado el día lunes. Rubros: Uñas, Peluquería, Masajes, Barbería, Cejas y Pestañas, Fitness, Depilación, etc. Tope $40.000 por reserva. Pagando con botón MACHBANK dentro de la app AgendaPro. Más detalles en: https://agendapr",
+   "pct": 40,
+   "rubro": "farmacias",
+   "dias": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "tarjetas": [
+    "MACHBANK QR / Botón de pago (cuenta débito)"
+   ],
+   "tipos": [
+    "debito"
+   ],
+   "tope": "Tope $40.000 por reserva",
+   "modalidad": "App",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/40percent-de-descuento-app-agendapro",
+   "imagen": "https://cdn3.bci.cl/uploads/cc79974c-feb0-4a3e-a6c7-12f0971bd8ed/original/Gemini_Generated_Image_d50rftd50rftd50r.jpeg",
+   "regiones": [],
+   "comunas": []
+  },
+  {
+   "id": "mach-f8d11bd4c89d",
+   "banco": "mach",
+   "comercio": "MACH Premium",
+   "titulo": "50% cashback en comercios seleccionados",
+   "descripcion": "¡Exclusivo para usuarios de MACH Premium! Recibe 50% de cashback adicional en comercios seleccionados al contratar MACH Premium y pagar tus compras con MACHBANK. Conoce el beneficio con MACH Premium: Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 50% de devolución (cashback) sobre el monto pagado por la contratación de suscripciones mensuales en las plataformas Spotify y/o Uber One. Cómo conseguirlo: 1 Asegúrate de ser Premium o eleva tu cuenta a Premium desde la app. 2 Compra en tu comercio favorito y paga con tu tarjeta virtual MACHBANK. 3 ¡Li",
+   "pct": 50,
+   "rubro": "viajes",
+   "dias": [],
+   "tarjetas": [],
+   "tipos": [
+    "credito"
+   ],
+   "tope": null,
+   "modalidad": "Online",
+   "vigencia_desde": null,
+   "vigencia_hasta": null,
+   "url": "https://www.machbank.cl/beneficios/detalle/descuentos-con-mach-premium",
+   "imagen": "https://cdn3.bci.cl/uploads/57b4834a-d699-4b1a-bb7c-7a70d8e60af8/original/Gemini_Generated_Image_b29g82b29g82b29g_1_2_2_.png",
+   "regiones": [],
+   "comunas": []
+  },
+  {
    "id": "santander-d55a9ca84135",
    "banco": "santander",
    "comercio": "FestiGame 2026",
@@ -83066,10 +83567,10 @@
    "comunas": []
   },
   {
-   "id": "santander-1b039db3fe5a",
+   "id": "santander-691e1d67da8a",
    "banco": "santander",
    "comercio": "ONLY",
-   "titulo": "20% dcto todos los jueves.",
+   "titulo": "20% dcto. todos los jueves.",
    "descripcion": "ONLY . Recuerda que:. Exclusivo pagando con tus Tarjetas de Crédito y Débito Santander. Válido en tiendas físicas y www.only.cl. Ingresa los 6 primeros dígitos de tu Tarjeta como código de descuento. No acumulable a otros descuentos. Excluye tienda outlet. Las ofertas, ventas y descuentos, entregas de beneficios no financieros, como asimismo la garantía, servicio y calidad del producto será de exclusiva responsabilidad del comercio, sin responsabilidad ni injerencia alguna para Banco Santander Chile ni en la ulterior atención que ello demande. Infórmese sobre la garantía estatal de los depósit",
    "pct": 20,
    "rubro": "otros",
@@ -87932,7 +88433,7 @@
    "tope": "Tope de descuento $150.000",
    "modalidad": "Online",
    "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://banco.santander.cl/beneficios/promociones/ecomovers-3",
    "imagen": "https://banco.santander.cl/uploads/000/051/871/344f46a0-9cf7-449a-a9e2-180353d4faaf/original/Logo_ecomovers_fondoblanco.png",
    "regiones": [],
@@ -88225,7 +88726,7 @@
    "tope": null,
    "modalidad": "Online",
    "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://banco.santander.cl/beneficios/promociones/biobrush",
    "imagen": "https://banco.santander.cl/uploads/000/046/195/ee236229-67bf-4b39-9f50-6ccf2d14bc94/original/BioBrush.jpg",
    "regiones": [],
@@ -88644,7 +89145,7 @@
    "tope": null,
    "modalidad": "Online",
    "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://banco.santander.cl/beneficios/promociones/freemet-2",
    "imagen": "https://banco.santander.cl/uploads/000/046/018/247e62f5-08b9-444c-be37-3a90a99742a8/original/logo_freemet.jpg",
    "regiones": [],
@@ -88731,7 +89232,7 @@
    "tope": null,
    "modalidad": "Online",
    "vigencia_desde": null,
-   "vigencia_hasta": "2026-11-30",
+   "vigencia_hasta": "2026-12-31",
    "url": "https://banco.santander.cl/beneficios/promociones/aquality-3",
    "imagen": "https://banco.santander.cl/uploads/000/045/992/2e5a2c6a-c82f-49ac-9699-9929c85a2478/original/logo_aquality.jpg",
    "regiones": [
@@ -89500,40 +90001,6 @@
    ]
   },
   {
-   "id": "bancoestado-69497a65c985",
-   "banco": "bancoestado",
-   "comercio": "Pepe Cuervo",
-   "titulo": "40% dto. en Pepe Cuervo",
-   "descripcion": "Lunes a Viernes. Zona: VI Región. Válido presentando y pagando con tu Tarjeta de Crédito Visa BancoEstado. Tope $40.000. Válido desde 01 de noviembre al 31 de diciembre 2026. Locales: Av. Costanera 610, Pichilemu.",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4
-   ],
-   "tarjetas": [
-    "Tarjeta de Crédito Visa BancoEstado"
-   ],
-   "tipos": [
-    "credito"
-   ],
-   "tope": "Tope $40.000.",
-   "modalidad": "Presencial",
-   "vigencia_desde": "2026-11-01",
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/un-mes-de-sabores---bancoestado-personas.html#pepe-cuervo",
-   "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/sabores/cabeceras/pepe-cuervo.png",
-   "regiones": [
-    "LI"
-   ],
-   "comunas": [
-    "Pichilemu"
-   ]
-  },
-  {
    "id": "bancoestado-7d609d1eea85",
    "banco": "bancoestado",
    "comercio": "Dynos Restaurant Bar",
@@ -90262,6 +90729,38 @@
    ],
    "comunas": [
     "Pirque"
+   ]
+  },
+  {
+   "id": "bancoestado-69497a65c985",
+   "banco": "bancoestado",
+   "comercio": "Pepe Cuervo",
+   "titulo": "40% dto. en Pepe Cuervo",
+   "descripcion": "Miércoles a Viernes. Zona: VI Región. Válido presentando y pagando con tu Tarjeta de Crédito Visa BancoEstado. Tope $40.000. Válido desde 01 de noviembre al 31 de diciembre 2026. Locales: Av. Costanera 610, Pichilemu.",
+   "pct": 40,
+   "rubro": "restaurantes",
+   "dias": [
+    2,
+    3,
+    4
+   ],
+   "tarjetas": [
+    "Tarjeta de Crédito Visa BancoEstado"
+   ],
+   "tipos": [
+    "credito"
+   ],
+   "tope": "Tope $40.000.",
+   "modalidad": "Presencial",
+   "vigencia_desde": "2026-11-01",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/un-mes-de-sabores---bancoestado-personas.html#pepe-cuervo",
+   "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/sabores/cabeceras/pepe-cuervo.png",
+   "regiones": [
+    "LI"
+   ],
+   "comunas": [
+    "Pichilemu"
    ]
   },
   {
@@ -92471,6 +92970,37 @@
    "comunas": []
   },
   {
+   "id": "bancoestado-b4820e416bb9",
+   "banco": "bancoestado",
+   "comercio": "Pizza Pizza",
+   "titulo": "$4.000 de dto. todos los lunes, martes y miércoles en PizzaPizza online, pagando a través del botón de pago de Compraquí.",
+   "descripcion": "todos los lunes, martes y miércoles en PizzaPizza online, pagando a través del botón de pago de Compraquí. $4.000 de descuento en compras iguales o superiores a $12.000 realizadas en PizzaPizza, pagando con Tarjetas de Débito o Crédito BancoEstado a través de Compraquí. Dónde: Online en el sitio web de PizzaPizza. Cómo acceder al beneficio: 1 - Ingresa a www.pizzapizza.cl . 2 - Selecciona los productos que deseas comprar. 3 - Paga utilizando el botón de pago Compraquí. 4 - Realiza el pago con tu Tarjeta de Débito o Crédito BancoEstado. 5 - Obtén $4.000 de descuento en compras desde $12.000. Vi",
+   "pct": null,
+   "rubro": "restaurantes",
+   "dias": [
+    3
+   ],
+   "tarjetas": [
+    "Tarjetas de Crédito BancoEstado",
+    "Tarjetas de Débito BancoEstado",
+    "CuentaRUT débito"
+   ],
+   "tipos": [
+    "credito",
+    "debito"
+   ],
+   "tope": null,
+   "modalidad": "Presencial",
+   "vigencia_desde": "2026-11-02",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios/pizza-pizza---beneficios-bancoestado.html",
+   "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/campanas/pizza-pizza/logo-pizza-pizza.png",
+   "regiones": [
+    "RM"
+   ],
+   "comunas": []
+  },
+  {
    "id": "bancoestado-e94f86a61b7a",
    "banco": "bancoestado",
    "comercio": "Dominos Pizza",
@@ -92672,12 +93202,12 @@
    "comunas": []
   },
   {
-   "id": "bancoestado-5f215775d761",
+   "id": "bancoestado-7a5fc29becc5",
    "banco": "bancoestado",
-   "comercio": "JetSMART maleta",
-   "titulo": "Hasta 100% de descuento En la compra de maleta de bodega.",
-   "descripcion": "En la compra de maleta de bodega. Beneficios exclusivos en servicios opcionales de JetSMART , comprando en JetSMART.com. y pagando con medios de pago BancoEstado. Cuenta Corriente BancoEstado 40% de descuento en Selección de Asiento. 40% de descuento en Maleta de Cabina. 100% de descuento en Maleta de Bodega. 40% de descuento en Mascota en Cabina. Tarjetas de Crédito BancoEstado 6 y 12 Cuotas Sin Interés. 50% de descuento en Selección de Asiento. 50% de descuento en Maleta de Cabina. 100% de descuento en Maleta de Bodega. 50% de descuento en Mascota en Cabina. 100% de descuento en Embarque Pri",
-   "pct": 100,
+   "comercio": "Prime Class",
+   "titulo": "3 accesos gratuitos a Salones VIP Primeclass Pacífico.",
+   "descripcion": "a Salones VIP Primeclass Pacífico. Beneficio válido para los salones Primeclass Pacífico ubicados en el Terminal 2 del Aeropuerto Arturo Merino Benítez. Aplica en los salones Metrópolis (Zona de Llegadas), Lagos (Espigón E), Isla de Pascua (Espigón C), Patagonia (Espigón F) y Desierto (Espigón D). Sujeto a disponibilidad y capacidad de cada salón. Cada acceso tendrá un cobro inicial de 0,76 UF por persona, el cual será reversado posteriormente en el estado de cuenta de la tarjeta utilizada. El beneficio considera un máximo de 3 accesos gratuitos por período. Un acceso corresponde al ingreso de",
+   "pct": null,
    "rubro": "viajes",
    "dias": [
     0,
@@ -92689,51 +93219,18 @@
     6
    ],
    "tarjetas": [
-    "CuentaRUT débito"
+    "Tarjeta de Crédito Mastercard BancoEstado",
+    "Tarjeta de Crédito Visa Platinum BancoEstado"
    ],
    "tipos": [
-    "debito"
+    "credito"
    ],
    "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios/iapurate--planifica-tu-proxima-escapada-con-jetsmart---beneficio.html",
-   "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/campanas/jet-smart/jetsmart.svg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "bancoestado-e9c26db6be20",
-   "banco": "bancoestado",
-   "comercio": "JetSMART",
-   "titulo": "Hasta 50% de descuento En la tarifa del pasaje para vuelos nacionales e internacionales.",
-   "descripcion": "En la tarifa del pasaje para vuelos nacionales e internacionales. 50% de descuento en la tarifa del pasaje para vuelos nacionales e internacionales de JetSMART, pagando con Tarjetas de Débito o Crédito BancoEstado. Beneficio válido exclusivamente para compras realizadas en JetSMART.com. Aplica únicamente sobre la tarifa aérea del pasaje. No incluye tasas de embarque, impuestos, cargos adicionales ni servicios complementarios. Válido para personas naturales sin giro comercial. Máximo 2.000 cupos disponibles, con hasta 100 cupos por ruta. Sujeto a disponibilidad de vuelos. No aplica para compras",
-   "pct": 50,
-   "rubro": "viajes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "Tarjetas de Crédito BancoEstado",
-    "Tarjetas de Débito BancoEstado"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": "2026-11-19",
-   "vigencia_hasta": "2026-11-24",
-   "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios/jetsmart--tu-proxima-aventura-comienza-aqui--beneficios-bancoestado.html",
-   "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/campanas/jet-smart/jetsmart.svg",
+   "modalidad": null,
+   "vigencia_desde": "2026-11-23",
+   "vigencia_hasta": "2026-12-31",
+   "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios/prime-class.html",
+   "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/campanas/prime-class/logo-prime-class-negro.svg",
    "regiones": [],
    "comunas": []
   },
@@ -93931,507 +94428,6 @@
    "vigencia_hasta": "2026-12-31",
    "url": "https://www.bancoestado.cl/content/bancoestado-public/cl/es/home/home/todosuma---bancoestado-personas/todos-beneficios/fashions-park---beneficios-bancoestado.html",
    "imagen": "https://www.bancoestado.cl/content/dam/bancoestado-public/todo-suma/campanas/fashions-park/logo_fashions_park.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-695f71d3dda9",
-   "banco": "mach",
-   "comercio": "Pedidos Ya",
-   "titulo": "40% descuento en Market con PedidosYa Plus",
-   "descripcion": "Solo para usuarios PedidosYa Plus, 40% de descuento en Market los días martes. Tope 3 lucas, dos usos mensuales. Conoce el beneficio en PedidosYa Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Solo para usuarios PedidosYa Plus, 40% de descuento en Market los días martes. Tope 3.000, dos usos mensuales. Paga con MACHBANK en PedidosYa: 1 Abre la app PedidosYa y arma tu pedido. 2 Al momento de pagar, selecciona \"App MACHBANK\" 3 PedidosYa te redirigirá a la app MACHBANK, ahí podrás ingresar tu pin MACHBANK y confirmar tu pago. Bases y condiciones Pr",
-   "pct": 40,
-   "rubro": "delivery",
-   "dias": [
-    1
-   ],
-   "tarjetas": [
-    "MACHBANK QR / Botón de pago (cuenta débito)"
-   ],
-   "tipos": [
-    "debito"
-   ],
-   "tope": "Tope de $3.000",
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/40percent-descuento-en-market-con-pedidosya-plus",
-   "imagen": "https://cdn3.bci.cl/uploads/d73960a9-4725-46a3-8be1-bfce43c51a9a/original/pedidosya-descuento-mercados-out.webp",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-8ccd306b7df9",
-   "banco": "mach",
-   "comercio": "Papa John's",
-   "titulo": "40% de descuento en Papa John's con Tarjeta de Crédito",
-   "descripcion": "Aprovecha 40% de descuento en PapaJohns online y presencial pagando con tu Tarjeta de Crédito MACHBANK. Válido para compras de mínimo $20.000. Conoce el descuento en Papa John's Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Aprovecha 40% de descuento en PapaJohns online y presencial pagando con tu Tarjeta de Crédito MACHBANK. Válido para compras de mínimo $20.000. Cómo pagar en PapaJohns.cl: 1 Entra en PapaJohns.cl y arma tu pedido de mínimo $20.000. 2 Ingresa los primeros 6 dígitos de tu Tarjeta de Crédito Virtual como cupón de descuento. ¡Ojo",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito"
-   ],
-   "tipos": [
-    "credito"
-   ],
-   "tope": null,
-   "modalidad": "Presencial y Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/40-descuento-papa-johns-credito",
-   "imagen": "https://cdn3.bci.cl/uploads/fdfb3e85-7fb6-4e6f-8f1b-dbc1cc1e0cc5/original/cashback-en-papajohns-con-credito-out.webp",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-23069b098732",
-   "banco": "mach",
-   "comercio": "McDonald's",
-   "titulo": "40% de descuento en la App McDonald's con Tarjeta de Crédito",
-   "descripcion": "40% de descuento en la App McDonald's solo con Tarjeta de Crédito, todos los martes. Conoce el descuento en McDonald's Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 40% de descuento en la App McDonald's, todos los martes, sin tope, en compras mínimas $12.000 con Tarjeta de Crédito MACHBANK Cómo pagar en McDonald's con MACHBANK 1 Abre la app de McDonald's, realiza tu pedido mayor a $12.000 y selecciona retiro en tienda o delivery. 2 Al momento de pagar, selecciona tu tarjeta de crédito MACHBANK ya enrolada en la app o ingrésala ahí mismo para qu",
-   "pct": 40,
-   "rubro": "restaurantes",
-   "dias": [
-    1
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito"
-   ],
-   "tipos": [
-    "credito"
-   ],
-   "tope": "Sin tope",
-   "modalidad": "App",
-   "vigencia_desde": "2026-02-01",
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://www.machbank.cl/beneficios/detalle/40-descuento-app-mcdonald",
-   "imagen": "https://cdn3.bci.cl/uploads/c1859d36-34db-4cbe-ab21-a514fe361353/original/mcd2.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-94b46e73a6fb",
-   "banco": "mach",
-   "comercio": "Starbucks",
-   "titulo": "30% de descuento en Starbucks",
-   "descripcion": "30% de descuento todos los lunes en bebidas preparadas en barra en tiendas presenciales Starbucks. Conoce el beneficio en Starbucks Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 30% de descuento todos los lunes en bebidas preparadas en barra en tiendas presenciales Starbucks. Cómo pagar en Starbucks: 1 Ve presencialmente a un Starbucks. 2 Al momento de pagar, indica que quieres pagar con tarjeta MACHBANK. 3 Paga en el terminal de pago con tu tarjeta MACHBANK y listo. Bases y condiciones Promoción válida todos los Lunes. Beneficio es válido en l",
-   "pct": 30,
-   "rubro": "restaurantes",
-   "dias": [
-    0
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito",
-    "MACHBANK Tarjeta Débito",
-    "MACHBANK Tarjeta Prepago"
-   ],
-   "tipos": [
-    "credito",
-    "debito",
-    "prepago"
-   ],
-   "tope": null,
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/30-descuento-starbucks-lunes-bebidas-preparadas",
-   "imagen": "https://cdn3.bci.cl/uploads/25c19985-0dcb-4ab1-980a-ec98c87d9bfc/original/cashback_starbucks_in.webp",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-5c2f3c447b98",
-   "banco": "mach",
-   "comercio": "Preunic",
-   "titulo": "20% de cashback online y presencial en Preunic",
-   "descripcion": "Aprovecha de 20% de cashback online y presencial en tu primera compra en Preunic, tope $5.000 por una transacción Conoce el descuento en Preunic Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 20% de cashback comprando en tiendas u online. Cómo pagar en Preunic.cl: 1 Entra a Preunic.cl y elige tus productos. 2 Elige MACHBANK como medio de pago. 3 Confirma tu compra y ¡listo! Cómo comprar en tiendas: 1 Indica que pagas con tu app MACHBANK y dicta tu rut. 2 Abre la notificación en tu teléfono que te derivará a tu app MACHBANK 2 Confirma tu compra y",
-   "pct": 20,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK QR / Botón de pago (cuenta débito)"
-   ],
-   "tipos": [
-    "debito"
-   ],
-   "tope": "tope $5.000 por una",
-   "modalidad": "Presencial y Online",
-   "vigencia_desde": "2024-05-01",
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://www.machbank.cl/beneficios/detalle/20percent-de-cashback-en-preunic",
-   "imagen": "https://cdn3.bci.cl/uploads/633abf58-2c18-43ce-9bf9-fa86809f5955/original/cashbacl-en-preunic-con-MACH_2-out.webp",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-c29d9e9e3f69",
-   "banco": "mach",
-   "comercio": "Copec",
-   "titulo": "Ahorra $100 por litro de bencina con tarjeta de crédito",
-   "descripcion": "Promoción de $100 de descuento por litro de combustible los sábados en Copec. Solo por app Copec enrolando y pagando con tu Tarjeta de Crédito Virtual MACHBANK. Promoción sujeta a cambios o hasta agotar stock. Conoce el descuento en bencina Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Ahorra $100 por litro de bencina pagando a través de app Copec enrolando tu tarjeta de crédito virtual MACHBANK los sábados del mes. Cómo pagar con tarjeta de crédito virtual a través de app Copec: 1 Abre la app Copec. 2 Ingresa los datos de tu tarjeta de crédito",
-   "pct": null,
-   "rubro": "combustible",
-   "dias": [
-    5
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito"
-   ],
-   "tipos": [
-    "credito"
-   ],
-   "tope": "Sin tope",
-   "modalidad": "App",
-   "vigencia_desde": "2026-01-01",
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://www.machbank.cl/beneficios/detalle/cashback-en-bencina-con-tarjeta-credito-virtual",
-   "imagen": "https://cdn3.bci.cl/uploads/d8afe99e-2223-45a1-b416-972d52094ff2/original/cashback_en_bencina_credito-out.webp",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-e24f4f10b942",
-   "banco": "mach",
-   "comercio": "McDonald's",
-   "titulo": "20% de descuento en la App McDonald's con Tarjeta de Débito",
-   "descripcion": "20% de descuento en la App McDonald's solo con Tarjeta de Debito o Prepago, todos los martes. Conoce el descuento en McDonald's Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 20% de descuento en la App McDonald's, todos los martes, sin tope, en compras mínimas $12.000 con Tarjeta de Débito o Prepago MACHBANK Cómo pagar en McDonald's con MACHBANK 1 Abre la app de McDonald's, realiza tu pedido mayor a $12.000 y selecciona retiro en tienda o delivery. 2 Al momento de pagar, selecciona tu tarjeta de Débito o Prepago MACHBANK ya enrolada en la app o ",
-   "pct": 20,
-   "rubro": "restaurantes",
-   "dias": [
-    1
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta Débito",
-    "MACHBANK Tarjeta Prepago"
-   ],
-   "tipos": [
-    "debito",
-    "prepago"
-   ],
-   "tope": "Sin tope",
-   "modalidad": "App",
-   "vigencia_desde": "2026-02-01",
-   "vigencia_hasta": "2026-12-31",
-   "url": "https://www.machbank.cl/beneficios/detalle/20-descuento-app-mcdonald",
-   "imagen": "https://cdn3.bci.cl/uploads/a2ee8bba-ca5d-469a-9dfb-37e0accddd2c/original/mcd2.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-c58f09e652bd",
-   "banco": "mach",
-   "comercio": "Flixbus",
-   "titulo": "15% de descuento en Flixbus con Tarjetas MACHBANK",
-   "descripcion": "15% de descuento con Tarjetas MACHBANK ingresando el código de descuento MACHFXBF antes de pagar Conoce el descuento en Flixbus Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 15% de descuento en Flixbus todos los días, con Tarjetas MACHBANK y código MACHFXBF Cómo pagar en Flixbus con MACHBANK 1 Ingresa a https://www.flixbus.cl/, escoje tu destino favorito y selecciona el día, hora y asiento 2 Antes de pagar, revisa el detalle de tu compra e ingresa el código MACHFXBF como cupón de descuento 3 Verifica que aplique correctamente el 15%, paga con T",
-   "pct": 15,
-   "rubro": "viajes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito",
-    "MACHBANK Tarjeta Débito"
-   ],
-   "tipos": [
-    "credito",
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/15-descuento-en-flixbus",
-   "imagen": "https://cdn3.bci.cl/uploads/02b9fc23-d368-476d-ace8-e1468f455666/original/flixbus2.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-5cc312f55f43",
-   "banco": "mach",
-   "comercio": "Restaurantes",
-   "titulo": "30% OFF en restaurantes seleccionados con el cupón MACHBANK30",
-   "descripcion": "Pide tu comida favorita en la web, paga con MACHBANK y recibe 30% OFF (la promoción aplica solo como descuento ingresando el cupón MACHBANK30 en los comercios adheridos) Conoce el beneficio en Restaurantes Conoce el beneficio ¿Cuáles son los restaurantes? ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 30% OFF pagando con MACHBANK en la página del comercio adherido a la promoción. Por este mes, la promoción aplica solo como descuento ingresando el cupón MACHBANK30 en los comercios adheridos. Tope $8.000 de descuento. Válido viernes y sábado. Máximo 1 transacción por",
-   "pct": 30,
-   "rubro": "restaurantes",
-   "dias": [
-    4,
-    5
-   ],
-   "tarjetas": [
-    "MACHBANK QR / Botón de pago (cuenta débito)"
-   ],
-   "tipos": [
-    "debito"
-   ],
-   "tope": "Tope $8.000",
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/30-off-en-restaurantes-seleccionados",
-   "imagen": "https://cdn3.bci.cl/uploads/ca615452-91c3-4484-8d8c-ff7a354ab8da/original/descuento-en-pedidosya-restaurantes-out.webp",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-f6a00deae7bd",
-   "banco": "mach",
-   "comercio": "Salcobrand",
-   "titulo": "20% descuento con MACHBANK en la primera unidad",
-   "descripcion": "20% de descuento en la primera unidad de productos adheridos al programa Mi Salcobrand. Válido con Tarjetas MACHBANK. Todos los días. Conoce el beneficio en Salcobrand Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 20% de descuento presencial en la primera unidad de productos adheridos al programa Mi Salcobrand . Cómo pagar en Salcobrand: 1 Ve a un local Salcobrand, elige tus productos y ve a pagar. 2 Al pagar, dicta al cajero el código que debes sacar de la app Salcobrand 3 Si el producto es parte del programa y es la primera unidad, paga con T",
-   "pct": 20,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito",
-    "MACHBANK Tarjeta Débito",
-    "MACHBANK Tarjeta Prepago"
-   ],
-   "tipos": [
-    "credito",
-    "debito",
-    "prepago"
-   ],
-   "tope": null,
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/mi-salcobrand-20-descuento-en-la-primera-unidad",
-   "imagen": "https://cdn3.bci.cl/uploads/9d2739ae-5535-40e6-b9cb-d48aeebe772a/original/tienda_salco.jpeg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-7ed9831758ed",
-   "banco": "mach",
-   "comercio": "miCoca-Cola",
-   "titulo": "Hasta 30% de descuento en miCoca-Cola.cl",
-   "descripcion": "Aprovecha todos los meses descuento en tus productos favoritos en https://andina.micoca-cola.cl y además, ¡despacho gratis! Conoce el beneficio en miCoca-Cola Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Hasta 30% de descuento con Tarjeta de Crédito todos los meses. Aplican TyC. Revisa el detalle de este beneficio en tu App MACHBANK. . Cómo pagar en miCoca-Cola: 1 Ingresa a https://andina.micoca-cola.cl, escoge tus productos y llena tu carrito 2 Antes de pagar, ingresa como cupón de descuento los primeros 6 dígitos de tu Tarjeta de Crédito MAC",
-   "pct": 30,
-   "rubro": "restaurantes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito"
-   ],
-   "tipos": [
-    "credito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/descuento-en-micoca-colacl",
-   "imagen": "https://cdn3.bci.cl/uploads/457a87a6-6ca2-4139-956d-6907f1069037/original/cocacola2.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-4a772f04da2d",
-   "banco": "mach",
-   "comercio": "bip!QR",
-   "titulo": "$2.000 de cashback con bip!QR",
-   "descripcion": "Gana $2.000 de cashback luego de la tercera recarga de mínimo $3.000 a través de bip!QR en MACHBANK. Conoce el beneficio en Metro y Micros con bip!QR Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: $2.000 de cashback pagando tu pasaje con bip!QR Cómo pagar en el Metro y Micro: 1 Entra a tu App MACHBANK. 2 Toca bip!QR para cargar tu saldo. 3 Carga el monto, genera el QR ¡y listo! Bases y condiciones La responsabilidad de la promoción y entrega del premio indicado, será única y exclusivamente de la sociedad “Krip SpA.” Se deja expresamente establec",
-   "pct": null,
-   "rubro": "viajes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK QR / Botón de pago (cuenta débito)"
-   ],
-   "tipos": [
-    "debito"
-   ],
-   "tope": null,
-   "modalidad": "Presencial",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/2000-cashback-bipqr",
-   "imagen": "https://cdn3.bci.cl/uploads/1132e5ef-9c04-4bc3-9005-30950c4daef6/original/head-bipqr.png",
-   "regiones": [
-    "RM"
-   ],
-   "comunas": []
-  },
-  {
-   "id": "mach-a69b011c7cd1",
-   "banco": "mach",
-   "comercio": "JetSMART",
-   "titulo": "Hasta 20% dcto. en Vuelos Nacionales e Internacionales",
-   "descripcion": "Paga con Tarjeta de Débito o Prepago con el código BCIMACHD Conoce el beneficio en JetSMART Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Hasta 20% dcto. en Vuelos Nacionales e Internacionales pagando con tu Tarjeta de Débito o Prepago con el código BCIMACHD. Válido para compras realizadas con al menos 14 días de anticipación al vuelo, y para volar hasta el 22 de diciembre de 2026. Compra tus vuelos en JetSMART 1 Entra a JetSMART.com y elige tu vuelo. 2 Ingresa el código promocional en JetSMART al momento de cotizar tu vuelo (verifica que apliq",
-   "pct": 20,
-   "rubro": "viajes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta Débito",
-    "MACHBANK Tarjeta Prepago"
-   ],
-   "tipos": [
-    "debito",
-    "prepago"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/15-debito-jetsmart-nacional-e-internacional",
-   "imagen": "https://cdn3.bci.cl/uploads/5c2916e8-b37e-438c-a127-1a83dc3a42b3/original/atacama.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-67a33c4faac2",
-   "banco": "mach",
-   "comercio": "JetSMART",
-   "titulo": "Hasta 30% de descuento en JetSMART",
-   "descripcion": "Aprovecha todos los miércoles de hasta 30% de descuento en Vuelos Nacionales e Internacionales con Tarjeta de Crédito en JetSMART. Conoce el beneficio en JetSMART Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Todos los miércoles, hasta 30% de descuento en Vuelos Nacionales e Internacionales online con cupón MACHC y pagando con tu Tarjeta de Crédito MACHBANK. Válido para vuelos del 6 de julio al 29 de noviembre 2026, comprando con al menos 14 días de anticipación. Cómo pagar en JetSMART: 1 Selecciona tu destino y tus vuelos de preferencia 2 Ante",
-   "pct": 30,
-   "rubro": "viajes",
-   "dias": [
-    2
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito"
-   ],
-   "tipos": [
-    "credito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/30-de-descuento-en-vuelos-jetsmart",
-   "imagen": "https://cdn3.bci.cl/uploads/7e9937b1-8c8a-4f75-82f5-3077a126e6a7/original/verano2_1.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-3dcac41cc30a",
-   "banco": "mach",
-   "comercio": "Cabify",
-   "titulo": "40% de descuento en Cabify",
-   "descripcion": "Aprovecha 40% de descuento en dos viajes al mes en Cabify utilizando el código MACH07 Conoce el beneficio en Cabify Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: Todos los días, 40% de descuento en dos viajes al mes por usuario pagando con tarjetas MACHBANK en app Cabify. Tope $3.000 por viaje. Cómo pagar en Cabify: 1 Ingresa al botón Cabify Club dentro de la app y selecciona Descuentos con tu banco o tarjeta 2 Selecciona la promoción de 40% dcto con MACHBANK y activa el descuento. 3 Añade tu tarjeta MACHBANK (prepago, débito o crédito), ingres",
-   "pct": 40,
-   "rubro": "viajes",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK Tarjeta de Crédito",
-    "MACHBANK Tarjeta Débito",
-    "MACHBANK Tarjeta Prepago"
-   ],
-   "tipos": [
-    "credito",
-    "debito",
-    "prepago"
-   ],
-   "tope": "Tope $3.000 por viaje",
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/40-de-descuento-en-cabify-con-todas-las-tarjetas",
-   "imagen": "https://cdn3.bci.cl/uploads/c6449526-daa5-460a-961a-bf069df2b0a5/original/cabify.png",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-9d89ec591c18",
-   "banco": "mach",
-   "comercio": "AgendaPro",
-   "titulo": "40% de descuento app AgendaPro",
-   "descripcion": "40% de descuento agendando servicios en app AgendaPro y pagando con botón MACHBANK. Conoce el beneficio en AgendaPro: Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 40% de descuento agendando servicios en app AgendaPro y pagando con botón MACHBANK. Agendar y pagar cualquier día de la semana, pero el servicio tiene que ser ejecutado el día lunes. Rubros: Uñas, Peluquería, Masajes, Barbería, Cejas y Pestañas, Fitness, Depilación, etc. Tope $40.000 por reserva. Pagando con botón MACHBANK dentro de la app AgendaPro. Más detalles en: https://agendapr",
-   "pct": 40,
-   "rubro": "farmacias",
-   "dias": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-   ],
-   "tarjetas": [
-    "MACHBANK QR / Botón de pago (cuenta débito)"
-   ],
-   "tipos": [
-    "debito"
-   ],
-   "tope": "Tope $40.000 por reserva",
-   "modalidad": "App",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/40percent-de-descuento-app-agendapro",
-   "imagen": "https://cdn3.bci.cl/uploads/cc79974c-feb0-4a3e-a6c7-12f0971bd8ed/original/Gemini_Generated_Image_d50rftd50rftd50r.jpeg",
-   "regiones": [],
-   "comunas": []
-  },
-  {
-   "id": "mach-f8d11bd4c89d",
-   "banco": "mach",
-   "comercio": "MACH Premium",
-   "titulo": "50% cashback en comercios seleccionados",
-   "descripcion": "¡Exclusivo para usuarios de MACH Premium! Recibe 50% de cashback adicional en comercios seleccionados al contratar MACH Premium y pagar tus compras con MACHBANK. Conoce el beneficio con MACH Premium: Conoce el beneficio ¿Cómo lo consigo? Bases y condiciones Con este beneficio podrás aprovechar: 50% de devolución (cashback) sobre el monto pagado por la contratación de suscripciones mensuales en las plataformas Spotify y/o Uber One. Cómo conseguirlo: 1 Asegúrate de ser Premium o eleva tu cuenta a Premium desde la app. 2 Compra en tu comercio favorito y paga con tu tarjeta virtual MACHBANK. 3 ¡Li",
-   "pct": 50,
-   "rubro": "viajes",
-   "dias": [],
-   "tarjetas": [],
-   "tipos": [
-    "credito"
-   ],
-   "tope": null,
-   "modalidad": "Online",
-   "vigencia_desde": null,
-   "vigencia_hasta": null,
-   "url": "https://www.machbank.cl/beneficios/detalle/descuentos-con-mach-premium",
-   "imagen": "https://cdn3.bci.cl/uploads/57b4834a-d699-4b1a-bb7c-7a70d8e60af8/original/Gemini_Generated_Image_b29g82b29g82b29g_1_2_2_.png",
    "regiones": [],
    "comunas": []
   },
