@@ -65,6 +65,21 @@ def esperar_urls(urls: list[str]) -> None:
             raise RuntimeError(f"La imagen no está disponible en {u}")
 
 
+def publicar_via_make(urls: list[str], texto: str, clave: str) -> dict:
+    """Envía el carrusel a un escenario de Make.com (webhook) que lo publica en Instagram.
+    Para cuando no hay token propio de la API de Instagram (sin cuenta de Meta for Developers)."""
+    import os
+    r = requests.post(os.environ["MAKE_WEBHOOK_URL"].strip(), timeout=120, json={
+        "clave": clave,
+        "texto": texto,
+        "imagenes": [{"url": u} for u in urls],
+        "urls": urls,
+    })
+    if r.status_code >= 400:
+        raise ErrorInstagram(f"Make.com respondió {r.status_code}: {r.text[:200]}")
+    return {"id": None, "permalink": None, "via": "make", "respuesta": r.text[:200]}
+
+
 def generar(rubro: str, region: str, salida: Path, por_tarjeta: bool = True) -> list[Path]:
     args = [sys.executable, "-m", "instagram.generar", "--rubro", rubro, "--region", region, "--salida", str(salida)]
     if por_tarjeta:
@@ -96,9 +111,10 @@ def main() -> int:
 
     hoy = datetime.strptime(a.hoy, "%Y-%m-%d") if a.hoy else datetime.now(CHILE)
     import os
-    if a.publicar and not os.environ.get("IG_TOKEN", "").strip():
+    via_make = bool(os.environ.get("MAKE_WEBHOOK_URL", "").strip()) and not os.environ.get("IG_TOKEN", "").strip()
+    if a.publicar and not os.environ.get("IG_TOKEN", "").strip() and not via_make:
         # Aún no se conecta la cuenta de Instagram: se generan las imágenes para subirlas a mano
-        print("Sin IG_TOKEN: se generan las imágenes y el texto para publicarlos a mano (no se publica).")
+        print("Sin IG_TOKEN ni MAKE_WEBHOOK_URL: se generan las imágenes y el texto para publicarlos a mano (no se publica).")
         a.publicar = False
     if a.rubro or a.region:
         if not (a.rubro and a.region):
@@ -132,7 +148,7 @@ def main() -> int:
             urls = [f"{REPO_RAW}/{sha}/{j.relative_to(ROOT).as_posix()}" for j in jpgs]
             esperar_urls(urls)
             print(f"[publicando] {clave}: {len(urls)} imágenes")
-            res = publicar_carrusel(urls, texto)
+            res = publicar_via_make(urls, texto, clave) if via_make else publicar_carrusel(urls, texto)
             publicados[clave] = {"fecha": datetime.now(CHILE).isoformat(timespec="minutes"), **res}
             PUBLICADOS.write_text(json.dumps(publicados, ensure_ascii=False, indent=1), "utf-8")
             subir([PUBLICADOS], f"Publicado en Instagram: {clave}")

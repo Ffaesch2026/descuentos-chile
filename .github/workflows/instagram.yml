@@ -5,6 +5,8 @@ name: Publicar en Instagram
 #
 # Secretos del repositorio (Settings → Secrets and variables → Actions):
 #   IG_TOKEN  token de acceso de larga duración de @descuentosalmes (obligatorio)
+#   MAKE_WEBHOOK_URL  alternativa a IG_TOKEN: webhook de un escenario de Make.com que publica el
+#             carrusel (para quien no puede crear una app en Meta for Developers)
 #   GH_PAT    token de GitHub con permiso "Secrets: Read and write" sobre este repositorio,
 #             para guardar el IG_TOKEN renovado (opcional; sin él hay que renovarlo a mano cada 60 días)
 
@@ -70,6 +72,7 @@ jobs:
       - name: Publicar
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          MAKE_WEBHOOK_URL: ${{ secrets.MAKE_WEBHOOK_URL }}
         run: |
           ARGS=""
           if [ -n "${{ inputs.rubro }}" ]; then ARGS="$ARGS --rubro ${{ inputs.rubro }} --region ${{ inputs.region }}"; fi

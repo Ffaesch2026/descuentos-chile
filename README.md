@@ -67,6 +67,7 @@ Eso instala lo necesario, programa una tarea de Windows (lunes y jueves 9:00 y e
 - `instagram/calendario.json` define qué se publica cada mes (día, rubro, región, `activo`).
 - `.github/workflows/instagram.yml` corre todos los días, publica lo que toca según el calendario y lo anota en `instagram/publicados.json` para no repetir. Las imágenes se suben a `publicaciones/` porque Instagram las descarga desde una URL pública.
 - También se puede lanzar a mano: **Actions → Publicar en Instagram → Run workflow**, con rubro y región. Si no se marca "Publicar", solo genera las imágenes y quedan para descargar en la ejecución (sección *Artifacts*).
+- Si no se puede crear una app en Meta for Developers, se puede publicar a través de **Make.com**: guardar como secreto `MAKE_WEBHOOK_URL` el webhook de un escenario de Make (Webhooks → Instagram for Business, carrusel). GitHub le envía `{"clave", "texto", "imagenes": [{"url"}], "urls"}`.
 - Secretos del repositorio: `IG_TOKEN` (token de acceso de Instagram, obligatorio) y `GH_PAT` (opcional, para que el token se renueve solo cada día; sin él vence a los 60 días).
 
 ## Descuentos ingresados a mano
