@@ -66,6 +66,25 @@ def esperar_urls(urls: list[str]) -> None:
             raise RuntimeError(f"La imagen no está disponible en {u}")
 
 
+_RUBROS = {"restaurantes", "supermercados", "combustible", "farmacias", "viajes", "entretencion",
+           "vestuario", "delivery", "otros"}
+_SINONIMOS = {"restaurant": "restaurantes", "restaurante": "restaurantes", "comida": "restaurantes",
+              "supermercado": "supermercados", "super": "supermercados", "bencina": "combustible",
+              "combustibles": "combustible", "salud": "farmacias", "farmacia": "farmacias",
+              "salud y farmacias": "farmacias", "entretenimiento": "entretencion", "viaje": "viajes",
+              "transporte": "viajes", "ropa": "vestuario", "hogar": "vestuario", "vestuario y hogar": "vestuario"}
+
+
+def normalizar_rubro(texto: str) -> str:
+    """'Supermercados', 'Entretención', 'salud' -> nombre interno del rubro."""
+    import unicodedata
+    t = "".join(c for c in unicodedata.normalize("NFD", texto.strip().lower()) if unicodedata.category(c) != "Mn")
+    t = _SINONIMOS.get(t, t)
+    if t not in _RUBROS:
+        raise SystemExit(f"Rubro desconocido: '{texto}'. Usa uno de: {', '.join(sorted(_RUBROS))}.")
+    return t
+
+
 def publicar_via_make(urls: list[str], texto: str, clave: str) -> dict:
     """Envía el carrusel a un escenario de Make.com (webhook) que lo publica en Instagram.
     Para cuando no hay token propio de la API de Instagram (sin cuenta de Meta for Developers)."""
@@ -128,7 +147,7 @@ def main() -> int:
         if not (a.rubro and a.region):
             print("Indica --rubro y --region juntos.")
             return 2
-        tareas = [{"rubro": a.rubro, "region": a.region}]
+        tareas = [{"rubro": normalizar_rubro(a.rubro), "region": a.region.strip().upper()}]
     else:
         cal = json.loads(CALENDARIO.read_text("utf-8"))["publicaciones"]
         tareas = [p for p in cal if p.get("activo") and int(p["dia"]) == hoy.day]
