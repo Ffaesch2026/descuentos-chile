@@ -65,9 +65,11 @@ def esperar_urls(urls: list[str]) -> None:
             raise RuntimeError(f"La imagen no está disponible en {u}")
 
 
-def generar(rubro: str, region: str, salida: Path) -> list[Path]:
-    subprocess.run([sys.executable, "-m", "instagram.generar", "--rubro", rubro, "--region", region,
-                    "--salida", str(salida)], check=True, cwd=ROOT)
+def generar(rubro: str, region: str, salida: Path, por_tarjeta: bool = True) -> list[Path]:
+    args = [sys.executable, "-m", "instagram.generar", "--rubro", rubro, "--region", region, "--salida", str(salida)]
+    if por_tarjeta:
+        args.append("--por-tarjeta")
+    subprocess.run(args, check=True, cwd=ROOT)
     return sorted(salida.glob("*.png"))
 
 
@@ -120,7 +122,7 @@ def main() -> int:
         try:
             print(f"[generando] {clave}")
             tmp = ROOT / "instagram" / "salida" / clave
-            pngs = generar(t["rubro"], t["region"], tmp)
+            pngs = generar(t["rubro"], t["region"], tmp, t.get("por_tarjeta", True))
             texto = (tmp / "texto.txt").read_text("utf-8")
             if not a.publicar:
                 print(f"[listo para subir a mano] {len(pngs)} imágenes y texto.txt en {tmp}")
