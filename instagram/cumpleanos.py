@@ -232,7 +232,9 @@ def descripcion(cats: list[dict], total: int) -> str:
     for c in cats:
         lineas.append(f"{iconos.get(c['id'], '🎁')} {c['nombre']}")
         for b in c["beneficios"]:
-            req = b["requisito"][:1].lower() + b["requisito"][1:]
+            req = b["requisito"]
+            if req.split(" ")[0] in ("Mostrar", "Reservar", "Registrarse", "Agendar", "Pagar", "Ser", "Cupón", "Categoría"):
+                req = req[:1].lower() + req[1:]  # minúscula solo en verbos y palabras comunes, no en marcas
             lineas.append(f"• {b['marca']}: {b['regalo']} ({CUANDO.get(b['cuando'], b['cuando']).lower()}; {req})")
         lineas.append("")
     lineas += ["📌 Casi todos piden la cédula o estar inscrito en el club o la app de la marca. Los beneficios y "
