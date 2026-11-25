@@ -28,7 +28,7 @@ CUANDO = {"día": "Tu día", "dia": "Tu día", "semana": "Hasta 1 semana", "mes"
 CONFETI = ["#ff3e7f", "#ffd23f", "#00b3a6", "#7b2ff7", "#ff8c1a", "#1f7aff", "#ffffff"]
 
 CSS = """
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Instrument+Sans:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Instrument+Sans:wght@500;600;700&family=Playfair+Display:ital,wght@0,800;1,600&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 body{width:1080px;height:1350px;overflow:hidden;font-family:'Instrument Sans',system-ui,sans-serif;color:#2a1a3a}
 .slide{position:relative;width:1080px;height:1350px;overflow:hidden}
@@ -161,6 +161,130 @@ def pagina(cuerpo: str) -> str:
     return f"<!doctype html><html lang='es'><head><meta charset='utf-8'><style>{CSS}</style></head><body>{cuerpo}</body></html>"
 
 
+CSS_PORTADAS = """
+/* A · Brindis */
+.brindis{background:radial-gradient(120% 90% at 50% 20%,#2b1650 0%,#140b26 60%,#0b0716 100%);color:#fff}
+.brindis .capa{padding:84px 80px 64px}
+.brindis .k{font-weight:700;font-size:24px;letter-spacing:.32em;text-transform:uppercase;color:#f5c86a}
+.brindis h1{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:128px;line-height:.95;margin-top:30px}
+.brindis h1 em{font-style:italic;font-weight:600;color:#f5c86a}
+.brindis .lead{font-size:34px;line-height:1.35;color:#d9cdef;margin-top:30px;max-width:780px}
+.brindis .copas{position:absolute;right:60px;bottom:140px;width:640px}
+.brindis .pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;color:#fff}
+.brindis .btn{background:#f5c86a;color:#140b26;border-radius:999px;padding:14px 30px}
+/* B · Cupón */
+.cupon{background:#ff3e7f}
+.cupon .capa{padding:70px 64px 56px}
+.cupon .franja{position:absolute;inset:auto -60px 120px -60px;height:420px;background:#ffd23f;transform:rotate(-7deg)}
+.cupon .k{font-weight:700;font-size:26px;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+.cupon h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:136px;line-height:.92;color:#fff;margin-top:22px;text-shadow:0 7px 0 #b0124f}
+.ticket{position:relative;margin-top:110px;background:#fff;border-radius:34px;display:grid;grid-template-columns:1fr 280px;
+  box-shadow:14px 14px 0 #2a1a3a;border:5px solid #2a1a3a}
+.ticket .izq{padding:52px 50px}
+.ticket .izq b{font-family:'Fredoka',sans-serif;font-size:58px;color:#2a1a3a;display:block;line-height:1}
+.ticket .izq ul{list-style:none;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+.ticket .izq li{font-weight:700;font-size:36px;color:#2a1a3a;display:flex;align-items:center;gap:12px}
+.ticket .izq li i{width:22px;height:22px;border-radius:50%;background:var(--c);flex:none}
+.ticket .der{border-left:5px dashed #2a1a3a;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:#2a1a3a;color:#ffd23f;border-radius:0 24px 24px 0}
+.ticket .der b{font-family:'Fredoka',sans-serif;font-size:150px;line-height:1}
+.ticket .der span{font-weight:700;font-size:32px;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.ticket:before,.ticket:after{content:"";position:absolute;right:262px;width:44px;height:44px;border-radius:50%;background:#ff3e7f;border:5px solid #2a1a3a}
+.ticket:before{top:-27px}.ticket:after{bottom:-27px}
+.cupon .pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;color:#2a1a3a}
+.cupon .btn{background:#2a1a3a;color:#ffd23f;border-radius:999px;padding:14px 30px}
+/* C · Fuegos artificiales */
+.fuegos{background:#12093a;color:#fff}
+.fuegos .capa{padding:76px 72px 60px;justify-content:flex-start}
+.fuegos .num{font-family:'Fredoka',sans-serif;font-weight:700;font-size:470px;line-height:.8;letter-spacing:-.04em;
+  background:linear-gradient(120deg,#ffd23f 10%,#ff3e7f 50%,#00d1c1 90%);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:170px}
+.fuegos h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:104px;line-height:.95;margin-top:18px}
+.fuegos .lead{font-size:34px;color:#cfc6ff;margin-top:24px;max-width:680px;line-height:1.3}
+.fuegos .pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;color:#fff}
+.fuegos .btn{background:#ffd23f;color:#12093a;border-radius:999px;padding:14px 30px}
+"""
+
+
+def _destellos(semilla: int, colores, n=60, libre=None) -> str:
+    """Destellos pequeños (estrellas de 4 puntas y puntos) repartidos por la imagen."""
+    rnd = random.Random(semilla)
+    out = []
+    for _ in range(n):
+        x, y, r = rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(5, 16)
+        if libre and any(z[0] < x < z[2] and z[1] < y < z[3] for z in libre):
+            continue
+        c = rnd.choice(colores)
+        if rnd.random() < .5:
+            out.append(f'<path d="M{x} {y - r} Q{x} {y} {x + r} {y} Q{x} {y} {x} {y + r} Q{x} {y} {x - r} {y} Q{x} {y} {x} {y - r}Z" fill="{c}" opacity=".9"/>')
+        else:
+            out.append(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{r / 4:.1f}" fill="{c}" opacity=".8"/>')
+    return f'<svg class="confeti" viewBox="0 0 {W} {H}">{"".join(out)}</svg>'
+
+
+def _fuego(cx, cy, radio, color, rayos=16) -> str:
+    """Un fuego artificial: rayos desde el centro con un punto al final."""
+    import math
+    partes = []
+    for i in range(rayos):
+        a = 2 * math.pi * i / rayos
+        x1, y1 = cx + math.cos(a) * radio * .28, cy + math.sin(a) * radio * .28
+        x2, y2 = cx + math.cos(a) * radio, cy + math.sin(a) * radio
+        partes.append(f'<line x1="{x1:.0f}" y1="{y1:.0f}" x2="{x2:.0f}" y2="{y2:.0f}" stroke="{color}" stroke-width="7" stroke-linecap="round"/>'
+                      f'<circle cx="{x2 + math.cos(a) * 18:.0f}" cy="{y2 + math.sin(a) * 18:.0f}" r="7" fill="{color}"/>')
+    return "".join(partes)
+
+
+def portada_brindis(total: int) -> str:
+    copas = """<svg class="copas" viewBox="0 0 560 620" fill="none" stroke="#f5c86a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="rotate(-14 200 300)">
+    <path d="M120 90 h150 q-6 150 -75 175 q-69 -25 -75 -175 z"/><path d="M128 150 h134" opacity=".55"/>
+    <path d="M195 265 v170 M135 440 h120"/>
+  </g>
+  <g transform="rotate(14 360 300)">
+    <path d="M290 90 h150 q-6 150 -75 175 q-69 -25 -75 -175 z"/><path d="M298 150 h134" opacity=".55"/>
+    <path d="M365 265 v170 M305 440 h120"/>
+  </g>
+  <path d="M280 40 v-34 M246 52 l-22 -24 M314 52 l22 -24" stroke="#fff"/>
+  <circle cx="200" cy="200" r="6" fill="#f5c86a" stroke="none"/><circle cx="224" cy="170" r="4" fill="#f5c86a" stroke="none"/>
+  <circle cx="352" cy="190" r="5" fill="#f5c86a" stroke="none"/><circle cx="336" cy="160" r="4" fill="#f5c86a" stroke="none"/>
+</svg>"""
+    return pagina(f"""<style>{CSS_PORTADAS}</style><div class="slide brindis">{_destellos(3, ["#f5c86a", "#ffffff", "#ff7aa8"], 90, [(60, 60, 1000, 600), (40, 1200, 1040, 1320)])}<div class="capa">
+  <div class="k">Solo por cumplir años</div>
+  <h1>Beneficios<br>de <em>cumpleaños</em></h1>
+  <div class="lead">{total} marcas que te regalan algo en tu día: café, cine, panoramas y más.</div>
+  {copas}
+  <div class="pie"><span>{CUENTA}</span><span class="btn">Desliza →</span></div>
+</div></div>""")
+
+
+def portada_cupon(total: int, categorias) -> str:
+    items = "".join(f'<li style="--c:{c["color"]}"><i></i>{e(c["nombre"].split(" y ")[0])}</li>' for c in categorias)
+    return pagina(f"""<style>{CSS_PORTADAS}</style><div class="slide cupon"><div class="franja"></div>{confeti(5, 40, (40, 40, 1040, 1310))}<div class="capa">
+  <div class="k">Solo por cumplir años</div>
+  <h1>Beneficios<br>de cumpleaños</h1>
+  <div class="ticket">
+    <div class="izq"><b>Vale por un regalo</b><ul>{items}</ul></div>
+    <div class="der"><b>{total}</b><span>marcas</span></div>
+  </div>
+  <div class="pie"><span>{CUENTA}</span><span class="btn">Desliza →</span></div>
+</div></div>""")
+
+
+def portada_fuegos(total: int) -> str:
+    fuegos = (f'<svg class="confeti" viewBox="0 0 {W} {H}">'
+              f'{_fuego(830, 260, 170, "#ffd23f")}{_fuego(560, 120, 70, "#ff3e7f", 14)}'
+              f'{_fuego(860, 1010, 120, "#00d1c1", 14)}{_fuego(560, 1110, 60, "#a98bff", 12)}</svg>')
+    return pagina(f"""<style>{CSS_PORTADAS}</style><div class="slide fuegos">{_destellos(9, ["#ffd23f", "#ff3e7f", "#00d1c1", "#ffffff"], 80, [(50, 180, 700, 1000), (50, 1180, 1040, 1320)])}{fuegos}<div class="capa">
+  <div class="num">{total}</div>
+  <h1>beneficios de<br>cumpleaños</h1>
+  <div class="lead">Lo que te regalan las marcas por cumplir años: café, cine, panoramas, tiendas y bencina.</div>
+  <div class="pie"><span>{CUENTA}</span><span class="btn">Desliza →</span></div>
+</div></div>""")
+
+
+PORTADAS = {"brindis": portada_brindis, "cupon": portada_cupon, "fuegos": portada_fuegos}
+
+
 def html_portada(total: int) -> str:
     return pagina(f"""<div class="slide portada">{confeti(1, 90, (90, 40, 990, 1320))}<div class="capa">
   <div class="eyebrow">Solo por cumplir años</div>
@@ -248,13 +372,20 @@ def descripcion(cats: list[dict], total: int) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--salida", default=None)
+    ap.add_argument("--portada", default="torta", choices=["torta", *PORTADAS],
+                    help="diseño de la portada")
     a = ap.parse_args()
     data = json.loads(DATA.read_text("utf-8"))
     cats = [c for c in data["categorias"] if c["beneficios"]]
     total = sum(len(c["beneficios"]) for c in cats)
     paginas = paginar(cats)
     total_img = len(paginas) + 2
-    htmls = [html_portada(total)]
+    if a.portada == "cupon":
+        htmls = [portada_cupon(total, cats)]
+    elif a.portada in PORTADAS:
+        htmls = [PORTADAS[a.portada](total)]
+    else:
+        htmls = [html_portada(total)]
     for i, bloques in enumerate(paginas, start=2):
         htmls.append(html_lista(bloques, i, total_img, semilla=i * 7))
     fecha = date.fromisoformat(data.get("actualizado", date.today().isoformat())).strftime("%d-%m-%Y")
