@@ -67,12 +67,13 @@ def esperar_urls(urls: list[str]) -> None:
 
 
 _RUBROS = {"restaurantes", "supermercados", "combustible", "farmacias", "viajes", "entretencion",
-           "vestuario", "delivery", "otros"}
+           "vestuario", "delivery", "otros", "cumpleanos"}
 _SINONIMOS = {"restaurant": "restaurantes", "restaurante": "restaurantes", "comida": "restaurantes",
               "supermercado": "supermercados", "super": "supermercados", "bencina": "combustible",
               "combustibles": "combustible", "salud": "farmacias", "farmacia": "farmacias",
               "salud y farmacias": "farmacias", "entretenimiento": "entretencion", "viaje": "viajes",
-              "transporte": "viajes", "viajes y transporte": "viajes", "ropa": "vestuario", "hogar": "vestuario", "vestuario y hogar": "vestuario"}
+              "transporte": "viajes", "viajes y transporte": "viajes", "ropa": "vestuario", "hogar": "vestuario", "vestuario y hogar": "vestuario",
+              "cumpleanos": "cumpleanos", "cumple": "cumpleanos", "beneficios de cumpleanos": "cumpleanos"}
 
 
 def normalizar_rubro(texto: str) -> str:
@@ -100,6 +101,9 @@ def publicar_via_make(urls: list[str], texto: str, clave: str) -> dict:
 
 
 def generar(rubro: str, region: str, salida: Path, por_tarjeta: bool = True) -> list[Path]:
+    if rubro == "cumpleanos":  # carrusel especial, solo a pedido (no va en el calendario)
+        subprocess.run([sys.executable, "-m", "instagram.cumpleanos", "--salida", str(salida)], check=True, cwd=ROOT)
+        return sorted(salida.glob("*.png"))
     args = [sys.executable, "-m", "instagram.generar", "--rubro", rubro, "--region", region, "--salida", str(salida)]
     if por_tarjeta:
         args.append("--por-tarjeta")
@@ -154,7 +158,7 @@ def main() -> int:
             print("Indica el rubro (--rubro).")
             return 2
         rubro = normalizar_rubro(a.rubro)
-        region = (a.region or "").strip().upper() or ("CL" if rubro == "combustible" else "RM")
+        region = (a.region or "").strip().upper() or ("CL" if rubro in ("combustible", "cumpleanos") else "RM")
         tareas = [{"rubro": rubro, "region": region}]
     else:
         cal = json.loads(CALENDARIO.read_text("utf-8"))["publicaciones"]

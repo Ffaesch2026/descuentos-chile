@@ -19,7 +19,7 @@ on:
   workflow_dispatch:
     inputs:
       rubro:
-        description: "Rubro (vacío = lo que diga el calendario para hoy)"
+        description: "Rubro (vacío = lo que diga el calendario para hoy; 'Cumpleaños' = beneficios de cumpleaños)"
         required: false
         default: ""
       region:

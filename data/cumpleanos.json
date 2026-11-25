@@ -1,0 +1,39 @@
+{
+ "_ayuda": "Beneficios de cumpleaños para el carrusel de Instagram (python -m instagram.cumpleanos). Se editan a mano. 'cuando': día / semana / mes. 'requisito': lo que hay que presentar o tener. 'fuente': de dónde se tomó el dato. Revisar cada cierto tiempo: las marcas cambian sus beneficios.",
+ "actualizado": "2026-11-25",
+ "categorias": [
+  {"id": "comida", "nombre": "Comida y café", "color": "#ff3e7f",
+   "beneficios": [
+    {"marca": "Krispy Kreme", "regalo": "Donut glaseada gratis", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/03/28/viene-tu-cumpleanos-revisa-productos-gratis-y-descuentos-a-los-que-puedes-acceder.shtml"},
+    {"marca": "Starbucks", "regalo": "Bebida tamaño alto gratis", "requisito": "Starbucks Rewards con 5 Stars", "cuando": "mes", "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/03/28/viene-tu-cumpleanos-revisa-productos-gratis-y-descuentos-a-los-que-puedes-acceder.shtml"},
+    {"marca": "McDonald's", "regalo": "Sundae de manjar gratis", "requisito": "Cupón en la app", "cuando": "mes", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"},
+    {"marca": "Little Caesars", "regalo": "Palitos de ajo gratis", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"},
+    {"marca": "Wally's", "regalo": "Papas fritas gratis", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"},
+    {"marca": "Dominó", "regalo": "Completo gratis", "requisito": "Registrarse en la app", "cuando": "día", "fuente": "https://www.fmdos.cl/noticias/estas-son-las-cosas-gratis-que-puedes-recibir-en-tu-cumpleanos-durante-el-2026/"}
+   ]},
+  {"id": "cines", "nombre": "Cines", "color": "#7b2ff7",
+   "beneficios": [
+    {"marca": "Cinépolis", "regalo": "2 entradas gratis", "requisito": "Club Cinépolis + cédula", "cuando": "semana", "fuente": "https://www.chilevision.cl/tiempo-libre/panoramas/panoramas-para-tu-cumpleanos-estos-lugares-te-regalan-cosas-gratis-en-tu-dia/"},
+    {"marca": "Cinemark", "regalo": "Entrada 2D gratis", "requisito": "Muvi Club + cédula", "cuando": "semana", "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/03/28/viene-tu-cumpleanos-revisa-productos-gratis-y-descuentos-a-los-que-puedes-acceder.shtml"},
+    {"marca": "Cineplanet", "regalo": "Entrada gratis", "requisito": "Ser socio", "cuando": "día", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"}
+   ]},
+  {"id": "panoramas", "nombre": "Panoramas", "color": "#00b3a6",
+   "beneficios": [
+    {"marca": "Fantasilandia", "regalo": "Entrada gratis", "requisito": "Reservar antes (cupos limitados)", "cuando": "día", "fuente": "https://www.chilevision.cl/tiempo-libre/panoramas/panoramas-para-tu-cumpleanos-estos-lugares-te-regalan-cosas-gratis-en-tu-dia/"},
+    {"marca": "Buin Zoo", "regalo": "Entrada gratis", "requisito": "Mostrar cédula", "cuando": "semana", "fuente": "https://www.chilevision.cl/tiempo-libre/panoramas/panoramas-para-tu-cumpleanos-estos-lugares-te-regalan-cosas-gratis-en-tu-dia/"},
+    {"marca": "Cerogrado", "regalo": "1 hora de patinaje gratis", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.biobiochile.cl/noticias/servicios/toma-nota/2026/03/28/viene-tu-cumpleanos-revisa-productos-gratis-y-descuentos-a-los-que-puedes-acceder.shtml"},
+    {"marca": "Jumpin", "regalo": "1 hora de salto gratis", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"},
+    {"marca": "Trampoline Park", "regalo": "Entrada gratis", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"}
+   ]},
+  {"id": "tiendas", "nombre": "Tiendas y belleza", "color": "#ff8c1a",
+   "beneficios": [
+    {"marca": "Adidas", "regalo": "20% de descuento", "requisito": "Mostrar cédula", "cuando": "día", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"},
+    {"marca": "Blush Bar", "regalo": "Maquillaje gratis", "requisito": "Agendar hora", "cuando": "mes", "fuente": "https://www.24horas.cl/tendencias/ocio/cumpleanos-estas-son-las-cosas-gratis-que-puedes-tener-en-tu-dia-en-2026-"},
+    {"marca": "CMR Puntos", "regalo": "Cupones en Falabella, Sodimac y Tottus", "requisito": "Categoría Fan, Premium o Elite", "cuando": "10 días", "fuente": "https://chocale.cl/2026/02/beneficios-en-tu-cumpleanos-en-2026-la-guia-actualizada-de-tiendas-cines-y-panoramas/"}
+   ]},
+  {"id": "bencina", "nombre": "Bencina", "color": "#1f7aff",
+   "beneficios": [
+    {"marca": "Shell", "regalo": "$50 de dcto. por litro", "requisito": "Pagar con la app Shell", "cuando": "mes", "fuente": "https://anda.cl/descuentos-shell-octubre-2026/"}
+   ]}
+ ]
+}
