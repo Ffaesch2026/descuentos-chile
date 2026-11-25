@@ -232,7 +232,8 @@ def descripcion(cats: list[dict], total: int) -> str:
     for c in cats:
         lineas.append(f"{iconos.get(c['id'], '🎁')} {c['nombre']}")
         for b in c["beneficios"]:
-            lineas.append(f"• {b['marca']}: {b['regalo']} ({CUANDO.get(b['cuando'], b['cuando']).lower()}; {b['requisito'].lower()})")
+            req = b["requisito"][:1].lower() + b["requisito"][1:]
+            lineas.append(f"• {b['marca']}: {b['regalo']} ({CUANDO.get(b['cuando'], b['cuando']).lower()}; {req})")
         lineas.append("")
     lineas += ["📌 Casi todos piden la cédula o estar inscrito en el club o la app de la marca. Los beneficios y "
                "requisitos cambian seguido: confírmalos antes de ir. Cuenta no afiliada a ninguna marca.",
