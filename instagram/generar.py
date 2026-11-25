@@ -267,10 +267,23 @@ def pagina(cuerpo: str) -> str:
     return f"<!doctype html><html lang='es'><head><meta charset='utf-8'><style>{CSS}</style><style>{variables}</style></head><body>{cuerpo}</body></html>"
 
 
+def encabezado(mes_txt: str) -> str:
+    """Encabezado de la primera imagen de TODOS los carruseles: "Descuentos con tarjeta - Diciembre 2026"
+    (se muestra en mayúsculas)."""
+    return f"Descuentos con tarjeta - {mes_txt}"
+
+
+def mes_actual_txt() -> str:
+    """Mes y año en curso en Chile, p. ej. "Diciembre 2026"."""
+    from zoneinfo import ZoneInfo
+    hoy = datetime.now(ZoneInfo("America/Santiago"))
+    return f"{MESES[hoy.month - 1].capitalize()} {hoy.year}"
+
+
 def html_portada(rubro_txt, region_txt, mes_txt, total, nbancos, bancos, todos=False):
     chips = "".join(f"<span>{e(n)}</span>" for n in bancos)
     return pagina(f"""<div class="slide cover">
-  <div><div class="k">Descuentos con tarjeta · {e(mes_txt)}</div>
+  <div><div class="k">{e(encabezado(mes_txt))}</div>
   <h1>{e(rubro_txt)}</h1><div class="reg">{e(region_txt)}</div>
   <div class="big"><div><b>{total}</b><span>descuentos</span></div><div><b>{nbancos}</b><span>bancos y tarjetas</span></div></div>
   <p class="lead">{"Todos los descuentos del mes" if todos else "Los mejores de cada banco"}, ordenados por día de la semana.</p></div>
