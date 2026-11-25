@@ -95,7 +95,8 @@ def confeti(semilla: int, n: int = 70, zona_libre=None) -> str:
     piezas = []
     for _ in range(n):
         x, y = rnd.uniform(0, W), rnd.uniform(0, H)
-        if zona_libre and zona_libre[0] < x < zona_libre[2] and zona_libre[1] < y < zona_libre[3]:
+        zonas = zona_libre if (zona_libre and isinstance(zona_libre[0], (tuple, list))) else ([zona_libre] if zona_libre else [])
+        if any(z[0] < x < z[2] and z[1] < y < z[3] for z in zonas):
             continue
         c = rnd.choice(CONFETI)
         r = rnd.uniform(0, 180)
@@ -173,12 +174,16 @@ CSS_PORTADAS = """
 .brindis .pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;color:#fff}
 .brindis .btn{background:#f5c86a;color:#140b26;border-radius:999px;padding:14px 30px}
 /* B · Cupón */
-.cupon{background:#ff3e7f}
+.cupon{background:linear-gradient(160deg,#ff3e7f 0%,#ff7a59 45%,#ffc93c 100%)}
 .cupon .capa{padding:70px 64px 56px}
 .cupon .franja{position:absolute;inset:auto -60px 120px -60px;height:420px;background:#ffd23f;transform:rotate(-7deg)}
 .cupon .k{font-weight:700;font-size:26px;letter-spacing:.2em;text-transform:uppercase;color:#fff}
-.cupon h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:136px;line-height:.92;color:#fff;margin-top:22px;text-shadow:0 7px 0 #b0124f}
-.ticket{position:relative;margin-top:110px;background:#fff;border-radius:34px;display:grid;grid-template-columns:1fr 280px;
+.cupon h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:136px;line-height:.92;color:#fff;margin-top:22px;
+  text-shadow:0 6px 0 #c2185b,0 10px 24px rgba(80,0,40,.35)}
+.cupon .k{background:#2a1a3a;border-radius:999px;padding:10px 26px;align-self:flex-start}
+.cupon .mas{margin-top:46px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:38px;color:#2a1a3a;background:#fff;
+  border-radius:22px;padding:12px 28px;box-shadow:0 6px 0 #2a1a3a;align-self:flex-start}
+.ticket{position:relative;margin:auto 0;background:#fff;border-radius:34px;display:grid;grid-template-columns:1fr 280px;
   box-shadow:14px 14px 0 #2a1a3a;border:5px solid #2a1a3a}
 .ticket .izq{padding:52px 50px}
 .ticket .izq b{font-family:'Fredoka',sans-serif;font-size:58px;color:#2a1a3a;display:block;line-height:1}
@@ -189,9 +194,9 @@ CSS_PORTADAS = """
   background:#2a1a3a;color:#ffd23f;border-radius:0 24px 24px 0}
 .ticket .der b{font-family:'Fredoka',sans-serif;font-size:150px;line-height:1}
 .ticket .der span{font-weight:700;font-size:32px;letter-spacing:.1em;text-transform:uppercase;color:#fff}
-.ticket:before,.ticket:after{content:"";position:absolute;right:262px;width:44px;height:44px;border-radius:50%;background:#ff3e7f;border:5px solid #2a1a3a}
+.ticket:before,.ticket:after{content:"";position:absolute;right:262px;width:44px;height:44px;border-radius:50%;background:#ff8455;border:5px solid #2a1a3a}
 .ticket:before{top:-27px}.ticket:after{bottom:-27px}
-.cupon .pie{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;color:#2a1a3a}
+.cupon .pie{margin-top:0;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px;color:#2a1a3a}
 .cupon .btn{background:#2a1a3a;color:#ffd23f;border-radius:999px;padding:14px 30px}
 /* C · Fuegos artificiales */
 .fuegos{background:#12093a;color:#fff}
@@ -259,9 +264,10 @@ def portada_brindis(total: int) -> str:
 
 def portada_cupon(total: int, categorias) -> str:
     items = "".join(f'<li style="--c:{c["color"]}"><i></i>{e(c["nombre"].split(" y ")[0])}</li>' for c in categorias)
-    return pagina(f"""<style>{CSS_PORTADAS}</style><div class="slide cupon"><div class="franja"></div>{confeti(5, 40, (40, 40, 1040, 1310))}<div class="capa">
+    return pagina(f"""<style>{CSS_PORTADAS}</style><div class="slide cupon">{confeti(5, 150, [(50, 50, 1000, 530), (50, 640, 1050, 1020), (40, 1210, 1040, 1310)])}<div class="capa">
   <div class="k">Solo por cumplir años</div>
   <h1>Beneficios<br>de cumpleaños</h1>
+  <div class="mas">Regalos y descuentos en tu día</div>
   <div class="ticket">
     <div class="izq"><b>Vale por un regalo</b><ul>{items}</ul></div>
     <div class="der"><b>{total}</b><span>marcas</span></div>
@@ -372,7 +378,7 @@ def descripcion(cats: list[dict], total: int) -> str:
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--salida", default=None)
-    ap.add_argument("--portada", default="torta", choices=["torta", *PORTADAS],
+    ap.add_argument("--portada", default="cupon", choices=["torta", *PORTADAS],
                     help="diseño de la portada")
     a = ap.parse_args()
     data = json.loads(DATA.read_text("utf-8"))
