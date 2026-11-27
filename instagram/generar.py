@@ -247,18 +247,18 @@ def _tema_color(fondo: str, oscuro: str, acento: str) -> dict:
 
 
 TEMAS_MES = {
-    1: _tema_color("#1d4ed8", "#132f80", "#fde68a"),   # enero: azul
-    2: _tema_color("#7c3aed", "#4c1d95", "#fde68a"),   # febrero: morado
-    3: _tema_color("#c2410c", "#7c2d12", "#fef08a"),   # marzo: naranjo
-    4: _tema_color("#0f766e", "#134e4a", "#fde68a"),   # abril: verde azulado
-    5: _tema_color("#be185d", "#831843", "#fde68a"),   # mayo: fucsia
-    6: _tema_color("#1e40af", "#172554", "#a5f3fc"),   # junio: azul marino
-    7: _tema_color("#15803d", "#14532d", "#fef08a"),   # julio: verde
-    8: _tema_color("#b45309", "#78350f", "#fef3c7"),   # agosto: ámbar
-    9: _tema_color("#0e7490", "#164e63", "#fde68a"),   # septiembre: cian
-    10: _tema_color("#6d28d9", "#3b0764", "#bbf7d0"),  # octubre: violeta
-    11: _BASE,                                         # noviembre: claro (diseño original)
-    12: _tema_color("#c1121f", "#7f0d16", "#ffd166"),  # diciembre: rojo
+    1: _tema_color("#0284c7", "#075985", "#fde68a"),   # enero: celeste (verano)
+    2: _tema_color("#e0525f", "#9f1d33", "#fff1a8"),   # febrero: coral (San Valentín)
+    3: _tema_color("#c2410c", "#7c2d12", "#fef08a"),   # marzo: naranjo (vuelta a clases)
+    4: _tema_color("#7a4a1d", "#4a2a0c", "#fcd34d"),   # abril: café otoño
+    5: _tema_color("#be185d", "#831843", "#fde68a"),   # mayo: fucsia (Día de la Madre)
+    6: _tema_color("#334155", "#1e293b", "#a5f3fc"),   # junio: gris lluvia
+    7: _tema_color("#166534", "#0b3b1f", "#fef08a"),   # julio: verde pino (invierno)
+    8: _tema_color("#0f766e", "#134e4a", "#fde68a"),   # agosto: verde azulado (Mes del Niño)
+    9: _tema_color("#1e3a8a", "#0f1d4d", "#fecaca"),   # septiembre: azul patrio (Fiestas Patrias)
+    10: _tema_color("#1c1917", "#000000", "#fb923c"),  # octubre: negro y naranjo (Halloween)
+    11: _tema_color("#7e3fb8", "#4a1f73", "#f9d77e"),  # noviembre: morado jacarandá (primavera)
+    12: _tema_color("#c1121f", "#7f0d16", "#ffd166"),  # diciembre: rojo (Navidad)
 }
 MES_TEMA = 11  # se fija en main() según el mes de los datos
 
@@ -352,7 +352,120 @@ def _deco_diciembre(tipo: str) -> str:
     return f'<svg class="deco" viewBox="0 0 {W} {H}">{el}</svg>'
 
 
-DECORACION_MES = {12: _deco_diciembre}
+# ---- Íconos de línea blanca para los demás meses ----
+def _g(cuerpo: str, op: float, sw: float = 3.5) -> str:
+    return f'<g {_LINEA} stroke-width="{sw}" opacity="{op}">{cuerpo}</g>'
+
+
+def _sol(x, y, r, op=.6):
+    import math
+    rayos = "".join(f'<path d="M{x + math.cos(a) * r * .72:.0f} {y + math.sin(a) * r * .72:.0f}L{x + math.cos(a) * r:.0f} {y + math.sin(a) * r:.0f}"/>'
+                    for a in [i * math.pi / 4 for i in range(8)])
+    return _g(f'<circle cx="{x}" cy="{y}" r="{r * .48:.0f}"/>{rayos}', op)
+
+
+def _ola(x, y, r, op=.6):
+    d = f"M{x - r} {y}" + "".join(f" q{r / 4:.0f} {-r / 3:.0f} {r / 2:.0f} 0 t{r / 2:.0f} 0" for _ in range(2))
+    return _g(f'<path d="{d}"/><path d="{d}" transform="translate(0 {r * .45:.0f})"/>', op)
+
+
+def _corazon(x, y, r, op=.6):
+    return _g(f'<path d="M{x} {y + r * .8:.0f} C{x - r * 1.3:.0f} {y - r * .1:.0f} {x - r * .6:.0f} {y - r:.0f} {x} {y - r * .35:.0f}'
+              f' C{x + r * .6:.0f} {y - r:.0f} {x + r * 1.3:.0f} {y - r * .1:.0f} {x} {y + r * .8:.0f}Z"/>', op)
+
+
+def _lapiz(x, y, r, op=.6):
+    return _g(f'<g transform="rotate(-35 {x} {y})"><rect x="{x - r * .2:.0f}" y="{y - r:.0f}" width="{r * .4:.0f}" height="{r * 1.5:.0f}" rx="2"/>'
+              f'<path d="M{x - r * .2:.0f} {y + r * .5:.0f}L{x} {y + r:.0f}L{x + r * .2:.0f} {y + r * .5:.0f}M{x - r * .2:.0f} {y - r * .7:.0f}H{x + r * .2:.0f}"/></g>', op)
+
+
+def _hoja(x, y, r, op=.6, rot=-30):
+    return _g(f'<g transform="rotate({rot} {x} {y})"><path d="M{x} {y - r} Q{x + r * .8:.0f} {y} {x} {y + r} Q{x - r * .8:.0f} {y} {x} {y - r}Z"/>'
+              f'<path d="M{x} {y - r * .8:.0f}V{y + r * 1.3:.0f}M{x} {y - r * .2:.0f}l{r * .35:.0f} {-r * .3:.0f}M{x} {y + r * .25:.0f}l{-r * .35:.0f} {-r * .3:.0f}"/></g>', op)
+
+
+def _flor(x, y, r, op=.6):
+    import math
+    petalos = "".join(f'<ellipse cx="{x + math.cos(a) * r * .55:.0f}" cy="{y + math.sin(a) * r * .55:.0f}" rx="{r * .38:.0f}" ry="{r * .26:.0f}" '
+                      f'transform="rotate({math.degrees(a):.0f} {x + math.cos(a) * r * .55:.0f} {y + math.sin(a) * r * .55:.0f})"/>'
+                      for a in [i * 2 * math.pi / 5 - math.pi / 2 for i in range(5)])
+    return _g(f'{petalos}<circle cx="{x}" cy="{y}" r="{r * .2:.0f}"/>', op)
+
+
+def _gota(x, y, r, op=.55):
+    return _g(f'<path d="M{x} {y - r} Q{x + r * .75:.0f} {y + r * .1:.0f} {x} {y + r * .6:.0f} Q{x - r * .75:.0f} {y + r * .1:.0f} {x} {y - r}Z"/>', op, 3)
+
+
+def _paraguas(x, y, r, op=.65):
+    return _g(f'<path d="M{x - r} {y} A{r} {r} 0 0 1 {x + r} {y} q{-r / 3:.0f} {-r / 5:.0f} {-r * 2 / 3:.0f} 0 q{-r / 3:.0f} {-r / 5:.0f} {-r * 2 / 3:.0f} 0'
+              f' q{-r / 3:.0f} {-r / 5:.0f} {-r * 2 / 3:.0f} 0Z"/><path d="M{x} {y - r}V{y + r * .9:.0f} q0 {r * .3:.0f} {-r * .25:.0f} {r * .3:.0f} q{-r * .2:.0f} 0 {-r * .2:.0f} {-r * .2:.0f}"/>', op)
+
+
+def _montana(x, y, r, op=.6):
+    return _g(f'<path d="M{x - r * 1.4:.0f} {y + r * .7:.0f} L{x - r * .3:.0f} {y - r * .6:.0f} L{x + r * .3:.0f} {y + r * .05:.0f} L{x + r * .7:.0f} {y - r * .3:.0f} L{x + r * 1.5:.0f} {y + r * .7:.0f}"/>'
+              f'<path d="M{x - r * .75:.0f} {y - r * .05:.0f} l{r * .2:.0f} {r * .12:.0f} l{r * .2:.0f} {-r * .14:.0f} l{r * .2:.0f} {r * .14:.0f}"/>', op)
+
+
+def _volantin(x, y, r, op=.65):
+    return _g(f'<path d="M{x} {y - r} L{x + r * .75:.0f} {y} L{x} {y + r} L{x - r * .75:.0f} {y}Z M{x} {y - r}V{y + r} M{x - r * .75:.0f} {y}H{x + r * .75:.0f}"/>'
+              f'<path d="M{x} {y + r} q{-r * .3:.0f} {r * .5:.0f} 0 {r:.0f} q{r * .3:.0f} {r * .5:.0f} 0 {r:.0f}"/>'
+              f'<path d="M{x - r * .15:.0f} {y + r * 1.5:.0f}l{r * .3:.0f} {r * .1:.0f}M{x - r * .15:.0f} {y + r * 2:.0f}l{r * .3:.0f} {r * .1:.0f}"/>', op)
+
+
+def _calabaza(x, y, r, op=.6):
+    return _g(f'<ellipse cx="{x}" cy="{y}" rx="{r}" ry="{r * .78:.0f}"/><ellipse cx="{x}" cy="{y}" rx="{r * .45:.0f}" ry="{r * .78:.0f}"/>'
+              f'<path d="M{x} {y - r * .78:.0f} q{r * .05:.0f} {-r * .35:.0f} {r * .3:.0f} {-r * .45:.0f}"/>', op)
+
+
+def _murcielago(x, y, r, op=.55):
+    return _g(f'<path d="M{x} {y} q{-r * .3:.0f} {-r * .35:.0f} {-r * .6:.0f} {-r * .2:.0f} q{-r * .25:.0f} {r * .1:.0f} {-r * .55:.0f} {-r * .15:.0f}'
+              f' q{r * .2:.0f} {r * .45:.0f} {r * .5:.0f} {r * .5:.0f} q{r * .3:.0f} {r * .05:.0f} {r * .65:.0f} {-r * .15:.0f}'
+              f' q{r * .35:.0f} {r * .2:.0f} {r * .65:.0f} {r * .15:.0f} q{r * .3:.0f} {-r * .05:.0f} {r * .5:.0f} {-r * .5:.0f}'
+              f' q{-r * .3:.0f} {r * .25:.0f} {-r * .55:.0f} {r * .15:.0f} q{-r * .3:.0f} {-r * .15:.0f} {-r * .6:.0f} {r * .2:.0f}Z"/>', op, 3)
+
+
+def _banderines(y=0, op=.6):
+    """Guirnalda de banderines a lo ancho del margen superior (Fiestas Patrias)."""
+    tri = "".join(f'<path d="M{x} {y + 14} l22 0 l-11 26 z"/>' for x in range(40, 1060, 60))
+    return _g(f'<path d="M0 {y + 10} Q540 {y + 26} 1080 {y + 10}"/>{tri}', op, 3)
+
+
+def _franja(iconos, op=.55, y=26) -> str:
+    """Fila de íconos pequeños en el margen superior (y < 46)."""
+    return "".join(iconos[k % len(iconos)](x, y, 14, op) for k, x in enumerate(range(90, 1060, 110)))
+
+
+def _tema(iconos, grande, extra_portada="", franja=None):
+    """Arma la decoración de un mes: franja superior, grupo en la esquina inferior derecha de la
+    portada (sobre 'Desliza'), íconos sueltos en el borde derecho y en el cierre."""
+    def deco(tipo: str) -> str:
+        top = franja() if franja else _franja(iconos)
+        if tipo == "portada":
+            el = (top + grande(935, 1105, 58, .7) + iconos[0](1035, 1070, 28, .6) + iconos[-1](830, 1125, 26, .55)
+                  + iconos[0](1040, 430, 16, .45) + iconos[-1](1030, 570, 14, .4) + extra_portada)
+        elif tipo == "cierre":
+            el = (top + grande(900, 560, 70, .75) + iconos[0](1010, 470, 22, .5) + iconos[-1](780, 640, 20, .45)
+                  + grande(940, 1030, 46, .6) + iconos[0](1030, 1090, 20, .45))
+        else:
+            el = top
+        return f'<svg class="deco" viewBox="0 0 {W} {H}">{el}</svg>'
+    return deco
+
+
+DECORACION_MES = {
+    1: _tema([_sol, _ola], _sol),                                # enero: verano
+    2: _tema([_corazon, _sol], _corazon),                        # febrero: San Valentín y vacaciones
+    3: _tema([_lapiz, _estrella], _lapiz),                       # marzo: vuelta a clases
+    4: _tema([_hoja, lambda x, y, r, op=.6: _hoja(x, y, r, op, 40)], _hoja),  # abril: otoño
+    5: _tema([_flor, _corazon], _flor),                          # mayo: Día de la Madre
+    6: _tema([_gota, _gota, _paraguas], _paraguas),              # junio: lluvias
+    7: _tema([lambda x, y, r, op=.5: _copo(x, y, r, op, 2.5), _montana], _montana),  # julio: invierno
+    8: _tema([_volantin, _estrella], _volantin),                 # agosto: Mes del Niño
+    9: _tema([_volantin, _estrella], _volantin, franja=lambda: _banderines()),       # septiembre: Fiestas Patrias
+    10: _tema([_calabaza, _murcielago], _calabaza),              # octubre: Halloween
+    11: _tema([_flor, _hoja], _flor),                            # noviembre: primavera
+    12: _deco_diciembre,                                         # diciembre: Navidad
+}
 
 
 def pagina(cuerpo: str) -> str:
