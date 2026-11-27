@@ -67,6 +67,8 @@ Eso instala lo necesario, programa una tarea de Windows (todos los días a las 9
 - `instagram/calendario.json` define qué se publica cada mes (día, rubro, región, `activo`).
 - **Regiones** (`--region REG`): restaurantes por comuna fuera de la Región Metropolitana, de norte a sur, con los mejores descuentos de cada comuna (sin cadenas con locales en más de 4 comunas).
 - **Beneficios de cumpleaños** (solo a pedido, no está en el calendario): `python -m instagram.cumpleanos`, con los datos de `data/cumpleanos.json` (se editan a mano). Desde GitHub: Run workflow con rubro `Cumpleaños`.
+- **Delivery** incluye una imagen extra con los **códigos de descuento** de cada banco (PedidosYa, Rappi, Justo…), leídos de la descripción de cada beneficio.
+- **Diciembre:** fondo rojo con dibujos navideños de línea blanca (`DECORACION_MES` en `instagram/generar.py`).
 - Se publica a las **7:00 AM hora de Chile** (verano e invierno). Cada mes tiene su **color de fondo** (`TEMAS_MES` en `instagram/generar.py`; diciembre = rojo) para distinguir la información de un mes y la del siguiente.
 - Un banco que no se actualizó en el mes (por ejemplo Santander o BancoEstado si no corrió el computador local) **no aparece** en los carruseles de ese mes.
 - `.github/workflows/instagram.yml` corre todos los días, publica lo que toca según el calendario y lo anota en `instagram/publicados.json` para no repetir. Las imágenes se suben a `publicaciones/` porque Instagram las descarga desde una URL pública.

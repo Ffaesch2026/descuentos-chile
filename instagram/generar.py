@@ -191,7 +191,9 @@ CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Instrument+Sans:wght@500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
 body{width:1080px;height:1350px;background:var(--fondo);color:var(--tinta);font-family:'Instrument Sans',system-ui,sans-serif;overflow:hidden}
-.slide{width:1080px;height:1350px;display:flex;flex-direction:column;padding:56px 52px 40px}
+.slide{position:relative;width:1080px;height:1350px;display:flex;flex-direction:column;padding:56px 52px 40px}
+.deco{position:absolute;inset:0;pointer-events:none;z-index:0}
+.slide > *:not(.deco){position:relative;z-index:1}
 .top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:5px solid var(--tinta);padding-bottom:18px;margin-bottom:22px}
 .top h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:46px;letter-spacing:-.02em;line-height:1}
 .top h2 small{display:block;font-family:'Instrument Sans';font-weight:600;font-size:22px;letter-spacing:.1em;text-transform:uppercase;color:var(--etiqueta);margin-bottom:8px}
@@ -261,9 +263,106 @@ TEMAS_MES = {
 MES_TEMA = 11  # se fija en main() según el mes de los datos
 
 
+# ---- Decoración por mes: dibujos de línea blanca, sobrios (diciembre: Navidad) ----
+_LINEA = 'fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"'
+
+
+def _copo(x, y, r, op=.5, sw=3) -> str:
+    """Copo de nieve de 6 brazos con pequeñas ramas."""
+    import math
+    partes = []
+    for i in range(6):
+        a = math.pi / 3 * i
+        ex, ey = x + math.cos(a) * r, y + math.sin(a) * r
+        partes.append(f"M{x:.0f} {y:.0f}L{ex:.0f} {ey:.0f}")
+        for f in (.55, .8):
+            bx, by = x + math.cos(a) * r * f, y + math.sin(a) * r * f
+            for s_ in (-1, 1):
+                b = a + s_ * math.pi / 4
+                partes.append(f"M{bx:.0f} {by:.0f}L{bx + math.cos(b) * r * .22:.0f} {by + math.sin(b) * r * .22:.0f}")
+    return f'<path d="{" ".join(partes)}" {_LINEA} stroke-width="{sw}" opacity="{op}"/>'
+
+
+def _adorno(x, largo, r, op=.75) -> str:
+    """Esfera colgando de un hilo desde el borde superior, con franjas."""
+    cy = largo + r
+    return (f'<g {_LINEA} stroke-width="3.5" opacity="{op}"><path d="M{x} 0V{largo}"/>'
+            f'<rect x="{x - r * .28:.0f}" y="{largo - 6}" width="{r * .56:.0f}" height="12" rx="3"/>'
+            f'<circle cx="{x}" cy="{cy:.0f}" r="{r}"/>'
+            f'<path d="M{x - r * .92:.0f} {cy - r * .3:.0f}Q{x} {cy - r * .05:.0f} {x + r * .92:.0f} {cy - r * .3:.0f}'
+            f'M{x - r * .92:.0f} {cy + r * .3:.0f}Q{x} {cy + r * .55:.0f} {x + r * .92:.0f} {cy + r * .3:.0f}"/></g>')
+
+
+def _estrella(x, y, r, op=.8) -> str:
+    import math
+    pts = []
+    for i in range(10):
+        a = -math.pi / 2 + i * math.pi / 5
+        rr = r if i % 2 == 0 else r * .45
+        pts.append(f"{x + math.cos(a) * rr:.0f},{y + math.sin(a) * rr:.0f}")
+    return f'<polygon points="{" ".join(pts)}" {_LINEA} stroke-width="3.5" opacity="{op}"/>'
+
+
+def _rama(x, y, largo, ang, op=.6) -> str:
+    """Rama de pino: eje y agujas en ángulo."""
+    import math
+    a = math.radians(ang)
+    partes = [f"M{x} {y}L{x + math.cos(a) * largo:.0f} {y + math.sin(a) * largo:.0f}"]
+    for i in range(1, 9):
+        px, py = x + math.cos(a) * largo * i / 9, y + math.sin(a) * largo * i / 9
+        for s_ in (-1, 1):
+            b = a + s_ * math.radians(38) + math.radians(180)
+            l = 46 * (1 - i / 14)
+            partes.append(f"M{px:.0f} {py:.0f}L{px + math.cos(b) * l:.0f} {py + math.sin(b) * l:.0f}")
+    return f'<path d="{" ".join(partes)}" {_LINEA} stroke-width="3" opacity="{op}"/>'
+
+
+def _esfera(x, y, r, hilo=40, op=.8) -> str:
+    """Esfera colgando de un hilo corto (desde una rama), con franjas."""
+    cy = y + hilo + r
+    return (f'<g {_LINEA} stroke-width="3.5" opacity="{op}"><path d="M{x} {y}V{y + hilo}"/>'
+            f'<rect x="{x - r * .28:.0f}" y="{y + hilo - 6}" width="{r * .56:.0f}" height="12" rx="3"/>'
+            f'<circle cx="{x}" cy="{cy:.0f}" r="{r}"/>'
+            f'<path d="M{x - r * .92:.0f} {cy - r * .3:.0f}Q{x} {cy - r * .05:.0f} {x + r * .92:.0f} {cy - r * .3:.0f}'
+            f'M{x - r * .92:.0f} {cy + r * .3:.0f}Q{x} {cy + r * .55:.0f} {x + r * .92:.0f} {cy + r * .3:.0f}"/></g>')
+
+
+def _franja_superior(op=.55) -> str:
+    """Copos y estrellas pequeños en el margen superior (y < 46), sin tocar textos."""
+    el = ""
+    for k, x in enumerate(range(90, 1060, 110)):
+        el += _estrella(x, 24, 9, op) if k % 3 == 1 else _copo(x, 24, 13, op * .9, 2.5)
+    return el
+
+
+def _deco_diciembre(tipo: str) -> str:
+    if tipo == "portada":
+        # Rama de pino con esferas en la esquina inferior derecha (sobre "Desliza"), copos arriba y al borde
+        el = (_rama(1110, 1110, 290, 186, .6) + _rama(1110, 1160, 200, 180, .45)
+              + _esfera(930, 1092, 26, 30) + _esfera(1015, 1100, 22, 20) + _esfera(855, 1085, 18, 20, .65)
+              + _franja_superior(.5)
+              + _copo(1040, 420, 18, .4) + _copo(1020, 560, 12, .35) + _estrella(1040, 690, 12, .6))
+    elif tipo == "cierre":
+        el = (_rama(1110, 1010, 420, 200, .55) + _rama(1110, 1090, 260, 190, .4)
+              + _esfera(860, 960, 34, 60) + _esfera(960, 1000, 26, 34) + _esfera(760, 1000, 22, 26, .65)
+              + _franja_superior(.5)
+              + _estrella(930, 520, 30, .75) + _copo(820, 600, 26, .45) + _copo(1000, 640, 18, .4))
+    else:  # imágenes con tablas: solo el margen superior
+        el = _franja_superior(.5)
+    return f'<svg class="deco" viewBox="0 0 {W} {H}">{el}</svg>'
+
+
+DECORACION_MES = {12: _deco_diciembre}
+
+
 def pagina(cuerpo: str) -> str:
     t = TEMAS_MES.get(MES_TEMA, _BASE)
     variables = ":root{" + ";".join(f"--{k}:{v}" for k, v in t.items()) + "}"
+    deco = DECORACION_MES.get(MES_TEMA)
+    if deco:
+        import re as _re
+        tipo = "cierre" if 'class="slide cover end"' in cuerpo else "portada" if 'class="slide cover"' in cuerpo else "tabla"
+        cuerpo = _re.sub(r'(<div class="slide[^"]*">)', lambda m: m.group(1) + deco(tipo), cuerpo, count=1)
     return f"<!doctype html><html lang='es'><head><meta charset='utf-8'><style>{CSS}</style><style>{variables}</style></head><body>{cuerpo}</body></html>"
 
 
@@ -366,6 +465,8 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
     for bid, filas in sel.items():
         d = max(filas, key=lambda x: (x["_orden"], -len(x["dias"])))
         destacados.append(f"• {nombres[bid]}: {_valor_texto(d['_valor'])} en {nombre_comercio(d)} ({_dias_texto(d['dias'])})")
+    codigos_txt = "🎟️ En la penúltima imagen están los códigos de descuento de cada banco para PedidosYa, Rappi y Justo." \
+        if a.rubro == "delivery" else ""
     lectura = ("💳 Cómo leerlo: en cada banco, la franja de color indica a qué tarjetas aplica "
                "(crédito y débito, solo crédito o solo tarjetas premium como Black o Infinite)."
                if a.por_tarjeta else "")
@@ -381,6 +482,8 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
         partes = [cab]
         if n_dest:
             partes.append("🔥 El mejor de cada banco:\n" + "\n".join(destacados[:n_dest]))
+        if codigos_txt:
+            partes.append(codigos_txt)
         if lectura:
             partes.append(lectura)
         if con_links and links:
@@ -395,6 +498,115 @@ def descripcion(sel, data, a, rubro_txt, region_txt, mes_txt, gen) -> str:
             if len(t) <= LIMITE_TEXTO:
                 return t
     return armar(0, False)[:LIMITE_TEXTO]
+
+
+# ---- Delivery: imagen con los códigos de descuento (PedidosYa, Rappi, Justo…) ----
+PLATAFORMAS = [("pedidosya", "PedidosYa", "#fa0050", r"pedidos ?ya"), ("rappi", "Rappi", "#ff441f", r"rappi"),
+               ("justo", "Justo", "#0f9d58", r"\bjusto\b"), ("ubereats", "Uber Eats", "#06a35a", r"uber ?eats"),
+               ("didi", "DiDi Food", "#ff7d41", r"didi ?food")]
+_CODIGO_RX = __import__("re").compile(r"\b[A-Z][A-Z0-9]{5,20}\b")
+
+
+def codigos(d: dict) -> list[str]:
+    """Códigos de descuento que aparecen en el título o la descripción (ej. BCHPEYA1126)."""
+    import re as _re
+    vistos = []
+    for c in _CODIGO_RX.findall(f'{d.get("titulo", "")} {d.get("descripcion", "")}'):
+        if _re.search(r"\d", c) and len(_re.findall(r"[A-Z]", c)) >= 3 and c not in vistos:
+            vistos.append(c)
+    return vistos[:4]
+
+
+def _tope_corto(t: str) -> str:
+    """"Tope de $5.000 y tres usos al mes" -> "Tope $5.000 · 3 usos"."""
+    import re as _re
+    m = _re.search(r"\$\s?\d[\d.]*", t)
+    if not m:
+        return ""
+    out = "Tope " + m.group(0).replace(" ", "")
+    u = _re.search(r"(?i)(\d+|uno|dos|tres|cuatro|cinco) usos?", t)
+    if u:
+        n = {"uno": "1", "dos": "2", "tres": "3", "cuatro": "4", "cinco": "5"}.get(u.group(1).lower(), u.group(1))
+        out += f" · {n} uso{'s' if n != '1' else ''}"
+    return out
+
+
+def filas_codigos(descuentos) -> list[tuple]:
+    """[(plataforma, nombre, color, [filas])] con una fila por banco y código (Justo: una sola fila)."""
+    import re as _re
+    grupos = {}
+    for d in descuentos:
+        cs = codigos(d)
+        if not cs:
+            continue
+        txt = f'{d["comercio"]} {d.get("titulo", "")}'.lower()
+        plat = next((p for p in PLATAFORMAS if _re.search(p[3], txt)), None)
+        if not plat:
+            continue
+        com = nombre_comercio(d)
+        resto = _re.sub(r"(?i)\s*[-–]?\s*(pedidos ?ya|rappi|justo|uber ?eats|didi ?food)\s*", " ", com).strip(" -–")
+        detalle = resto if resto and plat[0] != "justo" else ("Restaurantes adheridos" if plat[0] == "justo" else "")
+        clave = (d["banco"], tuple(cs))
+        g = grupos.setdefault(plat[0], {"plat": plat, "filas": {}})
+        if clave not in g["filas"]:
+            v = valor(d)
+            g["filas"][clave] = {"banco": d["banco"], "tarjeta": _tarjeta_corta(d), "valor": v[0] if v else "",
+                                 "detalle": detalle, "codigos": list(cs), "dias": fmt_dias(d.get("dias") or []),
+                                 "tope": _tope_corto(d.get("tope") or "")}
+    orden = [p[0] for p in PLATAFORMAS]
+    return [(g["plat"][0], g["plat"][1], g["plat"][2], list(g["filas"].values()))
+            for k, g in sorted(grupos.items(), key=lambda kv: orden.index(kv[0]))]
+
+
+CSS_COD = """
+.crow{display:grid;grid-template-columns:150px 92px 1fr;align-items:center;gap:10px;padding:10px 16px;border-top:1px solid #e6ebe9;min-height:66px}
+.crow:nth-child(even of .crow){background:#f6f7f7}
+.crow .bk b{font-size:19px}.crow .bk i{font-size:13px}
+.crow .v{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:var(--pc);text-align:center}
+.crow .cods{display:flex;flex-direction:column;gap:5px;min-width:0}
+.crow .cods div{display:flex;flex-wrap:wrap;gap:6px}
+.code{font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;font-weight:700;font-size:21px;letter-spacing:.04em;
+  color:#15201d;background:#fff;border:2px dashed var(--pc);border-radius:8px;padding:3px 9px}
+.crow small{font-size:15px;font-weight:600;color:#5d6a66;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ph{background:var(--pc);color:#fff;height:62px;padding:0 18px;display:flex;align-items:center;justify-content:space-between}
+.ph b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px}
+.ph span{font-size:16px;font-weight:700;opacity:.9;text-transform:uppercase;letter-spacing:.08em}
+.cgrid{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-content:start}
+.cgrid.una{grid-template-columns:1fr;gap:18px}
+.una .crow{grid-template-columns:190px 104px 1fr;min-height:74px;padding:10px 20px}
+.una .crow .bk b{font-size:22px}.una .crow .bk i{font-size:14px}
+.una .crow .v{font-size:34px}
+.una .code{font-size:25px;padding:4px 12px}
+.una .crow small{font-size:17px}
+.una .ph{height:64px}
+"""
+
+
+def html_codigos(plataformas, mes_txt, n, total) -> str:
+    colores = {b: c for b, _, c in BANCOS}
+    def fila(f):
+        extra = " · ".join(x for x in [f["detalle"], f["dias"] if f["dias"] not in ("TODOS", "VER COND.") else "", f["tope"]] if x)
+        return (f'<div class="crow"><span class="bk" style="--bc:{colores.get(f["banco"], "#333")}">'
+                f'<b>{e(BANCO_CORTO.get(f["banco"], f["banco"]))}</b><i>{e(f["tarjeta"])}</i></span>'
+                f'<span class="v">{e(f["valor"])}</span><span class="cods"><div>'
+                + "".join(f'<span class="code">{e(c)}</span>' for c in f["codigos"]) +
+                f'</div>{f"<small>{e(extra)}</small>" if extra else ""}</span></div>')
+    # Pocas filas: una sola columna a todo el ancho; muchas: dos columnas equilibradas
+    una = sum(len(p[3]) for p in plataformas) + 1.4 * len(plataformas) <= 15
+    cols, altos = ([[]], [0]) if una else ([[], []], [0, 0])
+    for pid, nombre, color, filas in (plataformas if una else sorted(plataformas, key=lambda p: -len(p[3]))):
+        k = altos.index(min(altos))
+        cols[k].append((pid, nombre, color, filas)); altos[k] += len(filas) + 1.4
+    bloques = "".join(
+        '<div class="col">' + "".join(
+            f'<div class="blk" style="--pc:{color}"><div class="ph"><b>{e(nombre)}</b><span>Ingresa el código en la app</span></div>'
+            + "".join(fila(f) for f in filas) + "</div>" for _, nombre, color, filas in col) + "</div>"
+        for col in cols)
+    return pagina(f"""<style>{CSS_REG}{CSS_COD}</style><div class="slide">
+  <div class="top"><h2><small>{e(mes_txt)}</small>Códigos de descuento · Delivery</h2><span class="pg">{n}/{total}</span></div>
+  <div class="cgrid{' una' if una else ''}">{bloques}</div>
+  <div class="foot"><b>{CUENTA}</b><span>Los códigos cambian cada mes: revísalos en el sitio de tu banco</span></div>
+</div>""")
 
 
 def renderizar(htmls: list[str], out: Path) -> None:
@@ -649,8 +861,14 @@ def main():
     nombres = {b: n for b, n, _ in BANCOS}
     htmls = [html_portada(rubro_txt, region_txt, mes_txt, sum(len(f) for f in sel.values()), len(sel),
                           [nombres[b] for b in sel], todos=not seleccionar.recortado)]
+    plats = filas_codigos(data["descuentos"]) if a.rubro == "delivery" else []
+    if plats:
+        total_img += 1
     for i, cols in enumerate(paginas, start=2):
         htmls.append(html_tabla(cols, tipos, f"{rubro_txt} · {region_txt}", mes_txt, i, total_img))
+    if plats:
+        htmls.append(html_codigos(plats, mes_txt, total_img - 1, total_img))
+        print(f"Códigos de descuento: {sum(len(p[3]) for p in plats)} en {len(plats)} apps")
     htmls.append(html_cierre(mes_txt, gen.strftime("%d-%m-%Y")))
 
     renderizar(htmls, out)
