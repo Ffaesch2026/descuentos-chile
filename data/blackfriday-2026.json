@@ -1,0 +1,294 @@
+{
+ "_ayuda": "Ofertas de Black Friday verificadas con el historial de precios de SoloTodo: descuento real = precio Black Friday vs precio habitual (mediana del precio más bajo diario entre el 1-oct y el 20-nov). Solo se incluyen ofertas con 15% o más y precio igual o menor al mínimo previo.",
+ "evento": "Black Friday 2026",
+ "fechas": "27 al 30 de noviembre",
+ "fecha_revision": "2026-11-28",
+ "periodo_comparacion": "1 de octubre al 20 de noviembre de 2026",
+ "revisados": 225,
+ "grupos": [
+  {
+   "id": "tecnologia",
+   "nombre": "Celulares, notebooks y tablets",
+   "productos": [
+    {
+     "producto": "Celular Motorola Edge 70 Fusion 256 GB",
+     "marca": "Motorola",
+     "tienda": "Hites",
+     "precio": 259990,
+     "precio_habitual": 339990,
+     "precio_min_previo": 299990,
+     "descuento_real": 24,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2719491_picture_1774348724.png",
+     "url": "https://www.hites.com/smartphone-motorola-moto-edge-70-fusion-5g-256-gb-azul-liberado-980738001.html",
+     "solotodo": "https://www.solotodo.cl/products/385082"
+    },
+    {
+     "producto": "Tablet Lenovo Tab One",
+     "marca": "Lenovo",
+     "tienda": "Lider",
+     "precio": 114990,
+     "precio_habitual": 148067,
+     "precio_min_previo": 114990,
+     "descuento_real": 22,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2092037_picture_1749008051.png",
+     "url": "https://www.lider.cl/ip/Tablet-Lenovo-One-8-7-HD-MediaTek-Helio-G85-4GB-128GB-WiFi-LTE-Gris/00019815639071",
+     "solotodo": "https://www.solotodo.cl/products/277169"
+    },
+    {
+     "producto": "Celular Motorola Edge 70 512 GB",
+     "marca": "Motorola",
+     "tienda": "Hites",
+     "precio": 399990,
+     "precio_habitual": 479990,
+     "precio_min_previo": 422991,
+     "descuento_real": 17,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2719473_picture_1774347708.png",
+     "url": "https://www.hites.com/smartphone-motorola-moto-edge-70-5g-512-gb-verde-liberado-980743001.html",
+     "solotodo": "https://www.solotodo.cl/products/385081"
+    },
+    {
+     "producto": "Notebook Lenovo IdeaPad Slim 3 14\"",
+     "marca": "Lenovo",
+     "tienda": "Lenovo Chile",
+     "precio": 649992,
+     "precio_habitual": 779990,
+     "precio_min_previo": 699991,
+     "descuento_real": 17,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2044853_picture_1742485881.jpg",
+     "url": "https://www.lenovo.com/cl/es/p/notebooks/ideapad/ideapad-3/lenovo-ideapad-slim-3i-gen-10-14-inch-intel/83k000mpcl",
+     "solotodo": "https://www.solotodo.cl/products/392666"
+    },
+    {
+     "producto": "Tablet Xiaomi Redmi Pad 2 128 GB",
+     "marca": "Xiaomi",
+     "tienda": "Lider",
+     "precio": 129990,
+     "precio_habitual": 154990,
+     "precio_min_previo": 129990,
+     "descuento_real": 16,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2767711_picture_1779908815.webp",
+     "url": "https://www.lider.cl/ip/Tablet-Xiaomi-Redmi-Pad-2-9-7-9-7-FHD-Qualcomm-Snapdragon-4GB-128GB-WiFi-Gris/00693909300809",
+     "solotodo": "https://www.solotodo.cl/products/396894"
+    }
+   ]
+  },
+  {
+   "id": "audio",
+   "nombre": "Audio",
+   "productos": [
+    {
+     "producto": "Audífonos Logitech H390",
+     "marca": "Logitech",
+     "tienda": "ABC",
+     "precio": 9990,
+     "precio_habitual": 22900,
+     "precio_min_previo": 9990,
+     "descuento_real": 56,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/769960_picture_1530732999.png",
+     "url": "https://www.abc.cl/audifonos-on-ear-logitech-29loghd390/28829906.html",
+     "solotodo": "https://www.solotodo.cl/products/47094"
+    },
+    {
+     "producto": "Audífonos Anker Soundcore Liberty 5",
+     "marca": "Anker Soundcore",
+     "tienda": "Falabella",
+     "precio": 54990,
+     "precio_habitual": 72891,
+     "precio_min_previo": 59990,
+     "descuento_real": 25,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2702955_picture_1771667448.png",
+     "url": "https://www.falabella.com/falabella-cl/product/80704487/audifonos-tws-anc-liberty-5-a/80704495",
+     "solotodo": "https://www.solotodo.cl/products/382087"
+    },
+    {
+     "producto": "Audífonos gamer Redragon H510 Zeus Pro blanco",
+     "marca": "Redragon",
+     "tienda": "Winpy",
+     "precio": 42880,
+     "precio_habitual": 52990,
+     "precio_min_previo": 50340,
+     "descuento_real": 19,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2049302_picture_1742924613.jpeg",
+     "url": "https://www.winpy.cl/venta/audifonos-gamer-redragon-zeus-pro-bluetooth-dongle-usb-blanco/",
+     "solotodo": "https://www.solotodo.cl/products/270259"
+    },
+    {
+     "producto": "Apple AirPods 4 con cancelación de ruido",
+     "marca": "Apple",
+     "tienda": "Lider",
+     "precio": 139990,
+     "precio_habitual": 169990,
+     "precio_min_previo": 139990,
+     "descuento_real": 18,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1968459_picture_1728966520.jpg",
+     "url": "https://www.lider.cl/ip/Aud-fonos-In-ear-AirPods-4-MXP93AM-A-Bluetooth-5-3-Blanco/00019594968953",
+     "solotodo": "https://www.solotodo.cl/products/256185"
+    },
+    {
+     "producto": "Apple AirPods 4",
+     "marca": "Apple",
+     "tienda": "Tienda Claro",
+     "precio": 99990,
+     "precio_habitual": 119990,
+     "precio_min_previo": 99990,
+     "descuento_real": 17,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1968448_picture_1728966451.jpg",
+     "url": "https://tienda.clarochile.cl/catalogo/tecnologia-y-accesorios/apple-airpods-4-7006938acc",
+     "solotodo": "https://www.solotodo.cl/products/256184"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "nombre": "Cocina",
+   "productos": [
+    {
+     "producto": "Freidora de aire Oster CKSTAF75WDSSDF",
+     "marca": "Oster",
+     "tienda": "Hites",
+     "precio": 54990,
+     "precio_habitual": 83990,
+     "precio_min_previo": 64990,
+     "descuento_real": 34,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1755918",
+     "url": "https://www.hites.com/freidora-de-aire-oster-ckstaf75wdssdf-7.5-litros-945726001.html",
+     "solotodo": "https://www.solotodo.cl/products/267645"
+    },
+    {
+     "producto": "Freidora de aire Oster CKSTAF401MDF",
+     "marca": "Oster",
+     "tienda": "Hites",
+     "precio": 29990,
+     "precio_habitual": 41990,
+     "precio_min_previo": 34990,
+     "descuento_real": 29,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1758919",
+     "url": "https://www.hites.com/freidora-de-aire-oster-ckstaf401mdf-4-litros-945724001.html",
+     "solotodo": "https://www.solotodo.cl/products/267652"
+    },
+    {
+     "producto": "Freidora de aire Thomas TH-AF30DN",
+     "marca": "Thomas",
+     "tienda": "Ripley",
+     "precio": 24990,
+     "precio_habitual": 34990,
+     "precio_min_previo": 29990,
+     "descuento_real": 29,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1794989",
+     "url": "https://simple.ripley.cl/freidora-de-aire-thomas-3-l-led-touch-digital-th-af30dn-2000402459565p",
+     "solotodo": "https://www.solotodo.cl/products/267603"
+    },
+    {
+     "producto": "Freidora de aire Xiaomi Essential 6L",
+     "marca": "Xiaomi",
+     "tienda": "Travel Tienda",
+     "precio": 44990,
+     "precio_habitual": 57990,
+     "precio_min_previo": 44990,
+     "descuento_real": 22,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1865012",
+     "url": "https://tienda.travel.cl/cupon-30-50/freidora-de-aire-xiaomi-air-fryer-essential-6-lts/SKU118230",
+     "solotodo": "https://www.solotodo.cl/products/267575"
+    },
+    {
+     "producto": "Freidora de aire Moulinex EZ8328F0",
+     "marca": "Moulinex",
+     "tienda": "Falabella",
+     "precio": 72990,
+     "precio_habitual": 89990,
+     "precio_min_previo": 76990,
+     "descuento_real": 19,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2267310",
+     "url": "https://www.falabella.com/falabella-cl/product/80744826/freidora-de-aire-easy-fry-infrared-moulinex/80744826",
+     "solotodo": "https://www.solotodo.cl/products/395727"
+    }
+   ]
+  },
+  {
+   "id": "hogar",
+   "nombre": "Hogar",
+   "productos": [
+    {
+     "producto": "Aspiradora Dreame R10 Pro",
+     "marca": "Dreame",
+     "tienda": "Ripley",
+     "precio": 199990,
+     "precio_habitual": 299990,
+     "precio_min_previo": 199990,
+     "descuento_real": 33,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2253547",
+     "url": "https://simple.ripley.cl/aspiradora-vertical-dreame-inalambrica-r10-pro-2000410288393p",
+     "solotodo": "https://www.solotodo.cl/products/393053"
+    },
+    {
+     "producto": "Robot aspiradora Thomas Gyrorobot TH-AR1070G",
+     "marca": "Thomas",
+     "tienda": "Paris",
+     "precio": 89990,
+     "precio_habitual": 119990,
+     "precio_min_previo": 119990,
+     "descuento_real": 25,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2300353",
+     "url": "https://www.paris.cl/aspiradora-robot-gyrorobot-pro-2-en-1-th-ar1070g-561546999.html",
+     "solotodo": "https://www.solotodo.cl/products/401772"
+    },
+    {
+     "producto": "Robot aspiradora Wurden WRB-SMARTKLEAN",
+     "marca": "Wurden",
+     "tienda": "Falabella",
+     "precio": 79990,
+     "precio_habitual": 99990,
+     "precio_min_previo": 89990,
+     "descuento_real": 20,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1863937_picture_1705423532.jpg",
+     "url": "https://www.falabella.com/falabella-cl/product/883474540/Aspiradora Robot Aspira y Trapea WRB-SMARTKLEAN2 Wurden/883474541",
+     "solotodo": "https://www.solotodo.cl/products/230088"
+    },
+    {
+     "producto": "Robot aspiradora Xiaomi S40 Pro",
+     "marca": "Xiaomi",
+     "tienda": "Lider",
+     "precio": 219990,
+     "precio_habitual": 269990,
+     "precio_min_previo": 229990,
+     "descuento_real": 18,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2216227.jpg",
+     "url": "https://www.lider.cl/ip/XIAOMI-ROBOT-VACUUM-S40PRO/00693255444705",
+     "solotodo": "https://www.solotodo.cl/products/385556"
+    },
+    {
+     "producto": "Refrigerador LG GT32BPY",
+     "marca": "LG",
+     "tienda": "Paris",
+     "precio": 329990,
+     "precio_habitual": 399990,
+     "precio_min_previo": 349990,
+     "descuento_real": 18,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2817014_picture_1787671671.avif",
+     "url": "https://www.paris.cl/refrigerador-top-mount-no-frost-325-litros-gt32bpy-597603999.html",
+     "solotodo": "https://www.solotodo.cl/products/404111"
+    }
+   ]
+  }
+ ]
+}
