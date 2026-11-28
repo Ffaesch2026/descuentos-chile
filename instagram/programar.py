@@ -67,13 +67,13 @@ def esperar_urls(urls: list[str]) -> None:
 
 
 _RUBROS = {"restaurantes", "supermercados", "combustible", "farmacias", "viajes", "entretencion",
-           "vestuario", "delivery", "otros", "cumpleanos"}
+           "vestuario", "delivery", "otros", "cumpleanos", "blackfriday"}
 _SINONIMOS = {"restaurant": "restaurantes", "restaurante": "restaurantes", "comida": "restaurantes",
               "supermercado": "supermercados", "super": "supermercados", "bencina": "combustible",
               "combustibles": "combustible", "salud": "farmacias", "farmacia": "farmacias",
               "salud y farmacias": "farmacias", "entretenimiento": "entretencion", "viaje": "viajes",
               "transporte": "viajes", "viajes y transporte": "viajes", "ropa": "vestuario", "hogar": "vestuario", "vestuario y hogar": "vestuario",
-              "cumpleanos": "cumpleanos", "cumple": "cumpleanos", "beneficios de cumpleanos": "cumpleanos"}
+              "cumpleanos": "cumpleanos", "black friday": "blackfriday", "cumple": "cumpleanos", "beneficios de cumpleanos": "cumpleanos"}
 
 
 def normalizar_rubro(texto: str) -> str:
@@ -101,6 +101,10 @@ def publicar_via_make(urls: list[str], texto: str, clave: str) -> dict:
 
 
 def generar(rubro: str, region: str, salida: Path, por_tarjeta: bool = True) -> list[Path]:
+    if rubro == "blackfriday":  # región = parte (1 o 2)
+        subprocess.run([sys.executable, "-m", "instagram.blackfriday", "--parte", region if region in ("1", "2") else "0",
+                        "--salida", str(salida)], check=True, cwd=ROOT)
+        return sorted(salida.glob("*.png"))
     if rubro == "cumpleanos":  # carrusel especial, solo a pedido (no va en el calendario)
         subprocess.run([sys.executable, "-m", "instagram.cumpleanos", "--salida", str(salida)], check=True, cwd=ROOT)
         return sorted(salida.glob("*.png"))

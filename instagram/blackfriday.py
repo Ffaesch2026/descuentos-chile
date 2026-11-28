@@ -100,7 +100,7 @@ def portada(d) -> str:
     total = sum(len(g["productos"]) for g in d["grupos"])
     rubros = "".join(f"<span>{e(n)}</span>" for n in (["Vuelos"] if d.get("viajes") else []) + [g["nombre"] for g in d["grupos"]])
     return pagina(f"""<div class="slide">{fondo_rayas()}
-  <div class="p-k">Ofertas verificadas · Chile</div>
+  <div class="p-k">{e(d.get("parte", "Ofertas verificadas · Chile"))}</div>
   <div class="p-bf"><span>Black</span><span class="amarillo">Friday</span></div>
   <div class="p-fechas tag">{e(d['fechas'].upper())}</div>
   <div class="p-lead">{total} ofertas con <b>descuento real</b> (comparamos cada precio con lo que costaba en octubre y noviembre){f" + {len(d['viajes']['vuelos'])} vuelos" if d.get("viajes") else ""}.</div>
@@ -141,7 +141,7 @@ def cierre(d) -> str:
     return pagina(f"""<div class="slide">{fondo_rayas()}
   <div class="p-k">Antes de comprar</div>
   <div class="c-h">Que no te<br><span class="amarillo">engañen</span></div>
-  <div class="c-p">De <b>{d['revisados']} productos populares</b> que revisamos, solo <b>{sum(len(g['productos']) for g in d['grupos'])}</b> tenían un descuento real de 15% o más.
+  <div class="c-p">De <b>{d['revisados']} productos populares</b> que revisamos, solo <b>{d.get('verificadas', sum(len(g['productos']) for g in d['grupos']))}</b> tenían un descuento real de 15% o más.
   Compara siempre con el precio de las semanas anteriores, no con el "precio antes" que muestra la tienda.</div>
   <div class="c-seg">Síguenos en<br>{CUENTA}</div>
   <div class="c-av">Descuento real = precio Black Friday comparado con el precio habitual entre el {e(d['periodo_comparacion'])}, según el historial de precios de SoloTodo.
@@ -150,7 +150,7 @@ def cierre(d) -> str:
 
 
 def descripcion(d, max_por_grupo: int = 2) -> str:
-    lineas = [f"🖤 Black Friday Chile · {d['fechas']}", "",
+    lineas = [f"🖤 Black Friday Chile · {d['fechas']}" + (f" · {d['parte']}" if d.get("parte") else ""), "",
               f"Lo mejor de cada rubro 👇 (todas las ofertas, en las imágenes)", "",
               "Ofertas con DESCUENTO REAL: comparamos cada precio de hoy con lo que costaba entre octubre y noviembre "
               "(no con el \"precio antes\" de la tienda). 👉 Desliza y guarda el post.", ""]
@@ -164,7 +164,7 @@ def descripcion(d, max_por_grupo: int = 2) -> str:
         for x in g["productos"][:max_por_grupo]:
             lineas.append(f"• {x['producto']}: {pesos(x['precio'])} en {x['tienda']} (-{x['descuento_real']}% real)")
         lineas.append("")
-    lineas += [f"🔎 De {d['revisados']} productos populares revisados, solo {sum(len(g['productos']) for g in d['grupos'])} tenían "
+    lineas += [f"🔎 De {d['revisados']} productos populares revisados, solo {d.get('verificadas', sum(len(g['productos']) for g in d['grupos']))} tenían "
                "un descuento real de 15% o más. Precios revisados el "
                f"{d['fecha_revision'][8:10]}-{d['fecha_revision'][5:7]}: pueden cambiar o agotarse. Fuente del historial: SoloTodo. "
                "Cuenta no afiliada a ninguna tienda.", "",
@@ -179,8 +179,17 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--datos", default=str(ROOT / "data" / "blackfriday-2026.json"))
     ap.add_argument("--salida", default=None)
+    ap.add_argument("--parte", type=int, choices=[0, 1, 2], default=0,
+                    help="0 = todo; 1 = vuelos y tecnología; 2 = hogar, cocina y belleza (para no pasar de 10 imágenes)")
     a = ap.parse_args()
     d = json.loads(Path(a.datos).read_text("utf-8"))
+    d["verificadas"] = sum(len(g["productos"]) for g in d["grupos"])
+    if a.parte:
+        tecno = {"tecnologia", "monitores", "audifonos", "parlantes", "gamer"}
+        d["grupos"] = [g for g in d["grupos"] if (g["id"] in tecno) == (a.parte == 1)]
+        if a.parte == 2:
+            d.pop("viajes", None)
+        d["parte"] = "Parte 1 · Viajes y tecnología" if a.parte == 1 else "Parte 2 · Hogar, cocina y belleza"
     ap_max = MAX_IMAGENES
     vuelos = 1 if d.get("viajes") else 0
     grupos = [g for g in d["grupos"] if g["productos"]][:ap_max - 2 - vuelos]
