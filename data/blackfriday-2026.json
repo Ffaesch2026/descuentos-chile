@@ -4,7 +4,7 @@
  "fechas": "27 al 30 de noviembre",
  "fecha_revision": "2026-11-28",
  "periodo_comparacion": "1 de octubre al 20 de noviembre de 2026",
- "revisados": 225,
+ "revisados": 706,
  "grupos": [
   {
    "id": "tecnologia",
@@ -63,23 +63,81 @@
      "solotodo": "https://www.solotodo.cl/products/392666"
     },
     {
-     "producto": "Tablet Xiaomi Redmi Pad 2 128 GB",
-     "marca": "Xiaomi",
-     "tienda": "Lider",
-     "precio": 129990,
-     "precio_habitual": 154990,
-     "precio_min_previo": 129990,
-     "descuento_real": 16,
-     "nuevo_minimo": false,
-     "foto": "https://media.solotodo.com/media/products/2767711_picture_1779908815.webp",
-     "url": "https://www.lider.cl/ip/Tablet-Xiaomi-Redmi-Pad-2-9-7-9-7-FHD-Qualcomm-Snapdragon-4GB-128GB-WiFi-Gris/00693909300809",
-     "solotodo": "https://www.solotodo.cl/products/396894"
+     "producto": "Notebook Gigabyte Gaming A16 3TH",
+     "marca": "Gigabyte",
+     "tienda": "OPC Store",
+     "precio": 1549990,
+     "precio_habitual": 1859990,
+     "precio_min_previo": 1855690,
+     "descuento_real": 17,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2113216_picture_1753989579.png",
+     "url": "https://www.opcstore.cl/products/notebook-gigabyte-gaming-a16-3wh-16-ips-wuxga-165hz-rtx-5070-ryzen-7-260-ram-16gb-512gb-ssd-w11h",
+     "solotodo": "https://www.solotodo.cl/products/413028"
     }
    ]
   },
   {
-   "id": "audio",
-   "nombre": "Audio",
+   "id": "monitores",
+   "nombre": "Monitores",
+   "productos": [
+    {
+     "producto": "Monitor MSI MAG 274QP QD-OLED X24",
+     "marca": "MSI",
+     "tienda": "Sandos",
+     "precio": 419895,
+     "precio_habitual": 514490,
+     "precio_min_previo": 493490,
+     "descuento_real": 18,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2274135",
+     "url": "https://sandos.cl/p/monitor-gamer-oled-msi-mag-274qp-x24-27-wqhd-240hz-003-ms-panel-qd-oled-p36794",
+     "solotodo": "https://www.solotodo.cl/products/397021"
+    },
+    {
+     "producto": "Monitor TCL 34R83Q",
+     "marca": "TCL",
+     "tienda": "Paris Marketplace",
+     "precio": 459990,
+     "precio_habitual": 549990,
+     "precio_min_previo": 459990,
+     "descuento_real": 16,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2004363_picture_1734620078.png",
+     "url": "https://www.paris.cl/monitor-gamer-tcl-qd-mini-led-34r83q-wqhd-170hz-MKJEY3PXPG.html",
+     "solotodo": "https://www.solotodo.cl/products/262936"
+    },
+    {
+     "producto": "Monitor MSI MAG 271QP QD-OLED X28",
+     "marca": "MSI",
+     "tienda": "UG Store",
+     "precio": 475196,
+     "precio_habitual": 566990,
+     "precio_min_previo": 485527,
+     "descuento_real": 16,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2132281",
+     "url": "https://www.ugstore.cl/monitor-msi-mag-271qp-qd-oled-x28",
+     "solotodo": "https://www.solotodo.cl/products/358427"
+    },
+    {
+     "producto": "Monitor Gigabyte GO27Q24G",
+     "marca": "Gigabyte",
+     "tienda": "Sandos",
+     "precio": 419895,
+     "precio_habitual": 499599,
+     "precio_min_previo": 457079,
+     "descuento_real": 16,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2804059_picture_1785501605.webp",
+     "url": "https://sandos.cl/p/monitor-gamer-oled-gigabyte-go27q24g-realblack-glossy-27-qhd-240hz-003-ms-woled-true-black-hdr-400-p44813",
+     "solotodo": "https://www.solotodo.cl/products/401108"
+    }
+   ]
+  },
+  {
+   "id": "audifonos",
+   "nombre": "Audífonos",
    "productos": [
     {
      "producto": "Audífonos Logitech H390",
@@ -95,6 +153,19 @@
      "solotodo": "https://www.solotodo.cl/products/47094"
     },
     {
+     "producto": "Audífonos Anker Soundcore P40i",
+     "marca": "Anker",
+     "tienda": "Falabella Marketplace",
+     "precio": 24990,
+     "precio_habitual": 34990,
+     "precio_min_previo": 27990,
+     "descuento_real": 29,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1935368_picture_1721384047.webp",
+     "url": "https://www.falabella.com/falabella-cl/product/149616271/audifonos-tws-p40i-nc-soundcore-negro/149616273",
+     "solotodo": "https://www.solotodo.cl/products/250403"
+    },
+    {
      "producto": "Audífonos Anker Soundcore Liberty 5",
      "marca": "Anker Soundcore",
      "tienda": "Falabella",
@@ -108,7 +179,7 @@
      "solotodo": "https://www.solotodo.cl/products/382087"
     },
     {
-     "producto": "Audífonos gamer Redragon H510 Zeus Pro blanco",
+     "producto": "Audífonos gamer Redragon H510 Zeus Pro",
      "marca": "Redragon",
      "tienda": "Winpy",
      "precio": 42880,
@@ -121,36 +192,165 @@
      "solotodo": "https://www.solotodo.cl/products/270259"
     },
     {
-     "producto": "Apple AirPods 4 con cancelación de ruido",
-     "marca": "Apple",
-     "tienda": "Lider",
-     "precio": 139990,
-     "precio_habitual": 169990,
-     "precio_min_previo": 139990,
+     "producto": "Audífonos Sennheiser Momentum 4 Wireless",
+     "marca": "Sennheiser",
+     "tienda": "Travel Tienda",
+     "precio": 229990,
+     "precio_habitual": 279990,
+     "precio_min_previo": 239990,
      "descuento_real": 18,
-     "nuevo_minimo": false,
-     "foto": "https://media.solotodo.com/media/products/1968459_picture_1728966520.jpg",
-     "url": "https://www.lider.cl/ip/Aud-fonos-In-ear-AirPods-4-MXP93AM-A-Bluetooth-5-3-Blanco/00019594968953",
-     "solotodo": "https://www.solotodo.cl/products/256185"
-    },
-    {
-     "producto": "Apple AirPods 4",
-     "marca": "Apple",
-     "tienda": "Tienda Claro",
-     "precio": 99990,
-     "precio_habitual": 119990,
-     "precio_min_previo": 99990,
-     "descuento_real": 17,
-     "nuevo_minimo": false,
-     "foto": "https://media.solotodo.com/media/products/1968448_picture_1728966451.jpg",
-     "url": "https://tienda.clarochile.cl/catalogo/tecnologia-y-accesorios/apple-airpods-4-7006938acc",
-     "solotodo": "https://www.solotodo.cl/products/256184"
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1681647_picture_1671016677.webp",
+     "url": "https://tienda.travel.cl/aud%C3%ADfonos/aud%C3%ADfonos-sennheiser-over-ear-momentum-4-bluetooth-noise-cancelling-negro/SKU83706",
+     "solotodo": "https://www.solotodo.cl/products/158271"
     }
    ]
   },
   {
-   "id": "cocina",
-   "nombre": "Cocina",
+   "id": "parlantes",
+   "nombre": "Parlantes y audio",
+   "productos": [
+    {
+     "producto": "Parlante Harman Kardon Onyx Studio 9",
+     "marca": "Harman Kardon",
+     "tienda": "Paris",
+     "precio": 119990,
+     "precio_habitual": 239990,
+     "precio_min_previo": 139990,
+     "descuento_real": 50,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2007855_picture_1735620388.png",
+     "url": "https://www.paris.cl/parlante-portatil-onyx-studio-9-negro-168463999.html",
+     "solotodo": "https://www.solotodo.cl/products/263769"
+    },
+    {
+     "producto": "Parlante JBL Charge 5",
+     "marca": "JBL",
+     "tienda": "Lider",
+     "precio": 79990,
+     "precio_habitual": 129990,
+     "precio_min_previo": 79990,
+     "descuento_real": 38,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1407393_picture_1623787379.jpg",
+     "url": "https://www.lider.cl/ip/Parlante-Charge-5-Bluetooth-JBL/00692528198218",
+     "solotodo": "https://www.solotodo.cl/products/113387"
+    },
+    {
+     "producto": "Parlante JBL PartyBox 720",
+     "marca": "JBL",
+     "tienda": "Lider",
+     "precio": 559990,
+     "precio_habitual": 870990,
+     "precio_min_previo": 649990,
+     "descuento_real": 36,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2691989_picture_1770184876.png",
+     "url": "https://www.lider.cl/ip/Parlante-JBL-PartyBox-720-Negro/00120013002583",
+     "solotodo": "https://www.solotodo.cl/products/379582"
+    },
+    {
+     "producto": "Parlante Anker Soundcore Select 4 Go",
+     "marca": "Anker",
+     "tienda": "Falabella Marketplace",
+     "precio": 14990,
+     "precio_habitual": 18990,
+     "precio_min_previo": 18990,
+     "descuento_real": 21,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2009228_picture_1736400494.png",
+     "url": "https://www.falabella.com/falabella-cl/product/139703009/parlante-portatil-select-4-go-soundcore-azul/139703012",
+     "solotodo": "https://www.solotodo.cl/products/264163"
+    },
+    {
+     "producto": "Parlante JBL Boombox 4",
+     "marca": "JBL",
+     "tienda": "Lider",
+     "precio": 319990,
+     "precio_habitual": 399990,
+     "precio_min_previo": 319990,
+     "descuento_real": 20,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2551942_picture_1758699841.png",
+     "url": "https://www.lider.cl/ip/Parlante-JBL-Boombox-4-Negro/00120013002418",
+     "solotodo": "https://www.solotodo.cl/products/355720"
+    }
+   ]
+  },
+  {
+   "id": "gamer",
+   "nombre": "Teclados y mouse gamer",
+   "productos": [
+    {
+     "producto": "Teclado ASUS TUF Gaming K3 Gen II",
+     "marca": "ASUS",
+     "tienda": "Sandos",
+     "precio": 104895,
+     "precio_habitual": 199895,
+     "precio_min_previo": 109990,
+     "descuento_real": 48,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2279092_picture_1755940045.png",
+     "url": "https://sandos.cl/p/asus-keyboard-gaming-hatsune-miku-edition-p42257",
+     "solotodo": "https://www.solotodo.cl/products/312550"
+    },
+    {
+     "producto": "Teclado Hype Legend Rebel L RGB",
+     "marca": "Hype Legend",
+     "tienda": "Central Gamer",
+     "precio": 14990,
+     "precio_habitual": 26990,
+     "precio_min_previo": 19990,
+     "descuento_real": 44,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1467243_picture_1633013966.webp",
+     "url": "https://centralgamer.cl/teclado-gamer/teclado-mecanico-hype-legend-rebel-rgb-white-l-blue-switch/",
+     "solotodo": "https://www.solotodo.cl/products/121483"
+    },
+    {
+     "producto": "Teclado Alienware AW510K",
+     "marca": "Alienware",
+     "tienda": "Tecnomas.cl",
+     "precio": 62990,
+     "precio_habitual": 113390,
+     "precio_min_previo": 99989,
+     "descuento_real": 44,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/1700155_picture_1673875778.jpg",
+     "url": "https://tecnomas.cl/producto/teclado-alambrico-dell-alienware-led-rgb-mecanico-usb-bajo-perfil-color-gris",
+     "solotodo": "https://www.solotodo.cl/products/168859"
+    },
+    {
+     "producto": "Mouse Redragon M908 Impact",
+     "marca": "Redragon",
+     "tienda": "Falabella",
+     "precio": 24990,
+     "precio_habitual": 34990,
+     "precio_min_previo": 24990,
+     "descuento_real": 29,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/895174_picture_1552163182.jpg",
+     "url": "https://www.falabella.com/falabella-cl/product/14726856/Mouse-Gamer-Rgb-Impact-M908-Redragon/14726856",
+     "solotodo": "https://www.solotodo.cl/products/58140"
+    },
+    {
+     "producto": "Teclado Redragon K686 Eisa Magnético",
+     "marca": "Redragon",
+     "tienda": "Progaming",
+     "precio": 43606,
+     "precio_habitual": 57990,
+     "precio_min_previo": 43606,
+     "descuento_real": 25,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2717738_picture_1773844889.webp",
+     "url": "https://progaming.cl/products/teclado-mecanico-redragon-eisa-k686-rgb-cableado-negro",
+     "solotodo": "https://www.solotodo.cl/products/410940"
+    }
+   ]
+  },
+  {
+   "id": "airfryer",
+   "nombre": "Freidoras de aire",
    "productos": [
     {
      "producto": "Freidora de aire Oster CKSTAF75WDSSDF",
@@ -220,8 +420,79 @@
    ]
   },
   {
+   "id": "cocina",
+   "nombre": "Cafeteras, licuadoras y microondas",
+   "productos": [
+    {
+     "producto": "Licuadora Mainstays 42913B",
+     "marca": "Mainstays",
+     "tienda": "Lider",
+     "precio": 9990,
+     "precio_habitual": 15990,
+     "precio_min_previo": 9990,
+     "descuento_real": 38,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2108915_picture_1753217892.jpeg",
+     "url": "https://www.lider.cl/ip/Licuadora-personal-42913B-Negro/00085005791000",
+     "solotodo": "https://www.solotodo.cl/products/279824"
+    },
+    {
+     "producto": "Microondas Ursus Trotter UT-CLASSY720",
+     "marca": "Ursus Trotter",
+     "tienda": "ABC",
+     "precio": 49990,
+     "precio_habitual": 74990,
+     "precio_min_previo": 49990,
+     "descuento_real": 33,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/531606_picture_1474992401.jpg",
+     "url": "https://www.abc.cl/microondas-ursus-trotter-ut-classy720-20-l/19314278.html",
+     "solotodo": "https://www.solotodo.cl/products/28688"
+    },
+    {
+     "producto": "Cafetera DeLonghi Magnifica Start",
+     "marca": "DeLonghi",
+     "tienda": "Falabella",
+     "precio": 499990,
+     "precio_habitual": 669990,
+     "precio_min_previo": 549990,
+     "descuento_real": 25,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/cafeteras-1749466-1741277811",
+     "url": "https://www.falabella.com/falabella-cl/product/17127314/Cafetera-Magnifica-Start-Delonghi/17127314",
+     "solotodo": "https://www.solotodo.cl/products/267283"
+    },
+    {
+     "producto": "Licuadora Midea MJ-BL6003BK",
+     "marca": "Midea",
+     "tienda": "ABC",
+     "precio": 16990,
+     "precio_habitual": 22480,
+     "precio_min_previo": 16990,
+     "descuento_real": 24,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1827508",
+     "url": "https://www.abc.cl/licuadora-midea-mj-bl6003bk-15-l/28249209.html",
+     "solotodo": "https://www.solotodo.cl/products/268286"
+    },
+    {
+     "producto": "Cafetera Fagor Tiramisu",
+     "marca": "Fagor",
+     "tienda": "ABC",
+     "precio": 20990,
+     "precio_habitual": 26990,
+     "precio_min_previo": 20990,
+     "descuento_real": 22,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1756031",
+     "url": "https://www.abc.cl/cafetera-aluminio-fagor-cupy-640-ml/24768856.html",
+     "solotodo": "https://www.solotodo.cl/products/268904"
+    }
+   ]
+  },
+  {
    "id": "hogar",
-   "nombre": "Hogar",
+   "nombre": "Aspiradoras y refrigeradores",
    "productos": [
     {
      "producto": "Aspiradora Dreame R10 Pro",
@@ -237,7 +508,7 @@
      "solotodo": "https://www.solotodo.cl/products/393053"
     },
     {
-     "producto": "Robot aspiradora Thomas Gyrorobot TH-AR1070G",
+     "producto": "Robot aspiradora Thomas Gyrorobot",
      "marca": "Thomas",
      "tienda": "Paris",
      "precio": 89990,
@@ -250,7 +521,7 @@
      "solotodo": "https://www.solotodo.cl/products/401772"
     },
     {
-     "producto": "Robot aspiradora Wurden WRB-SMARTKLEAN",
+     "producto": "Robot aspiradora Wurden SmartKlean",
      "marca": "Wurden",
      "tienda": "Falabella",
      "precio": 79990,
@@ -289,6 +560,211 @@
      "solotodo": "https://www.solotodo.cl/products/404111"
     }
    ]
+  },
+  {
+   "id": "clima",
+   "nombre": "Aire acondicionado",
+   "productos": [
+    {
+     "producto": "Aire acondicionado portátil Noblex",
+     "marca": "Noblex",
+     "tienda": "Lider Marketplace",
+     "precio": 199990,
+     "precio_habitual": 265990,
+     "precio_min_previo": 199990,
+     "descuento_real": 25,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1777561",
+     "url": "https://www.lider.cl/ip/Aire-Acondicionado-Port-til-Noblex-Fr-o-Calor-12000btu-4en1/00750304808924",
+     "solotodo": "https://www.solotodo.cl/products/360842"
+    },
+    {
+     "producto": "Aire acondicionado Electrolux 12.000 BTU",
+     "marca": "Electrolux",
+     "tienda": "Easy",
+     "precio": 319990,
+     "precio_habitual": 399990,
+     "precio_min_previo": 368590,
+     "descuento_real": 20,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2314402",
+     "url": "https://www.easy.cl/aire-acondicionado-portatil-sp12fc-1539057/p",
+     "solotodo": "https://www.solotodo.cl/products/403677"
+    },
+    {
+     "producto": "Aire acondicionado portátil Nex",
+     "marca": "Nex",
+     "tienda": "Easy",
+     "precio": 269990,
+     "precio_habitual": 329990,
+     "precio_min_previo": 299990,
+     "descuento_real": 18,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/not_found.png",
+     "url": "https://www.easy.cl/aire-acondicionado-portatil-14000-btu-frio-1471949/p",
+     "solotodo": "https://www.solotodo.cl/products/356425"
+    },
+    {
+     "producto": "Aire acondicionado portátil Midea",
+     "marca": "Midea",
+     "tienda": "Easy",
+     "precio": 189990,
+     "precio_habitual": 229990,
+     "precio_min_previo": 199990,
+     "descuento_real": 17,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2156448",
+     "url": "https://www.easy.cl/aire-acondicionado-portatil-9000-btuh-solo-frio-mppa-09crn7-1500397/p",
+     "solotodo": "https://www.solotodo.cl/products/363511"
+    }
+   ]
+  },
+  {
+   "id": "cabello",
+   "nombre": "Cuidado del cabello",
+   "productos": [
+    {
+     "producto": "Secador de pelo plegable Dot",
+     "marca": "Dot",
+     "tienda": "Ripley",
+     "precio": 9990,
+     "precio_habitual": 14990,
+     "precio_min_previo": 9990,
+     "descuento_real": 33,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/2590190_picture_1763059904.webp",
+     "url": "https://simple.ripley.cl/secador-de-pelo-dot-plegable-dt-004-1200w-2000408316053p",
+     "solotodo": "https://www.solotodo.cl/products/361679"
+    },
+    {
+     "producto": "Secador de pelo Mint",
+     "marca": "Mint",
+     "tienda": "Travel Tienda",
+     "precio": 59990,
+     "precio_habitual": 89990,
+     "precio_min_previo": 65990,
+     "descuento_real": 33,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2737618_picture_1776759040.png",
+     "url": "https://tienda.travel.cl/cupon-30-50/secador-de-pelo-multistyler-mint-6-en-1-blanco/SKU140781",
+     "solotodo": "https://www.solotodo.cl/products/388676"
+    },
+    {
+     "producto": "Multistyler Gama UniQ 8 en 1",
+     "marca": "Gama",
+     "tienda": "Ripley",
+     "precio": 119990,
+     "precio_habitual": 159990,
+     "precio_min_previo": 139990,
+     "descuento_real": 25,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2121384",
+     "url": "https://simple.ripley.cl/secador-de-pelo-gama-multistyler-vibrance-uniq-8-en-1-1500w-2000408149606p",
+     "solotodo": "https://www.solotodo.cl/products/356417"
+    },
+    {
+     "producto": "Alisador Remington Wet2Straight",
+     "marca": "Remington",
+     "tienda": "Falabella",
+     "precio": 29990,
+     "precio_habitual": 39990,
+     "precio_min_previo": 29990,
+     "descuento_real": 25,
+     "nuevo_minimo": false,
+     "foto": "https://media.solotodo.com/media/products/1918899",
+     "url": "https://www.falabella.com/falabella-cl/product/17080276/plancha-alisador-de-pelo-wet2straight-remington/17080276",
+     "solotodo": "https://www.solotodo.cl/products/272204"
+    },
+    {
+     "producto": "Multistyler Osoji 8 en 1",
+     "marca": "Osoji",
+     "tienda": "Falabella Marketplace",
+     "precio": 149990,
+     "precio_habitual": 199990,
+     "precio_min_previo": 159990,
+     "descuento_real": 25,
+     "nuevo_minimo": true,
+     "foto": "https://media.solotodo.com/media/products/2067204_picture_1757458031.jpg",
+     "url": "https://www.falabella.com/falabella-cl/product/137814338/secador-de-pelo-multistyler-8-en-1-m10/137814339",
+     "solotodo": "https://www.solotodo.cl/products/272401"
+    }
+   ]
   }
- ]
+ ],
+ "viajes": {
+  "nombre": "Vuelos",
+  "nota": "Precio por tramo, más tasas. Viajes entre diciembre 2026 y junio 2027. Descuento informado por la aerolínea.",
+  "vuelos": [
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "Concepción → Santiago",
+    "precio": 7778,
+    "descuento_informado": 70,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   },
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "Santiago → Temuco",
+    "precio": 10900,
+    "descuento_informado": 62,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   },
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "La Serena → Santiago",
+    "precio": 10900,
+    "descuento_informado": 52,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   },
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "Puerto Montt → Santiago",
+    "precio": 22380,
+    "descuento_informado": 45,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   },
+   {
+    "aerolinea": "LATAM",
+    "ruta": "Santiago → Concepción",
+    "precio": 19990,
+    "descuento_informado": 59,
+    "fuente": "https://chocale.cl/2026/11/black-friday-latam-airlines-mas-de-80-destinos-oferta/"
+   },
+   {
+    "aerolinea": "LATAM",
+    "ruta": "Santiago → Antofagasta",
+    "precio": 21990,
+    "descuento_informado": 63,
+    "fuente": "https://chocale.cl/2026/11/black-friday-latam-airlines-mas-de-80-destinos-oferta/"
+   },
+   {
+    "aerolinea": "LATAM",
+    "ruta": "Santiago → Calama",
+    "precio": 22990,
+    "descuento_informado": 63,
+    "fuente": "https://chocale.cl/2026/11/black-friday-latam-airlines-mas-de-80-destinos-oferta/"
+   },
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "Santiago → Mendoza",
+    "precio": 26325,
+    "descuento_informado": 53,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   },
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "Santiago → Montevideo",
+    "precio": 31200,
+    "descuento_informado": 60,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   },
+   {
+    "aerolinea": "JetSMART",
+    "ruta": "Santiago → Florianópolis",
+    "precio": 86913,
+    "descuento_informado": 33,
+    "fuente": "https://www.encancha.cl/enlahora/servicios/2026/11/27/jetsmart-inicio-el-black-friday-con-descuentos-de-hasta-70-326759.html"
+   }
+  ]
+ }
 }
